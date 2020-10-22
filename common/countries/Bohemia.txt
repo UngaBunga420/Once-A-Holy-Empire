@@ -90,6 +90,19 @@ division_template = {
 		force_equipment_variants = { infantry_equipment_0 = { owner = "BOH" } }
 	}
 
+air_wings = {
+	9 = { 	# Edinburgh
+		tac_bomber_equipment_0 = { owner = "BOH" amount = 72 }
+			start_experience_factor = 0.2
+		fighter_equipment_1 = { owner = "BOH"  version_name = "Flieger 109" amount = 150 }
+			start_experience_factor = 0.5			
+	}
+}
 
+set_state_owner = 9
+set_state_owner = 74
+set_state_owner = 69
+set_state_owner = 75
+set_state_owner = 72
 
 color = { 106  119  89 }
