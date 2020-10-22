@@ -53,9 +53,43 @@ create_country_leader = {
 	expire = "1941.6.4"
 	ideology = neutrality_ideology
 	traits = {
-		Empire_Builder
-		Popular_Figurehead
+		empire_builder
+		popular_figurehead
 	}
 }
+
+division_template = {
+	name = "Infanterie-Division"
+	division_names_group = GER_Inf_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+   		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+  		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+	}
+}
+
+         division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 35
+		}
+		location = 11542
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.1
+		force_equipment_variants = { infantry_equipment_0 = { owner = "BOH" } }
+	}
+
+
 
 color = { 106  119  89 }
