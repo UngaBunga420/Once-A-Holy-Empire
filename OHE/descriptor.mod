@@ -1,0 +1,9 @@
+version="0.1"
+tags={
+	"Alternative History"
+	"Map"
+	"National Focuses"
+}
+name="Once A Holy Empire"
+supported_version="1.10.1"
+remote_file_id="2264286887"
