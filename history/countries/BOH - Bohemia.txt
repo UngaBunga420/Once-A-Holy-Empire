@@ -2,7 +2,7 @@ capital = 9
 
 #oob = "BOH_1936"
 
-set_research_slots = 3
+set_research_slots = 4
 
 set_stability = 0.4
 set_war_support = 0.6
@@ -12,9 +12,12 @@ add_ideas = {
 		partial_mobilization
 		limited_conscription
 }
+
 set_technology = {
- 	infantry_weapons = 1
-	infantry_weapons1 = 1	
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_support = 1		
 	tech_engineers = 1
 	tech_mountaineers = 1
 	motorised_infantry = 1
@@ -22,12 +25,20 @@ set_technology = {
 	interwar_antiair = 1
 	gwtank = 1
 	basic_light_tank = 1
+	improved_light_tank = 1
+	basic_heavy_tank = 1
 	early_fighter = 1
 	fighter1 = 1
 	early_bomber = 1
 	tactical_bomber1 = 1
 	strategic_bomber1 = 1
 	CAS1 = 1
+	mobile_warfare = 1
+	trade_interdiction = 1
+	formation_flying = 1
+	synth_oil_experiments = 1
+	fuel_silos = 1
+	fuel_refining = 1
 }
 
 set_politics = {
@@ -67,46 +78,5 @@ create_country_leader = {
 	traits = {
 		empire_builder
 		popular_figurehead
-	}
-}
-
-division_template = {
-	name = "Infanterie-Division"
-	division_names_group = GER_Inf_01
-
-	regiments = {
-		infantry = { x = 0 y = 0 }
-		infantry = { x = 0 y = 1 }
-		infantry = { x = 0 y = 2 }
-   		infantry = { x = 1 y = 0 }
-		infantry = { x = 1 y = 1 }
-		infantry = { x = 1 y = 2 }
-  		infantry = { x = 2 y = 0 }
-		infantry = { x = 2 y = 1 }
-		infantry = { x = 2 y = 2 }
-	}
-	support = {
-		engineer = { x = 0 y = 0 }
-		artillery = { x = 0 y = 1 }
-	}
-}
-
-         division= {
-		division_name = {
-				is_name_ordered = yes
-				name_order = 35
-		}
-		location = 11542
-		division_template = "Infanterie-Division"
-		start_experience_factor = 0.1
-		force_equipment_variants = { infantry_equipment_0 = { owner = "BOH" } }
-	}
-
-air_wings = {
-	9 = { 	# Edinburgh
-		tac_bomber_equipment_0 = { owner = "BOH" amount = 72 }
-			start_experience_factor = 0.2
-		fighter_equipment_1 = { owner = "BOH"  version_name = "Flieger 109" amount = 150 }
-			start_experience_factor = 0.5			
 	}
 }
