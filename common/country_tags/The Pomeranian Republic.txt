@@ -1,1 +1,1 @@
-TPR = "common/countries/The Pomeranian Republic.txt"
+TPR = "countries/The Pomeranian Republic.txt"

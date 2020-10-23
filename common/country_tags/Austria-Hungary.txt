@@ -1,1 +1,1 @@
-AUH = "common/countries/Austria-Hungary.txt"
+AUH = "countries/Austria-Hungary.txt"

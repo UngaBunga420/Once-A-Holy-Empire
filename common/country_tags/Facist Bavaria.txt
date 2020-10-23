@@ -1,1 +1,1 @@
-BAV = "common/countries/Facist Bavaria.txt"
+BAV = "countries/Facist Bavaria.txt"

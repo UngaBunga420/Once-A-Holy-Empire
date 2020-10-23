@@ -1,1 +1,1 @@
-NOR = "common/countries/Northern Territories.txt"
+NOT = "countries/Northern Territories.txt"

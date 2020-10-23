@@ -1,0 +1,10 @@
+create_country_leader = {
+	name = "Bob"
+	desc = ""
+	picture = "Human.dds"
+	expire = "2020.1.1"
+	ideology = despotism
+	traits = {
+		#
+	}
+}

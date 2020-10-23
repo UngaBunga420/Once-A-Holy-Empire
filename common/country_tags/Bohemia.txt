@@ -1,1 +1,1 @@
-BOH = "common/Countries/Bohemia.txt"
+BOH = "countries/Bohemia.txt"

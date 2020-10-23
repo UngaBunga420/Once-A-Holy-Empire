@@ -1,1 +1,1 @@
-TRC = "common/countries/The Rhine Confederation.txt"
+TRC = "countries/The Rhine Confederation.txt"
