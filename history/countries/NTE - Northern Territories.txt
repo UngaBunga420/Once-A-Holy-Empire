@@ -1,7 +1,7 @@
 create_country_leader = {
 	name = "Bob"
 	desc = ""
-	picture = "Human.dds"
+	picture = "gfx/leaders/NTE/human.dds"
 	expire = "2020.1.1"
 	ideology = despotism
 	traits = {

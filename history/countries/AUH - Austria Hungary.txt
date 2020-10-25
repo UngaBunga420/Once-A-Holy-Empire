@@ -45,7 +45,7 @@ set_popularities = {
 
 create_country_leader = {
 	name = "Otto von Habsburg"
-	desc = ""
+	desc = "POLITICS_OTTO_HABSBURG_DESC"
 	picture = "gfx/leaders/AUH/otto.dds"
 	expire = "2011.1.1"
 	ideology = despotism

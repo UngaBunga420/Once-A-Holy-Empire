@@ -1,4 +1,3 @@
-
 state={
 	id=59
 	name="STATE_59"
@@ -10,7 +9,7 @@ state={
 	state_category = large_city
 
 	history={
-		owner = NOT
+		owner = NTE
 		victory_points = {
 			3326 5 
 		}
@@ -27,7 +26,10 @@ state={
 			}
 
 		}
-		add_core_of = NOT	}
+		add_core_of = NTE
+		1939.1.1 = {
+
+			}
 		}
 	}
 

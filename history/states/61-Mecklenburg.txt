@@ -7,7 +7,7 @@ state={
 	state_category = town
 
 	history={
-		owner = NOT
+		owner = NTE
 		victory_points = {
 			321 5
 		}
@@ -23,7 +23,7 @@ state={
 			}
 			air_base = 3
 		}
-		add_core_of = NOT
+		add_core_of = NTE
 	}
 
 	provinces={
