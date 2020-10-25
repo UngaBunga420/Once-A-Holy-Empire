@@ -1,3 +1,4 @@
+
 state={
 	id=59
 	name="STATE_59"
@@ -27,8 +28,13 @@ state={
 
 		}
 		add_core_of = NTE
-		1939.1.1 = {
 
+		1939.1.1 = {
+			buildings = {
+				air_base = 6
+				arms_factory = 4
+				industrial_complex = 3
+				dockyard = 3
 			}
 		}
 	}

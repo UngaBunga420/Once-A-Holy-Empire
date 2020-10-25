@@ -1,6 +1,6 @@
 capital = 9
 
-#oob = "BOH_1936"
+oob = "BOH_1936"
 
 set_research_slots = 4
 
@@ -65,4 +65,11 @@ create_country_leader = {
 		empire_builder
 		popular_figurehead
 	}
+}
+
+create_field_marshal = {
+	name = "Kaiser Wilhelm II"
+	picture = "gfx/leaders/BOH/wilhelm.dds"
+	traits = {media_personality organizer mountaineer old guard}
+	skill = 5
 }
