@@ -1,1 +1,1 @@
-NOT = "countries/Northern Territories.txt"
+NTE = "countries/Northern Territories.txt"
