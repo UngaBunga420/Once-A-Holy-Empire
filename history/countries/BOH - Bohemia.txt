@@ -9,8 +9,7 @@ set_war_support = 0.6
 
 add_ideas = {
 		#laws
-		partial_mobilization
-		limited_conscription
+
 }
 
 set_technology = {
@@ -42,29 +41,16 @@ set_technology = {
 }
 
 set_politics = {
-	
-	parties = {
-		democratic = {
-			popularity = 5
-		}
-
-		fascism = {
-			popularity = 20
-		}
-
-		communism = {
-			popularity = 0
-		}
-
-		neutrality = {
-			popularity = 75
-		}
-	}
-
 	ruling_party = neutrality
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = no
+}
+set_popularities = {
+	democratic = 14
+	fascism = 26
+	communism = 5
+	neutrality = 55
 }
 
 
