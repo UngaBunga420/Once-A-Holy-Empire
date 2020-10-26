@@ -1,4 +1,4 @@
-capital = 58
+capital = 763
 
 #oob = ""
 
@@ -30,23 +30,24 @@ set_technology = {
 }
 
 set_politics = {
-	ruling_party = neutrality
+	ruling_party = communism
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = no
 }
 set_popularities = { 
-	neutrality = 100
+	communism = 83
+	neutrality = 17
 }
 
 
 create_country_leader = {
-	name = "August von Mackensen"
-	desc = "POLITICS_MACKENSEN_DESC"
-	picture = "gfx/leaders/NTE/mackensen.dds"
-	expire = "1938.1.1"
-	ideology = despotism
+	name = "Leon Trotsky"
+	desc = "POLITICS_TROTSKY_DESC"
+	picture = "gfx/leaders/PRS/trotsky.dds"
+	expire = "1950.1.1"
+	ideology = leninism
 	traits = {
-	great_war_hero
+
 	}
 }

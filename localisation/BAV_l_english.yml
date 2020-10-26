@@ -1,12 +1,12 @@
-l_english:
+﻿l_english:
  BAV_fascism:0 "Bavarian Reich"
  BAV_fascism_DEF:0 "The Bavarian Reich"
  BAV_democratic:0 "State of Bavaria"
  BAV_democratic_DEF:0 "The State of Bavaria"
  BAV_neutrality:0 "Bavaria"
  BAV_neutrality_DEF:0 "Bavaria"
- BAV_communism:0 "Peaoples Republic of Bavaria"
- BAV_communism_DEF:0 "the Austro-Hungarian Collective"
+ BAV_communism:0 "Peoples Republic of Bavaria"
+ BAV_communism_DEF:0 "the People's Republic of Bavaria"
  BAV_fascism_ADJ:0 "Bavarian"
  BAV_democratic_ADJ:0 "Bavarian"
  BAV_neutrality_ADJ:0 "Bavarian"
