@@ -5,5 +5,6 @@ tags={
 	"National Focuses"
 }
 name="Once A Holy Empire"
+picture="thumbnail.png"
 supported_version="1.10.1"
 remote_file_id="2264286887"
