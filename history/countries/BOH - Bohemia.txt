@@ -67,9 +67,11 @@ create_country_leader = {
 	}
 }
 
-create_field_marshal = {
+create_corps_commander = {
 	name = "Kaiser Wilhelm II"
 	picture = "gfx/leaders/BOH/wilhelm.dds"
-	traits = {media_personality organizer mountaineer old guard}
+	traits = {
+	media_personality organizer mountaineer old_guard
+	}
 	skill = 5
 }
