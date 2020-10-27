@@ -12,7 +12,7 @@ state={
 	}
 
 	history={
-		owner = AUH
+		owner = AUS
 		buildings = {
 			infrastructure = 6
 			industrial_complex = 3
@@ -32,7 +32,7 @@ state={
 		#victory_points = {
 		#	11612 3
 		#}
-		add_core_of = AUH
+		add_core_of = AUS
 	}
 
 	provinces={

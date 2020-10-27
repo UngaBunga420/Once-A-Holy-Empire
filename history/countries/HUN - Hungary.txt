@@ -1,4 +1,4 @@
-capital = 4
+capital = 43
 
 #oob = ""
 
@@ -44,9 +44,9 @@ set_popularities = {
 
 
 create_country_leader = {
-	name = "Otto von Habsburg"
-	desc = "POLITICS_OTTO_HABSBURG_DESC"
-	picture = "gfx/leaders/AUH/otto.dds"
+	name = "Miklos Horthy"
+	desc = "POLITICS_MIKLOS_HORTHY_DESC"
+	picture = "gfx/leaders/HUN/horthy.dds"
 	expire = "2011.1.1"
 	ideology = despotism
 	traits = {

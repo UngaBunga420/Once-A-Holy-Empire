@@ -10,7 +10,7 @@ state={
 	}
 
 	history={
-		owner = AUH
+		owner = HUN
 		victory_points = {
 			9692 10
 		}
@@ -23,7 +23,6 @@ state={
 			arms_factory = 2
 			air_base = 3
 		}
-		add_core_of = AUH
 	}
 
 	provinces={

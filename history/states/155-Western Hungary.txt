@@ -9,7 +9,7 @@ state={
 		oil = 1 # was: 1
 	}
 	history={
-		owner = AUH
+		owner = HUN
 		victory_points = {
 			11610 5 
 		}
@@ -19,7 +19,7 @@ state={
 			arms_factory = 1
 			air_base = 3
 		}
-		add_core_of = AUH
+		add_core_of = HUN
 	}
 
 	provinces={
