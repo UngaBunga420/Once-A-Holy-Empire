@@ -1,6 +1,6 @@
 capital = 58
 
-#oob = ""
+oob = "NTE_1936"
 
 set_research_slots = 3
 

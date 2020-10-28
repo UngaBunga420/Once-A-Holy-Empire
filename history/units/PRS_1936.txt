@@ -22,7 +22,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 11
 		}
-		location = 763
+		location = 6332332
 		division_template = "Prussian-Red-Guard"
 		start_experience_factor = 0.3
 	}
@@ -30,7 +30,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 11
 		}
-		location = 6
+		location = 6332
 		division_template = "Prussian-Red-Guard"
 		start_experience_factor = 0.3
 	}
@@ -38,7 +38,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 11
 		}
-		location = 6
+		location = 6332
 		division_template = "Prussian-Red-Guard"
 		start_experience_factor = 0.3
 	}
@@ -46,7 +46,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 11
 		}
-		location = 6
+		location = 6332
 		division_template = "Prussian-Red-Guard"
 		start_experience_factor = 0.3
 	}
@@ -54,7 +54,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 11
 		}
-		location = 6
+		location = 6332
 		division_template = "Prussian-Red-Guard"
 		start_experience_factor = 0.3
 	}
@@ -62,7 +62,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 11
 		}
-		location = 6
+		location = 6332
 		division_template = "Prussian-Red-Guard"
 		start_experience_factor = 0.3
 	}

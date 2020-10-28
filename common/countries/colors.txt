@@ -1,7 +1,11 @@
 #reload countrycolors
-AUH = {
+AUS = {
 	color = rgb { 204 208 235 }
 	color_ui = rgb { 224 228 255 }
+}
+HUN = {
+	color = rgb { 255 221 153 }
+	color_ui = rgb { 224 228 160 }
 }
 BOH = {
 	color = rgb { 86 99 69 }

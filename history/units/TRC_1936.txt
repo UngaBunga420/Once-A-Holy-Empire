@@ -27,7 +27,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 11
 		}
-		location = 6
+		location = 516
 		division_template = "Infanterie-Division"
 		start_experience_factor = 0.3
 	}
@@ -35,7 +35,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 11
 		}
-		location = 6
+		location = 516
 		division_template = "Infanterie-Division"
 		start_experience_factor = 0.3
 	}
@@ -43,7 +43,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 11
 		}
-		location = 6
+		location = 516
 		division_template = "Infanterie-Division"
 		start_experience_factor = 0.3
 	}
@@ -51,7 +51,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 11
 		}
-		location = 6
+		location = 516
 		division_template = "Infanterie-Division"
 		start_experience_factor = 0.3
 	}
@@ -59,7 +59,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 11
 		}
-		location = 6
+		location = 516
 		division_template = "Infanterie-Division"
 		start_experience_factor = 0.3
 	}
@@ -67,7 +67,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 11
 		}
-		location = 6
+		location = 516
 		division_template = "Infanterie-Division"
 		start_experience_factor = 0.3
 	}
@@ -75,7 +75,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 11
 		}
-		location = 6
+		location = 516
 		division_template = "Infanterie-Division"
 		start_experience_factor = 0.3
 	}
@@ -83,7 +83,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 11
 		}
-		location = 6
+		location = 516
 		division_template = "Infanterie-Division"
 		start_experience_factor = 0.3
 	}
@@ -91,7 +91,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 11
 		}
-		location = 6
+		location = 516
 		division_template = "Infanterie-Division"
 		start_experience_factor = 0.3
 	}
@@ -99,7 +99,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 11
 		}
-		location = 6
+		location = 516
 		division_template = "Infanterie-Division"
 		start_experience_factor = 0.3
 	}
@@ -107,7 +107,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 11
 		}
-		location = 6
+		location = 516
 		division_template = "Infanterie-Division"
 		start_experience_factor = 0.3
 	}
@@ -115,7 +115,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 11
 		}
-		location = 6
+		location = 516
 		division_template = "Infanterie-Division"
 		start_experience_factor = 0.3
 	}
@@ -123,7 +123,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 11
 		}
-		location = 6
+		location = 516
 		division_template = "Infanterie-Division"
 		start_experience_factor = 0.3
 	}
@@ -131,7 +131,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 11
 		}
-		location = 6
+		location = 516
 		division_template = "Infanterie-Division"
 		start_experience_factor = 0.3
 	}
