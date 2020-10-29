@@ -1,14 +1,14 @@
 state={
 	id=807
 	name="STATE_807"
-	manpower=50000
+	manpower=100000
+	state_category = city
 	buildings_max_level_factor=1.000
-	state_category = rural
 
 	history={
 		owner = TRC
 	}
-	
+
 	provinces={
 		6500 11562 
 	}
