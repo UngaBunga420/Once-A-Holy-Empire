@@ -1,0 +1,17 @@
+﻿l_english:
+ 
+ SOV_fascism:0 "Fascist State of Russia"
+ SOV_fascism_DEF:0 "the Fascist State of Russia"
+ SOV_democratic:0 "Russian Federation"
+ SOV_democratic_DEF:0 "the Russian Federation"
+ SOV_neutrality:0 "Tsardom of Russia"
+ SOV_neutrality_DEF:0 "The Tsardom of Russia"
+ SOV_communism:0 "Soviet Union"
+ SOV_communism_DEF:0 "the Soviet Union"
+ SOV_fascism_ADJ:0 "Russian"
+ SOV_democratic_ADJ:0 "Russian"
+ SOV_neutrality_ADJ:0 "Russian"
+ SOV_communism_ADJ:0 "Soviet"
+ SOV:0 "Russia"
+ SOV_DEF:0 "Russia"
+ SOV_ADJ:0 "Russian"
