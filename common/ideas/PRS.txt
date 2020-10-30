@@ -1,0 +1,24 @@
+ideas = {
+
+	country = {
+		PRS_gymnastics_and_sports_division = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_speed_factor = 1
+				attrition = -0.5
+				breakthrough_factor = 0.75
+			}
+			#rule = {
+				#can_create_factions = yes
+			#}
+		}

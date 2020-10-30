@@ -8,7 +8,7 @@ set_stability = 0.4
 set_war_support = 0.6
 
 add_ideas = {
-		#laws
+	PRS_gymnastics_and_sports_division
 
 }
 set_technology = {
@@ -27,18 +27,18 @@ set_technology = {
 	tactical_bomber1 = 1
 	strategic_bomber1 = 1
 	CAS1 = 1
-	support_equipment1 = 1
+	tech_support = 1
 }
 
 set_politics = {
-	ruling_party = communism
-	last_election = "1936.1.1"
+	ruling_party = fascism
+	last_election = "1923.1.1"
 	election_frequency = 48
 	elections_allowed = no
 }
 set_popularities = { 
-	communism = 83
-	neutrality = 17
+	fascism = 83
+	communism = 17
 }
 
 
@@ -49,6 +49,16 @@ create_country_leader = {
 	expire = "1950.1.1"
 	ideology = leninism
 	traits = {
+	}
+}
 
+create_country_leader = {
+	name = "Ernst Rohm"
+	desc = "POLITICS_ROHM_DESC"
+	picture = "rohm.dds"
+	expire = "1953.3.1"
+	ideology = nazism
+	traits = {
+		cornered_fox
 	}
 }
