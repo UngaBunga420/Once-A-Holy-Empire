@@ -27,6 +27,7 @@ set_technology = {
 	tactical_bomber1 = 1
 	strategic_bomber1 = 1
 	CAS1 = 1
+	support_equipment1 = 1
 }
 
 set_politics = {
@@ -44,9 +45,9 @@ set_popularities = {
 
 
 create_country_leader = {
-	name = "Otto von Habsburg"
+	name = "Maurice Thorez"
 	desc = "POLITICS_MAURICE_THOREZ_DESC"
-	picture = "gfx/leaders/MOC/thorez.dds"
+	picture = "gfx/leaders/HEC/thorez.dds"
 	expire = "2011.1.1"
 	ideology = marxism
 	traits = {

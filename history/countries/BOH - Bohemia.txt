@@ -38,6 +38,7 @@ set_technology = {
 	synth_oil_experiments = 1
 	fuel_silos = 1
 	fuel_refining = 1
+	support_equipment1 = 1
 }
 
 set_politics = {
