@@ -1,6 +1,6 @@
 state={
 	id=6
-	name="Antwerpen"
+	name="STATE_809"
 	manpower = 1000000
 	resources={
 		steel= 8 # was: 48
@@ -27,6 +27,6 @@ state={
 	}
 
 	provinces={
-		 6598 11419 
+	 6598 11419 
 	}
 }
