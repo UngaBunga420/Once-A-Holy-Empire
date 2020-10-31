@@ -2,9 +2,9 @@
 state={
 	id=6
 	name="STATE_6" # Flanders
-	manpower = 3747700
+	manpower = 4747700
 	resources={
-		steel=17 # was: 48
+		steel=25 # was: 48
 	}
 	
 	state_category = metropolis
@@ -35,6 +35,6 @@ state={
 	}
 
 	provinces={
-		516 3576 6446 6560 9574 13068 6598 11419 
+		516 3576 6446 6560 6598 9574 11419 13068 
 	}
 }

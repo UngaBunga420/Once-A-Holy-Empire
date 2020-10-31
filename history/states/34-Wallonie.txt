@@ -18,7 +18,7 @@ state={
 			9536 3
 		}
 		buildings = {
-			infrastructure = 5
+			infrastructure = 6
 			arms_factory = 1
 			industrial_complex = 4
 			air_base = 1
@@ -28,6 +28,6 @@ state={
 	}
 
 	provinces={
-		3516 6537 9444 9536 11519 13081 9418 11407 3488 
-	} 
+		3488 3516 6537 9418 9444 9536 11407 11519 13081 
+	}
 }

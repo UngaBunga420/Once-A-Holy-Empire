@@ -5603,4 +5603,12 @@ spriteTypes = {
 		name = "GFX_idea_PRS_gymnastics_and_sports_division"
 		texturefile = "gfx/interface/ideas/Army-Upgrade.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_NTE_a_fragmented_empire"
+		texturefile = "gfx/interface/ideas/fragmented.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_NTE_lack_of_defensive_planning"
+		texturefile = "gfx/interface/ideas/defensive.dds"
+	}
 }

@@ -1,0 +1,16 @@
+state={
+	id=808
+	name="STATE_808"
+	manpower=4253789
+	state_category=city
+	buildings_max_level_factor=1.000
+
+	history={
+		owner = TRC
+		add_core_of = TRC
+	}
+	
+	provinces={
+		529 3512 6469 6570 9482 
+	}
+}

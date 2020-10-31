@@ -2,39 +2,34 @@
 state={
 	id=51
 	name="STATE_51"
-	manpower = 3327743
 	resources={
-		steel=30 # was: 54
+		steel=30.000
 	}
 
-
-	state_category = metropolis
-	
 	history={
 		owner = TRC
 		victory_points = {
+			6469 10 
+		}
+		victory_points = {
 			587 5 
 		}
-		#victory_points = {
-		#	3444 5
-		#}
-		#victory_points = {
-		#	3547 1
-		#}
 		buildings = {
-			infrastructure = 5
-			arms_factory = 1
-			industrial_complex = 1
-			air_base = 2
+			infrastructure = 8
+			arms_factory = 3
+			industrial_complex = 2
+			air_base = 3
 
 		}
 		add_core_of = TRC
-	
 		set_demilitarized_zone = no
+
 	}
 
 	provinces={
-		 587 3444 354 9522 3547 529 3512 6469 6570 9482 
+		529 587 3444 3547 9522 
 	}
-	 
+	manpower=6144743
+	buildings_max_level_factor=1.000
+	state_category=metropolis
 }
