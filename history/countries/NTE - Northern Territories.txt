@@ -8,8 +8,8 @@ set_stability = 0.4
 set_war_support = 0.6
 
 add_ideas = {
-	NTE_a_fragmented_empire
-	NTE_lack_of_defensive_planning
+		#laws
+
 }
 set_technology = {
  	infantry_weapons = 1
