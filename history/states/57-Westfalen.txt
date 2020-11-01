@@ -21,6 +21,7 @@ state={
 
 		}
 		add_core_of = NTE
+		add_core_of = BOH
 	}
 
 	provinces={

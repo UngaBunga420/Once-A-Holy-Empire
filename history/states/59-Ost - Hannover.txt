@@ -28,6 +28,7 @@ state={
 
 		}
 		add_core_of = NTE
+		add_core_of = BOH
 
 		1939.1.1 = {
 			buildings = {

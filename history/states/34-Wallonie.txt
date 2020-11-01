@@ -25,6 +25,7 @@ state={
 
 		}
 		add_core_of = TRC
+		add_core_of = BOH
 	}
 
 	provinces={

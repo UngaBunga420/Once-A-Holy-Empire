@@ -54,3 +54,14 @@ create_country_leader = {
 
 	}
 }
+
+create_country_leader = {
+	name = "Paul von Lettow-Vorbeck"
+	desc = "POLITICS_PAUL_VORBECK_DESC"
+	picture = "gfx/leaders/TRC/lettow.dds"
+	expire = "2011.1.1"
+	ideology = despotism
+	traits = {
+
+	}
+}
