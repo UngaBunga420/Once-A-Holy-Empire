@@ -46,10 +46,21 @@ set_popularities = {
 
 create_country_leader = {
 	name = "Maurice Thorez"
-	desc = "POLITICS_MAURICE_THOREZ_DESC"
+	#desc = "POLITICS_MAURICE_THOREZ_DESC"
 	picture = "gfx/leaders/HEC/thorez.dds"
 	expire = "2011.1.1"
 	ideology = marxism
+	traits = {
+
+	}
+}
+
+create_country_leader = {
+	name = "Military Council"
+	#desc = "POLITICS_MAURICE_THOREZ_DESC"
+	picture = "gfx/leaders/HEC/council.dds"
+	expire = "2011.1.1"
+	ideology = despotism
 	traits = {
 
 	}
