@@ -27,7 +27,7 @@ ideas = {
 		NTE_lack_of_defensive_planning = {
 
 			allowed = {
-				always = no
+				always = yes
 			}
 
 			allowed_civil_war = {
