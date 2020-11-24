@@ -1,0 +1,18 @@
+state={
+	id=809
+	name="STATE_809"
+	manpower=4253789
+	state_category=town
+	history={
+		victory_points = {
+				6914 30 
+			}
+		owner = SPE
+		add_core_of = SPE
+		add_core_of = FSP
+	}
+	provinces={
+		858 977 3986 6914 9767 13224 
+	}
+	buildings_max_level_factor=1.000
+}
