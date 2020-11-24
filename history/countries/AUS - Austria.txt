@@ -31,26 +31,26 @@ set_technology = {
 }
 
 set_politics = {
-	ruling_party = neutrality
+	ruling_party = democratic
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = no
 }
 set_popularities = { 
-	democratic = 37
-	fascism = 13
-	communism = 5
-	neutrality = 45
+	democratic = 74
+	fascism = 7
+	communism = 3
+	neutrality = 16
 }
 
 
 create_country_leader = {
-	name = "Otto von Habsburg"
-	desc = "POLITICS_OTTO_HABSBURG_DESC"
-	picture = "gfx/leaders/AUS/otto.dds"
+	name = "Engelbert Dollfuß"
+	desc = "POLITICS_ENGELBERT_DESC"
+	picture = "gfx/leaders/AUS/engelbert.dds"
 	expire = "2011.1.1"
-	ideology = despotism
+	ideology = conservative
 	traits = {
-
+		fascist_sympathies
 	}
 }

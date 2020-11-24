@@ -54,10 +54,10 @@ set_popularities = {
 
 
 create_country_leader = {
-	name = "Kaiser Wilhelm II"
-	desc = "POLITICS_KAISER_WILHELM_DESC"
-	picture = "gfx/leaders/BOH/wilhelm.dds"
-	expire = "1941.6.4"
+	name = "Otto von Hapsburg"
+	desc = "POLITICS_OTTO_DESC"
+	picture = "gfx/leaders/BOH/otto.dds"
+	expire = "2011.6.4"
 	ideology = despotism
 	traits = {
 		empire_builder
@@ -66,8 +66,8 @@ create_country_leader = {
 }
 
 create_field_marshal = {
-	name = "Kaiser Wilhelm II"
-	portrait_path = "gfx/leaders/BOH/wilhelm.dds"
+	name = "Otto von Hapsburg"
+	portrait_path = "gfx/leaders/BOH/otto.dds"
 	traits = {
 	media_personality organizer old_guard
 	}
@@ -76,4 +76,17 @@ create_field_marshal = {
 	defense_skill = 5
 	planning_skill = 4
 	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Gerd von Rundstedt"
+	portrait_path = "gfx/leaders/BOH/gerd.dds"
+	traits = {
+		old_guard brilliant_strategist
+	}
+	skill = 6
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 5
+	logistics_skill =4
 }
