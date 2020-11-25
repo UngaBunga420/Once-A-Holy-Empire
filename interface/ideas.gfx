@@ -5604,11 +5604,15 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/Army-Upgrade.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_NTE_a_fragmented_empire"
+		name = "GFX_idea_BOH_a_fragmented_empire"
 		texturefile = "gfx/interface/ideas/fragmented.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_NTE_lack_of_defensive_planning"
 		texturefile = "gfx/interface/ideas/defensive.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BOH_the_rightful_empire"
+		texturefile = "gfx/interface/ideas/rightful.dds"
 	}
 }

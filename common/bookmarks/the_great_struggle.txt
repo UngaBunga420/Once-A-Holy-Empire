@@ -1,0 +1,31 @@
+bookmarks = {
+	bookmark = {
+		name = "The Great Struggle"
+		desc = "GREAT_STRUGGLE_BOOKMARK_LOC"
+		date = 1936.1.1.12
+		picture = "GFX_select_date_1936"
+		default_country = "BOH"
+		default = yes
+		
+		"BOH"={
+			history = "BOH_GTB_DESC_LOC"
+			ideology = neutrality
+			ideas = {
+				BOH_a_fragmented_empire
+				BOH_the_rightful_empire
+			}
+			focuses = {
+
+			}
+		}
+
+		"---"={
+			history = "OTHER_GATHERING_STORM_DESC"
+		}
+		
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}

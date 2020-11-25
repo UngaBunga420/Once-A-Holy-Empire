@@ -84,6 +84,9 @@ SPE = {
 	color = rgb { 242 205 94 }
 	color_ui = rgb { 255 255 122 }
 }
+FSP = { color = rgb { 193 171 8  }
+		color_ui = rgb { 251 222 10 }
+}
 ITA = {
 	color = rgb { 67 127 63 }
 	color_ui = rgb { 87 165 82 }

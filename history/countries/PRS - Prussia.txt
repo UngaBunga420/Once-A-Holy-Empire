@@ -9,6 +9,7 @@ set_war_support = 0.6
 
 add_ideas = {
 	PRS_gymnastics_and_sports_division
+	BOH_a_fragmented_empire
 }
 
 set_technology = {
