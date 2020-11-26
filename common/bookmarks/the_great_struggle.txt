@@ -3,7 +3,7 @@ bookmarks = {
 		name = "The Great Struggle"
 		desc = "GREAT_STRUGGLE_BOOKMARK_LOC"
 		date = 1936.1.1.12
-		picture = "GFX_select_date_1936"
+		picture = "GFX_great_struggle_bookmark"
 		default_country = "BOH"
 		default = yes
 		

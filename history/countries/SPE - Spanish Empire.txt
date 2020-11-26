@@ -45,7 +45,7 @@ create_country_leader = {
 	desc = "POLITICS_COUNCIL_DESC"
 	picture = "gfx/leaders/SPE/council.dds"
 	expire = "2011.1.1"
-	ideology = oligarchy
+	ideology = despotism
 	traits = {
 
 	}

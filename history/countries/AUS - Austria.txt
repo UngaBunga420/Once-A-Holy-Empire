@@ -43,13 +43,12 @@ set_popularities = {
 	neutrality = 16
 }
 
-
 create_country_leader = {
-	name = "Engelbert Dollfuß"
+	name = "Engelbert Dollfuss"
 	desc = "POLITICS_ENGELBERT_DESC"
 	picture = "gfx/leaders/AUS/engelbert.dds"
 	expire = "2011.1.1"
-	ideology = conservative
+	ideology = conservatism
 	traits = {
 		fascist_sympathies
 	}
