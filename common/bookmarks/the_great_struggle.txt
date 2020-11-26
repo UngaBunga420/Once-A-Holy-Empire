@@ -19,6 +19,74 @@ bookmarks = {
 			}
 		}
 
+		"BAV"={
+			history = "BAV_GTB_DESC_LOC"
+			ideology = fascism
+			ideas = {
+				BOH_a_fragmented_empire
+			}
+			focuses = {
+
+			}
+		}
+
+		"TRC"={
+			history = "TRC_GTB_DESC_LOC"
+			ideology = democratic
+			ideas = {
+				BOH_a_fragmented_empire
+			}
+			focuses = {
+
+			}
+		}
+
+		"NTE"={
+			history = "NTE_GTB_DESC_LOC"
+			ideology = neutrality
+			ideas = {
+				BOH_a_fragmented_empire
+				NTE_lack_of_defensive_planning
+			}
+			focuses = {
+
+			}
+		}
+
+		"TPR"={
+			history = "TPR_GTB_DESC_LOC"
+			ideology = communism
+			ideas = {
+				BOH_a_fragmented_empire
+			}
+			focuses = {
+
+			}
+		}
+
+		"PRS"={
+			history = "PRS_GTB_DESC_LOC"
+			ideology = fascism
+			ideas = {
+				BOH_a_fragmented_empire
+				PRS_gymnastics_and_sports_division
+			}
+			focuses = {
+
+			}
+		}
+
+		"SOV"={
+			history = "SOV_GTB_DESC_LOC"
+			ideology = neutrality
+			ideas = {
+			
+			}
+			focuses = {
+
+			}
+		}
+
 		"---"={
 			history = "OTHER_GATHERING_STORM_DESC"
 		}
