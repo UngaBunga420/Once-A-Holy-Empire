@@ -32,23 +32,7 @@ ideas = {
 production_factory_start_efficiency_factor = 0.35
 			}
 		}
-BOH_recovering2 = {
-			picture = chi_hyper_inflation5
-			allowed = {
-				always= yes
-			}
-			allowed_civil_war = {
-				always= yes
-			}
-			visible = {
-				always= yes
-			}
-			modifier = {
-				production_speed_buildings_factor= -0.25
-				political_power_cost= 0.5
-				consumer_goods_factor=0.3
-			}
-		}
+
 		BOH_war_department_plans = {
 			picture = rmy_ordnance_department
 			modifier = {
@@ -114,6 +98,33 @@ BOH_military_advisors = {
 				command_power_gain= 0.5
 			}
 		}
+		
+		BOH_recovering = {
+			ledger = army
+			picture = chi_hyper_inflation5
+			allowed = {
+				always= yes
+			}
+			allowed_civil_war = {
+				always= no
+			}
+			visible = {
+				always= yes
+			}
+			modifier = {
+				production_speed_buildings_factor= -0.25
+political_power_cost= 0.5
+consumer_goods_factor=0.3
+			}
+		}
+		BOH_partially_recovered = {
+			picture = chi_hyper_inflation4
+			modifier = {
+				production_speed_buildings_factor= -0.20
+political_power_cost= 0.3
+consumer_goods_factor=0.25
+			}
+		}
 		BOH_nearly_recovered = {
 			picture = chi_hyper_inflation3
 			modifier = {
@@ -122,22 +133,20 @@ political_power_cost= 0.25
 consumer_goods_factor=0.15
 			}
 		}
-
-		BOH_fully_recovered = {
-			picture = generic_economic_increase
-			modifier = {
-				production_speed_buildings_factor= 0.05
-consumer_goods_factor=0.05
-political_power_gain = 0.1
-			}
-		}
-
 		BOH_reopening_our_economy = {
 			picture = chi_hyper_inflation
 			modifier = {
 				production_speed_buildings_factor= -0.05
 political_power_cost= 0.15
 consumer_goods_factor=0.1
+			}
+		}
+		BOH_fully_recovered = {
+			picture = generic_economic_increase
+			modifier = {
+				production_speed_buildings_factor= 0.05
+consumer_goods_factor=-0.05
+political_power_gain = 0.1
 			}
 		}
 		BOH_closer_ties_to_bavaria = {
@@ -302,27 +311,6 @@ uses = 2
 category = industry 
 }
 			}
-		}
-
-		
-
-		
-
-		
-BOH_partially_recovered = {
-			picture = chi_hyper_inflation4
-			modifier = {
-				production_speed_buildings_factor= -0.20
-political_power_cost= 0.3
-consumer_goods_factor=0.25
-			}
-		}
-		
-
-		
-
-		
-
-		
+		}	
 	}
 }
