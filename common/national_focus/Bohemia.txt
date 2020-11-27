@@ -132,10 +132,30 @@ army_experience= 50
 			factor = 1
 		}
 		available = {
-			TPR = {has_government= neutrality  has_war= no   }
+				OR = {TPR = { is_puppet_of = BOH has_autonomy_state = autonomy_integrated_puppet} TPR = {has_government= neutrality has_war= no neutrality > 0.5  }}
 		}
 		completion_reward = {
 			annex_country = {target = TPR}
+		}
+	}
+#Focus for Integrate Bavaria
+	focus = {
+		id = BOH_integrate_bavaria
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 16
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_hold_a_referendum_in_bavaria }
+		search_filters = { FOCUS_FILTER_ANNEXATION } 
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {BAV = { is_puppet_of = BOH has_autonomy_state = autonomy_integrated_puppet} BAV = {has_government= neutrality  has_war= no neutrality > 0.5  }}
+		}
+		completion_reward = {
+			annex_country = {target = BAV}
 		}
 	}
 	#Focus for Purge Political Conspirators
@@ -345,7 +365,7 @@ days = 365
 		completion_reward = {
 			BAV = {country_event= {
 days = 1 
-id = ohe.14 
+id = ohe.13
 }
    }
 		}
@@ -409,7 +429,12 @@ id = ohe.14
 			factor = 1
 		}
 		completion_reward = {
-			TPR = {add_ideas= kaiser_influence }
+			TPR = { country_event= {
+days = 1 
+id = ohe.1 
+}}
+
+  
 		}
 	}
 	#Focus for Plough Through The Sudetes
@@ -593,10 +618,18 @@ popularity = 0.2
 			factor = 1
 		}
 		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.5
+			}
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = yes
+			}
 			start_civil_war= {
- ideology = communism
-size = 0.6 
-}
+			 ideology = neutrality
+			 size = 0.5
+			}
 		}
 	}
 
@@ -669,7 +702,7 @@ neutrality > 0.75
 		completion_reward = {
 			TPR = {country_event= {
 days = 1 
-id = ohe.18
+id = ohe.17
 }
    }
 		}
@@ -689,7 +722,12 @@ id = ohe.18
 			factor = 1
 		}
 		completion_reward = {
-			BAV = { add_ideas= kaiser_influence }
+			BAV = { country_event= {
+days = 1 
+id = ohe.1 
+}}
+
+  
 		}
 	}
 	#Focus for Elastic Defense
@@ -845,7 +883,7 @@ producer = BOH
 		completion_reward = {
 			country_event= {
 days = 1 
-id = ohe.17
+id = ohe.16
 }
 		}
 	}
@@ -897,7 +935,7 @@ neutrality > 0.75
 		completion_reward = {
 			BAV = {country_event= {
 days = 1 
-id = ohe.12
+id = ohe.11
 }
    }
 		}
@@ -946,7 +984,7 @@ add_war_support= 0.1
 		completion_reward = {
 			create_wargoal= { 
 type = annex_everything 
-target = HEC
+target = BAD
 }
 add_war_support= 0.1
 		}
@@ -1120,7 +1158,7 @@ category = cas_bomber
 		completion_reward = {
 			BAV = {country_event= {
 days = 1 
-id = ohe.15 
+id = ohe.14
 }
    }
 		}
@@ -1143,6 +1181,7 @@ id = ohe.15
 		ai_will_do = {
 			factor = 1
 		}
+		completion_reward = {create_faction= "Democratic German Front" }
 	}
 
 	#Focus for Support Bavarian Democrats
@@ -2351,7 +2390,7 @@ add_idea = BOH_fully_recovered
 	#Focus for Marxism-Leninism
 	focus = {
 		id = BOH_marxismleninism
-		icon = GFX_goal_unknown
+		icon = GFX_BOH_marxismleninism-67379
 		x = 26
 		y = 7
 		cost = 1
@@ -2363,15 +2402,20 @@ add_idea = BOH_fully_recovered
 			factor = 1
 		}
 		
-		
-		bypass = {has_cosmetic_tag = BOH_marxism_leninism}
+		bypass = {
+			has_cosmetic_tag = BOH_marxism_leninism
+		}
+		available = {
+			always = no
+		}
+		completion_reward = { custom_effect_tooltip = BOH_has_marxism_leninism }
 		
 	}
 
 	#Focus for Marxism
 	focus = {
 		id = BOH_marxism
-		icon = GFX_goal_unknown
+		icon = GFX_BOH_marxism-67382
 		x = 30
 		y = 7
 		cost = 1
@@ -2383,11 +2427,12 @@ add_idea = BOH_fully_recovered
 			factor = 1
 		}
 		bypass = {
-			has_cosmetic_tag = BOH_marxism
+			has_cosmetic_tag = BOH_marxism_n
 		}
 		available = {
-			has_cosmetic_tag = BOH_marxism
+			always = no
 		}
+		completion_reward = { custom_effect_tooltip = BOH_has_marxism }
 	}
 
 	#Focus for Approach Pomerania
@@ -2410,7 +2455,7 @@ add_idea = BOH_fully_recovered
 			TPR = {
 country_event= {
 days = 5
-id = ohe.18
+id = ohe.17
 }
 }
 		}
@@ -2462,7 +2507,7 @@ target = TPR
 			BAV = {
 country_event= {
 days = 1
-id = OHE.21
+id = ohe.20
 }
 }
 		}
@@ -2611,7 +2656,7 @@ add_extra_state_shared_building_slots = 1
 		completion_reward = {
 			country_event= {
 days = 1 
-id = ohe.13 
+id = ohe.12 
 }
 		}
 	}
