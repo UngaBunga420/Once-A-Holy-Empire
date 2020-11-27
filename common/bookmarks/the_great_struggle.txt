@@ -76,7 +76,49 @@ bookmarks = {
 			}
 		}
 
+		
+		"---"={
+			history = "OTHER_GATHERING_STORM_DESC"
+		}
+		
+		"FRA"={
+			minor = yes
+			history = "FRA_GTB_DESC_LOC"
+			ideology = neutrality
+			ideas = {
+				
+			}
+			focuses = {
+				
+			}
+		}
+
+		"SPE"={
+			minor = yes
+			history = "SPE_GTB_DESC_LOC"
+			ideology = neutrality
+			ideas = {
+				
+			}
+			focuses = {
+				
+			}
+		}
+
+		"FSP"={
+			minor = yes
+			history = "FRA_GTB_DESC_LOC"
+			ideology = fascism
+			ideas = {
+				
+			}
+			focuses = {
+				
+			}
+		}
+
 		"SOV"={
+			minor = yes
 			history = "SOV_GTB_DESC_LOC"
 			ideology = neutrality
 			ideas = {
@@ -87,10 +129,7 @@ bookmarks = {
 			}
 		}
 
-		"---"={
-			history = "OTHER_GATHERING_STORM_DESC"
-		}
-		
+
 		effect = {
 			randomize_weather = 22345 # <- Obligatory in every bookmark !
 			#123 = { rain_light = yes }
