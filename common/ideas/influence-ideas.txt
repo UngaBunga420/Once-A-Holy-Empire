@@ -1,0 +1,27 @@
+ideas = {
+	country = {
+
+		kaiser_influence = {
+			ledger = army
+			picture = ger_revive_the_kaiserreich
+			allowed = {
+				always= yes
+			}
+			allowed_civil_war = {
+				always= yes
+			}
+			visible = {
+				always= yes
+			}
+			modifier = {
+				neutrality_drift = 0.2
+			}
+			on_add = {
+				country_event= {
+days = 1 
+id = ohe.1 
+}
+			}
+		}
+	}
+}
