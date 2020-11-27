@@ -1,51 +1,4 @@
-spriteTypes = {
-	##Icon For: The Kaiser
-	SpriteType = { 
-		name = "BOH_the_kaiser-61704"
-		texturefile = "gfx/interface/ideas/BOH_the_kaiser-61704.dds"
-	}
-
-	##Icon For: Reformed Economy
-	SpriteType = { 
-		name = "BOH_reformed_economy-61330"
-		texturefile = "gfx/interface/ideas/BOH_reformed_economy-61330.dds"
-	}
-
-	##Icon For: Hugenberg
-	SpriteType = { 
-		name = "BOH_hugenberg-62448"
-		texturefile = "gfx/interface/ideas/BOH_hugenberg-62448.dds"
-	}
-
-	##Icon For: Hjalmar
-	SpriteType = { 
-		name = "BOH_hjalmar-62449"
-		texturefile = "gfx/interface/ideas/BOH_hjalmar-62449.dds"
-	}
-
-	##Icon For: True Blitzkrieg
-	SpriteType = { 
-		name = "BOH_true_blitzkrieg-67078"
-		texturefile = "gfx/interface/ideas/BOH_true_blitzkrieg-67078.dds"
-	}
-
-	##Icon For: Modern Military
-	SpriteType = { 
-		name = "BOH_modern_military-67081"
-		texturefile = "gfx/interface/ideas/BOH_modern_military-67081.dds"
-	}
-
-	##Icon For: Modern Airforce
-	SpriteType = { 
-		name = "BOH_modern_airforce-67082"
-		texturefile = "gfx/interface/ideas/BOH_modern_airforce-67082.dds"
-	}
-
-	##Icon For: Small Arms Production
-	SpriteType = { 
-		name = "BOH_small_arms_production-67084"
-		texturefile = "gfx/interface/ideas/BOH_small_arms_production-67084.dds"
-	}
+spriteTypes = { 
 	##Icon For: The State of The Empire
 	SpriteType = { 
 		name = "GFX_BOH_the_state_of_the_empire-60305"
@@ -1059,6 +1012,82 @@ spriteTypes = {
 		}
 		animation = {
 			animationmaskfile = "gfx/interface/goals/GFX_BOH_true_blitzkrieg-66058.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Marxism-Leninism
+	SpriteType = { 
+		name = "GFX_BOH_marxismleninism-67379"
+		texturefile = "gfx/interface/goals/GFX_BOH_marxismleninism-67379.dds"
+	}
+
+	##Icon Shine For: Marxism-Leninism
+	SpriteType = { 
+		name = "GFX_BOH_marxismleninism-67379_shine"
+		texturefile = "gfx/interface/goals/GFX_BOH_marxismleninism-67379.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_BOH_marxismleninism-67379.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_BOH_marxismleninism-67379.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Marxism
+	SpriteType = { 
+		name = "GFX_BOH_marxism-67382"
+		texturefile = "gfx/interface/goals/GFX_BOH_marxism-67382.dds"
+	}
+
+	##Icon Shine For: Marxism
+	SpriteType = { 
+		name = "GFX_BOH_marxism-67382_shine"
+		texturefile = "gfx/interface/goals/GFX_BOH_marxism-67382.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_BOH_marxism-67382.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_BOH_marxism-67382.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
