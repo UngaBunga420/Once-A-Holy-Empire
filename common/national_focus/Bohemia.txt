@@ -2612,7 +2612,7 @@ add_political_power= 150
 		prerequisite = {
 			focus = BOH_reopening_our_economy_focus
 		}
-		search_filters = { FOCUS_FILTER_STABILITY } 
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL } 
 		ai_will_do = {
 			factor = 1
 		}
@@ -2738,7 +2738,7 @@ add_idea = BOH_fully_recovered
 			focus = BOH_marxismleninism
 			focus = BOH_marxism
 		}
-		search_filters = { FOCUS_FILTER_ANNEXATION } 
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
 		ai_will_do = {
 			factor = 1
 		}
@@ -2758,7 +2758,7 @@ add_idea = BOH_fully_recovered
 		prerequisite = { 
 			focus = BOH_seize_production_means
 		}
-		search_filters = { FOCUS_FILTER_ANNEXATION } 
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
 		ai_will_do = {
 			factor = 1
 		}
