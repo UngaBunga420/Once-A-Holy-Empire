@@ -1,0 +1,579 @@
+add_namespace = ohe
+
+##Event: Kaiser Influence
+country_event = {
+	id = ohe.1
+	title = ohe.1.title
+	desc = ohe.1.desc
+	picture = GFX_report_event_king_speech
+	is_triggered_only = yes
+	option = {
+		name = ohe.1.a
+		ai_chance = { factor = 1}	
+		add_timed_idea= { 
+		idea = kaiser_influence
+		days = 720 
+		}
+	}
+}
+##Event: Demand Annexation
+country_event = {
+	id = ohe.2
+	title = ohe.2.title
+	desc = ohe.2.desc
+	picture = GFX_report_event_vienna_award_hungary
+	is_triggered_only = yes
+	option = {
+		name = ohe.2.a
+		ai_chance = { factor = 2}
+		BOH = {country_event= {
+days = 1 
+id = ohe.3 
+}
+   }
+	}
+	option = {
+		name = ohe.2.b
+		ai_chance = { factor = 1}
+		BOH = {country_event= {
+days = 1 
+id = ohe.4 
+}
+   }
+	}
+}
+##Event: The Rhine Confederation Submits
+country_event = {
+	id = ohe.3
+	title = ohe.3.title
+	desc = ohe.3.desc
+	picture = GFX_report_event_japanese_chinese_surrender
+	is_triggered_only = yes
+	option = {
+		name = ohe.3.a
+		ai_chance = { factor = 1}
+		annex_country= {
+ target = TRC 
+}
+add_named_threat= { 
+threat = 10
+name = ohe.3
+}
+	}
+	option = {
+		name = ohe.3.b
+		ai_chance = { factor = 2}
+		puppet= TRC
+add_named_threat= { 
+threat = 10
+name = ohe.3
+}
+	}
+}
+##Event: The Rhine Government Is Defiant!
+country_event = {
+	id = ohe.4
+	title = ohe.4.title
+	desc = ohe.4.desc
+	picture = GFX_report_event_poland_rejects
+	is_triggered_only = yes
+	option = {
+		name = ohe.4.a
+		ai_chance = { factor = 2}
+		create_wargoal= { 
+	type = annex_everything 
+	target = TRC
+}
+	}
+	option = {
+		name = ohe.4.b
+		ai_chance = { factor = 1}
+		add_political_power=-150
+	}
+}
+##Event: The HRE Proposes An Alliance
+country_event = {
+	id = ohe.5
+	title = ohe.5.title
+	desc = ohe.5.desc
+	picture = GFX_report_event_gre_allied_diplomacy
+	is_triggered_only = yes
+	option = {
+		name = ohe.5.a
+		ai_chance = { factor = 1}
+		BOH = {
+country_event= {
+	days = 1 
+	id = ohe.6
+}}
+	}
+	option = {
+		name = ohe.5.b
+		ai_chance = { factor = 2}
+		BOH = {
+	country_event= {
+		days = 1 
+		id = ohe.8 
+	}
+}
+	}
+}
+##Event: Alliance With Austria
+country_event = {
+	id = ohe.6
+	title = ohe.6.title
+	desc = ohe.6.desc
+	picture = GFX_report_event_chamberlain_announce
+	is_triggered_only = yes
+	option = {
+		name = ohe.6.a
+		ai_chance = { factor = 1}
+		news_event= ohe.7
+create_faction= "Central European Alliance"
+add_to_faction= AUS
+add_named_threat= { 
+threat = 5
+name = ohe.6
+}
+	}
+}
+##Event: HRE Government Announces Military Alliance With Austria!
+news_event = {
+	id = ohe.7
+	title = ohe.7.title
+	desc = ohe.7.desc
+	picture = GFX_report_event_tur_opposition_party
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = ohe.7.a
+		ai_chance = { factor = 1}
+	}
+}
+##Event: Austrian Government Defiant!
+country_event = {
+	id = ohe.8
+	title = ohe.8.title
+	desc = ohe.8.desc
+	picture = GFX_report_event_generic_peaceful_annexation
+	is_triggered_only = yes
+	option = {
+		name = ohe.8.a
+		ai_chance = { factor = 2}
+		create_wargoal= { 
+	type = annex_everything 
+	target = AUS
+}
+	}
+	option = {
+		name = ohe.8.b
+		ai_chance = { factor = 1}
+		add_political_power= -150
+	}
+}
+##Event: The Holy Roman Government Demands Our Subjugation!
+country_event = {
+	id = ohe.9
+	title = ohe.9.title
+	desc = ohe.9.desc
+	picture = GFX_report_event_spr_spanish_civil_war2
+	is_triggered_only = yes
+	option = {
+		name = ohe.9.a
+		ai_chance = { factor = 2}
+		BOH = { 
+country_event= {
+days = 1 
+id = ohe.26
+}
+}
+	}
+	option = {
+		name = ohe.9.b
+		ai_chance = { factor = 1}
+		BOH = {country_event= {
+days = 1 
+id = ohe.10
+}
+   }
+	}
+}
+##Event: Annexation of Austria
+country_event = {
+	id = ohe.10
+	title = ohe.10.title
+	desc = ohe.10.desc
+	picture = GFX_report_event_tur_upheaval_celebration
+	is_triggered_only = yes
+	option = {
+		name = ohe.10.a
+		ai_chance = { factor = 2}
+		annex_country= {
+ target = AUS
+}
+add_named_threat= { 
+threat = 10
+name = ohe.10
+}
+	}
+	option = {
+		name = ohe.10.b
+		ai_chance = { factor = 1}
+		puppet = AUS
+add_named_threat= { 
+threat = 10
+name = ohe.10
+}
+	}
+}
+##Event: HRE Demands Our Annexation
+country_event = {
+	id = ohe.11
+	title = ohe.11.title
+	desc = ohe.11.desc
+	picture = GFX_report_event_generic_peaceful_annexation
+	is_triggered_only = yes
+	option = {
+		name = ohe.11.a
+		ai_chance = { factor = 2}
+		BOH = {
+country_event = {
+days = 5
+id = ohe.25
+}
+}
+	}
+	option = {
+		name = ohe.11.b
+		ai_chance = { factor = 1}
+		BOH = {
+country_event = {
+days = 5
+id = ohe.15
+}
+}
+	}
+}
+##Event: Appointing An Economical Minister
+country_event = {
+	id = ohe.12
+	title = ohe.12.title
+	desc = ohe.12.desc
+	picture = GFX_report_event_vienna_award_negotiations
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = ohe.12.a
+		ai_chance = { factor = 2}
+		add_ideas= BOH_hugenberg
+	}
+	option = {
+		name = ohe.12.b
+		ai_chance = { factor = 1}
+		add_ideas= BOH_hjalmar
+	}
+}
+##Event: The Holy Roman Empire Requests Alliance
+country_event = {
+	id = ohe.13
+	title = ohe.13.title
+	desc = ohe.13.desc
+	picture = GFX_report_event_gre_allied_diplomacy
+	is_triggered_only = yes
+	option = {
+		name = ohe.13.a
+		ai_chance = { factor = 2}
+		BOH = {create_faction= "Right-Wing German Union"  add_to_faction= BAV   }
+	}
+	option = {
+		name = ohe.13.b
+		ai_chance = { factor = 1}
+		BOH = {country_event= {
+days = 1 
+id = ohe.15
+}
+   }
+	}
+}
+##Event: The HRE Proposes An Alliance
+country_event = {
+	id = ohe.14
+	title = ohe.14.title
+	desc = ohe.14.desc
+	picture = GFX_report_event_gre_allied_diplomacy
+	is_triggered_only = yes
+	option = {
+		name = ohe.14.a
+		ai_chance = { factor = 1}
+		BOH = {create_faction= "Democratic German Front"  add_to_faction= BAV   }
+	}
+	option = {
+		name = ohe.14.b
+		ai_chance = { factor = 1}
+		BOH={
+country_event= {
+days = 1 
+id = ohe.15 
+}
+ }
+	}
+}
+##Event: Bavaria Declines
+country_event = {
+	id = ohe.15
+	title = ohe.15.title
+	desc = ohe.15.desc
+	picture = GFX_report_event_soviet_purge_trial
+	is_triggered_only = yes
+	
+	option = {
+		name = ohe.15.a
+		ai_chance = { factor = 2}
+		puppet = BAV
+		BAV = {
+			start_civil_war= {
+				ideology = fascism 
+				size = 0.3
+				
+			}
+			
+		}
+		
+		
+
+	}
+	option = {
+		name = ohe.15.b
+		ai_chance = { factor = 1}
+		add_political_power= -150
+	}
+}
+##Event: Governmental Reorganization
+country_event = {
+	id = ohe.16
+	title = ohe.16.title
+	desc = ohe.16.desc
+	picture = GFX_report_event_generic_communist_congress
+	is_triggered_only = yes
+	option = {
+		name = ohe.16.a
+		ai_chance = { factor = 1}
+		set_cosmetic_tag= BOH_marxism
+	}
+	option = {
+		name = ohe.16.b
+		ai_chance = { factor = 1}
+		set_cosmetic_tag= BOH_marxism_leninism
+	}
+}
+##Event: Proposal from Bohemia
+country_event = {
+	id = ohe.17
+	title = ohe.17.title
+	desc = ohe.17.desc
+	picture = GFX_report_event_generic_peaceful_annexation
+	is_triggered_only = yes
+	option = {
+		name = ohe.17.a
+		ai_chance = { factor = 2}
+		BOH = {country_event= {
+days = 1 
+id = ohe.18
+}
+   }
+	}
+	option = {
+		name = ohe.17.b
+		ai_chance = { factor = 1}
+		BOH = {country_event= {
+days = 1 
+id = ohe.19
+}
+   }
+	}
+}
+##Event: Pomerania has agreed!
+country_event = {
+	id = ohe.18
+	title = ohe.18.title
+	desc = ohe.18.desc
+	picture = GFX_report_event_generic_peaceful_annexation
+	is_triggered_only = yes
+	option = {
+		name = ohe.18.a
+		ai_chance = { factor = 1}
+		annex_country= {
+ target = TPR
+}
+	}
+}
+##Event: Pomerania has declined!
+country_event = {
+	id = ohe.19
+	title = ohe.19.title
+	desc = ohe.19.desc
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		name = ohe.19.a
+		ai_chance = { factor = 2}
+		BOH = {create_wargoal= { 
+type = annex_everything 
+target = TPR
+}
+   }
+	}
+	option = {
+		name = ohe.19.b
+		ai_chance = { factor = 1}
+		add_political_power= -150
+	}
+}
+##Event: The Bohemians are influencing us!
+country_event = {
+	id = ohe.20
+	title = ohe.20.title
+	desc = ohe.20.desc
+	picture = GFX_report_event_communists_cheer
+	is_triggered_only = yes
+	option = {
+		name = ohe.20.a
+		ai_chance = { factor = 2}
+		add_political_power= 150
+BOH = {
+country_event= {
+days = 1 
+id = ohe.21
+}
+}
+add_timed_idea= { 
+		idea = bohemian_communist_propaganda
+		days = 720 
+		}
+	}
+	option = {
+		name = ohe.20.b
+		ai_chance = { factor = 1}
+		add_political_power = -100
+BOH = {country_event= {
+days = 10
+id = ohe.22
+}
+   }
+   add_timed_idea= { 
+		idea = bohemian_communist_propaganda
+		days = 720 
+		}
+	}
+}
+##Event: The Bavarians Respond
+country_event = {
+	id = ohe.21
+	title = ohe.21.title
+	desc = ohe.21.desc
+	picture = GFX_event_test
+	is_triggered_only = yes
+	option = {
+		name = ohe.21.a
+		ai_chance = { factor = 2}
+		create_wargoal= { 
+type = annex_everything 
+target = BAV
+}
+	}
+	option = {
+		name = ohe.21.b
+		ai_chance = { factor = 1}
+		BAV={
+country_event= {
+days = 5
+id = ohe.24
+}
+  }
+	}
+}
+##Event: Our Propaganda Efforts in Bavaria were exposed.
+country_event = {
+	id = ohe.22
+	title = ohe.22.title
+	desc = ohe.22.desc
+	picture = GFX_event_test
+	is_triggered_only = yes
+	option = {
+		name = ohe.22.a
+		ai_chance = { factor = 1}
+		BAV={
+country_event= {
+days = 5
+id = ohe.23
+}
+  }
+	}
+}
+##Event: Investigation Results
+country_event = {
+	id = ohe.23
+	title = ohe.23.title
+	desc = ohe.23.desc
+	picture = GFX_report_event_fascist_gathering
+	is_triggered_only = yes
+	option = {
+		name = ohe.23.a
+		ai_chance = { factor = 1}
+		remove_ideas= BOH_bohemian_communist_propaganda
+	}
+}
+##Event: Bohemians Respond to our Denunciation
+country_event = {
+	id = ohe.24
+	title = ohe.24.title
+	desc = ohe.24.desc
+	picture = GFX_report_event_fascist_speech
+	is_triggered_only = yes
+	option = {
+		name = ohe.24.a
+		ai_chance = { factor = 1}
+		remove_ideas= BOH_bohemian_communist_propaganda
+	}
+}
+##Event: Bavarians Accept Ultimatum
+country_event = {
+	id = ohe.25
+	title = ohe.25.title
+	desc = ohe.25.desc
+	picture = GFX_event_test
+	is_triggered_only = yes
+	option = {
+		name = ohe.25.a
+		ai_chance = { factor = 1}
+		annex_country= {
+ target = BAV
+}
+	}
+	option = {
+		name = ohe.25.b
+		ai_chance = { factor = 2}
+		puppet= BAV
+	}
+}
+##Event: Austria Denies Annexation
+country_event = {
+	id = ohe.26
+	title = ohe.26.title
+	desc = ohe.26.desc
+	picture = GFX_news_event_the_megali_idea_fails
+	is_triggered_only = yes
+	option = {
+		name = ohe.26.a
+		ai_chance = { factor = 2}
+		create_wargoal= { 
+type = annex_everything 
+target = AUS
+}
+	}
+	option = {
+		name = ohe.26.b
+		ai_chance = { factor = 1}
+		add_political_power= -150
+	}
+}

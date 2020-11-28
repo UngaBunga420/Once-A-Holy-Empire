@@ -1,0 +1,3507 @@
+﻿focus_tree = {
+	id = Bohemia
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = BOH
+		}
+	}
+	#Focus for Purge Opponents
+	focus = {
+		id = BOH_purge_opponents
+		icon = GFX_focus_generic_soviet_politics
+		x = 30
+		y = 4
+		cost = 6
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_begin_reconstruction }
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			IF = {
+				limit = { has_idea = BOH_recovering}
+				swap_ideas = {
+					remove_idea = BOH_recovering
+					add_idea = BOH_com_purge	 
+				}
+			}
+			ELSE_IF = {
+				limit = { has_idea = BOH_com_purge}
+				swap_ideas = {
+					remove_idea = BOH_com_purge
+					add_idea = BOH_com_political_reforms	 
+				}
+			}
+			ELSE_IF = {
+				limit = { has_idea = BOH_com_political_reforms}
+				swap_ideas = {
+					remove_idea = BOH_com_political_reforms
+					add_idea = BOH_partially_recovered	 
+				}
+			}
+			ELSE_IF = {
+				limit = { has_idea = BOH_partially_recovered}
+				swap_ideas = {
+					remove_idea = BOH_partially_recovered
+					add_idea = BOH_nearly_recovered	 
+				}
+			}
+			ELSE_IF = {
+				limit = { has_idea = BOH_nearly_recovered}
+				swap_ideas = {
+					remove_idea = BOH_nearly_recovered
+					add_idea = BOH_reopening_our_economy	 
+				}
+			}
+			ELSE = {
+				limit = { has_idea = BOH_reopening_our_economy}
+				swap_ideas = {
+					remove_idea = BOH_reopening_our_economy
+					add_idea = BOH_fully_recovered	 
+				}
+			}
+		}
+	}
+
+	#Focus for Our Doctrine Is Fine
+	focus = {
+		id = BOH_our_doctrine_is_fine
+		icon = GFX_goal_generic_army_artillery2
+		x = 49
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_land_doctrine_assessment }
+		mutually_exclusive = { 
+			focus = BOH_create_war_plans 
+		}
+		mutually_exclusive = { 
+			focus = BOH_modernize_our_doctrines 
+		}
+		mutually_exclusive = { 
+			focus = BOH_ 
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus= {
+      bonus = 0.5 
+      category = cat_superior_firepower
+}
+		}
+	}
+
+	#Focus for Increase Mountaineer Investment
+	focus = {
+		id = BOH_increase_mountaineer_investment
+		icon = GFX_focus_GRE_a_land_of_mountains
+		x = 41
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_more_rigorous_training }
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			set_technology= { 
+tech_mountaineers = 1
+}
+		}
+	}
+
+	#Focus for More Rigorous Training
+	focus = {
+		id = BOH_more_rigorous_training
+		icon = GFX_goal_continuous_reduce_training_time
+		x = 41
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_land_doctrine_assessment }
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas= BOH_army_training
+army_experience= 50
+		}
+	}
+
+	#Focus for Begin Reconstruction
+	focus = {
+		id = BOH_begin_reconstruction
+		icon = GFX_goal_generic_national_unity
+		x = 28
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_abolish_the_monarchy }
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government= communism
+			has_civil_war= no
+		}
+		completion_reward = {
+			add_ideas= BOH_recovering
+		}
+	}
+#Focus for Integrate Pomerania
+	focus = {
+		id = BOH_integrate_pomerania
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 20
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_hold_a_referendum_in_pomerania }
+		search_filters = { FOCUS_FILTER_ANNEXATION } 
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+				OR = {TPR = { is_puppet_of = BOH has_autonomy_state = autonomy_integrated_puppet} TPR = {has_government= neutrality has_war= no neutrality > 0.5  }}
+		}
+		completion_reward = {
+			annex_country = {target = TPR}
+		}
+	}
+#Focus for Integrate Bavaria
+	focus = {
+		id = BOH_integrate_bavaria
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 16
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_hold_a_referendum_in_bavaria }
+		search_filters = { FOCUS_FILTER_ANNEXATION } 
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {BAV = { is_puppet_of = BOH has_autonomy_state = autonomy_integrated_puppet} BAV = {has_government= neutrality  has_war= no neutrality > 0.5  }}
+		}
+		completion_reward = {
+			annex_country = {target = BAV}
+		}
+	}
+	#Focus for Purge Political Conspirators
+	focus = {
+		id = BOH_purge_political_conspirators
+		icon = GFX_goal_generic_major_war
+		x = 16
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_support_the_kaisers_regime }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_timed_idea = { idea = BOH_purged_enemies days = 140 }
+		}
+	}
+
+	#Focus for The State of The Empire
+	focus = {
+		id = BOH_the_state_of_the_empire
+		icon = GFX_BOH_the_state_of_the_empire-60305
+		x = 18
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government= neutrality
+		}
+		completion_reward = {
+			add_political_power= 200
+		}
+	}
+	#Focus for Advancements in Artillery
+	focus = {
+		id = BOH_advancements_in_artillery
+		icon = GFX_goal_generic_army_artillery2
+		x = 49
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_appoint_new_military_commanders }
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus= {
+ bonus = 0.5 
+uses = 2 
+category = artillery
+}
+		}
+	}
+
+	#Focus for Improve our Radio Towers
+	focus = {
+		id = BOH_improve_our_radio_towers
+		icon = GFX_focus_research
+		x = 3
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_plough_through_the_sudetes }
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus= {
+ bonus = 0.5 
+uses = 2
+category = electronics
+}
+		}
+	}
+#Focus for Finish Major Reforms
+	focus = {
+		id = BOH_finish_major_reforms
+		icon = GFX_goal_generic_air_production
+		x = 3
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_encourage_immigration }
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas= BOH_reformed_economy
+		}
+	}
+	#Focus for Improve Industrial Tools
+	focus = {
+		id = BOH_improve_industrial_tools
+		icon = GFX_goal_generic_production
+		x = 3
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BOH_improve_our_radio_towers 
+			focus = BOH_construct_more_arms_factories 
+			focus = BOH_invest_into_rural_areas 
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus= {
+ bonus = 0.75 
+uses = 2 
+category = industry 
+}
+		}
+	}
+
+	#Focus for Encourage Immigration
+	focus = {
+		id = BOH_encourage_immigration
+		icon = GFX_focus_generic_manpower
+		x = 3
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_improve_industrial_tools }
+		search_filters = { FOCUS_FILTER_MANPOWER } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			weekly_manpower = 2000
+		}
+	}
+	#Focus for Superior Small Arms Production
+	focus = {
+		id = BOH_superior_small_arms_production
+		icon = GFX_BOH_superior_small_arms_production-66071
+		x = 53
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BOH_fortification_effort 
+		}
+		prerequisite = { 
+			focus = BOH_improve_static_defense_tactics 
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas= BOH_small_arms_production
+		}
+	}
+	#Focus for Revitalize Our Industry
+	focus = {
+		id = BOH_revitalize_our_industry
+		icon = GFX_BOH_revitalize_our_industry-61330
+		x = 3
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_appoint_an_economical_minister }
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_timed_idea= { 
+idea = BOH_revitalized_industry 
+days = 365 
+}
+		}
+	}
+
+	#Focus for An Ally In The Fuhrer
+	focus = {
+		id = BOH_an_ally_in_the_fuhrer
+		icon = GFX_BOH_an_ally_in_the_fuhrer-60312
+		x = 10
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_the_state_of_the_empire }
+		mutually_exclusive = { 
+			focus = BOH_support_the_pomeranians 
+			focus = BOH_support_the_kaisers_regime 
+			focus = BOH_ 
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			BAV = { has_government= fascism }
+		}
+		completion_reward = {
+			BAV = {country_event= {
+days = 1 
+id = ohe.13
+}
+   }
+		}
+	}
+	#Focus for Consolidate Our Power
+	focus = {
+		id = BOH_consolidate_our_power
+		icon = GFX_focus_generic_strike_at_democracy1
+		x = 11
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_an_ally_in_the_fuhrer }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Appoint Loyal Ministers
+	focus = {
+		id = BOH_appoint_loyal_ministers
+		icon = GFX_goal_tripartite_pact
+		x = 11
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_consolidate_our_power }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Prepare For War With Pomerania
+	focus = {
+		id = BOH_prepare_for_war_with_pomerania
+		icon = GFX_goal_unknown
+		x = 9
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_split_our_claims_with_bavaria }
+		search_filters = { FOCUS_FILTER_ANNEXATION } 
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Gain Influence In Pomerania
+	focus = {
+		id = BOH_gain_influence_in_pomerania
+		icon = GFX_BOH_gain_influence_in_pomerania-60525
+		x = 18
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_support_the_kaisers_regime }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			TPR = { country_event= {
+days = 1 
+id = ohe.1 
+}}
+
+  
+		}
+	}
+	#Focus for Plough Through The Sudetes
+	focus = {
+		id = BOH_plough_through_the_sudetes
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 3
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_revitalize_our_industry }
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			69 = {
+add_building_construction = { 
+     type = infrastructure          
+     level = 1
+     instant_build = yes}
+}
+74 = {
+add_building_construction = { 
+     type = infrastructure          
+     level = 1
+     instant_build = yes}
+}
+66 = {
+add_building_construction = { 
+     type = infrastructure          
+     level = 1
+     instant_build = yes}
+}
+		}
+	}
+	#Focus for Move Torwards The Right
+	focus = {
+		id = BOH_move_torwards_the_right
+		icon = GFX_goal_support_fascism
+		x = 9
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_an_ally_in_the_fuhrer }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			set_politics= {
+ ruling_party = fascism 
+elections_allowed = no 
+}
+  add_ideas= BOH_the_kaiser
+		}
+	}
+
+	#Focus for Invest In The Local Population
+	focus = {
+		id = BOH_invest_in_the_local_population
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 5
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_revitalize_our_industry }
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state={
+ limit = {
+ free_building_slots = {
+ building = industrial_complex
+ size > 0
+ include_locked = yes
+ }
+
+ }
+
+ add_extra_state_shared_building_slots = 1
+ add_building_construction = {
+ type = industrial_complex
+ level = 1
+ instant_build = yes
+ }
+
+ }
+  random_owned_controlled_state={
+ limit = {
+ free_building_slots = {
+ building = industrial_complex
+ size > 0
+ include_locked = yes
+ }
+
+ }
+
+ add_extra_state_shared_building_slots = 1
+ add_building_construction = {
+ type = industrial_complex
+ level = 1
+ instant_build = yes
+ }
+
+ }
+		}
+	}
+
+	#Focus for Fund The Prague Arms Company
+	focus = {
+		id = BOH_fund_the_prague_arms_company
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 1
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_revitalize_our_industry }
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state={
+ limit = {
+ free_building_slots = {
+ building = arms_factory
+ size > 0
+ include_locked = yes
+ }
+
+ }
+
+ add_extra_state_shared_building_slots = 1
+ add_building_construction = {
+ type = arms_factory
+ level = 1
+ instant_build = yes
+ }
+
+ }
+		}
+	}
+
+	#Focus for Less Radical Socialism
+	focus = {
+		id = BOH_less_radical_socialism
+		icon = GFX_goal_tripartite_pact
+		x = 38
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_support_the_pomeranians }
+		mutually_exclusive = { focus = BOH_abolish_the_monarchy }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity= { 
+ideology = democratic 
+popularity = 0.2 
+}
+		}
+	}
+
+	#Focus for Abolish The Monarchy
+	focus = {
+		id = BOH_abolish_the_monarchy
+		icon = GFX_goal_tfv_burn_the_royal_portraits
+		x = 28
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_support_the_pomeranians }
+		mutually_exclusive = { focus = BOH_less_radical_socialism }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.5
+			}
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = yes
+			}
+			start_civil_war= {
+			 ideology = neutrality
+			 size = 0.5
+			}
+		}
+	}
+
+	#Focus for Support The Pomeranians
+	focus = {
+		id = BOH_support_the_pomeranians
+		icon = GFX_focus_prc_agrarian_socialism
+		x = 25
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_the_state_of_the_empire }
+		mutually_exclusive = { 
+			focus = BOH_an_ally_in_the_fuhrer 
+			focus = BOH_support_the_kaisers_regime 
+			focus = BOH_ 
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Support The Kaisers Regime
+	focus = {
+		id = BOH_support_the_kaisers_regime
+		icon = GFX_BOH_support_the_kaisers_regime-60340
+		x = 18
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_the_state_of_the_empire }
+		mutually_exclusive = { 
+			focus = BOH_support_the_pomeranians 
+		}
+		mutually_exclusive = { 
+			focus = BOH_an_ally_in_the_fuhrer 
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power= 200  
+
+neutrality_drift = 0.03
+		}
+	}
+
+	#Focus for Hold A Referendum In Pomerania
+	focus = {
+		id = BOH_hold_a_referendum_in_pomerania
+		icon = GFX_BOH_hold_a_referendum_in_pomerania-60501
+		x = 18
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_gain_influence_in_pomerania }
+		search_filters = { FOCUS_FILTER_ANNEXATION } 
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			TPR = { 
+if = {
+neutrality > 0.75
+}
+}
+		}
+		completion_reward = {
+			TPR = {country_event= {
+days = 1 
+id = ohe.17
+}
+   }
+		}
+	}
+
+	#Focus for Gain Influence In Bavaria
+	focus = {
+		id = BOH_gain_influence_in_bavaria
+		icon = GFX_BOH_gain_influence_in_bavaria-60526
+		x = 20
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_support_the_kaisers_regime }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			BAV = { country_event= {
+days = 1 
+id = ohe.1 
+}}
+
+  
+		}
+	}
+	#Focus for Elastic Defense
+	focus = {
+		id = BOH_elastic_defense
+		icon = GFX_BOH_elastic_defense-66048
+		x = 46
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_modernize_our_doctrines }
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus= {
+ bonus = 0.5 
+uses = 2 
+category = cat_mobile_warfare
+}
+		}
+	}
+
+	#Focus for Split Our Claims With Bavaria
+	focus = {
+		id = BOH_split_our_claims_with_bavaria
+		icon = GFX_goal_molotov_ribbentrop_pact
+		x = 9
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_move_torwards_the_right }
+		search_filters = { FOCUS_FILTER_ANNEXATION } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			MOC = {remove_core_of= BOH   }
+NTE = {remove_core_of= BOH   }
+BAV = {remove_core_of= BOH   }
+MOC = {add_core_of= BAV   }
+NTE = {add_core_of= BAV   }
+TRC = {add_core_of= BAV   }
+		}
+	}
+
+	#Focus for Armor Innovations
+	focus = {
+		id = BOH_armor_innovations
+		icon = GFX_BOH_armor_innovations-66050
+		x = 44
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_mechanize_our_troops }
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus= {
+ bonus = 0.5 
+uses = 2 
+category = armor 
+}
+		}
+	}
+
+	#Focus for Modernize our Artillery
+	focus = {
+		id = BOH_modernize_our_artillery
+		icon = GFX_goal_generic_army_artillery2
+		x = 48
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_our_doctrine_is_fine }
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus= {
+ bonus = 0.5 
+uses = 2 
+category = artillery 
+}
+		}
+	}
+
+	#Focus for Improve Upon Our Infantry Equipment
+	focus = {
+		id = BOH_improve_upon_our_infantry_equipment
+		icon = GFX_BOH_improve_upon_our_infantry_equipment-66059
+		x = 48
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_modernize_our_artillery }
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus= {
+ bonus = 0.5 
+uses = 2 
+category = infantry_weapons
+}
+		}
+	}
+
+	#Focus for Buy Foreign Tanks
+	focus = {
+		id = BOH_buy_foreign_tanks
+		icon = GFX_goal_tripartite_pact
+		x = 45
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BOH_true_blitzkrieg 
+			focus = BOH_elite_army_groups 
+			focus = BOH_superior_small_arms_production 
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_equipment_to_stockpile= {
+ type = light_tank_equipment_1 
+amount = 1000 
+producer = BOH 
+}
+		}
+	}
+	#Focus for Governmental Reorganization
+	focus = {
+		id = BOH_governmental_reorganization
+		icon = GFX_goal_generic_propaganda
+		x = 28
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		
+		prerequisite = { focus = BOH_end_reconstruction }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event= {
+days = 1 
+id = ohe.16
+}
+		}
+	}
+	#Focus for Buy Foreign Artillery
+	focus = {
+		id = BOH_buy_foreign_artillery
+		icon = GFX_focus_generic_little_entente
+		x = 53
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BOH_true_blitzkrieg 
+			focus = BOH_elite_army_groups 
+			focus = BOH_superior_small_arms_production 
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_equipment_to_stockpile= {
+ type = infantry_equipment_1 
+amount = 5000 
+producer = BOH 
+}
+		}
+	}
+	#Focus for Hold A Referendum In Bavaria
+	focus = {
+		id = BOH_hold_a_referendum_in_bavaria
+		icon = GFX_BOH_hold_a_referendum_in_bavaria-60501
+		x = 20
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_gain_influence_in_bavaria }
+		search_filters = { FOCUS_FILTER_ANNEXATION } 
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			BAV = {
+if = {
+neutrality > 0.75
+}
+}
+		}
+		completion_reward = {
+			BAV = {country_event= {
+days = 1 
+id = ohe.11
+}
+   }
+		}
+	}
+
+	#Focus for Crush Prussia
+	focus = {
+		id = BOH_crush_prussia
+		icon = GFX_BOH_crush_prussia-60528
+		x = 16
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_stop_the_communists_in_the_west }
+		search_filters = { FOCUS_FILTER_ANNEXATION } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_wargoal= { 
+type = annex_everything 
+target = PRS
+}
+add_war_support= 0.1
+		}
+	}
+
+	#Focus for Stop The Communists In The West
+	focus = {
+		id = BOH_stop_the_communists_in_the_west
+		icon = GFX_BOH_stop_the_communists_in_the_west-60788
+		x = 18
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BOH_put_new_officials_in_place 
+		}
+		prerequisite = { 
+			focus = BOH_hold_a_referendum_in_bavaria 
+		}
+		search_filters = { FOCUS_FILTER_ANNEXATION } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_wargoal= { 
+type = annex_everything 
+target = BAD
+}
+add_war_support= 0.1
+		}
+	}
+
+	#Focus for Put New Officials In Place
+	focus = {
+		id = BOH_put_new_officials_in_place
+		icon = GFX_goal_generic_neutrality_focus
+		x = 16
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_purge_political_conspirators }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power= 300  add_stability= 0.1
+		}
+	}
+
+	#Focus for Look North
+	focus = {
+		id = BOH_look_north
+		icon = GFX_BOH_look_north-61331
+		x = 20
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_stop_the_communists_in_the_west }
+		search_filters = { FOCUS_FILTER_ANNEXATION } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_wargoal= { 
+type = annex_everything 
+target = NTE
+}
+  add_war_support= 0.1
+		}
+	}
+#Focus for Fortification Effort
+	focus = {
+		id = BOH_fortification_effort
+		icon = GFX_goal_generic_fortify_city
+		x = 52
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_department_of_war }
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas= BOH_fort_effort
+		}
+	}
+
+	#Focus for Doctrine Advancements
+	focus = {
+		id = BOH_doctrine_advancements
+		icon = GFX_goal_generic_army_doctrines
+		x = 50
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_constant_barrage }
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus= {
+ bonus = 1.0
+uses = 1
+category = cat_superior_firepower
+}
+		}
+	}
+
+	#Focus for Mechanize our Troops
+	focus = {
+		id = BOH_mechanize_our_troops
+		icon = GFX_goal_unknown
+		x = 44
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_modernize_our_doctrines }
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus= {
+ bonus = 1.0 
+uses = 1
+category = cat_mechanized_equipment
+}
+		}
+	}
+#Focus for A Democratic Empire
+	focus = {
+		id = BOH_a_democratic_empire
+		icon = GFX_BOH_a_democratic_empire-61329
+		x = 38
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_less_radical_socialism }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			set_politics= {
+ ruling_party = democratic
+elections_allowed = yes 
+}
+  add_ideas= BOH_the_kaiser
+		}
+	}
+
+	
+
+	#Focus for Death from Above
+	focus = {
+		id = BOH_death_from_above
+		icon = GFX_goal_generic_CAS
+		x = 57
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BOH_integrated_airforce 
+		}
+		prerequisite = { 
+			focus = BOH_prague_military_airbase 
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus= {
+ bonus = 1.0 
+uses = 1
+category = cas_bomber
+}
+		}
+	}
+
+	#Focus for Ally With The Rhine
+	focus = {
+		id = BOH_ally_with_the_rhine
+		icon = GFX_BOH_ally_with_the_rhine-61949
+		x = 38
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_a_democratic_empire }
+		mutually_exclusive = { focus = BOH_our_own_democratic_sphere }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			BAV = {country_event= {
+days = 1 
+id = ohe.14
+}
+   }
+		}
+	}
+
+
+
+
+	#Focus for Our Own Democratic Sphere
+	focus = {
+		id = BOH_our_own_democratic_sphere
+		icon = GFX_goal_unknown
+		x = 35
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_a_democratic_empire }
+		mutually_exclusive = { focus = BOH_ally_with_the_rhine }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {create_faction= "Democratic German Front" }
+	}
+
+	#Focus for Support Bavarian Democrats
+	focus = {
+		id = BOH_support_bavarian_democrats
+		icon = GFX_BOH_support_bavarian_democrats-62633
+		x = 35
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BOH_our_own_democratic_sphere 
+			focus = BOH_ally_with_the_rhine 
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			not= {
+is_in_faction_with= TRC
+}
+		}
+	}
+
+	#Focus for Help The Rhine Take Hessen
+	focus = {
+		id = BOH_help_the_rhine_take_hessen
+		icon = GFX_goal_unknown
+		x = 38
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_ally_with_the_rhine }
+		search_filters = { FOCUS_FILTER_ANNEXATION } 
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for A Joint Bavarian Conquest
+	focus = {
+		id = BOH_a_joint_bavarian_conquest
+		icon = GFX_goal_unknown
+		x = 38
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_help_the_rhine_take_hessen }
+		search_filters = { FOCUS_FILTER_ANNEXATION } 
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Split The North
+	focus = {
+		id = BOH_split_the_north
+		icon = GFX_goal_unknown
+		x = 38
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_a_joint_bavarian_conquest }
+		search_filters = { FOCUS_FILTER_ANNEXATION } 
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Integrated Airforce
+	focus = {
+		id = BOH_integrated_airforce
+		icon = GFX_goal_generic_build_airforce
+		x = 57
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_land_doctrine_assessment }
+		mutually_exclusive = { focus = BOH_independent_airforce }
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus= {
+ bonus = 2
+uses = 1
+category = battlefield_support_tree
+}
+		}
+	}
+
+	#Focus for Unrestricted Submarine Warfare
+	focus = {
+		id = BOH_unrestricted_submarine_warfare
+		icon = GFX_goal_generic_navy_anti_submarine
+		x = 68
+		y = 5
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BOH_project_our_power 
+			focus = BOH_protect_our_trade 
+			focus = BOH_a_grand_navy 
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			navy_experience = 15
+add_tech_bonus = {
+	name = ss_bonus
+	bonus = 1.0
+	ahead_reduction = 2
+	uses = 2
+	category = ss_tech
+}
+		}
+	}
+
+	#Focus for Trade Interdiction
+	focus = {
+		id = BOH_trade_interdiction
+		icon = GFX_goal_generic_navy_cruiser
+		x = 67
+		y = 6
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_protect_our_trade }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			navy_experience = 5
+add_tech_bonus = {
+	bonus = 0.5
+	uses = 2
+	category = cat_trade_interdiction
+}
+		}
+	}
+
+	#Focus for Destroyer Efforts
+	focus = {
+		id = BOH_destroyer_efforts
+		icon = GFX_focus_generic_destroyer
+		x = 66
+		y = 5
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BOH_project_our_power 
+			focus = BOH_protect_our_trade 
+			focus = BOH_a_grand_navy 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			navy_experience = 5
+add_tech_bonus = {
+	name = ss_bonus
+	bonus = 1.0
+	ahead_reduction = 2
+	uses = 1
+	category = dd_tech
+}
+		}
+	}
+
+	#Focus for Cruiser Modernization
+	focus = {
+		id = BOH_cruiser_modernization
+		icon = GFX_focus_generic_cruiser2
+		x = 64
+		y = 5
+		cost = 7
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { 
+			focus = BOH_project_our_power 
+			focus = BOH_protect_our_trade 
+			focus = BOH_a_grand_navy 
+		}
+		completion_reward = {
+			navy_experience = 5
+add_tech_bonus = {
+	name = cruiser_bonus
+	bonus = 1.0
+	ahead_reduction = 2
+	uses = 1
+	category = ca_tech
+	category = cl_tech
+}
+		}
+	}
+
+	#Focus for Naval Aviation
+	focus = {
+		id = BOH_naval_aviation
+		icon = GFX_goal_generic_air_fighter2
+		x = 70
+		y = 5
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BOH_project_our_power 
+			focus = BOH_protect_our_trade 
+			focus = BOH_a_grand_navy 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			navy_experience = 5
+air_experience = 15
+add_tech_bonus = {
+	bonus = 1.0
+	uses = 1
+	category = naval_bomber
+}
+		}
+	}
+
+	#Focus for Fleet in being
+	focus = {
+		id = BOH_fleet_in_being
+		icon = GFX_goal_generic_navy_battleship
+		x = 71
+		y = 6
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_a_grand_navy }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			navy_experience = 5
+add_tech_bonus = {
+	bonus = 0.5
+	uses = 2
+	category = cat_fleet_in_being
+}
+		}
+	}
+
+	#Focus for Modern Navy
+	focus = {
+		id = BOH_modern_navy
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 67
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BOH_trade_interdiction 
+			focus = BOH_fleet_in_being 
+			focus = BOH_base_strike_doctrine 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas= BOH_modern_navy
+		}
+	}
+
+	#Focus for Coastal Defenses
+	focus = {
+		id = BOH_coastal_defenses
+		icon = GFX_focus_generic_coastal_fort
+		x = 69
+		y = 6
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BOH_project_our_power 
+			focus = BOH_protect_our_trade 
+			focus = BOH_a_grand_navy 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas= BOH_coastal_forts
+		}
+	}
+
+	#Focus for Small Arms Modernization
+	focus = {
+		id = BOH_small_arms_modernization
+		icon = GFX_BOH_small_arms_modernization-66041
+		x = 47
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_appoint_new_military_commanders }
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus= {
+ bonus = 1.0
+uses = 1
+category = infantry_weapons
+}
+		}
+	}
+
+
+
+	#Focus for Improve Static Defense Tactics
+	focus = {
+		id = BOH_improve_static_defense_tactics
+		icon = GFX_focus_generic_provoke_border_clashes
+		x = 54
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_maximum_planning }
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus= {
+ bonus = 0.5 
+uses = 2 
+category = cat_grand_battle_plan
+}
+		}
+	}
+
+	
+
+	#Focus for Prague Military Airbase
+	focus = {
+		id = BOH_prague_military_airbase
+		icon = GFX_goal_unknown
+		x = 59
+		y = 4
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BOH_integrated_airforce 
+			focus = BOH_independent_airforce 
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			9 = {
+    if = {
+        limit = { is_controlled_by = ROOT }
+        add_building_construction = {
+	type = air_base
+	level = 2
+	instant_build = yes
+}
+    }
+}
+		}
+	}
+
+	#Focus for Elite Army Groups
+	focus = {
+		id = BOH_elite_army_groups
+		icon = GFX_focus_generic_license_production
+		x = 49
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BOH_improve_upon_our_infantry_equipment 
+		}
+		prerequisite = { 
+			focus = BOH_doctrine_advancements 
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas= BOH_elite_army_groups
+		}
+	}
+
+	#Focus for Department of War
+	focus = {
+		id = BOH_department_of_war
+		icon = GFX_focus_usa_focus_on_europe
+		x = 52
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_create_war_plans }
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas= BOH_war_department_plans
+		}
+	}
+
+	#Focus for Maximum Planning
+	focus = {
+		id = BOH_maximum_planning
+		icon = GFX_focus_generic_manpower
+		x = 54
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_create_war_plans }
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus= {
+ bonus = 1.0 
+uses = 1 
+category = cat_grand_battle_plan
+}
+		}
+	}
+
+	
+
+
+
+	#Focus for Air Doctrine Experiments
+	focus = {
+		id = BOH_air_doctrine_experiments
+		icon = GFX_goal_generic_air_doctrine
+		x = 60
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_bomb_them_back_to_the_stone_age }
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus= {
+ bonus = 1 
+uses = 1 
+category = air_doctrine
+}
+		}
+	}
+
+	#Focus for Naval Interests
+	focus = {
+		id = BOH_naval_interests
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 67
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			any_owned_state = {
+    is_coastal = yes
+}
+		}
+		completion_reward = {
+			navy_experience= 15
+		}
+	}
+
+	#Focus for Modern Air Force
+	focus = {
+		id = BOH_modern_air_force
+		icon = GFX_goal_unknown
+		x = 59
+		y = 7
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BOH_air_doctrine_experiments 
+			focus = BOH_prioritize_battlefield_support_bombing 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas= BOH_modern_airforce
+		}
+	}
+
+	#Focus for A Grand Navy
+	focus = {
+		id = BOH_a_grand_navy
+		icon = GFX_goal_generic_navy_cruiser
+		x = 71
+		y = 4
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_naval_interests }
+		mutually_exclusive = { 
+			focus = BOH_project_our_power 
+		}
+		mutually_exclusive = { 
+			focus = BOH_protect_our_trade 
+		}
+		mutually_exclusive = { 
+			focus = BOH_ 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			navy_experience = 15
+add_tech_bonus = {
+	name = capital_ships_bonus
+	bonus = 1.0
+	ahead_reduction = 2
+	uses = 1
+	category = bc_tech
+	category = bb_tech
+}
+add_tech_bonus = {
+	bonus = 1
+	uses = 1
+	category = cat_fleet_in_being
+}
+		}
+	}
+
+	#Focus for Prioritize Battlefield Support Bombing
+	focus = {
+		id = BOH_prioritize_battlefield_support_bombing
+		icon = GFX_goal_unknown
+		x = 58
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_death_from_above }
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus= {
+ bonus = 1 
+uses = 1 
+category = battlefield_support_tree
+}
+		}
+	}
+
+	#Focus for Bomb Them Back to the Stone Age
+	focus = {
+		id = BOH_bomb_them_back_to_the_stone_age
+		icon = GFX_goal_generic_air_bomber
+		x = 61
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BOH_independent_airforce 
+		}
+		prerequisite = { 
+			focus = BOH_prague_military_airbase 
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus= {
+ bonus = 1.0 
+uses = 1
+category = cat_strategic_bomber
+}
+		}
+	}
+
+	#Focus for Project our Power
+	focus = {
+		id = BOH_project_our_power
+		icon = GFX_goal_generic_navy_carrier
+		x = 63
+		y = 4
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_naval_interests }
+		mutually_exclusive = { 
+			focus = BOH_protect_our_trade 
+		}
+		mutually_exclusive = { 
+			focus = BOH_a_grand_navy 
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			navy_experience = 15
+add_tech_bonus = {
+	name = carrier_bonus
+	bonus = 1.0
+	ahead_reduction = 2
+	uses = 1
+	category = cv_tech
+}
+add_tech_bonus = {
+	bonus = 1
+	uses = 1
+	category = cat_base_strike
+}
+		}
+	}
+
+	#Focus for Protect our Trade
+	focus = {
+		id = BOH_protect_our_trade
+		icon = GFX_focus_generic_navy_battleship2
+		x = 67
+		y = 4
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_naval_interests }
+		mutually_exclusive = { 
+			focus = BOH_project_our_power 
+		}
+		mutually_exclusive = { 
+			focus = BOH_a_grand_navy 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			navy_experience = 15
+add_tech_bonus = {
+	name = cr_bonus
+	bonus = 1.0
+	ahead_reduction = 2
+	uses = 1
+	category = cl_tech
+	category = ca_tech
+}
+add_tech_bonus = {
+	bonus = 1
+	uses = 1
+	category = cat_trade_interdiction
+}
+		}
+	}
+
+	#Focus for Base Strike Doctrine
+	focus = {
+		id = BOH_base_strike_doctrine
+		icon = GFX_goal_generic_navy_carrier
+		x = 63
+		y = 6
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_project_our_power }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			navy_experience = 5
+add_tech_bonus = {
+	bonus = 0.5
+	uses = 2
+	category = cat_base_strike
+}
+		}
+	}
+
+	#Focus for Holy Roman Marines
+	focus = {
+		id = BOH_holy_roman_marines
+		icon = GFX_goal_unknown
+		x = 65
+		y = 6
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BOH_project_our_power 
+			focus = BOH_protect_our_trade 
+			focus = BOH_a_grand_navy 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			navy_experience = 5
+army_experience = 5
+add_tech_bonus = {
+	bonus = 1
+	uses = 1
+	category = marine_tech
+}
+		}
+	}
+	#Focus for Prioritize Breakthroughs
+	focus = {
+		id = BOH_prioritize_breakthroughs
+		icon = GFX_BOH_prioritize_breakthroughs-66049
+		x = 46
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_elastic_defense }
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus= {
+ bonus = 1.0 
+uses = 1 
+category = cat_mobile_warfare
+}
+		}
+	}
+
+
+
+	#Focus for Motorized Infantry
+	focus = {
+		id = BOH_motorized_infantry
+		icon = GFX_goal_generic_army_motorized
+		x = 51
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_appoint_new_military_commanders }
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus= {
+ bonus = 1.0
+uses = 1
+category = motorized_equipment
+}
+		}
+	}
+
+	#Focus for Land Doctrine Assessment
+	focus = {
+		id = BOH_land_doctrine_assessment
+		icon = GFX_goal_generic_army_doctrines
+		x = 49
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BOH_small_arms_modernization 
+		}
+		prerequisite = { 
+			focus = BOH_advancements_in_artillery 
+		}
+		prerequisite = { 
+			focus = BOH_motorized_infantry 
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas= BOH_military_advisors
+		}
+	}
+
+	#Focus for Create War Plans
+	focus = {
+		id = BOH_create_war_plans
+		icon = GFX_focus_generic_combined_arms
+		x = 53
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_land_doctrine_assessment }
+		mutually_exclusive = { 
+			focus = BOH_modernize_our_doctrines 
+		}
+		mutually_exclusive = { 
+			focus = BOH_our_doctrine_is_fine 
+		}
+		mutually_exclusive = { 
+			focus = BOH_ 
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus= {
+ bonus = 1 
+uses = 1 
+category = cat_grand_battle_plan
+}
+		}
+	}
+
+	#Focus for True Blitzkrieg
+	focus = {
+		id = BOH_true_blitzkrieg
+		icon = GFX_BOH_true_blitzkrieg-66058
+		x = 45
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BOH_armor_innovations 
+		}
+		prerequisite = { 
+			focus = BOH_prioritize_breakthroughs 
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas= BOH_true_blitzkrieg
+		}
+	}
+
+	#Focus for Constant Barrage
+	focus = {
+		id = BOH_constant_barrage
+		icon = GFX_goal_unknown
+		x = 50
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_our_doctrine_is_fine }
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus= {
+ bonus = 0.5 
+uses = 2 
+category = cat_superior_firepower
+}
+		}
+	}
+
+	#Focus for Improved Fighter Designs
+	focus = {
+		id = BOH_improved_fighter_designs
+		icon = GFX_goal_generic_air_fighter2
+		x = 59
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_prague_military_airbase }
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus= {
+ bonus = 1.0 
+uses = 1
+category = light_fighter
+}
+		}
+	}
+
+	#Focus for Modern Military
+	focus = {
+		id = BOH_modern_military
+		icon = GFX_focus_chi_army_reform
+		x = 49
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BOH_true_blitzkrieg 
+			focus = BOH_elite_army_groups 
+			focus = BOH_superior_small_arms_production 
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas= BOH_modern_military
+		}
+	}
+
+	#Focus for Independent Airforce
+	focus = {
+		id = BOH_independent_airforce
+		icon = GFX_goal_generic_air_fighter2
+		x = 61
+		y = 3
+		cost = 7
+		available_if_capitulated = yes
+		mutually_exclusive = { focus = BOH_integrated_airforce }
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus= {
+ bonus = 2
+uses = 1
+category = air_doctrine
+}
+		}
+	}
+	#Focus for Invest Into Rural Areas
+	focus = {
+		id = BOH_invest_into_rural_areas
+		icon = GFX_focus_generic_industry_2
+		x = 5
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_invest_in_the_local_population }
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state={
+ 	limit = {
+ 		free_building_slots = {
+ 			building = industrial_complex
+ 			size > 0
+ 			include_locked = yes
+ 		}
+
+	}
+
+ 	add_extra_state_shared_building_slots = 1
+ 	add_building_construction = {
+ 		type = industrial_complex
+ 		level = 1
+ 		instant_build = yes
+ 	}
+ }
+random_owned_controlled_state={
+ 	limit = {
+ 		free_building_slots = {
+ 			building = industrial_complex
+ 			size > 0
+ 			include_locked = yes
+ 		}
+
+	}
+
+ 	add_extra_state_shared_building_slots = 1
+ 	add_building_construction = {
+ 		type = industrial_complex
+ 		level = 1
+ 		instant_build = yes
+ 	}
+ }
+random_owned_controlled_state={
+ 	limit = {
+ 		free_building_slots = {
+ 			building = industrial_complex
+ 			size > 0
+ 			include_locked = yes
+ 		}
+
+	}
+
+ 	add_extra_state_shared_building_slots = 1
+ 	add_building_construction = {
+ 		type = industrial_complex
+ 		level = 1
+ 		instant_build = yes
+ 	}
+ }
+random_owned_controlled_state={
+ 	limit = {
+ 		free_building_slots = {
+ 			building = industrial_complex
+ 			size > 0
+ 			include_locked = yes
+ 		}
+
+	}
+
+ 	add_extra_state_shared_building_slots = 1
+ 	add_building_construction = {
+ 		type = industrial_complex
+ 		level = 1
+ 		instant_build = yes
+ 	}
+ }
+		}
+	}
+
+	#Focus for Appoint New Military Commanders
+	focus = {
+		id = BOH_appoint_new_military_commanders
+		icon = GFX_goal_rhineland
+		x = 49
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_corps_commander= { 
+name = 'Gerd von Rundstedt' 
+gfx = 'gerd.dds' 
+traits = {
+}
+ 
+skill = 5 
+}
+  create_corps_commander= { 
+name = 'Ferdinand von Bredow' 
+gfx = 'bredow.dds' 
+traits = {
+}
+ 
+skill = 3 
+}
+		}
+	}
+
+	#Focus for Conquer Rome
+	focus = {
+		id = BOH_conquer_rome
+		icon = GFX_BOH_conquer_rome-61119
+		x = 19
+		y = 11
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_take_switzerland }
+		search_filters = { FOCUS_FILTER_ANNEXATION } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_wargoal= { 
+type = annex_everything 
+target = ITA
+}
+		}
+	}
+
+	#Focus for Send Austria Military Advisors
+	focus = {
+		id = BOH_send_austria_military_advisors
+		icon = GFX_focus_generic_military_mission
+		x = 22
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_ally_austria }
+		mutually_exclusive = { focus = BOH_rebuild_austria }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			AUS = {army_experience= 50  air_experience= 25  add_ideas= BOH_military_advisors   }
+		}
+	}
+
+	#Focus for Ally Austria
+	focus = {
+		id = BOH_ally_austria
+		icon = GFX_BOH_ally_austria-60641
+		x = 22
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_retake_the_industrial_heartland }
+		mutually_exclusive = { focus = BOH_demand_austrian_subjugation }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			AUS = {country_event= {
+days = 1 
+id = ohe.5 
+}
+   }
+		}
+	}
+
+	#Focus for Stabilize The State
+	focus = {
+		id = BOH_stabilize_the_state
+		icon = GFX_goal_generic_neutrality_focus
+		x = 14
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_retake_the_industrial_heartland }
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_idea= { 
+idea = BOH_stabilized 
+}
+add_political_power= 150
+		}
+	}
+#Focus for Political Reforms
+	focus = {
+		id = BOH_com_political_reforms_focus
+		icon = GFX_goal_unknown
+		x = 26
+		y = 4
+		cost = 6
+		available_if_capitulated = yes
+		
+		prerequisite = { 
+			focus = BOH_begin_reconstruction 
+		}
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			IF = {
+				limit = { has_idea = BOH_recovering}
+				swap_ideas = {
+					remove_idea = BOH_recovering
+					add_idea = BOH_com_purge	 
+				}
+			}
+			ELSE_IF = {
+				limit = { has_idea = BOH_com_purge}
+				swap_ideas = {
+					remove_idea = BOH_com_purge
+					add_idea = BOH_com_political_reforms	 
+				}
+			}
+			ELSE_IF = {
+				limit = { has_idea = BOH_com_political_reforms}
+				swap_ideas = {
+					remove_idea = BOH_com_political_reforms
+					add_idea = BOH_partially_recovered	 
+				}
+			}
+			ELSE_IF = {
+				limit = { has_idea = BOH_partially_recovered}
+				swap_ideas = {
+					remove_idea = BOH_partially_recovered
+					add_idea = BOH_nearly_recovered	 
+				}
+			}
+			ELSE_IF = {
+				limit = { has_idea = BOH_nearly_recovered}
+				swap_ideas = {
+					remove_idea = BOH_nearly_recovered
+					add_idea = BOH_reopening_our_economy	 
+				}
+			}
+			ELSE = {
+				limit = { has_idea = BOH_reopening_our_economy}
+				swap_ideas = {
+					remove_idea = BOH_reopening_our_economy
+					add_idea = BOH_fully_recovered	 
+				}
+			}
+			
+		}
+	}
+#Focus for Promote Unionism
+	focus = {
+		id = BOH_promote_unionism
+		icon = GFX_goal_unknown
+		x = 28
+		y = 4
+		cost = 6
+		available_if_capitulated = yes
+		
+		prerequisite = { 
+			focus = BOH_begin_reconstruction 
+		}
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			IF = {
+				limit = { has_idea = BOH_recovering}
+				swap_ideas = {
+					remove_idea = BOH_recovering
+					add_idea = BOH_com_purge	 
+				}
+			}
+			ELSE_IF = {
+				limit = { has_idea = BOH_com_purge}
+				swap_ideas = {
+					remove_idea = BOH_com_purge
+					add_idea = BOH_com_political_reforms	 
+				}
+			}
+			ELSE_IF = {
+				limit = { has_idea = BOH_com_political_reforms}
+				swap_ideas = {
+					remove_idea = BOH_com_political_reforms
+					add_idea = BOH_partially_recovered	 
+				}
+			}
+			ELSE_IF = {
+				limit = { has_idea = BOH_partially_recovered}
+				swap_ideas = {
+					remove_idea = BOH_partially_recovered
+					add_idea = BOH_nearly_recovered	 
+				}
+			}
+			ELSE_IF = {
+				limit = { has_idea = BOH_nearly_recovered}
+				swap_ideas = {
+					remove_idea = BOH_nearly_recovered
+					add_idea = BOH_reopening_our_economy	 
+				}
+			}
+			ELSE = {
+				limit = { has_idea = BOH_reopening_our_economy}
+				swap_ideas = {
+					remove_idea = BOH_reopening_our_economy
+					add_idea = BOH_fully_recovered	 
+				}
+			}
+			
+		}
+	}
+
+	#Focus for Final Stages of Reconstruction
+	focus = {
+		id = BOH_final_stages_of_reconstruction
+		icon = GFX_goal_unknown
+		x = 27
+		y = 5
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BOH_purge_opponents
+		}
+		prerequisite = { 
+			focus = BOH_promote_unionism
+		}
+		prerequisite = { 
+			focus = BOH_com_political_reforms_focus
+		}
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			IF = {
+				limit = { has_idea = BOH_recovering}
+				swap_ideas = {
+					remove_idea = BOH_recovering
+					add_idea = BOH_com_purge	 
+				}
+			}
+			ELSE_IF = {
+				limit = { has_idea = BOH_com_purge}
+				swap_ideas = {
+					remove_idea = BOH_com_purge
+					add_idea = BOH_com_political_reforms	 
+				}
+			}
+			ELSE_IF = {
+				limit = { has_idea = BOH_com_political_reforms}
+				swap_ideas = {
+					remove_idea = BOH_com_political_reforms
+					add_idea = BOH_partially_recovered	 
+				}
+			}
+			ELSE_IF = {
+				limit = { has_idea = BOH_partially_recovered}
+				swap_ideas = {
+					remove_idea = BOH_partially_recovered
+					add_idea = BOH_nearly_recovered	 
+				}
+			}
+			ELSE_IF = {
+				limit = { has_idea = BOH_nearly_recovered}
+				swap_ideas = {
+					remove_idea = BOH_nearly_recovered
+					add_idea = BOH_reopening_our_economy	 
+				}
+			}
+			ELSE = {
+				limit = { has_idea = BOH_reopening_our_economy}
+				swap_ideas = {
+					remove_idea = BOH_reopening_our_economy
+					add_idea = BOH_fully_recovered	 
+				}
+			}
+		}
+	}
+	#Focus for Reopen our economy
+	focus = {
+		id = BOH_reopening_our_economy_focus
+		icon = GFX_goal_unknown
+		x = 29
+		y = 5
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BOH_purge_opponents
+		}
+		prerequisite = { 
+			focus = BOH_promote_unionism
+		}
+		prerequisite = { 
+			focus = BOH_com_political_reforms_focus
+		}
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			IF = {
+				limit = { has_idea = BOH_recovering}
+				swap_ideas = {
+					remove_idea = BOH_recovering
+					add_idea = BOH_com_purge	 
+				}
+			}
+			ELSE_IF = {
+				limit = { has_idea = BOH_com_purge}
+				swap_ideas = {
+					remove_idea = BOH_com_purge
+					add_idea = BOH_com_political_reforms	 
+				}
+			}
+			ELSE_IF = {
+				limit = { has_idea = BOH_com_political_reforms}
+				swap_ideas = {
+					remove_idea = BOH_com_political_reforms
+					add_idea = BOH_partially_recovered	 
+				}
+			}
+			ELSE_IF = {
+				limit = { has_idea = BOH_partially_recovered}
+				swap_ideas = {
+					remove_idea = BOH_partially_recovered
+					add_idea = BOH_nearly_recovered	 
+				}
+			}
+			ELSE_IF = {
+				limit = { has_idea = BOH_nearly_recovered}
+				swap_ideas = {
+					remove_idea = BOH_nearly_recovered
+					add_idea = BOH_reopening_our_economy	 
+				}
+			}
+			ELSE = {
+				limit = { has_idea = BOH_reopening_our_economy}
+				swap_ideas = {
+					remove_idea = BOH_reopening_our_economy
+					add_idea = BOH_fully_recovered	 
+				}
+			}
+		}
+	}
+	#Focus for End Reconstruction
+	focus = {
+		id = BOH_end_reconstruction
+		icon = GFX_focus_generic_industry_3
+		x = 28
+		y = 6
+		cost = 12
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BOH_final_stages_of_reconstruction 
+		}
+		prerequisite = {
+			focus = BOH_reopening_our_economy_focus
+		}
+		search_filters = { FOCUS_FILTER_STABILITY } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			swap_ideas= {
+ remove_idea = BOH_reopening_our_economy 
+add_idea = BOH_fully_recovered
+}
+		}
+	}
+
+	#Focus for Marxism-Leninism
+	focus = {
+		id = BOH_marxismleninism
+		icon = GFX_BOH_marxismleninism-67379
+		x = 26
+		y = 8
+		cost = 0
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_governmental_reorganization }
+		mutually_exclusive = { focus = BOH_marxism }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		
+		bypass = {
+			has_cosmetic_tag = BOH_marxism_leninism
+		}
+		available = {
+			always = no
+		}
+		completion_reward = { custom_effect_tooltip = BOH_has_marxism_leninism }
+		
+	}
+
+	#Focus for Marxism
+	focus = {
+		id = BOH_marxism
+		icon = GFX_BOH_marxism-67382
+		x = 30
+		y = 8
+		cost = 0
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_governmental_reorganization }
+		mutually_exclusive = { focus = BOH_marxismleninism }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		bypass = {
+			has_cosmetic_tag = BOH_marxism_n
+		}
+		available = {
+			always = no
+		}
+		completion_reward = { custom_effect_tooltip = BOH_has_marxism }
+	}
+
+	#Focus for Approach Pomerania
+	focus = {
+		id = BOH_approach_pomerania
+		icon = GFX_goal_unknown
+		x = 25
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BOH_marxismleninism 
+			focus = BOH_marxism 
+		}
+		search_filters = { FOCUS_FILTER_ANNEXATION } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			TPR = {
+				country_event= {
+				days = 5
+				id = ohe.17
+				}
+			}
+		}
+	}
+	#Focus for Deal with Mackensen
+	focus = {
+		id = BOH_deal_with_mackensen
+		icon = GFX_goal_unknown
+		x = 29
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BOH_marxismleninism 
+			focus = BOH_marxism 
+		}
+		search_filters = { FOCUS_FILTER_ANNEXATION } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			TPR = {
+				country_event= {
+				days = 5
+				id = ohe.17
+				}
+			}
+		}
+	}
+	#Focus for March to Hamburg
+	focus = {
+		id = BOH_march_to_hamburg
+		icon = GFX_goal_unknown
+		x = 29
+		y = 10
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BOH_deal_with_mackensen
+		}
+		search_filters = { FOCUS_FILTER_ANNEXATION } 
+		ai_will_do = {
+			factor = 1
+		}
+		bypass = {
+			NTE={
+				exists= no  
+			}
+		}
+		available = {
+			country_exists= NTE
+		}
+		completion_reward = {
+			create_wargoal= { 
+				type = annex_everything 
+				target = NTE
+			}
+		}
+	}
+	#Focus for Annex Baden
+	focus = {
+		id = BOH_annex_baden
+		icon = GFX_goal_unknown
+		x = 27
+		y = 10
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BOH_approach_the_commune_of_baden
+		}
+		search_filters = { FOCUS_FILTER_ANNEXATION } 
+		ai_will_do = {
+			factor = 1
+		}
+		bypass = {
+			BAD={
+				exists= no  
+			}
+		}
+		available = {
+			country_exists= BAD
+		}
+		completion_reward = {
+			create_wargoal= { 
+				type = annex_everything 
+				target = BAD
+			}
+		}
+	}
+	
+	#Focus for Approach the Commune of Baden
+	focus = {
+		id = BOH_approach_the_commune_of_baden
+		icon = GFX_goal_unknown
+		x = 27
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BOH_marxismleninism 
+			focus = BOH_marxism 
+		}
+		search_filters = { FOCUS_FILTER_ANNEXATION } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			TPR = {
+				country_event= {
+				days = 5
+				id = ohe.17
+				}
+			}
+		}
+	}
+	#Focus for Reunited At Last
+	focus = {
+		id = BOH_com_reunited
+		icon = GFX_goal_unknown
+		x = 28
+		y = 11
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BOH_marxismleninism
+			focus = BOH_marxism
+		}
+		available = {
+			# All the HRE cores
+			custom_trigger_tooltip = {
+				tooltip = form_hre_union
+				# Netherlands
+				controls_state = 153
+				controls_state = 152
+				controls_state = 4
+				controls_state = 39
+				controls_state = 160
+				controls_state = 736
+				# Belgium
+				controls_state = 6
+				controls_state = 34
+				# Luxembourg
+				controls_state = 8
+				#Germany
+				controls_state = 51
+				controls_state = 42
+				controls_state = 56
+				controls_state = 57
+				controls_state = 55
+				controls_state = 50
+				controls_state = 59
+				controls_state = 58
+				controls_state = 60
+				controls_state = 54
+				controls_state = 52
+				controls_state = 53
+				controls_state = 61
+				controls_state = 64
+				controls_state = 65
+				controls_state = 62
+				controls_state = 68
+				controls_state = 66
+				controls_state = 67
+				controls_state = 63
+				controls_state = 5
+				controls_state = 763
+				controls_state = 808
+				controls_state = 85
+				controls_state = 188
+			}
+		}
+		completion_reward = { add_ideas = BOH_com_reunited_idea country_event= {
+				days = 5
+				id = ohe.17
+				} }
+		
+		search_filters = { FOCUS_FILTER_ANNEXATION } 
+		ai_will_do = {
+			factor = 1
+		}
+		
+	}
+	
+	#Focus for Proclaim the Holy Roman Union
+	focus = {
+		id = BOH_proclaim_the_holy_roman_union
+		icon = GFX_focus_generic_diplomatic_treaty
+		x = 26
+		y = 12
+		cost = 1
+		available_if_capitulated = yes
+		mutually_exclusive = { focus = BOH_proclaim_the_holy_roman_federation }
+		prerequisite = {focus = BOH_com_reunited }
+		
+		search_filters = { FOCUS_FILTER_ANNEXATION } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = { custom_effect_tooltip = BOH_proclaim_holy_roman_union }
+		
+	}
+	#Focus for Proclaim the Holy Roman Federation
+	focus = {
+		id = BOH_proclaim_the_holy_roman_federation
+		icon = GFX_focus_generic_diplomatic_treaty
+		x = 30
+		y = 12
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = {focus = BOH_com_reunited}
+		mutually_exclusive = { focus = BOH_proclaim_the_holy_roman_union }
+		search_filters = { FOCUS_FILTER_ANNEXATION } 
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = { set_cosmetic_tag = BOH_name_holy_roman_federation custom_effect_tooltip = BOH_proclaim_holy_roman_federation2 }
+		
+	}
+	#Focus for Eliminate Fascism in Italy
+	focus = {
+		id = BOH_com_italy
+		icon = GFX_goal_unknown
+		x = 28
+		y = 14
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BOH_com_switzerland
+		}
+		prerequisite = {focus = BOH_com_austria}
+		search_filters = { FOCUS_FILTER_ANNEXATION } 
+		ai_will_do = {
+			factor = 1
+		}
+		bypass = {
+			ITA={
+				exists= no  
+			}
+		}
+		available = {
+			country_exists= ITA
+		}
+		completion_reward = {
+			create_wargoal= { 
+				type = puppet_wargoal_focus  
+				target = ITA
+			}
+		}
+	}
+	#Focus for Liberate Swiss Workers
+	focus = {
+		id = BOH_com_switzerland
+		icon = GFX_goal_unknown
+		x = 27
+		y = 13
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BOH_proclaim_the_holy_roman_federation
+			focus = BOH_proclaim_the_holy_roman_union
+		}
+		search_filters = { FOCUS_FILTER_ANNEXATION } 
+		ai_will_do = {
+			factor = 1
+		}
+		bypass = {
+			SWI={
+				exists= no  
+			}
+		}
+		available = {
+			country_exists= SWI
+		}
+		completion_reward = {
+			create_wargoal= { 
+				type = annex_everything  
+				target = SWI
+			}
+		}
+	}
+	
+	#Focus for Demand the Annexation of Austria
+	focus = {
+		id = BOH_com_austria
+		icon = GFX_goal_unknown
+		x = 29
+		y = 13
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BOH_proclaim_the_holy_roman_federation
+			focus = BOH_proclaim_the_holy_roman_union
+		}
+		search_filters = { FOCUS_FILTER_ANNEXATION } 
+		ai_will_do = {
+			factor = 1
+		}
+		bypass = {
+			AUS={
+				exists= no  
+			}
+		}
+		available = {
+			country_exists= AUS
+		}
+		completion_reward = {
+			AUS = {
+				country_event= {
+				days = 5
+				id = ohe.9
+				}
+			}
+		}
+	}
+	
+	#Focus for Correct the Pomeranians
+	focus = {
+		id = BOH_correct_the_pomeranians
+		icon = GFX_goal_unknown
+		x = 25
+		y = 10
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_approach_pomerania }
+		search_filters = { FOCUS_FILTER_ANNEXATION } 
+		ai_will_do = {
+			factor = 1
+		}
+		bypass = {
+			TPR={
+exists= no  }
+		}
+		available = {
+			country_exists= TPR
+		}
+		completion_reward = {
+			create_wargoal= { 
+type = annex_everything 
+target = TPR
+}
+		}
+	}
+	#Focus for The Bavarian Issue
+	focus = {
+		id = BOH_the_bavarian_issue
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		x = 31
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BOH_marxismleninism 
+			focus = BOH_marxism 
+		}
+		search_filters = { FOCUS_FILTER_ANNEXATION } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			BAV = {
+country_event= {
+days = 1
+id = ohe.20
+}
+}
+		}
+	}
+
+	#Focus for Destroy the Bavarians
+	focus = {
+		id = BOH_destroy_the_bavarians
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x = 31
+		y = 10
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_the_bavarian_issue }
+		search_filters = { FOCUS_FILTER_ANNEXATION } 
+		ai_will_do = {
+			factor = 1
+		}
+		bypass = {
+			NOT={country_exists= BAV}
+		}
+		available = {
+			country_exists= BAV
+		}
+		completion_reward = {
+			create_wargoal= { 
+type = annex_everything 
+target = BAV
+}
+		}
+	}
+	#Focus for Retake The Industrial Heartland
+	focus = {
+		id = BOH_retake_the_industrial_heartland
+		icon = GFX_BOH_retake_the_industrial_heartland-60614
+		x = 18
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BOH_look_north 
+		}
+		prerequisite = { 
+			focus = BOH_crush_prussia 
+		}
+		search_filters = { FOCUS_FILTER_ANNEXATION } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			TRC = {country_event= {
+days = 1 
+id = ohe.2 
+}
+   }
+		}
+	}
+
+	#Focus for Demand Austrian Subjugation
+	focus = {
+		id = BOH_demand_austrian_subjugation
+		icon = GFX_BOH_demand_austrian_subjugation-60787
+		x = 19
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_retake_the_industrial_heartland }
+		mutually_exclusive = { focus = BOH_ally_austria }
+		search_filters = { FOCUS_FILTER_ANNEXATION } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			AUS = {country_event= {
+days = 1 
+id = ohe.9
+}
+   }
+		}
+	}
+
+	#Focus for Rebuild Austria
+	focus = {
+		id = BOH_rebuild_austria
+		icon = GFX_goal_continuous_repairments
+		x = 19
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BOH_ally_austria 
+			focus = BOH_demand_austrian_subjugation 
+		}
+		mutually_exclusive = { focus = BOH_send_austria_military_advisors }
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+country_exists = AUS
+}
+		}
+		completion_reward = {
+			4 = {              add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+
+            }
+       4 = {
+add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+
+            }
+       4 = {
+add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = arms_factory
+                    level = 1
+                    instant_build = yes
+                }
+
+            }
+		}
+	}
+
+	#Focus for Appoint An Economical Minister
+	focus = {
+		id = BOH_appoint_an_economical_minister
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 3
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event= {
+days = 1 
+id = ohe.12 
+}
+		}
+	}
+
+	#Focus for Take Switzerland
+	focus = {
+		id = BOH_take_switzerland
+		icon = GFX_focus_attack_switzerland
+		x = 19
+		y = 10
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BOH_help_austria_take_hungary 
+			focus = BOH_rebuild_austria 
+		}
+		search_filters = { FOCUS_FILTER_ANNEXATION } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_wargoal= { 
+type = annex_everything 
+target = SWI
+}
+		}
+	}
+
+	#Focus for Help Austria Take Hungary
+	focus = {
+		id = BOH_help_austria_take_hungary
+		icon = GFX_BOH_help_austria_take_hungary-61118
+		x = 22
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_send_austria_military_advisors }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			AUS = {create_wargoal= { 
+type = annex_everything 
+target = HUN
+}
+   }
+		}
+	}
+
+	#Focus for Construct More Arms Factories
+	focus = {
+		id = BOH_construct_more_arms_factories
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 1
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_fund_the_prague_arms_company }
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			9={
+ 	limit = {
+		free_building_slots = {
+ 			building = arms_factory
+ 			size > 0
+ 			include_locked = yes
+ 		}
+
+ 	}
+
+ 	add_extra_state_shared_building_slots = 1
+ 	add_building_construction = {
+ 		type = arms_factory
+ 		level = 1
+ 		instant_build = yes
+ 	}
+
+ }
+9={
+ 	limit = {
+		free_building_slots = {
+ 			building = arms_factory
+ 			size > 0
+ 			include_locked = yes
+ 		}
+
+ 	}
+
+ 	add_extra_state_shared_building_slots = 1
+ 	add_building_construction = {
+ 		type = arms_factory
+ 		level = 1
+ 		instant_build = yes
+ 	}
+
+ }
+9={
+ 	limit = {
+		free_building_slots = {
+ 			building = arms_factory
+ 			size > 0
+ 			include_locked = yes
+ 		}
+
+ 	}
+
+ 	add_extra_state_shared_building_slots = 1
+ 	add_building_construction = {
+ 		type = arms_factory
+ 		level = 1
+ 		instant_build = yes
+ 	}
+
+ }
+9={
+ 	limit = {
+		free_building_slots = {
+ 			building = arms_factory
+ 			size > 0
+ 			include_locked = yes
+ 		}
+
+ 	}
+
+ 	add_extra_state_shared_building_slots = 1
+ 	add_building_construction = {
+ 		type = arms_factory
+ 		level = 1
+ 		instant_build = yes
+ 	}
+
+ }
+9={
+ 	limit = {
+		free_building_slots = {
+ 			building = arms_factory
+ 			size > 0
+ 			include_locked = yes
+ 		}
+
+ 	}
+
+ 	add_extra_state_shared_building_slots = 1
+ 	add_building_construction = {
+ 		type = arms_factory
+ 		level = 1
+ 		instant_build = yes
+ 	}
+
+ }
+9={
+ 	limit = {
+		free_building_slots = {
+ 			building = arms_factory
+ 			size > 0
+ 			include_locked = yes
+ 		}
+
+ 	}
+
+ 	add_extra_state_shared_building_slots = 1
+ 	add_building_construction = {
+ 		type = arms_factory
+ 		level = 1
+ 		instant_build = yes
+ 	}
+
+ }
+9={
+ 	limit = {
+		free_building_slots = {
+ 			building = arms_factory
+ 			size > 0
+ 			include_locked = yes
+ 		}
+
+ 	}
+
+ 	add_extra_state_shared_building_slots = 1
+ 	add_building_construction = {
+ 		type = arms_factory
+ 		level = 1
+ 		instant_build = yes
+ 	}
+
+ }
+		}
+	}
+
+	#Focus for Modernize Our Doctrines
+	focus = {
+		id = BOH_modernize_our_doctrines
+		icon = GFX_goal_generic_army_motorized
+		x = 45
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_land_doctrine_assessment }
+		mutually_exclusive = { 
+			focus = BOH_our_doctrine_is_fine 
+		}
+		mutually_exclusive = { 
+			focus = BOH_create_war_plans 
+		}
+		mutually_exclusive = { 
+			focus = BOH_ 
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus= {
+      bonus = 0.5 
+      category = cat_mobile_warfare
+}
+		}
+	}
+
+	#Focus for Create The Kaiser's Guard
+	focus = {
+		id = BOH_create_the_kaisers_guard
+		icon = GFX_BOH_create_the_kaisers_guard-60506
+		x = 41
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_increase_mountaineer_investment }
+		search_filters = { FOCUS_FILTER_ANNEXATION } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			division_template= { 
+	name = "Kaisers Guard" 
+	regiments = { 
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		artillery_battalion = { x = 2 y = 0 }
+		artillery_battalion = { x = 2 y = 1 }
+	}
+ 
+}
+
+create_unit= { 
+	division = {
+		name = "Kaisers Guard"
+		location = 9
+		division_template = "Kaisers Guard"
+		start_experience_factor = 0.3
+	}
+ }
+
+ create_unit= { 
+	division = {
+		name = "Kaisers Guard"
+		location = 9
+		division_template = "Kaisers Guard"
+		start_experience_factor = 0.3
+	}
+ }
+
+ create_unit= { 
+	division = {
+		name = "Kaisers Guard"
+		location = 9
+		division_template = "Kaisers Guard"
+		start_experience_factor = 0.3
+	}
+ }
+ 
+ create_unit= { 
+	division = {
+		name = "Kaisers Guard"
+		location = 9
+		division_template = "Kaisers Guard"
+		start_experience_factor = 0.3
+	}
+ }
+		}
+	}
+
+
+	
+
+	
+
+
+
+#End of focuses 
+ }
