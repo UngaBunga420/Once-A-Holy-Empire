@@ -2680,7 +2680,7 @@ add_idea = BOH_fully_recovered
 	focus = {
 		id = BOH_approach_pomerania
 		icon = GFX_goal_unknown
-		x = 25
+		x = 24
 		y = 9
 		cost = 10
 		available_if_capitulated = yes
@@ -2705,7 +2705,7 @@ add_idea = BOH_fully_recovered
 	focus = {
 		id = BOH_deal_with_mackensen
 		icon = GFX_goal_unknown
-		x = 29
+		x = 30
 		y = 9
 		cost = 10
 		available_if_capitulated = yes
@@ -2726,11 +2726,56 @@ add_idea = BOH_fully_recovered
 			}
 		}
 	}
+	#Focus for Seize the Means of Production
+	focus = {
+		id = BOH_seize_production_means
+		icon = GFX_goal_unknown
+		x = 28
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BOH_marxismleninism
+			focus = BOH_marxism
+		}
+		search_filters = { FOCUS_FILTER_ANNEXATION } 
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_ideas = BOH_idea_marxism_industry
+		}
+	}
+	#Focus for Liquidate the Capitalist Class
+	focus = {
+		id = BOH_liquidate_the_capitalist_class
+		icon = GFX_goal_unknown
+		x = 28
+		y = 10
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BOH_seize_production_means
+		}
+		search_filters = { FOCUS_FILTER_ANNEXATION } 
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			
+			swap_ideas = {
+					remove_idea = BOH_idea_marxism_industry
+					add_idea = BOH_idea_marxism_leninism_industry	 
+			}
+		}
+	}
 	#Focus for March to Hamburg
 	focus = {
 		id = BOH_march_to_hamburg
 		icon = GFX_goal_unknown
-		x = 29
+		x = 30
 		y = 10
 		cost = 10
 		available_if_capitulated = yes
@@ -2760,7 +2805,7 @@ add_idea = BOH_fully_recovered
 	focus = {
 		id = BOH_annex_baden
 		icon = GFX_goal_unknown
-		x = 27
+		x = 26
 		y = 10
 		cost = 10
 		available_if_capitulated = yes
@@ -2791,7 +2836,7 @@ add_idea = BOH_fully_recovered
 	focus = {
 		id = BOH_approach_the_commune_of_baden
 		icon = GFX_goal_unknown
-		x = 27
+		x = 26
 		y = 9
 		cost = 10
 		available_if_capitulated = yes
@@ -2821,8 +2866,7 @@ add_idea = BOH_fully_recovered
 		cost = 5
 		available_if_capitulated = yes
 		prerequisite = { 
-			focus = BOH_marxismleninism
-			focus = BOH_marxism
+			focus = BOH_liquidate_the_capitalist_class
 		}
 		available = {
 			# All the HRE cores
@@ -2868,7 +2912,7 @@ add_idea = BOH_fully_recovered
 				controls_state = 188
 			}
 		}
-		completion_reward = { add_ideas = BOH_com_reunited_idea country_event= {
+		completion_reward = { remove_ideas = BOH_a_fragmented_empire add_ideas = BOH_com_reunited_idea country_event= {
 				days = 5
 				id = ohe.17
 				} }
@@ -3017,7 +3061,7 @@ add_idea = BOH_fully_recovered
 	focus = {
 		id = BOH_correct_the_pomeranians
 		icon = GFX_goal_unknown
-		x = 25
+		x = 24
 		y = 10
 		cost = 10
 		available_if_capitulated = yes
@@ -3044,7 +3088,7 @@ target = TPR
 	focus = {
 		id = BOH_the_bavarian_issue
 		icon = GFX_focus_generic_anti_fascist_diplomacy
-		x = 31
+		x = 32
 		y = 9
 		cost = 10
 		available_if_capitulated = yes
@@ -3070,7 +3114,7 @@ id = ohe.20
 	focus = {
 		id = BOH_destroy_the_bavarians
 		icon = GFX_goal_generic_occupy_states_ongoing_war
-		x = 31
+		x = 32
 		y = 10
 		cost = 10
 		available_if_capitulated = yes
