@@ -1,4 +1,41 @@
 ideas = {
+	economy = { 
+		law = yes
+		use_list_view = yes
+		
+		BOH_isolation = {
+						
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.4
+				production_speed_industrial_complex_factor = -0.4
+				production_speed_arms_factory_factor = -0.4
+				production_speed_dockyard_factor = -0.4
+				conversion_cost_civ_to_mil_factor= 0.4
+				conversion_cost_mil_to_civ_factor = 0.4
+				generate_wargoal_tension = 1.00
+				join_faction_tension = 0.20
+				send_volunteers_tension = 0.20
+				guarantee_tension = 0.5
+				max_fuel_factor = -0.35
+				fuel_gain_factor = -0.5
+				agency_upgrade_time = 0.8
+			}
+			allowed_to_remove = {
+				OR = {
+					has_war_support > 0.75
+					has_war = yes
+					has_completed_focus = BOH_end_reconstruction					
+				}
+			}
+			
+			cancel_if_invalid = no
+		}
+	}
 	country = {
 
 		BOH_the_kaiser = {
@@ -16,6 +53,7 @@ ideas = {
 				political_power_gain = 0.75
 			}
 		}
+		
 		BOH_idea_marxism_leninism = {
 			picture = generic_communism_drift_bonus
 			allowed = {
