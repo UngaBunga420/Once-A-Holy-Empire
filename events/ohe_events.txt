@@ -358,12 +358,14 @@ country_event = {
 	option = {
 		name = ohe.16.a
 		ai_chance = { factor = 1}
-		set_cosmetic_tag= BOH_marxism
+		set_cosmetic_tag= BOH_marxism_n
+		complete_national_focus = BOH_marxism
 	}
 	option = {
 		name = ohe.16.b
 		ai_chance = { factor = 1}
 		set_cosmetic_tag= BOH_marxism_leninism
+		complete_national_focus = BOH_marxismleninism
 	}
 }
 ##Event: Proposal from Bohemia
@@ -575,5 +577,227 @@ target = AUS
 		name = ohe.26.b
 		ai_chance = { factor = 1}
 		add_political_power= -150
+	}
+}
+##Event: Union with Bohemia?
+country_event = {
+	id = ohe.27
+	title = ohe.27.title
+	desc = ohe.27.desc
+	picture = GFX_report_event_generic_peaceful_annexation
+	is_triggered_only = yes
+	option = {
+		name = ohe.27.a
+		ai_chance = { factor = 2}
+		BOH = {country_event= {
+days = 1 
+id = ohe.28
+}
+   }
+	}
+	option = {
+		name = ohe.27.b
+		ai_chance = { factor = 1}
+		BOH = {country_event= {
+days = 1 
+id = ohe.29
+}
+   }
+	}
+}
+##Event: Baden has agreed!
+country_event = {
+	id = ohe.28
+	title = ohe.28.title
+	desc = ohe.28.desc
+	picture = GFX_report_event_generic_peaceful_annexation
+	is_triggered_only = yes
+	option = {
+		name = ohe.28.a
+		ai_chance = { factor = 1}
+		annex_country= {
+ target = BAD
+}
+	}
+	option = {
+		name = ohe.28.b
+		ai_chance = { factor = 1}
+		puppet = BAD
+	}
+}
+##Event: Baden has declined!
+country_event = {
+	id = ohe.29
+	title = ohe.29.title
+	desc = ohe.29.desc
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		name = ohe.29.a
+		ai_chance = { factor = 2}
+		BOH = {create_wargoal= { 
+type = annex_everything 
+target = BAD
+}
+   }
+	}
+	option = {
+		name = ohe.29.b
+		ai_chance = { factor = 1}
+		add_political_power= -150
+	}
+}
+##Event: (COM Pomerania) Join the Bohemian Union?
+country_event = {
+	id = ohe.30
+	title = ohe.30.title
+	desc = ohe.30.desc
+	picture = GFX_report_event_generic_peaceful_annexation
+	is_triggered_only = yes
+	option = {
+		name = ohe.30.a
+		ai_chance = { factor = 2}
+		BOH = {country_event= {
+days = 1 
+id = ohe.31
+}
+   }
+	}
+	option = {
+		name = ohe.30.b
+		ai_chance = { factor = 1}
+		BOH = {country_event= {
+days = 1 
+id = ohe.32
+}
+   }
+	}
+}
+##Event: (COM) Pomerania has agreed!
+country_event = {
+	id = ohe.31
+	title = ohe.31.title
+	desc = ohe.31.desc
+	picture = GFX_report_event_generic_peaceful_annexation
+	is_triggered_only = yes
+	option = {
+		name = ohe.31.a
+		ai_chance = { factor = 1}
+		annex_country= {
+			target = TPR
+		}
+		set_cosmetic_tag= BOH_com_east_germany
+		country_event= {
+			days = 10 
+			id = ohe.36
+		}
+	}
+}
+##Event: (COM) Pomerania has declined!
+country_event = {
+	id = ohe.32
+	title = ohe.32.title
+	desc = ohe.32.desc
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		name = ohe.32.a
+		ai_chance = { factor = 2}
+		BOH = {create_wargoal= { 
+type = annex_everything 
+target = TPR
+}
+   }
+	}
+	option = {
+		name = ohe.32.b
+		ai_chance = { factor = 1}
+		add_political_power= -150
+	}
+}
+##Event: (COM Mackensen) Join the Bohemian Union?
+country_event = {
+	id = ohe.33
+	title = ohe.33.title
+	desc = ohe.33.desc
+	picture = GFX_report_event_generic_peaceful_annexation
+	is_triggered_only = yes
+	option = {
+		name = ohe.33.a
+		ai_chance = { factor = 2}
+		BOH = {country_event= {
+days = 1 
+id = ohe.34
+}
+   }
+	}
+	option = {
+		name = ohe.33.b
+		ai_chance = { factor = 1}
+		BOH = {country_event= {
+days = 1 
+id = ohe.35
+}
+   }
+	}
+}
+##Event: (COM) Mackensen has agreed!
+country_event = {
+	id = ohe.34
+	title = ohe.34.title
+	desc = ohe.34.desc
+	picture = GFX_report_event_generic_peaceful_annexation
+	is_triggered_only = yes
+	option = {
+		name = ohe.34.a
+		ai_chance = { factor = 1}
+		annex_country= {
+ target = NTE
+}
+	}
+	option = {
+		name = ohe.34.b
+		ai_chance = { factor = 1}
+		puppet = NTE
+	}
+}
+##Event: (COM) Mackensen has declined!
+country_event = {
+	id = ohe.35
+	title = ohe.35.title
+	desc = ohe.35.desc
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		name = ohe.35.a
+		ai_chance = { factor = 2}
+		BOH = {create_wargoal= { 
+type = annex_everything 
+target = NTE
+}
+   }
+	}
+	option = {
+		name = ohe.35.b
+		ai_chance = { factor = 1}
+		add_political_power= -150
+	}
+}
+##Event: Move Capital to Berlin
+country_event = {
+	id = ohe.36
+	title = ohe.36.title
+	desc = ohe.36.desc
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		name = ohe.36.a
+		ai_chance = { factor = 2}
+		set_capital = 64
+   }
+	option = {
+		name = ohe.36.b
+		ai_chance = { factor = 1}
+		set_capital = 9
 	}
 }

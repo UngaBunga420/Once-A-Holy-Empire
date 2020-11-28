@@ -2630,7 +2630,7 @@ add_idea = BOH_fully_recovered
 		icon = GFX_BOH_marxismleninism-67379
 		x = 26
 		y = 8
-		cost = 0
+		cost = 5
 		available_if_capitulated = yes
 		prerequisite = { focus = BOH_governmental_reorganization }
 		mutually_exclusive = { focus = BOH_marxism }
@@ -2644,8 +2644,12 @@ add_idea = BOH_fully_recovered
 		}
 		available = {
 			always = no
+			
 		}
-		completion_reward = { custom_effect_tooltip = BOH_has_marxism_leninism }
+		completion_reward = { 
+			custom_effect_tooltip = BOH_has_marxism_leninism
+			add_ideas = BOH_idea_marxism_leninism
+		}
 		
 	}
 
@@ -2655,7 +2659,7 @@ add_idea = BOH_fully_recovered
 		icon = GFX_BOH_marxism-67382
 		x = 30
 		y = 8
-		cost = 0
+		cost = 5
 		available_if_capitulated = yes
 		prerequisite = { focus = BOH_governmental_reorganization }
 		mutually_exclusive = { focus = BOH_marxismleninism }
@@ -2669,7 +2673,7 @@ add_idea = BOH_fully_recovered
 		available = {
 			always = no
 		}
-		completion_reward = { custom_effect_tooltip = BOH_has_marxism }
+		completion_reward = { custom_effect_tooltip = BOH_has_marxism add_ideas = BOH_idea_marxism }
 	}
 
 	#Focus for Approach Pomerania
@@ -2692,7 +2696,7 @@ add_idea = BOH_fully_recovered
 			TPR = {
 				country_event= {
 				days = 5
-				id = ohe.17
+				id = ohe.30
 				}
 			}
 		}
@@ -2714,10 +2718,10 @@ add_idea = BOH_fully_recovered
 			factor = 1
 		}
 		completion_reward = {
-			TPR = {
+			NTE = {
 				country_event= {
 				days = 5
-				id = ohe.17
+				id = ohe.33
 				}
 			}
 		}
@@ -2800,21 +2804,21 @@ add_idea = BOH_fully_recovered
 			factor = 1
 		}
 		completion_reward = {
-			TPR = {
+			BAD = {
 				country_event= {
 				days = 5
-				id = ohe.17
+				id = ohe.27
 				}
 			}
 		}
 	}
-	#Focus for Reunited At Last
+	#Focus for Reunited under Communism
 	focus = {
 		id = BOH_com_reunited
 		icon = GFX_goal_unknown
 		x = 28
 		y = 11
-		cost = 10
+		cost = 5
 		available_if_capitulated = yes
 		prerequisite = { 
 			focus = BOH_marxismleninism
@@ -2882,7 +2886,7 @@ add_idea = BOH_fully_recovered
 		icon = GFX_focus_generic_diplomatic_treaty
 		x = 26
 		y = 12
-		cost = 1
+		cost = 5
 		available_if_capitulated = yes
 		mutually_exclusive = { focus = BOH_proclaim_the_holy_roman_federation }
 		prerequisite = {focus = BOH_com_reunited }
@@ -2891,7 +2895,7 @@ add_idea = BOH_fully_recovered
 		ai_will_do = {
 			factor = 1
 		}
-		completion_reward = { custom_effect_tooltip = BOH_proclaim_holy_roman_union }
+		completion_reward = { custom_effect_tooltip = BOH_proclaim_holy_roman_union custom_effect_tooltip = BOH_proclaim_holy_roman_union2 }
 		
 	}
 	#Focus for Proclaim the Holy Roman Federation
@@ -2900,7 +2904,7 @@ add_idea = BOH_fully_recovered
 		icon = GFX_focus_generic_diplomatic_treaty
 		x = 30
 		y = 12
-		cost = 1
+		cost = 5
 		available_if_capitulated = yes
 		prerequisite = {focus = BOH_com_reunited}
 		mutually_exclusive = { focus = BOH_proclaim_the_holy_roman_union }
