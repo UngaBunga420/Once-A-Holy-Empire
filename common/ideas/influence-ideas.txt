@@ -42,7 +42,7 @@ ideas = {
 		}
 		
 		kaiser_influence = {
-			picture = BOH_the_kaiser-61704
+			picture = ger_revive_the_kaiserreich
 			allowed = {
 				always= yes
 			}
