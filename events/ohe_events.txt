@@ -9,11 +9,11 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = ohe.1.a
-		ai_chance = { factor = 1}	
+		ai_chance = { factor = 1}
 		add_timed_idea= { 
-		idea = kaiser_influence
-		days = 720 
-		}
+idea = kaiser_influence
+days = 720 
+}
 	}
 }
 ##Event: Demand Annexation
@@ -325,22 +325,21 @@ country_event = {
 	desc = ohe.15.desc
 	picture = GFX_report_event_soviet_purge_trial
 	is_triggered_only = yes
-	
 	option = {
 		name = ohe.15.a
 		ai_chance = { factor = 2}
-		puppet = BAV
-		BAV = {
-			start_civil_war= {
-				ideology = fascism 
-				size = 0.3
-				
-			}
-			
-		}
-		
-		
-
+		BOH = {
+declare_war_on= { 
+target = BAV
+type = annex_everything 
+}
+}
+BAV = {
+start_civil_war= {
+ ideology = neutrality 
+size = 0.7 
+}
+}
 	}
 	option = {
 		name = ohe.15.b
@@ -358,12 +357,12 @@ country_event = {
 	option = {
 		name = ohe.16.a
 		ai_chance = { factor = 1}
-		set_cosmetic_tag= BOH_marxism
+		complete_national_focus= BOH_marxism  set_cosmetic_tag= BOH_marxism
 	}
 	option = {
 		name = ohe.16.b
 		ai_chance = { factor = 1}
-		set_cosmetic_tag= BOH_marxism_leninism
+		complete_national_focus= BOH_marxismleninism  set_cosmetic_tag= BOH_marxism_leninism
 	}
 }
 ##Event: Proposal from Bohemia
@@ -446,10 +445,6 @@ days = 1
 id = ohe.21
 }
 }
-add_timed_idea= { 
-		idea = bohemian_communist_propaganda
-		days = 720 
-		}
 	}
 	option = {
 		name = ohe.20.b
@@ -460,10 +455,6 @@ days = 10
 id = ohe.22
 }
    }
-   add_timed_idea= { 
-		idea = bohemian_communist_propaganda
-		days = 720 
-		}
 	}
 }
 ##Event: The Bavarians Respond

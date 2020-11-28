@@ -609,17 +609,17 @@ spriteTypes = {
 
 	##Icon For: Create The Kaiser's Guard
 	SpriteType = { 
-		name = "GFX_BOH_create_the_kaisers_guard-60506"
-		texturefile = "gfx/interface/goals/GFX_BOH_create_the_kaisers_guard-60506.dds"
+		name = "GFX_BOH_create_the_kaisers_guard-67546"
+		texturefile = "gfx/interface/goals/GFX_BOH_create_the_kaisers_guard-67546.dds"
 	}
 
 	##Icon Shine For: Create The Kaiser's Guard
 	SpriteType = { 
-		name = "GFX_BOH_create_the_kaisers_guard-60506_shine"
-		texturefile = "gfx/interface/goals/GFX_BOH_create_the_kaisers_guard-60506.dds"
+		name = "GFX_BOH_create_the_kaisers_guard-67546_shine"
+		texturefile = "gfx/interface/goals/GFX_BOH_create_the_kaisers_guard-67546.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GFX_BOH_create_the_kaisers_guard-60506.dds"
+			animationmaskfile = "gfx/interface/goals/GFX_BOH_create_the_kaisers_guard-67546.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -631,7 +631,7 @@ spriteTypes = {
 			animationtexturescale = { x = 1.0 y = 1.0 } 
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GFX_BOH_create_the_kaisers_guard-60506.dds"
+			animationmaskfile = "gfx/interface/goals/GFX_BOH_create_the_kaisers_guard-67546.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
