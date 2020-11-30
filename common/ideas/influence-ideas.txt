@@ -56,7 +56,13 @@ ideas = {
 				communism_drift = 0.2
 			}
 		}
-		
+		BOH_worker_strikes_idea = {
+			picture = generic_communism_drift_bonus
+			modifier = {
+				consumer_goods_factor = 0.1
+				industrial_capacity_factory = -0.2
+			}
+		}
 		kaiser_influence = {
 			picture = ger_revive_the_kaiserreich
 			allowed = {

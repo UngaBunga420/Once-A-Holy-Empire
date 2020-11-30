@@ -2245,21 +2245,22 @@ random_owned_controlled_state={
 		}
 		completion_reward = {
 			create_corps_commander= { 
-name = 'Gerd von Rundstedt' 
-gfx = 'gerd.dds' 
-traits = {
-}
- 
-skill = 5 
-}
-  create_corps_commander= { 
-name = 'Ferdinand von Bredow' 
-gfx = 'bredow.dds' 
-traits = {
-}
- 
-skill = 3 
-}
+				name = "Gerd von Rundstedt"
+				picture = "gerd.dds"
+				traits = {
+					old_guard brilliant_strategist
+				}
+				skill = 6
+				attack_skill = 3
+				defense_skill = 3
+				planning_skill = 5
+				logistics_skill =4
+			}
+			create_corps_commander= { 
+				name = "Ferdinand von Bredow" 
+				picture = "ferdinand-von-bredow.dds" 
+				skill = 3 
+			}
 		}
 	}
 
@@ -2692,7 +2693,7 @@ add_idea = BOH_fully_recovered
 	focus = {
 		id = BOH_approach_pomerania
 		icon = GFX_BOH_gain_influence_in_pomerania-60525
-		x = 24
+		x = 25
 		y = 9
 		cost = 10
 		available_if_capitulated = yes
@@ -2717,7 +2718,7 @@ add_idea = BOH_fully_recovered
 	focus = {
 		id = BOH_deal_with_mackensen
 		icon = GFX_goal_unknown
-		x = 30
+		x = 29
 		y = 9
 		cost = 10
 		available_if_capitulated = yes
@@ -2742,13 +2743,18 @@ add_idea = BOH_fully_recovered
 	focus = {
 		id = BOH_seize_production_means
 		icon = GFX_goal_unknown
-		x = 28
-		y = 9
+		x = 25
+		y = 15
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { 
-			focus = BOH_marxismleninism
-			focus = BOH_marxism
+			focus = BOH_com_healthcare
+		}
+		prerequisite = { 
+			focus = BOH_improve_education
+		}
+		prerequisite = { 
+			focus = BOH_reorganize_labor_plans
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY } 
 		ai_will_do = {
@@ -2763,8 +2769,8 @@ add_idea = BOH_fully_recovered
 	focus = {
 		id = BOH_liquidate_the_capitalist_class
 		icon = GFX_goal_unknown
-		x = 28
-		y = 10
+		x = 25
+		y = 16
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { 
@@ -2783,11 +2789,74 @@ add_idea = BOH_fully_recovered
 			}
 		}
 	}
+	#Focus for Reorganize Labor Plans
+	focus = {
+		id = BOH_reorganize_labor_plans
+		icon = GFX_goal_unknown
+		x = 27
+		y = 14
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BOH_com_internal_policy
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_ideas = BOH_idea_reorganized_labor
+			
+		}
+	}
+	#Focus for Improve our School System
+	focus = {
+		id = BOH_improve_education
+		icon = GFX_goal_unknown
+		x = 23
+		y = 14
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BOH_com_internal_policy
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_ideas = BOH_idea_socialist_education
+			
+		}
+	}
+	#Focus for Improve Healthcare Standards
+	focus = {
+		id = BOH_com_healthcare
+		icon = GFX_goal_unknown
+		x = 25
+		y = 14
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BOH_com_internal_policy
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_ideas = BOH_idea_socialist_education
+			
+		}
+	}
 	#Focus for March to Hamburg
 	focus = {
 		id = BOH_march_to_hamburg
 		icon = GFX_goal_unknown
-		x = 30
+		x = 29
 		y = 10
 		cost = 10
 		available_if_capitulated = yes
@@ -2817,7 +2886,7 @@ add_idea = BOH_fully_recovered
 	focus = {
 		id = BOH_annex_baden
 		icon = GFX_goal_unknown
-		x = 26
+		x = 27
 		y = 10
 		cost = 10
 		available_if_capitulated = yes
@@ -2848,7 +2917,7 @@ add_idea = BOH_fully_recovered
 	focus = {
 		id = BOH_approach_the_commune_of_baden
 		icon = GFX_goal_unknown
-		x = 26
+		x = 27
 		y = 9
 		cost = 10
 		available_if_capitulated = yes
@@ -2878,27 +2947,29 @@ add_idea = BOH_fully_recovered
 		cost = 5
 		available_if_capitulated = yes
 		prerequisite = { 
-			focus = BOH_liquidate_the_capitalist_class
+			focus = BOH_annex_baden
+		}
+		prerequisite = { 
+			focus = BOH_correct_the_pomeranians
+		}
+		prerequisite = { 
+			focus = BOH_march_to_hamburg
+		}
+		prerequisite = { 
+			focus = BOH_destroy_the_bavarians
 		}
 		available = {
 			# All the HRE cores
 			custom_trigger_tooltip = {
 				tooltip = form_hre_union
-				# Netherlands
-				controls_state = 153
-				controls_state = 152
-				controls_state = 4
-				controls_state = 39
-				controls_state = 160
-				controls_state = 736
-				# Belgium
+				# Rhine
 				controls_state = 6
 				controls_state = 34
-				# Luxembourg
+				controls_state = 807
 				controls_state = 8
-				#Germany
-				controls_state = 51
 				controls_state = 42
+				#German Minors
+				controls_state = 51
 				controls_state = 56
 				controls_state = 57
 				controls_state = 55
@@ -2946,6 +3017,7 @@ add_idea = BOH_fully_recovered
 		available_if_capitulated = yes
 		mutually_exclusive = { focus = BOH_proclaim_the_holy_roman_federation }
 		prerequisite = {focus = BOH_com_reunited }
+		prerequisite = {focus = BOH_marxismleninism }
 		
 		search_filters = { FOCUS_FILTER_ANNEXATION } 
 		ai_will_do = {
@@ -2953,11 +3025,12 @@ add_idea = BOH_fully_recovered
 		}
 		bypass = {
 			has_cosmetic_tag = BOH_holy_roman_union
+			has_cosmetic_tag = BOH_marxism_leninism
 		}
 		available = {
 			always = no
 		}
-		completion_reward = { custom_effect_tooltip = BOH_proclaim_holy_roman_union custom_effect_tooltip = BOH_proclaim_holy_roman_union2 }
+		completion_reward = { custom_effect_tooltip = BOH_proclaim_holy_roman_union2 }
 		
 	}
 	#Focus for Proclaim the Holy Roman Federation
@@ -2969,32 +3042,33 @@ add_idea = BOH_fully_recovered
 		cost = 5
 		available_if_capitulated = yes
 		prerequisite = {focus = BOH_com_reunited}
+		prerequisite = {focus = BOH_marxism}
 		mutually_exclusive = { focus = BOH_proclaim_the_holy_roman_union }
 		search_filters = { FOCUS_FILTER_ANNEXATION } 
 		ai_will_do = {
 			factor = 1
 		}
 		bypass = {
+			has_cosmetic_tag = BOH_marxism_n
 			has_cosmetic_tag = BOH_holy_roman_federation
 		}
 		available = {
 			always = no
 		}
-		completion_reward = { set_cosmetic_tag = BOH_name_holy_roman_federation custom_effect_tooltip = BOH_proclaim_holy_roman_federation2 }
+		completion_reward = { custom_effect_tooltip = BOH_proclaim_holy_roman_federation2 }
 		
 	}
 	#Focus for Eliminate Fascism in Italy
 	focus = {
 		id = BOH_com_italy
 		icon = GFX_BOH_conquer_rome-61119
-		x = 28
+		x = 31
 		y = 14
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { 
-			focus = BOH_com_switzerland
+			focus = BOH_com_foreign_policy
 		}
-		prerequisite = {focus = BOH_com_austria}
 		search_filters = { FOCUS_FILTER_ANNEXATION } 
 		ai_will_do = {
 			factor = 1
@@ -3018,13 +3092,12 @@ add_idea = BOH_fully_recovered
 	focus = {
 		id = BOH_com_switzerland
 		icon = GFX_focus_attack_switzerland
-		x = 27
-		y = 13
+		x = 33
+		y = 14
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { 
-			focus = BOH_proclaim_the_holy_roman_federation
-			focus = BOH_proclaim_the_holy_roman_union
+			focus = BOH_com_foreign_policy
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION } 
 		ai_will_do = {
@@ -3051,12 +3124,11 @@ add_idea = BOH_fully_recovered
 		id = BOH_com_austria
 		icon = GFX_BOH_demand_austrian_subjugation-60787
 		x = 29
-		y = 13
+		y = 14
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { 
-			focus = BOH_proclaim_the_holy_roman_federation
-			focus = BOH_proclaim_the_holy_roman_union
+			focus = BOH_com_foreign_policy
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION } 
 		ai_will_do = {
@@ -3079,12 +3151,186 @@ add_idea = BOH_fully_recovered
 			}
 		}
 	}
-	
+	#Focus for Sympathize with French Workers
+	focus = {
+		id = BOH_aid_french_workers
+		icon = GFX_BOH_aid_french_workers
+		x = 30
+		y = 15
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BOH_com_foreign_policy
+		}
+		search_filters = { FOCUS_FILTER_ANNEXATION } 
+		ai_will_do = {
+			factor = 1
+		}
+		bypass = {
+			FRA={
+				exists= no  
+			}
+		}
+		available = {
+			country_exists= FRA
+		}
+		completion_reward = {
+			FRA = {country_event = {
+				days = 1 
+				id = ohe.41
+			}
+			
+			add_timed_idea = { idea = bohemian_communist_propaganda days = 220 }
+			}
+		}
+	}
+	#Focus for Retake Alsace
+	focus = {
+		id = BOH_com_retake_alsace
+		icon = GFX_focus_attack_france
+		x = 30
+		y = 16
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BOH_aid_french_workers
+		}
+		search_filters = { FOCUS_FILTER_ANNEXATION } 
+		ai_will_do = {
+			factor = 1
+		}
+		bypass = {
+			FRA={
+				exists= no  
+			}
+		}
+		available = {
+			country_exists= FRA
+		}
+		completion_reward = {
+			create_wargoal= { 
+				type = annex_everything  
+				target = FRA
+			}
+		}
+	}
+	#Focus for Sympathize with French Workers
+	focus = {
+		id = BOH_revitalize_soviet_sentiments
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		x = 32
+		y = 15
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BOH_com_foreign_policy
+		}
+		search_filters = { FOCUS_FILTER_ANNEXATION } 
+		ai_will_do = {
+			factor = 1
+		}
+		bypass = {
+			SOV={
+				exists= no  
+			}
+		}
+		available = {
+			country_exists= SOV
+		}
+		completion_reward = {
+			SOV = {country_event = {
+				days = 1 
+				id = ohe.41
+			}
+			add_timed_idea = { idea = bohemian_communist_propaganda days = 360 }
+			}
+		}
+	}
+	#Focus for The Giant in the East
+	focus = {
+		id = BOH_com_take_russia
+		icon = GFX_focus_attack_russia
+		x = 32
+		y = 16
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BOH_revitalize_soviet_sentiments
+		}
+		search_filters = { FOCUS_FILTER_ANNEXATION } 
+		ai_will_do = {
+			factor = 1
+		}
+		bypass = {
+			SOV={
+				exists= no  
+			}
+		}
+		available = {
+			country_exists= SOV
+		}
+		completion_reward = {
+			create_wargoal= { 
+				type = annex_everything  
+				target = SOV
+			}
+		}
+	}
+	#Focus for Foreign Policy
+	focus = {
+		id = BOH_com_foreign_policy
+		icon = GFX_goal_unknown
+		x = 31
+		y = 13
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			
+			focus = BOH_proclaim_the_holy_roman_federation
+			focus = BOH_proclaim_the_holy_roman_union
+		}
+		search_filters = { FOCUS_FILTER_ANNEXATION } 
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			country_event= {
+			days = 1
+			id = ohe.39
+			}
+		}
+	}
+	#Focus for Internal Policy
+	focus = {
+		id = BOH_com_internal_policy
+		icon = GFX_goal_unknown
+		x = 25
+		y = 13
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			
+			focus = BOH_proclaim_the_holy_roman_federation
+			focus = BOH_proclaim_the_holy_roman_union
+		}
+		search_filters = { FOCUS_FILTER_ANNEXATION } 
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			country_event= {
+			days = 1
+			id = ohe.40
+			}
+		}
+	}
 	#Focus for Correct the Pomeranians
 	focus = {
 		id = BOH_correct_the_pomeranians
 		icon = GFX_goal_unknown
-		x = 24
+		x = 25
 		y = 10
 		cost = 10
 		available_if_capitulated = yes
@@ -3111,7 +3357,7 @@ target = TPR
 	focus = {
 		id = BOH_the_bavarian_issue
 		icon = GFX_BOH_gain_influence_in_bavaria-60526
-		x = 32
+		x = 31
 		y = 9
 		cost = 10
 		available_if_capitulated = yes
@@ -3137,7 +3383,7 @@ id = ohe.20
 	focus = {
 		id = BOH_destroy_the_bavarians
 		icon = GFX_BOH_destroy_the_bavarians
-		x = 32
+		x = 31
 		y = 10
 		cost = 10
 		available_if_capitulated = yes
@@ -3147,10 +3393,21 @@ id = ohe.20
 			factor = 1
 		}
 		bypass = {
-			NOT={country_exists= BAV}
+			OR = {
+				NOT={
+					country_exists= BAV
+					
+				}
+				BAV = {is_puppet_of = BOH}
+			}
 		}
-		available = {
-			country_exists= BAV
+		available = 
+		{
+			AND = {
+				country_exists= BAV
+				NOT={ BAV = {is_puppet_of = BOH} }
+			}
+			
 		}
 		completion_reward = {
 			create_wargoal= { 

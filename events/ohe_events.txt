@@ -801,6 +801,7 @@ country_event = {
 			days = 5
 			id = ohe.38 
 		}
+		complete_national_focus = BOH_proclaim_the_holy_roman_union
    }
 	option = {
 		name = ohe.37.b
@@ -852,6 +853,7 @@ country_event = {
 			days = 5
 			id = ohe.38 
 		}
+		complete_national_focus = BOH_proclaim_the_holy_roman_federation
 	}
 }
 ##Event: Move our capital #2
@@ -886,4 +888,48 @@ country_event = {
 		ai_chance = { factor = 1}
 		set_capital = 4
 	}
+}
+##Event: COM BOH Foreign Policy
+country_event = {
+	id = ohe.39
+	title = ohe.39.title
+	desc = ohe.39.desc
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		name = ohe.39.a
+		ai_chance = { factor = 1}
+   }
+}
+
+##Event: COM BOH Domestic Policy
+country_event = {
+	id = ohe.40
+	title = ohe.40.title
+	desc = ohe.40.desc
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		name = ohe.40.a
+		ai_chance = { factor = 1}
+   }
+}
+##Event: Worker Strikes
+country_event = {
+	id = ohe.41
+	title = ohe.41.title
+	desc = ohe.41.desc
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		name = ohe.41.a
+		ai_chance = { factor = 2}
+		add_timed_idea = { idea = BOH_worker_strikes_idea days = 140 }
+   }
+   option = {
+		name = ohe.41.b
+		ai_chance = { factor = 1}
+		add_political_power = -150
+		add_timed_idea = { idea = BOH_worker_strikes_idea days = 90 }
+   }
 }

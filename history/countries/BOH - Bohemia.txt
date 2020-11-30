@@ -67,6 +67,26 @@ create_country_leader = {
 	}
 }
 
+create_country_leader = {
+	name = "Klement Gottwald"
+	desc = "POLITICS_KLEMENT_GOTTWALD_DESC"
+	picture = "gfx/leaders/BOH/Portrait_Czech_Klement_Gottwald.dds"
+	expire = "1965.1.1"
+	ideology = stalinism
+	traits = {
+		#
+	}
+}
+create_country_leader = {
+	name = "Klement Gottwald"
+	desc = "POLITICS_KLEMENT_GOTTWALD_DESC"
+	picture = "gfx/leaders/BOH/Portrait_Czech_Klement_Gottwald.dds"
+	expire = "1965.1.1"
+	ideology = marxleninism
+	traits = {
+		#
+	}
+}
 create_field_marshal = {
 	name = "Otto von Hapsburg"
 	portrait_path = "gfx/leaders/BOH/otto.dds"
@@ -80,15 +100,3 @@ create_field_marshal = {
 	logistics_skill = 3
 }
 
-create_corps_commander = {
-	name = "Gerd von Rundstedt"
-	portrait_path = "gfx/leaders/BOH/gerd.dds"
-	traits = {
-		old_guard brilliant_strategist
-	}
-	skill = 6
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 5
-	logistics_skill =4
-}

@@ -4,7 +4,6 @@ tags={
 	"Map"
 	"National Focuses"
 }
-name="Once A Holy Empire"
+name="Once A Holy Empire (Beta Branch)"
 picture="thumbnail.png"
 supported_version="1.10.*"
-remote_file_id="2264286887"
