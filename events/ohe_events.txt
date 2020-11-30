@@ -80,7 +80,7 @@ country_event = {
 	option = {
 		name = ohe.4.a
 		ai_chance = { factor = 2}
-		create_wargoal= { 
+		create_wargoal= {
 	type = annex_everything 
 	target = TRC
 }
@@ -216,15 +216,6 @@ threat = 10
 name = ohe.10
 }
 	}
-	option = {
-		name = ohe.10.b
-		ai_chance = { factor = 1}
-		puppet = AUS
-add_named_threat= { 
-threat = 10
-name = ohe.10
-}
-	}
 }
 ##Event: HRE Demands Our Annexation
 country_event = {
@@ -329,7 +320,10 @@ country_event = {
 	option = {
 		name = ohe.15.a
 		ai_chance = { factor = 2}
-		puppet = BAV
+		create_wargoal= {
+			type = annex_everything 
+			target = BAV
+		}
 		BAV = {
 			start_civil_war= {
 				ideology = fascism 
@@ -619,11 +613,6 @@ country_event = {
  target = BAD
 }
 	}
-	option = {
-		name = ohe.28.b
-		ai_chance = { factor = 1}
-		puppet = BAD
-	}
 }
 ##Event: Baden has declined!
 country_event = {
@@ -755,11 +744,7 @@ country_event = {
  target = NTE
 }
 	}
-	option = {
-		name = ohe.34.b
-		ai_chance = { factor = 1}
-		puppet = NTE
-	}
+
 }
 ##Event: (COM) Mackensen has declined!
 country_event = {
@@ -799,5 +784,106 @@ country_event = {
 		name = ohe.36.b
 		ai_chance = { factor = 1}
 		set_capital = 9
+	}
+}
+##Event: Status of our new territories
+country_event = {
+	id = ohe.37
+	title = ohe.37.title
+	desc = ohe.37.desc
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		name = ohe.37.a
+		ai_chance = { factor = 2}
+		set_cosmetic_tag = BOH_holy_roman_union
+		country_event= {
+			days = 5
+			id = ohe.38 
+		}
+   }
+	option = {
+		name = ohe.37.b
+		ai_chance = { factor = 1}
+		set_cosmetic_tag = BOH_holy_roman_federation
+		IF = {
+				limit = { OR = { AND = { controls_state = 52 controls_state = 53 controls_state = 54 controls_state = 60 } } }
+				release = BAV
+				puppet = BAV
+				BAV = {load_oob = "BAV_1936" set_cosmetic_tag = BAV_holy_roman_federation}
+		}
+		IF = {
+				limit = { OR = { AND = { controls_state = 64 controls_state = 62 controls_state = 68 controls_state = 63 controls_state = 86 } } }
+				release = TPR
+				puppet = TPR
+				TPR = {load_oob = "TPR_1936" set_cosmetic_tag = TPR_holy_roman_federation}
+		}
+		IF = {
+				limit = { OR = { AND = { controls_state = 152 controls_state = 4 controls_state = 153 controls_state = 102 controls_state = 736 controls_state = 160 } } }
+				release = AUS
+				puppet = AUS
+				AUS = {add_state_core = 160 transfer_state = 160 load_oob = "AUS_1936" set_cosmetic_tag = AUS_holy_roman_federation}
+		}
+		IF = {
+				limit = { OR = { AND = { controls_state = 85 controls_state = 5 controls_state = 763 controls_state = 188 } } }
+				release = PRS
+				puppet = PRS
+				PRS = {load_oob = "PRS_1936" set_cosmetic_tag = PRS_holy_roman_federation remove_ideas = PRS_gymnastics_and_sports_division}
+		}
+		IF = {
+				limit = { OR = { AND = { controls_state = 50 controls_state = 55 } } }
+				release = BAD
+				puppet = BAD
+				BAD = {load_oob = "BAD_1936" set_cosmetic_tag = BAD_holy_roman_federation}
+		}
+		IF = {
+				limit = { OR = { AND = { controls_state = 56 controls_state = 57 controls_state = 58 controls_state = 59 controls_state = 61 } } }
+				release = NTE
+				puppet = NTE
+				NTE = {load_oob = "NTE_1936" set_cosmetic_tag = NTE_holy_roman_federation}
+		}
+		IF = {
+				limit = { OR = { AND = { controls_state = 42 controls_state = 808 controls_state = 51 controls_state = 807 controls_state = 6 controls_state = 34 controls_state = 8 } } }
+				release = TRC
+				puppet = TRC
+				TRC = {load_oob = "TRC_1936" set_cosmetic_tag = TRC_holy_roman_federation}
+		}
+		country_event= {
+			days = 5
+			id = ohe.38 
+		}
+	}
+}
+##Event: Move our capital #2
+country_event = {
+	id = ohe.38
+	title = ohe.38.title
+	desc = ohe.38.desc
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		name = ohe.38.a
+		ai_chance = { factor = 2}
+		set_capital = 9
+   }
+	option = {
+		name = ohe.38.b
+		ai_chance = { factor = 1}
+		set_capital = 64
+	}
+	option = {
+		name = ohe.38.c
+		ai_chance = { factor = 2}
+		set_capital = 58
+   }
+	option = {
+		name = ohe.38.d
+		ai_chance = { factor = 1}
+		set_capital = 52
+	}
+	option = {
+		name = ohe.38.e
+		ai_chance = { factor = 1}
+		set_capital = 4
 	}
 }

@@ -2924,9 +2924,9 @@ add_idea = BOH_fully_recovered
 				controls_state = 188
 			}
 		}
-		completion_reward = { remove_ideas = BOH_a_fragmented_empire add_ideas = BOH_com_reunited_idea country_event= {
+		completion_reward = { remove_ideas = BOH_a_fragmented_empire country_event= {
 				days = 5
-				id = ohe.17
+				id = ohe.37
 				} }
 		
 		search_filters = { FOCUS_FILTER_ANNEXATION } 
@@ -2951,6 +2951,12 @@ add_idea = BOH_fully_recovered
 		ai_will_do = {
 			factor = 1
 		}
+		bypass = {
+			has_cosmetic_tag = BOH_holy_roman_union
+		}
+		available = {
+			always = no
+		}
 		completion_reward = { custom_effect_tooltip = BOH_proclaim_holy_roman_union custom_effect_tooltip = BOH_proclaim_holy_roman_union2 }
 		
 	}
@@ -2968,7 +2974,12 @@ add_idea = BOH_fully_recovered
 		ai_will_do = {
 			factor = 1
 		}
-		
+		bypass = {
+			has_cosmetic_tag = BOH_holy_roman_federation
+		}
+		available = {
+			always = no
+		}
 		completion_reward = { set_cosmetic_tag = BOH_name_holy_roman_federation custom_effect_tooltip = BOH_proclaim_holy_roman_federation2 }
 		
 	}
