@@ -302,10 +302,14 @@ category = electronics
 		y = 4
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { 
+		prerequisite = {
 			focus = BOH_improve_our_radio_towers 
+		}
+		prerequisite = {
 			focus = BOH_construct_more_arms_factories 
-			focus = BOH_invest_into_rural_areas 
+		}
+		prerequisite = {
+			focus = BOH_invest_into_rural_areas
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY } 
 		ai_will_do = {
@@ -3121,7 +3125,7 @@ id = ohe.20
 	#Focus for Destroy the Bavarians
 	focus = {
 		id = BOH_destroy_the_bavarians
-		icon = GFX_goal_generic_occupy_states_ongoing_war
+		icon = GFX_BOH_destroy_the_bavarians
 		x = 32
 		y = 10
 		cost = 10
@@ -3488,7 +3492,7 @@ target = HUN
 	#Focus for Create The Kaiser's Guard
 	focus = {
 		id = BOH_create_the_kaisers_guard
-		icon = GFX_BOH_create_the_kaisers_guard-60506
+		icon = GFX_BOH_create_the_kaisers_guard-67546
 		x = 41
 		y = 5
 		cost = 5
