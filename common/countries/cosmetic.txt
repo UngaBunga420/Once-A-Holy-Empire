@@ -1,5 +1,5 @@
 BOH_holy_roman_union = {
-	color = rgb { 94 34 34 }
+	color = rgb { 90 12 12 }
 	color_ui = rgb { 106 119 89 }
 }
 
