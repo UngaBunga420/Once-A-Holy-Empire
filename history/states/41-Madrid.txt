@@ -26,11 +26,7 @@ state={
 	}
 
 	provinces={
-<<<<<<< HEAD
-		858 896 939 977 3794 3845 3938 3986 6914 9767 9800 11820 13224 
-=======
 		858 896 939 977 3794 3845 3938 3986 6914 9767 9800 11820 13224 13237
->>>>>>> parent of 25cd1ae... Makes The Provinces Work
 	}
 	manpower=2064659
 	buildings_max_level_factor=1.000

@@ -1,4 +1,41 @@
 ideas = {
+	economy = { 
+		law = yes
+		use_list_view = yes
+		
+		BOH_isolation = {
+						
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.4
+				production_speed_industrial_complex_factor = -0.4
+				production_speed_arms_factory_factor = -0.4
+				production_speed_dockyard_factor = -0.4
+				conversion_cost_civ_to_mil_factor= 0.4
+				conversion_cost_mil_to_civ_factor = 0.4
+				generate_wargoal_tension = 1.00
+				join_faction_tension = 0.20
+				send_volunteers_tension = 0.20
+				guarantee_tension = 0.5
+				max_fuel_factor = -0.35
+				fuel_gain_factor = -0.5
+				agency_upgrade_time = 0.8
+			}
+			allowed_to_remove = {
+				OR = {
+					has_war_support > 0.75
+					has_war = yes
+					has_completed_focus = BOH_end_reconstruction					
+				}
+			}
+			
+			cancel_if_invalid = no
+		}
+	}
 	country = {
 
 		BOH_the_kaiser = {
@@ -16,6 +53,76 @@ ideas = {
 				political_power_gain = 0.75
 			}
 		}
+		
+		BOH_idea_marxism_leninism = {
+			picture = generic_communism_drift_bonus
+			allowed = {
+				always= yes
+			}
+			allowed_civil_war = {
+				always= yes
+			}
+			visible = {
+				always= yes
+			}
+			modifier = {
+				stability_factor=0.05
+				consumer_goods_factor = -0.01
+			}
+		}
+		BOH_idea_marxism = {
+			picture = generic_communism_drift_bonus
+			allowed = {
+				always= yes
+			}
+			allowed_civil_war = {
+				always= yes
+			}
+			visible = {
+				always= yes
+			}
+			modifier = {
+				political_power_factor = 0.1
+				consumer_goods_factor = -0.01
+			}
+		}
+		BOH_idea_marxism_industry = {
+			picture = man_five_year_plan_industry
+			allowed = {
+				always= yes
+			}
+			allowed_civil_war = {
+				always= yes
+			}
+			visible = {
+				always= yes
+			}
+			modifier = {
+				consumer_goods_factor=-0.05
+				political_power_factor = 0.05
+				industrial_capacity_factory = 0.05
+				production_speed_industrial_complex_factor = 0.05
+			}
+		}
+		BOH_idea_marxism_leninism_industry = {
+			picture = man_five_year_plan_industry
+			allowed = {
+				always= yes
+			}
+			allowed_civil_war = {
+				always= yes
+			}
+			visible = {
+				always= yes
+			}
+			modifier = {
+				consumer_goods_factor=-0.1
+				political_power_factor = 0.1
+				industrial_capacity_factory = 0.1
+				production_speed_industrial_complex_factor = 0.05
+				production_speed_arms_factory_factor = 0.05
+			}
+		}
 		BOH_reformed_economy = {
 			picture = BOH_reformed_economy-61330
 			allowed = {
@@ -29,7 +136,7 @@ ideas = {
 			}
 			modifier = {
 				production_speed_buildings_factor = 0.25
-production_factory_start_efficiency_factor = 0.35
+				production_factory_start_efficiency_factor = 0.35
 			}
 		}
 
@@ -40,13 +147,13 @@ production_factory_start_efficiency_factor = 0.35
 				planning_speed = 0.2
 			}
 		}
-BOH_small_arms_production = {
+		BOH_small_arms_production = {
 			picture = BOH_small_arms_production-67084
 			equipment_bonus = {
 				infantry_equipment = {
-	instant = yes
-	build_cost_ic = -0.15
-}
+					instant = yes
+					build_cost_ic = -0.15
+				}
 			}
 		}
 		BOH_revitalized_industry = {
@@ -61,11 +168,11 @@ BOH_small_arms_production = {
 				always= yes
 			}
 			modifier = {
-				production_speed_buildings_factor = 0.50
-economy_cost_factor = -0.25
+				production_speed_buildings_factor = 0.25
+				economy_cost_factor = -0.25
 			}
 		}
-BOH_army_training = {
+		BOH_army_training = {
 			picture = chi_army_corruption3
 			allowed = {
 				always= yes
@@ -78,11 +185,11 @@ BOH_army_training = {
 			}
 			modifier = {
 				training_time_army_factor= 0.25
-army_speed_factor= 0.05
-breakthrough_factor= 0.2
+				army_speed_factor= 0.05
+				breakthrough_factor= 0.2
 			}
 		}
-BOH_military_advisors = {
+		BOH_military_advisors = {
 			picture = send_attache
 			allowed = {
 				always= yes
@@ -113,42 +220,84 @@ BOH_military_advisors = {
 			}
 			modifier = {
 				production_speed_buildings_factor= -0.25
-political_power_cost= 0.5
-consumer_goods_factor=0.3
+				political_power_factor= 0.25
+				consumer_goods_factor=0.15
+				stability_factor=-0.25
 			}
 		}
-		BOH_partially_recovered = {
+		BOH_com_purge = { #Political #1
+			ledger = army
 			picture = chi_hyper_inflation4
+			allowed = {
+				always= yes
+			}
+			allowed_civil_war = {
+				always= no
+			}
+			visible = {
+				always= yes
+			}
+			modifier = {
+				production_speed_buildings_factor= -0.25
+				political_power_factor= 0.20
+				consumer_goods_factor=0.15
+				stability_factor=-0.20
+			}
+		}
+		BOH_com_political_reforms = { #Political #2
+			ledger = army
+			picture = chi_hyper_inflation3
+			allowed = {
+				always= yes
+			}
+			allowed_civil_war = {
+				always= no
+			}
+			visible = {
+				always= yes
+			}
+			modifier = {
+				production_speed_buildings_factor= -0.25
+				political_power_factor= 0.15
+				consumer_goods_factor=0.15
+				stability_factor=-0.15
+			}
+		}
+		BOH_partially_recovered = { #Industry #1
+			picture = chi_hyper_inflation2
 			modifier = {
 				production_speed_buildings_factor= -0.20
-political_power_cost= 0.3
-consumer_goods_factor=0.25
+				political_power_factor= 0.15
+				consumer_goods_factor=0.10
+				stability_factor=-0.15
 			}
 		}
-		BOH_nearly_recovered = {
-			picture = chi_hyper_inflation3
-			modifier = {
-				production_speed_buildings_factor= -0.10
-political_power_cost= 0.25
-consumer_goods_factor=0.15
-			}
-		}
-		BOH_reopening_our_economy = {
+		BOH_nearly_recovered = { #Industry #2
 			picture = chi_hyper_inflation
 			modifier = {
-				production_speed_buildings_factor= -0.05
-political_power_cost= 0.15
-consumer_goods_factor=0.1
+				production_speed_buildings_factor= -0.15
+				political_power_factor= 0.15
+				consumer_goods_factor=0.05
+				stability_factor=-0.15
 			}
 		}
-		BOH_fully_recovered = {
+		BOH_reopening_our_economy = { #Industry&Political
+			picture = chi_hyper_inflation
+			modifier = {
+				production_speed_buildings_factor= -0.10
+				political_power_factor= 0.10
+				stability_factor=-0.10
+			}
+		}
+		BOH_fully_recovered = { #Industry Buff
 			picture = generic_economic_increase
 			modifier = {
 				production_speed_buildings_factor= 0.05
-consumer_goods_factor=-0.05
-political_power_gain = 0.1
+				consumer_goods_factor=-0.05
 			}
 		}
+		
+		
 		BOH_closer_ties_to_bavaria = {
 			ledger = army
 			picture = generic_fascism_drift_bonus
@@ -194,8 +343,8 @@ political_power_gain = 0.1
 				always= yes
 			}
 			modifier = {
-				add_stability= -0.15  
-political_power_gain = -0.5
+				stability_factor= -0.15  
+				political_power_factor = -0.5
 			}
 		}
 
@@ -211,17 +360,17 @@ political_power_gain = -0.5
 				always= yes
 			}
 			modifier = {
-				add_stability= 0.10  
-political_power_gain= 0.75
-production_speed_buildings_factor= 0.5
+				stability_factor= 0.10  
+				political_power_factor= 0.75
+				production_speed_buildings_factor= 0.5
 			}
 		}
-BOH_true_blitzkrieg = {
+		BOH_true_blitzkrieg = {
 			picture = BOH_true_blitzkrieg-67078
 			modifier = {
 				army_armor_attack_factor = 0.05
-army_armor_defence_factor = 0.05
-army_armor_speed_factor = 0.05
+				army_armor_defence_factor = 0.05
+				army_armor_speed_factor = 0.05
 			}
 		}
 
@@ -229,7 +378,7 @@ army_armor_speed_factor = 0.05
 			picture = ng_imperial_conscription
 			modifier = {
 				army_infantry_attack_factor = 0.1
-army_infantry_defence_factor = 0.1
+				army_infantry_defence_factor = 0.1
 			}
 		}
 
@@ -237,17 +386,17 @@ army_infantry_defence_factor = 0.1
 			picture = BOH_modern_military-67081
 			modifier = {
 				army_org_factor = 0.1
-land_reinforce_rate = 0.15
+				land_reinforce_rate = 0.15
 			}
 		}
 
 		BOH_modern_navy = {
 			picture = generic_sea_focused_navy
 			modifier = {
-navy_org_factor = 0.1
-naval_morale_factor = 0.1
-naval_speed_factor = 0.1
-navy_max_range_factor = 0.1
+				navy_org_factor = 0.1
+				naval_morale_factor = 0.1
+				naval_speed_factor = 0.1
+				navy_max_range_factor = 0.1
 			}
 		}
 
@@ -283,9 +432,9 @@ navy_max_range_factor = 0.1
 			}
 			modifier = {
 				production_speed_arms_factory_factor= 0.5
-production_speed_fuel_silo_factor= 0.25
-production_speed_synthetic_refinery_factor= 0.25
-base_fuel_gain_factor= 0.15
+				production_speed_fuel_silo_factor= 0.25
+				production_speed_synthetic_refinery_factor= 0.25
+				base_fuel_gain_factor= 0.15
 			}
 		}
 
@@ -302,14 +451,14 @@ base_fuel_gain_factor= 0.15
 			}
 			modifier = {
 				production_speed_industrial_complex_factor= 0.5
-production_speed_infrastructure_factor= 0.25
+				production_speed_infrastructure_factor= 0.25
 			}
 			research_bonus = {
 				add_tech_bonus= {
- bonus = 0.5 
-uses = 2 
-category = industry 
-}
+					bonus = 0.5 
+					uses = 2 
+					category = industry 
+				}
 			}
 		}	
 	}
