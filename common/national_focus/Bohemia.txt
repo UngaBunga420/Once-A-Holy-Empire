@@ -3378,6 +3378,31 @@ id = ohe.20
 }
 		}
 	}
+	#Focus for Demand the Rhineland
+	focus = {
+		id = BOH_demand_the_rhine
+		icon = GFX_BOH_demand_the_rhine
+		x = 33
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BOH_marxismleninism 
+			focus = BOH_marxism 
+		}
+		search_filters = { FOCUS_FILTER_ANNEXATION } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			BAV = {
+country_event= {
+days = 1
+id = ohe.20
+}
+}
+		}
+	}
 
 	#Focus for Destroy the Bavarians
 	focus = {

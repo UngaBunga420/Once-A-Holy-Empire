@@ -123,6 +123,36 @@ ideas = {
 				production_speed_arms_factory_factor = 0.05
 			}
 		}
+		BOH_united_federation_idea = {
+			picture = generic_communism_drift_bonus
+			allowed = {
+				always= yes
+			}
+			allowed_civil_war = {
+				always= yes
+			}
+			visible = {
+				always= yes
+			}
+			modifier = {
+				consumer_goods_factor=0.15
+			}
+		}
+		BOH_united_union_idea = {
+			picture = generic_communism_drift_bonus
+			allowed = {
+				always= yes
+			}
+			allowed_civil_war = {
+				always= yes
+			}
+			visible = {
+				always= yes
+			}
+			modifier = {
+				consumer_goods_factor=0.25
+			}
+		}
 		BOH_reformed_economy = {
 			picture = BOH_reformed_economy-61330
 			allowed = {

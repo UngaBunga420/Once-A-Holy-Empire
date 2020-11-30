@@ -801,8 +801,9 @@ country_event = {
 			days = 5
 			id = ohe.38 
 		}
+		add_ideas = BOH_united_union_idea
 		complete_national_focus = BOH_proclaim_the_holy_roman_union
-   }
+	}
 	option = {
 		name = ohe.37.b
 		ai_chance = { factor = 1}
@@ -853,6 +854,7 @@ country_event = {
 			days = 5
 			id = ohe.38 
 		}
+		add_ideas = BOH_united_federation_idea
 		complete_national_focus = BOH_proclaim_the_holy_roman_federation
 	}
 }
