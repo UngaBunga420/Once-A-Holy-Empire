@@ -55,18 +55,9 @@ country_event = {
 		annex_country= {
  target = TRC 
 }
-add_named_threat= { 
+add_named_threat= {
 threat = 10
-name = ohe.3
-}
-	}
-	option = {
-		name = ohe.3.b
-		ai_chance = { factor = 2}
-		puppet= TRC
-add_named_threat= { 
-threat = 10
-name = ohe.3
+name = ohe.3.title
 }
 	}
 }
@@ -133,7 +124,7 @@ create_faction= "Central European Alliance"
 add_to_faction= AUS
 add_named_threat= { 
 threat = 5
-name = ohe.6
+name = ohe.6.title
 }
 	}
 }
@@ -213,7 +204,7 @@ country_event = {
 }
 add_named_threat= { 
 threat = 10
-name = ohe.10
+name = ohe.10.title
 }
 	}
 }
@@ -438,7 +429,7 @@ country_event = {
 		add_political_power= 150
 BOH = {
 country_event= {
-days = 1 
+days = 10 
 id = ohe.21
 }
 }
@@ -473,9 +464,14 @@ country_event = {
 		name = ohe.21.a
 		ai_chance = { factor = 2}
 		create_wargoal= { 
-type = annex_everything 
-target = BAV
-}
+			type = annex_everything 
+			target = BAV
+		}
+		add_named_threat= {
+			threat = 10
+			name = ohe.22.title
+		}
+		
 	}
 	option = {
 		name = ohe.21.b
@@ -498,6 +494,14 @@ country_event = {
 	option = {
 		name = ohe.22.a
 		ai_chance = { factor = 1}
+		add_named_threat= {
+			threat = 10
+			name = ohe.22.title
+		}
+		create_wargoal= { 
+			type = annex_everything 
+			target = BAV
+		}
 		BAV={
 country_event= {
 days = 5
@@ -516,7 +520,7 @@ country_event = {
 	option = {
 		name = ohe.23.a
 		ai_chance = { factor = 1}
-		remove_ideas= BOH_bohemian_communist_propaganda
+		remove_ideas= bohemian_communist_propaganda
 	}
 }
 ##Event: Bohemians Respond to our Denunciation
@@ -529,7 +533,7 @@ country_event = {
 	option = {
 		name = ohe.24.a
 		ai_chance = { factor = 1}
-		remove_ideas= BOH_bohemian_communist_propaganda
+		remove_ideas= bohemian_communist_propaganda
 	}
 }
 ##Event: Bavarians Accept Ultimatum
@@ -543,13 +547,12 @@ country_event = {
 		name = ohe.25.a
 		ai_chance = { factor = 1}
 		annex_country= {
- target = BAV
-}
-	}
-	option = {
-		name = ohe.25.b
-		ai_chance = { factor = 2}
-		puppet= BAV
+		 target = BAV
+		}
+		add_named_threat= {
+			threat = 5
+			name = ohe.25.title
+		}
 	}
 }
 ##Event: Austria Denies Annexation
