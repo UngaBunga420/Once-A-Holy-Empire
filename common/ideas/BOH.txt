@@ -1,8 +1,32 @@
 ideas = {
+	trade_laws = { 
+		BOH_collapsed_economy = {
+			
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			
+			
+			modifier = {
+				min_export = 0
+				#civilian_intel_to_others = 0.0
+			}
+			
+			allowed_to_remove = {
+				OR = {
+					has_completed_focus = BOH_end_reconstruction					
+				}
+			}
+			
+			cancel_if_invalid = no
+			
+		}
+	
+	}
 	economy = {
 		law = yes
 		use_list_view = yes
-		
 		BOH_isolation = {
 						
 			allowed = {
@@ -27,8 +51,6 @@ ideas = {
 			}
 			allowed_to_remove = {
 				OR = {
-					has_war_support > 0.75
-					has_war = yes
 					has_completed_focus = BOH_end_reconstruction					
 				}
 			}
@@ -37,7 +59,7 @@ ideas = {
 		}
 	}
 	country = {
-
+		
 		BOH_the_kaiser = {
 			picture = BOH_the_kaiser-61704
 			allowed = {
@@ -53,7 +75,21 @@ ideas = {
 				political_power_gain = 0.75
 			}
 		}
-		
+		BOH_idea_immigration = {
+			picture = generic_manpower_bonus
+			allowed = {
+				always= yes
+			}
+			allowed_civil_war = {
+				always= yes
+			}
+			visible = {
+				always= yes
+			}
+			modifier = {
+				monthly_population = 0.15
+			}
+		}
 		BOH_idea_marxism_leninism = {
 			picture = generic_communism_drift_bonus
 			allowed = {

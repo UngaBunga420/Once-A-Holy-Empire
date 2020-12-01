@@ -150,7 +150,7 @@ army_experience= 50
 		}
 		completion_reward = {
 			add_ideas = BOH_isolation
-			add_ideas = BOH_closed_economy
+			add_ideas = BOH_collapsed_economy
 			add_ideas= BOH_recovering
 		}
 	}
@@ -335,7 +335,7 @@ category = industry
 			factor = 1
 		}
 		completion_reward = {
-			weekly_manpower = 2000
+			add_ideas = { BOH_idea_immigration }
 		}
 	}
 	#Focus for Superior Small Arms Production
@@ -691,6 +691,53 @@ popularity = 0.2
 		ai_will_do = {
 			factor = 1
 		}
+		completion_reward = {
+			custom_effect_tooltip = "Removes all Holy Roman core states"
+			hidden_effect = { 
+				#Austria
+				4 = { remove_core_of= BOH }
+				152 = {remove_core_of= BOH   }
+				153 = {remove_core_of= BOH   }
+				39 = {remove_core_of= BOH   }
+				160 = {remove_core_of= BOH   }
+				736 = {remove_core_of= BOH   }
+				102 = {remove_core_of= BOH   }
+				#Bavaria
+				53 = { remove_core_of= BOH }
+				52 = {remove_core_of= BOH   }
+				54 = {remove_core_of= BOH   }
+				60 = {remove_core_of= BOH   }
+				#Rhine
+				42 = { remove_core_of= BOH }
+				51 = {remove_core_of= BOH   }
+				807 = {remove_core_of= BOH   }
+				808 = {remove_core_of= BOH   }
+				34 = {remove_core_of= BOH   }
+				8 = {remove_core_of= BOH   }
+				6 = {remove_core_of= BOH   }
+				#Mackensen
+				57 = { remove_core_of= BOH }
+				56 = {remove_core_of= BOH   }
+				59 = {remove_core_of= BOH   }
+				58 = {remove_core_of= BOH   }
+				61 = {remove_core_of= BOH   }
+				#Pomerania
+				64 = {remove_core_of= BOH   }
+				62 = { remove_core_of= BOH }
+				63 = {remove_core_of= BOH   }
+				68 = {remove_core_of= BOH   }
+				86 = {remove_core_of= BOH   }
+				#Prussia
+				85 = {remove_core_of= BOH   }
+				5 = {remove_core_of= BOH   }
+				188 = {remove_core_of= BOH   }
+				763 = {remove_core_of= BOH   }
+				#Baden
+				50 = {remove_core_of= BOH   }
+				55 = {remove_core_of= BOH   }
+			}
+			
+		}
 	}
 
 	#Focus for Support The Kaisers Regime
@@ -806,12 +853,65 @@ category = cat_mobile_warfare
 			factor = 1
 		}
 		completion_reward = {
-			MOC = {remove_core_of= BOH   }
-NTE = {remove_core_of= BOH   }
-BAV = {remove_core_of= BOH   }
-MOC = {add_core_of= BAV   }
-NTE = {add_core_of= BAV   }
-TRC = {add_core_of= BAV   }
+			hidden_effect = { 
+				#Rhine
+				42 = { add_core_of= BAV }
+				51 = { add_core_of= BAV }
+				807 = { add_core_of= BAV }
+				808 = { add_core_of= BAV }
+				34 = { add_core_of= BAV }
+				8 = { add_core_of= BAV }
+				6 = { add_core_of= BAV }
+				#Mackensen
+				57 = { add_core_of= BAV }
+				56 = { add_core_of= BAV }
+				59 = { add_core_of= BAV }
+				58 = { add_core_of= BAV }
+				#Pomerania
+				64 = {add_core_of= BOH }
+				62 = {add_core_of= BOH }
+				63 = {add_core_of= BOH }
+				68 = {add_core_of= BOH }
+				86 = {add_core_of= BOH }
+				#Prussia
+				85 = {add_core_of= BOH }
+				5 = {add_core_of= BOH }
+				188 = {add_core_of= BOH }
+				763 = {add_core_of= BOH }
+				#Bavaria
+				53 = { remove_core_of= BOH }
+				52 = {remove_core_of= BOH   }
+				54 = {remove_core_of= BOH   }
+				60 = {remove_core_of= BOH   }
+				#Rhine
+				42 = { remove_core_of= BOH }
+				51 = {remove_core_of= BOH   }
+				807 = {remove_core_of= BOH   }
+				808 = {remove_core_of= BOH   }
+				34 = {remove_core_of= BOH   }
+				8 = {remove_core_of= BOH   }
+				6 = {remove_core_of= BOH   }
+				#Mackensen
+				57 = { remove_core_of= BOH }
+				56 = {remove_core_of= BOH   }
+				59 = {remove_core_of= BOH   }
+				58 = {remove_core_of= BOH   }
+				61 = {remove_core_of= BAV   }
+				61 = {add_core_of= BOH   }
+				#Baden
+				50 = {remove_core_of= BOH   }
+				55 = {remove_core_of= BOH   }
+				#Baden
+				50 = {add_core_of= BAV }
+				55 = {add_core_of= BAV }
+			}
+			BAV = {remove_core_of= BOH   }
+			NTE = {remove_core_of= BOH   }
+			TRC = {remove_core_of= BOH   }
+			BAD = {remove_core_of= BOH   }
+			NTE = {add_core_of= BAV   }
+			BAD = {add_core_of= BAV   }
+			TRC = {add_core_of= BAV   }
 		}
 	}
 
@@ -2696,7 +2796,7 @@ add_political_power= 150
 	focus = {
 		id = BOH_deal_with_mackensen
 		icon = GFX_goal_unknown
-		x = 29
+		x = 31
 		y = 9
 		cost = 10
 		available_if_capitulated = yes
@@ -2830,72 +2930,14 @@ add_political_power= 150
 			
 		}
 	}
-	#Focus for March to Hamburg
-	focus = {
-		id = BOH_march_to_hamburg
-		icon = GFX_goal_unknown
-		x = 29
-		y = 10
-		cost = 10
-		available_if_capitulated = yes
-		prerequisite = { 
-			focus = BOH_deal_with_mackensen
-		}
-		search_filters = { FOCUS_FILTER_ANNEXATION } 
-		ai_will_do = {
-			factor = 1
-		}
-		bypass = {
-			NTE={
-				exists= no  
-			}
-		}
-		available = {
-			country_exists= NTE
-		}
-		completion_reward = {
-			create_wargoal= { 
-				type = annex_everything 
-				target = NTE
-			}
-		}
-	}
-	#Focus for Annex Baden
-	focus = {
-		id = BOH_annex_baden
-		icon = GFX_goal_unknown
-		x = 27
-		y = 10
-		cost = 10
-		available_if_capitulated = yes
-		prerequisite = { 
-			focus = BOH_approach_the_commune_of_baden
-		}
-		search_filters = { FOCUS_FILTER_ANNEXATION } 
-		ai_will_do = {
-			factor = 1
-		}
-		bypass = {
-			BAD={
-				exists= no  
-			}
-		}
-		available = {
-			country_exists= BAD
-		}
-		completion_reward = {
-			create_wargoal= { 
-				type = annex_everything 
-				target = BAD
-			}
-		}
-	}
+	
+	
 	
 	#Focus for Approach the Commune of Baden
 	focus = {
 		id = BOH_approach_the_commune_of_baden
 		icon = GFX_goal_unknown
-		x = 27
+		x = 29
 		y = 9
 		cost = 10
 		available_if_capitulated = yes
@@ -2925,17 +2967,16 @@ add_political_power= 150
 		cost = 5
 		available_if_capitulated = yes
 		prerequisite = { 
-			focus = BOH_annex_baden
+			focus = BOH_demand_prussia
 		}
 		prerequisite = { 
-			focus = BOH_correct_the_pomeranians
+			focus = BOH_demand_the_rhine
 		}
 		prerequisite = { 
-			focus = BOH_march_to_hamburg
+			focus = BOH_com_austria
 		}
-		prerequisite = { 
-			focus = BOH_destroy_the_bavarians
-		}
+		
+		
 		available = {
 			# All the HRE cores
 			custom_trigger_tooltip = {
@@ -2995,7 +3036,7 @@ add_political_power= 150
 		available_if_capitulated = yes
 		mutually_exclusive = { focus = BOH_proclaim_the_holy_roman_federation }
 		prerequisite = {focus = BOH_com_reunited }
-		prerequisite = {focus = BOH_marxismleninism }
+		##prerequisite = {focus = BOH_marxismleninism }
 		
 		search_filters = { FOCUS_FILTER_ANNEXATION } 
 		ai_will_do = {
@@ -3020,7 +3061,7 @@ add_political_power= 150
 		cost = 5
 		available_if_capitulated = yes
 		prerequisite = {focus = BOH_com_reunited}
-		prerequisite = {focus = BOH_marxism}
+		#prerequisite = {focus = BOH_marxism}
 		mutually_exclusive = { focus = BOH_proclaim_the_holy_roman_union }
 		search_filters = { FOCUS_FILTER_ANNEXATION } 
 		ai_will_do = {
@@ -3041,11 +3082,11 @@ add_political_power= 150
 		id = BOH_com_italy
 		icon = GFX_BOH_conquer_rome-61119
 		x = 31
-		y = 14
+		y = 17
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { 
-			focus = BOH_com_foreign_policy
+			focus = BOH_com_switzerland
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION } 
 		ai_will_do = {
@@ -3070,7 +3111,7 @@ add_political_power= 150
 	focus = {
 		id = BOH_com_switzerland
 		icon = GFX_focus_attack_switzerland
-		x = 33
+		x = 31
 		y = 14
 		cost = 10
 		available_if_capitulated = yes
@@ -3101,12 +3142,15 @@ add_political_power= 150
 	focus = {
 		id = BOH_com_austria
 		icon = GFX_BOH_demand_austrian_subjugation-60787
-		x = 29
-		y = 14
+		x = 28
+		y = 10
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { 
-			focus = BOH_com_foreign_policy
+			focus = BOH_approach_the_commune_of_baden
+		}
+		prerequisite = { 
+			focus = BOH_the_bavarian_issue
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION } 
 		ai_will_do = {
@@ -3304,38 +3348,12 @@ add_political_power= 150
 			}
 		}
 	}
-	#Focus for Correct the Pomeranians
-	focus = {
-		id = BOH_correct_the_pomeranians
-		icon = GFX_goal_unknown
-		x = 25
-		y = 10
-		cost = 10
-		available_if_capitulated = yes
-		prerequisite = { focus = BOH_approach_pomerania }
-		search_filters = { FOCUS_FILTER_ANNEXATION } 
-		ai_will_do = {
-			factor = 1
-		}
-		bypass = {
-			TPR={
-exists= no  }
-		}
-		available = {
-			country_exists= TPR
-		}
-		completion_reward = {
-			create_wargoal= { 
-type = annex_everything 
-target = TPR
-}
-		}
-	}
+	
 	#Focus for The Bavarian Issue
 	focus = {
 		id = BOH_the_bavarian_issue
-		icon = GFX_BOH_gain_influence_in_bavaria-60526
-		x = 31
+		icon = GFX_BOH_destroy_the_bavarians
+		x = 27
 		y = 9
 		cost = 10
 		available_if_capitulated = yes
@@ -3359,14 +3377,16 @@ id = ohe.20
 	#Focus for Demand the Rhineland
 	focus = {
 		id = BOH_demand_the_rhine
-		icon = GFX_BOH_demand_the_rhine
-		x = 33
-		y = 9
+		icon = GFX_BOH_destroy_the_bavarians
+		x = 30
+		y = 10
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { 
-			focus = BOH_marxismleninism 
-			focus = BOH_marxism 
+			focus = BOH_approach_the_commune_of_baden
+		}
+		prerequisite = { 
+			focus = BOH_deal_with_mackensen
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION } 
 		ai_will_do = {
@@ -3381,44 +3401,34 @@ id = ohe.20
 }
 		}
 	}
-
-	#Focus for Destroy the Bavarians
+	#Focus for Demand Prussian Annexation
 	focus = {
-		id = BOH_destroy_the_bavarians
-		icon = GFX_BOH_destroy_the_bavarians
-		x = 31
+		id = BOH_demand_prussia
+		icon = GFX_BOH_demand_prussia
+		x = 26
 		y = 10
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = BOH_the_bavarian_issue }
+		prerequisite = { 
+			focus = BOH_approach_pomerania
+		}
+		prerequisite = { 
+			focus = BOH_the_bavarian_issue
+		}
 		search_filters = { FOCUS_FILTER_ANNEXATION } 
 		ai_will_do = {
 			factor = 1
 		}
-		bypass = {
-			OR = {
-				NOT={
-					country_exists= BAV
-					
-				}
-				BAV = {is_puppet_of = BOH}
-			}
-		}
-		available = 
-		{
-			AND = {
-				country_exists= BAV
-				NOT={ BAV = {is_puppet_of = BOH} }
-			}
-			
-		}
 		completion_reward = {
-			create_wargoal= { 
-type = annex_everything 
-target = BAV
+			PRS = {
+country_event= {
+days = 1
+id = ohe.20
+}
 }
 		}
 	}
+	
 	#Focus for Retake The Industrial Heartland
 	focus = {
 		id = BOH_retake_the_industrial_heartland
