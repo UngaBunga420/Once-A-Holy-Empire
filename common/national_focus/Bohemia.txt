@@ -57,11 +57,7 @@
 				}
 			}
 			ELSE = {
-				limit = { has_idea = BOH_reopening_our_economy}
-				swap_ideas = {
-					remove_idea = BOH_reopening_our_economy
-					add_idea = BOH_fully_recovered	 
-				}
+				custom_effect_tooltip = "Improves recovery"
 			}
 		}
 	}
@@ -154,6 +150,7 @@ army_experience= 50
 		}
 		completion_reward = {
 			add_ideas = BOH_isolation
+			add_ideas = BOH_closed_economy
 			add_ideas= BOH_recovering
 		}
 	}
@@ -2400,11 +2397,7 @@ add_political_power= 150
 				}
 			}
 			ELSE = {
-				limit = { has_idea = BOH_reopening_our_economy}
-				swap_ideas = {
-					remove_idea = BOH_reopening_our_economy
-					add_idea = BOH_fully_recovered	 
-				}
+				custom_effect_tooltip = "Improves recovery"
 			}
 			
 		}
@@ -2462,11 +2455,7 @@ add_political_power= 150
 				}
 			}
 			ELSE = {
-				limit = { has_idea = BOH_reopening_our_economy}
-				swap_ideas = {
-					remove_idea = BOH_reopening_our_economy
-					add_idea = BOH_fully_recovered	 
-				}
+				custom_effect_tooltip = "Improves recovery"
 			}
 			
 		}
@@ -2531,11 +2520,7 @@ add_political_power= 150
 				}
 			}
 			ELSE = {
-				limit = { has_idea = BOH_reopening_our_economy}
-				swap_ideas = {
-					remove_idea = BOH_reopening_our_economy
-					add_idea = BOH_fully_recovered	 
-				}
+				custom_effect_tooltip = "Improves recovery"
 			}
 		}
 	}
@@ -2602,11 +2587,7 @@ add_political_power= 150
 				}
 			}
 			ELSE = {
-				limit = { has_idea = BOH_reopening_our_economy}
-				swap_ideas = {
-					remove_idea = BOH_reopening_our_economy
-					add_idea = BOH_fully_recovered	 
-				}
+				custom_effect_tooltip = "Improves recovery"
 			}
 		}
 	}
@@ -2629,11 +2610,8 @@ add_political_power= 150
 			factor = 1
 		}
 		completion_reward = {
-		
-			swap_ideas= {
- remove_idea = BOH_reopening_our_economy 
-add_idea = BOH_fully_recovered
-}
+			remove_ideas = BOH_reopening_our_economy 
+			add_ideas = BOH_fully_recovered
 		}
 	}
 
