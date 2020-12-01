@@ -14,7 +14,7 @@ state={
 		owner = BOH
 		buildings = {
 			infrastructure = 7
-			arms_factory = 2
+			arms_factory = 1
 			industrial_complex = 3
 		}
 		victory_points = {
