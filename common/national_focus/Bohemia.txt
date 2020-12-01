@@ -677,7 +677,7 @@ popularity = 0.2
 	focus = {
 		id = BOH_support_the_pomeranians
 		icon = GFX_focus_prc_agrarian_socialism
-		x = 25
+		x = 33
 		y = 1
 		cost = 10
 		available_if_capitulated = yes
@@ -692,16 +692,9 @@ popularity = 0.2
 			factor = 1
 		}
 		completion_reward = {
-			custom_effect_tooltip = "Removes all Holy Roman core states"
+			custom_effect_tooltip = "Remove all Holy Roman core states except Bohemia"
 			hidden_effect = { 
-				#Austria
-				4 = { remove_core_of= BOH }
-				152 = {remove_core_of= BOH   }
-				153 = {remove_core_of= BOH   }
-				39 = {remove_core_of= BOH   }
-				160 = {remove_core_of= BOH   }
-				736 = {remove_core_of= BOH   }
-				102 = {remove_core_of= BOH   }
+				
 				#Bavaria
 				53 = { remove_core_of= BOH }
 				52 = {remove_core_of= BOH   }
@@ -727,6 +720,14 @@ popularity = 0.2
 				63 = {remove_core_of= BOH   }
 				68 = {remove_core_of= BOH   }
 				86 = {remove_core_of= BOH   }
+				#Austria
+				4 = { remove_core_of= BOH }
+				152 = {remove_core_of= BOH   }
+				153 = {remove_core_of= BOH   }
+				39 = {remove_core_of= BOH   }
+				160 = {remove_core_of= BOH   }
+				736 = {remove_core_of= BOH   }
+				102 = {remove_core_of= BOH   }
 				#Prussia
 				85 = {remove_core_of= BOH   }
 				5 = {remove_core_of= BOH   }
@@ -2740,6 +2741,8 @@ add_political_power= 150
 		completion_reward = { 
 			custom_effect_tooltip = BOH_has_marxism_leninism
 			add_ideas = BOH_idea_marxism_leninism
+			
+
 		}
 		
 	}
@@ -2764,7 +2767,21 @@ add_political_power= 150
 		available = {
 			always = no
 		}
-		completion_reward = { custom_effect_tooltip = BOH_has_marxism add_ideas = BOH_idea_marxism }
+		completion_reward = { 
+			custom_effect_tooltip = BOH_has_marxism 
+			add_ideas = BOH_idea_marxism
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Rudolf Slánský"
+				desc = "POLITICS_KLEMENT_GOTTWALD_DESC"
+				picture = "gfx/leaders/BOH/Portrait_Czech_Rudolf.dds"
+				expire = "1965.1.1"
+				ideology = marxism
+				traits = {
+					#
+				}
+			}
+		}
 	}
 
 	#Focus for Approach Pomerania
@@ -2981,6 +2998,19 @@ add_political_power= 150
 			# All the HRE cores
 			custom_trigger_tooltip = {
 				tooltip = form_hre_union
+				#Austria
+				controls_state =4 
+				controls_state =152 
+				controls_state =153 
+				controls_state =39 
+				controls_state =160 
+				controls_state =736 
+				controls_state =102 
+				#Prussia
+				controls_state =85 
+				controls_state =5 
+				controls_state =188 
+				controls_state = 763 
 				# Rhine
 				controls_state = 6
 				controls_state = 34

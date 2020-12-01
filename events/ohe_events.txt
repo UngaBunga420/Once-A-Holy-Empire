@@ -797,6 +797,7 @@ country_event = {
 	picture = GFX_report_event_generic_read_write
 	is_triggered_only = yes
 	option = {
+		trigger = { has_completed_focus = BOH_marxismleninism }
 		name = ohe.37.a
 		ai_chance = { factor = 2}
 		set_cosmetic_tag = BOH_holy_roman_union
@@ -808,6 +809,7 @@ country_event = {
 		complete_national_focus = BOH_proclaim_the_holy_roman_union
 	}
 	option = {
+		trigger = { has_completed_focus = BOH_marxism }
 		name = ohe.37.b
 		ai_chance = { factor = 1}
 		set_cosmetic_tag = BOH_holy_roman_federation

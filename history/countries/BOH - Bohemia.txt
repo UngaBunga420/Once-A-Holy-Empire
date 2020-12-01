@@ -77,16 +77,7 @@ create_country_leader = {
 		#
 	}
 }
-create_country_leader = {
-	name = "Klement Gottwald"
-	desc = "POLITICS_KLEMENT_GOTTWALD_DESC"
-	picture = "gfx/leaders/BOH/Portrait_Czech_Klement_Gottwald.dds"
-	expire = "1965.1.1"
-	ideology = marxleninism
-	traits = {
-		#
-	}
-}
+
 create_field_marshal = {
 	name = "Otto von Hapsburg"
 	portrait_path = "gfx/leaders/BOH/otto.dds"
