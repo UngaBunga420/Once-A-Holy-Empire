@@ -2744,7 +2744,6 @@ add_political_power= 150
 		completion_reward = { 
 			custom_effect_tooltip = BOH_has_marxism_leninism
 			add_ideas = BOH_idea_marxism_leninism
-			retire_country_leader = yes
 			create_country_leader = {
 				name = "Klement Gottwald"
 				desc = "POLITICS_KLEMENT_GOTTWALD_DESC"
@@ -3083,7 +3082,7 @@ add_political_power= 150
 		available = {
 			always = no
 		}
-		completion_reward = { custom_effect_tooltip = BOH_proclaim_holy_roman_union2 }
+		completion_reward = { custom_effect_tooltip = BOH_proclaim_holy_roman_union custom_effect_tooltip = BOH_proclaim_holy_roman_union2 }
 		
 	}
 	#Focus for Proclaim the Holy Roman Federation
@@ -3108,7 +3107,7 @@ add_political_power= 150
 		available = {
 			always = no
 		}
-		completion_reward = { custom_effect_tooltip = BOH_proclaim_holy_roman_federation2 }
+		completion_reward = { custom_effect_tooltip = BOH_proclaim_holy_roman_federation custom_effect_tooltip = BOH_proclaim_holy_roman_federation2 }
 		
 	}
 	#Focus for Eliminate Fascism in Italy
@@ -3433,6 +3432,7 @@ id = ohe.20
 					id = ohe.42
 				}
 			}
+			custom_effect_tooltip = BOH_french_intervention
 		}
 	}
 	#Focus for Demand Prussian Annexation
