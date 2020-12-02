@@ -68,11 +68,11 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Klement Gottwald"
-	desc = "POLITICS_KLEMENT_GOTTWALD_DESC"
-	picture = "gfx/leaders/BOH/Portrait_Czech_Klement_Gottwald.dds"
-	expire = "1965.1.1"
-	ideology = stalinism
+	name = "Rudolf Slánský"
+	desc = "POLITICS_RUDOLF_SLANSKY_DESC"
+	picture = "gfx/leaders/BOH/Portrait_Czech_Rudolf.dds"
+	expire = "1969.1.1"
+	ideology = marxism
 	traits = {
 		#
 	}

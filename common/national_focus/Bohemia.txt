@@ -2744,7 +2744,17 @@ add_political_power= 150
 		completion_reward = { 
 			custom_effect_tooltip = BOH_has_marxism_leninism
 			add_ideas = BOH_idea_marxism_leninism
-			
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Klement Gottwald"
+				desc = "POLITICS_KLEMENT_GOTTWALD_DESC"
+				picture = "gfx/leaders/BOH/Portrait_Czech_Klement_Gottwald.dds"
+				expire = "1965.1.1"
+				ideology = stalinism
+				traits = {
+					#
+				}
+			}
 
 		}
 		
@@ -2773,17 +2783,7 @@ add_political_power= 150
 		completion_reward = { 
 			custom_effect_tooltip = BOH_has_marxism 
 			add_ideas = BOH_idea_marxism
-			retire_country_leader = yes
-			create_country_leader = {
-				name = "Rudolf Slánský"
-				desc = "POLITICS_RUDOLF_SLANSKY_DESC"
-				picture = "gfx/leaders/BOH/Portrait_Czech_Rudolf.dds"
-				expire = "1965.1.1"
-				ideology = marxism
-				traits = {
-					#
-				}
-			}
+			
 		}
 	}
 
@@ -3427,12 +3427,12 @@ id = ohe.20
 			factor = 1
 		}
 		completion_reward = {
-			BAV = {
-country_event= {
-days = 1
-id = ohe.20
-}
-}
+			TRC = {
+				country_event= {
+					days = 1
+					id = ohe.42
+				}
+			}
 		}
 	}
 	#Focus for Demand Prussian Annexation
