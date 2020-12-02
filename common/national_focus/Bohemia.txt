@@ -13,7 +13,7 @@
 		icon = GFX_BOH_purge_opponents-67856
 		x = 30
 		y = 4
-		cost = 6
+		cost = 7
 		available_if_capitulated = yes
 		prerequisite = { focus = BOH_begin_reconstruction }
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL } 
@@ -2454,7 +2454,7 @@ add_political_power= 150
 		icon = GFX_BOH_political_reforms-67860
 		x = 26
 		y = 4
-		cost = 6
+		cost = 7
 		available_if_capitulated = yes
 		
 		prerequisite = { 
@@ -2512,7 +2512,7 @@ add_political_power= 150
 		icon = GFX_BOH_promote_unionism-67858
 		x = 28
 		y = 4
-		cost = 6
+		cost = 7
 		available_if_capitulated = yes
 		
 		prerequisite = { 
@@ -2701,7 +2701,7 @@ add_political_power= 150
 		icon = GFX_focus_generic_industry_3
 		x = 28
 		y = 6
-		cost = 12
+		cost = 15
 		available_if_capitulated = yes
 		prerequisite = { 
 			focus = BOH_final_stages_of_reconstruction 
@@ -3457,7 +3457,7 @@ id = ohe.20
 			PRS = {
 country_event= {
 days = 1
-id = ohe.20
+id = ohe.48
 }
 }
 		}

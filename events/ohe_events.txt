@@ -71,10 +71,7 @@ country_event = {
 	option = {
 		name = ohe.4.a
 		ai_chance = { factor = 2}
-		create_wargoal= {
-	type = annex_everything 
-	target = TRC
-}
+		declare_war_on = { target = TRC    type = annex_everything }
 	}
 	option = {
 		name = ohe.4.b
@@ -151,10 +148,7 @@ country_event = {
 	option = {
 		name = ohe.8.a
 		ai_chance = { factor = 2}
-		create_wargoal= { 
-	type = annex_everything 
-	target = AUS
-}
+		declare_war_on = { target = AUS    type = annex_everything }
 	}
 	option = {
 		name = ohe.8.b
@@ -404,11 +398,7 @@ country_event = {
 	option = {
 		name = ohe.19.a
 		ai_chance = { factor = 2}
-		BOH = {create_wargoal= { 
-type = annex_everything 
-target = TPR
-}
-   }
+		BOH = {declare_war_on = { target = TPR    type = annex_everything }}
 	}
 	option = {
 		name = ohe.19.b
@@ -463,10 +453,7 @@ country_event = {
 	option = {
 		name = ohe.21.a
 		ai_chance = { factor = 2}
-		create_wargoal= { 
-			type = annex_everything 
-			target = BAV
-		}
+		declare_war_on = { target = BAV    type = annex_everything }
 		add_named_threat= {
 			threat = 10
 			name = ohe.22.title
@@ -498,10 +485,7 @@ country_event = {
 			threat = 10
 			name = ohe.22.title
 		}
-		create_wargoal= { 
-			type = annex_everything 
-			target = BAV
-		}
+		declare_war_on = { target = BAV    type = annex_everything }
 		BAV={
 country_event= {
 days = 5
@@ -565,10 +549,7 @@ country_event = {
 	option = {
 		name = ohe.26.a
 		ai_chance = { factor = 2}
-		create_wargoal= { 
-type = annex_everything 
-target = AUS
-}
+		declare_war_on = { target = AUS    type = annex_everything }
 	}
 	option = {
 		name = ohe.26.b
@@ -627,10 +608,7 @@ country_event = {
 	option = {
 		name = ohe.29.a
 		ai_chance = { factor = 2}
-		BOH = {create_wargoal= { 
-type = annex_everything 
-target = BAD
-}
+		BOH = {declare_war_on = { target = BAD    type = annex_everything }
    }
 	}
 	option = {
@@ -706,10 +684,7 @@ country_event = {
 	option = {
 		name = ohe.32.a
 		ai_chance = { factor = 2}
-		BOH = {create_wargoal= { 
-type = annex_everything 
-target = TPR
-}
+		BOH = {declare_war_on = { target = TPR    type = annex_everything }
    }
 	}
 	option = {
@@ -770,10 +745,7 @@ country_event = {
 	option = {
 		name = ohe.35.a
 		ai_chance = { factor = 2}
-		BOH = {create_wargoal= { 
-type = annex_everything 
-target = NTE
-}
+		BOH = {declare_war_on = { target = NTE    type = annex_everything }
    }
 	}
 	option = {
@@ -1088,4 +1060,68 @@ country_event = {
 		ai_chance = { factor = 1}
 		add_political_power= -150
 	}
+}
+##Event: (COM) Communist Bohemia demands Prussia
+country_event = {
+	id = ohe.48
+	title = ohe.48.title
+	desc = ohe.48.desc
+	picture = GFX_report_event_generic_peaceful_annexation
+	is_triggered_only = yes
+	option = {
+		name = ohe.48.a
+		ai_chance = { factor = 1}
+		BOH = {
+			country_event= {
+				days = 5
+				id = ohe.49
+			}
+		}
+	}
+	option = {
+		name = ohe.48.b
+		ai_chance = { factor = 2}
+		BOH = {
+			country_event= {
+				days = 5
+				id = ohe.50
+			}
+		}
+	}
+}
+##Event: (COM) Prussia has agreed!
+country_event = {
+	id = ohe.49
+	title = ohe.49.title
+	desc = ohe.49.desc
+	picture = GFX_report_event_generic_peaceful_annexation
+	is_triggered_only = yes
+	option = {
+		name = ohe.49.a
+		ai_chance = { factor = 1}
+		annex_country= {
+		 target = PRS
+		}
+	}
+
+}
+##Event: (COM) Prussia has declined!
+country_event = {
+	id = ohe.50
+	title = ohe.50.title
+	desc = ohe.50.desc
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		name = ohe.50.a
+		ai_chance = { factor = 2}
+		declare_war_on = { target = PRS    type = annex_everything }
+   }
+	}
+	option = {
+		name = ohe.50.b
+		ai_chance = { factor = 1}
+		add_political_power= -150
+	}
+}
 }
