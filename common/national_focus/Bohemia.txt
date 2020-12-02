@@ -149,6 +149,7 @@ army_experience= 50
 			has_civil_war= no
 		}
 		completion_reward = {
+			remove_unit_leader = 49240
 			add_ideas = BOH_isolation
 			add_ideas = BOH_collapsed_economy
 			add_ideas= BOH_recovering
@@ -2789,7 +2790,7 @@ add_political_power= 150
 	#Focus for Approach Pomerania
 	focus = {
 		id = BOH_approach_pomerania
-		icon = GFX_BOH_gain_influence_in_pomerania-60525
+		icon = GFX_BOH_approach_pomerania
 		x = 25
 		y = 9
 		cost = 10
@@ -2800,21 +2801,28 @@ add_political_power= 150
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION } 
 		ai_will_do = {
-			factor = 1
+			factor = 2
+		}
+		bypass = {
+			TPR={
+				exists= no  
+			}
 		}
 		completion_reward = {
+		
 			TPR = {
 				country_event= {
 				days = 5
 				id = ohe.30
 				}
 			}
+			custom_effect_tooltip = BOH_approach_pomerania_tooltip
 		}
 	}
 	#Focus for Deal with Mackensen
 	focus = {
 		id = BOH_deal_with_mackensen
-		icon = GFX_goal_unknown
+		icon = GFX_BOH_deal_with_mackensen
 		x = 31
 		y = 9
 		cost = 10
@@ -2826,6 +2834,11 @@ add_political_power= 150
 		search_filters = { FOCUS_FILTER_ANNEXATION } 
 		ai_will_do = {
 			factor = 1
+		}
+		bypass = {
+			NTE={
+				exists= no  
+			}
 		}
 		completion_reward = {
 			NTE = {
@@ -2956,7 +2969,7 @@ add_political_power= 150
 	#Focus for Approach the Commune of Baden
 	focus = {
 		id = BOH_approach_the_commune_of_baden
-		icon = GFX_goal_unknown
+		icon = GFX_BOH_approach_baden
 		x = 29
 		y = 9
 		cost = 10
@@ -2968,6 +2981,11 @@ add_political_power= 150
 		search_filters = { FOCUS_FILTER_ANNEXATION } 
 		ai_will_do = {
 			factor = 1
+		}
+		bypass = {
+			BAD={
+				exists= no  
+			}
 		}
 		completion_reward = {
 			BAD = {
@@ -2981,7 +2999,7 @@ add_political_power= 150
 	#Focus for Reunited under Communism
 	focus = {
 		id = BOH_com_reunited
-		icon = GFX_goal_unknown
+		icon = GFX_BOH_reunited_under_communism
 		x = 28
 		y = 11
 		cost = 5
@@ -3062,7 +3080,7 @@ add_political_power= 150
 	#Focus for Proclaim the Holy Roman Union
 	focus = {
 		id = BOH_proclaim_the_holy_roman_union
-		icon = GFX_focus_generic_diplomatic_treaty
+		icon = GFX_BOH_reunited_under_marxism_leninism
 		x = 26
 		y = 12
 		cost = 5
@@ -3088,7 +3106,7 @@ add_political_power= 150
 	#Focus for Proclaim the Holy Roman Federation
 	focus = {
 		id = BOH_proclaim_the_holy_roman_federation
-		icon = GFX_focus_generic_diplomatic_treaty
+		icon = GFX_BOH_reunited_under_marxism
 		x = 30
 		y = 12
 		cost = 5
@@ -3174,7 +3192,7 @@ add_political_power= 150
 	#Focus for Demand the Annexation of Austria
 	focus = {
 		id = BOH_com_austria
-		icon = GFX_BOH_demand_austrian_subjugation-60787
+		icon = GFX_BOH_annex_austria
 		x = 28
 		y = 10
 		cost = 10
@@ -3194,9 +3212,7 @@ add_political_power= 150
 				exists= no  
 			}
 		}
-		available = {
-			country_exists= AUS
-		}
+
 		completion_reward = {
 			AUS = {
 				country_event= {
@@ -3398,6 +3414,11 @@ add_political_power= 150
 		ai_will_do = {
 			factor = 1
 		}
+		bypass = {
+			BAV={
+				exists= no  
+			}
+		}
 		completion_reward = {
 			BAV = {
 country_event= {
@@ -3410,7 +3431,7 @@ id = ohe.20
 	#Focus for Demand the Rhineland
 	focus = {
 		id = BOH_demand_the_rhine
-		icon = GFX_BOH_destroy_the_bavarians
+		icon = GFX_demand_the_rhine
 		x = 30
 		y = 10
 		cost = 10
@@ -3448,6 +3469,11 @@ id = ohe.20
 		}
 		prerequisite = { 
 			focus = BOH_the_bavarian_issue
+		}
+		bypass = {
+			PRS={
+				exists= no  
+			}
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION } 
 		ai_will_do = {

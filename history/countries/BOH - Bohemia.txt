@@ -81,6 +81,7 @@ create_country_leader = {
 create_field_marshal = {
 	name = "Otto von Hapsburg"
 	portrait_path = "gfx/leaders/BOH/otto.dds"
+	id = 49240
 	traits = {
 	media_personality organizer old_guard
 	}
