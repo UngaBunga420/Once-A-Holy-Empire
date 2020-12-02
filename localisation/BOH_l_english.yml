@@ -25,7 +25,7 @@
  BOH_democratic_ADJ:0 "Bohemian"
  BOH_neutrality_ADJ:0 "Bohemian"
  BOH_communism_ADJ:0 "Bohemian"
-
+ BOH_coastal_forts:0 "Coastal Fortification Effort"
  BOH_com_east_germany_ADJ:0 "East German"
  BOH:0 "Bohemia"
  BOH_DEF:0 "Bohemia"

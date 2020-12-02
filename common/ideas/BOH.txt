@@ -59,7 +59,21 @@ ideas = {
 		}
 	}
 	country = {
-		
+		BOH_coastal_forts = {
+			picture = generic_fortify_the_borders
+			allowed = {
+				always= yes
+			}
+			allowed_civil_war = {
+				always= yes
+			}
+			visible = {
+				always= yes
+			}
+			modifier = {
+				production_speed_coastal_bunker_factor = 0.2
+			}
+		}
 		BOH_the_kaiser = {
 			picture = BOH_the_kaiser-61704
 			allowed = {
@@ -174,6 +188,7 @@ ideas = {
 				consumer_goods_factor=0.15
 			}
 		}
+		
 		BOH_united_union_idea = {
 			picture = generic_communism_drift_bonus
 			allowed = {
@@ -201,8 +216,8 @@ ideas = {
 				always= yes
 			}
 			modifier = {
-				production_speed_buildings_factor = 0.25
-				production_factory_start_efficiency_factor = 0.35
+				production_speed_buildings_factor = 0.05
+				production_factory_start_efficiency_factor = 0.1
 			}
 		}
 
@@ -234,8 +249,8 @@ ideas = {
 				always= yes
 			}
 			modifier = {
-				production_speed_buildings_factor = 0.25
-				economy_cost_factor = -0.25
+				production_speed_buildings_factor = 0.1
+				economy_cost_factor = -0.15
 			}
 		}
 		BOH_army_training = {
@@ -477,7 +492,7 @@ ideas = {
 				
 			}
 		}
-
+		
 		BOH_fort_effort = {
 			picture = generic_fortify_the_borders
 			modifier = {
@@ -497,9 +512,9 @@ ideas = {
 				always= yes
 			}
 			modifier = {
-				production_speed_arms_factory_factor= 0.5
-				production_speed_fuel_silo_factor= 0.25
-				production_speed_synthetic_refinery_factor= 0.25
+				production_speed_arms_factory_factor= 0.05
+				production_speed_fuel_silo_factor= 0.15
+				production_speed_synthetic_refinery_factor= 0.15
 				base_fuel_gain_factor= 0.15
 			}
 		}
@@ -516,12 +531,12 @@ ideas = {
 				always= yes
 			}
 			modifier = {
-				production_speed_industrial_complex_factor= 0.5
-				production_speed_infrastructure_factor= 0.25
+				production_speed_industrial_complex_factor= 0.05
+				production_speed_infrastructure_factor= 0.20
 			}
 			research_bonus = {
 				add_tech_bonus= {
-					bonus = 0.5 
+					 bonus = 0.75 
 					uses = 2 
 					category = industry 
 				}

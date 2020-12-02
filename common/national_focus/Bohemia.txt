@@ -658,6 +658,7 @@ popularity = 0.2
 			factor = 1
 		}
 		completion_reward = {
+			remove_ideas = BOH_the_rightful_empire
 			add_popularity = {
 				ideology = communism
 				popularity = 0.5
@@ -693,6 +694,7 @@ popularity = 0.2
 		}
 		completion_reward = {
 			custom_effect_tooltip = "Remove all Holy Roman core states except Bohemia"
+			
 			hidden_effect = { 
 				
 				#Bavaria
@@ -1213,7 +1215,7 @@ category = cat_superior_firepower
 	#Focus for Mechanize our Troops
 	focus = {
 		id = BOH_mechanize_our_troops
-		icon = GFX_goal_unknown
+		icon = GFX_BOH_mechanize_our_troops
 		x = 44
 		y = 4
 		cost = 10
@@ -1572,28 +1574,6 @@ add_tech_bonus = {
 }
 		}
 	}
-
-	#Focus for Modern Navy
-	focus = {
-		id = BOH_modern_navy
-		icon = GFX_goal_generic_navy_doctrines_tactics
-		x = 67
-		y = 7
-		cost = 5
-		available_if_capitulated = yes
-		prerequisite = { 
-			focus = BOH_trade_interdiction 
-			focus = BOH_fleet_in_being 
-			focus = BOH_base_strike_doctrine 
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		completion_reward = {
-			add_ideas= BOH_modern_navy
-		}
-	}
-
 	#Focus for Coastal Defenses
 	focus = {
 		id = BOH_coastal_defenses
@@ -1611,9 +1591,32 @@ add_tech_bonus = {
 			factor = 1
 		}
 		completion_reward = {
-			add_ideas= BOH_coastal_forts
+			add_ideas = BOH_coastal_forts
+			
 		}
 	}
+	#Focus for Modern Navy
+	focus = {
+		id = BOH_modern_navy
+		icon = GFX_BOH_modern_navy
+		x = 67
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BOH_trade_interdiction 
+			focus = BOH_fleet_in_being 
+			focus = BOH_base_strike_doctrine 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas= BOH_modern_navy
+		}
+	}
+
+	
 
 	#Focus for Small Arms Modernization
 	focus = {
@@ -1806,7 +1809,7 @@ category = air_doctrine
 	#Focus for Modern Air Force
 	focus = {
 		id = BOH_modern_air_force
-		icon = GFX_goal_unknown
+		icon = GFX_BOH_modern_airforce
 		x = 59
 		y = 7
 		cost = 7
@@ -2160,7 +2163,7 @@ category = cat_grand_battle_plan
 	#Focus for Constant Barrage
 	focus = {
 		id = BOH_constant_barrage
-		icon = GFX_goal_unknown
+		icon = GFX_BOH_constant_barrage
 		x = 50
 		y = 4
 		cost = 10
@@ -2204,7 +2207,7 @@ category = light_fighter
 	#Focus for Modern Military
 	focus = {
 		id = BOH_modern_military
-		icon = GFX_focus_chi_army_reform
+		icon = GFX_BOH_modern_military
 		x = 49
 		y = 7
 		cost = 10
@@ -2857,6 +2860,7 @@ add_political_power= 150
 		}
 		
 		completion_reward = {
+			remove_ideas = BOH_fully_recovered
 			add_ideas = BOH_idea_marxism_industry
 		}
 	}

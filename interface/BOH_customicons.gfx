@@ -36,13 +36,203 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
+	
+	##Icon For: Mechanize our troops
+	SpriteType = { 
+		name = "GFX_BOH_mechanize_our_troops"
+		texturefile = "gfx/interface/goals/GFX_BOH_mechanize_our_troops.dds"
+	}
 
+	##Icon Shine For: Mechanize our troops
+	SpriteType = { 
+		name = "GFX_BOH_mechanize_our_troops_shine"
+		texturefile = "gfx/interface/goals/GFX_BOH_mechanize_our_troops.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_BOH_mechanize_our_troops.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_BOH_mechanize_our_troops.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Constant Barrage
+	SpriteType = { 
+		name = "GFX_BOH_constant_barrage"
+		texturefile = "gfx/interface/goals/GFX_BOH_constant_barrage.dds"
+	}
+
+	##Icon Shine For: Constant Barrage
+	SpriteType = { 
+		name = "GFX_BOH_constant_barrage_shine"
+		texturefile = "gfx/interface/goals/GFX_BOH_constant_barrage.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_BOH_constant_barrage.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_BOH_mechanize_our_troops.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Modern Army
+	SpriteType = { 
+		name = "GFX_BOH_modern_military"
+		texturefile = "gfx/interface/goals/GFX_BOH_modern_military.dds"
+	}
+
+	##Icon Shine For: Modern Army
+	SpriteType = { 
+		name = "GFX_BOH_modern_military_shine"
+		texturefile = "gfx/interface/goals/GFX_BOH_modern_military.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_BOH_modern_military.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_BOH_modern_military.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+	
+	##Icon For: GFX_BOH_modern_airforce
+	SpriteType = { 
+		name = "GFX_BOH_modern_airforce"
+		texturefile = "gfx/interface/goals/GFX_BOH_modern_airforce.dds"
+	}
+
+	##Icon Shine For: Modern Airforce
+	SpriteType = { 
+		name = "GFX_BOH_modern_airforce_shine"
+		texturefile = "gfx/interface/goals/GFX_BOH_modern_airforce.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_BOH_modern_airforce.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_BOH_modern_airforce.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+	
+	##Icon For: Modern Navy
+	SpriteType = { 
+		name = "GFX_BOH_modern_navy"
+		texturefile = "gfx/interface/goals/GFX_BOH_modern_navy.dds"
+	}
+
+	##Icon Shine For: Modern Navy
+	SpriteType = { 
+		name = "GFX_BOH_modern_navy_shine"
+		texturefile = "gfx/interface/goals/GFX_BOH_modern_navy.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_BOH_modern_navy.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_BOH_modern_navy.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
 	##Icon For: The State of The Empire
 	SpriteType = { 
 		name = "GFX_BOH_the_state_of_the_empire-60305"
 		texturefile = "gfx/interface/goals/GFX_BOH_the_state_of_the_empire-60305.dds"
 	}
 
+	
 	##Icon Shine For: The State of The Empire
 	SpriteType = { 
 		name = "GFX_BOH_the_state_of_the_empire-60305_shine"
