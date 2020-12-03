@@ -518,7 +518,6 @@ ohe.50.desc:0 "The Prussian military has denied our demands for annexation. Thei
 ohe.50.a:0 "Launch the Prussian Expedition!"
 ohe.50.b:0 "Back down..."
 BOH_french_intervention:0 "§!§RThis focus may spark §YFrench§R intervention!§!§!§!§!"
-
 BOH_proclaim_holy_roman_union:0 "§!§RRequires focus §YMarxism-Leninism§!§!§!."
 BOH_proclaim_holy_roman_union2:0 "§!§!You will recieve decisions to integrate §YHoly Roman§! core states§!§!."
 BOH_proclaim_holy_roman_federation:0 "§!§RRequires focus §YMarxism§!§!§!."

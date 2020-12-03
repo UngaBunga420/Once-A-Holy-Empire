@@ -137,7 +137,7 @@ ideas = {
 			}
 		}
 		BOH_idea_marxism_industry = {
-			picture = man_five_year_plan_industry
+			picture = idea_man_five_year_plan_industry
 			allowed = {
 				always= yes
 			}
@@ -154,8 +154,9 @@ ideas = {
 				production_speed_industrial_complex_factor = 0.05
 			}
 		}
+		
 		BOH_idea_marxism_leninism_industry = {
-			picture = man_five_year_plan_industry
+			picture = idea_man_five_year_plan_industry
 			allowed = {
 				always= yes
 			}
@@ -518,7 +519,51 @@ ideas = {
 				base_fuel_gain_factor= 0.15
 			}
 		}
-
+		BOH_idea_reorganized_labor = {
+			picture = idea_generic_communist_army
+			allowed = {
+				always= yes
+			}
+			allowed_civil_war = {
+				always= yes
+			}
+			visible = {
+				always= yes
+			}
+			modifier = {
+				recruitable_population_factor = 0.15
+			}
+		}
+		BOH_idea_socialist_education = {
+			picture = idea_jap_supremacy_of_will
+			allowed = {
+				always= yes
+			}
+			allowed_civil_war = {
+				always= yes
+			}
+			visible = {
+				always= yes
+			}
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+		BOH_com_healthcare = {
+			picture = generic_research_bonus
+			allowed = {
+				always= yes
+			}
+			allowed_civil_war = {
+				always= yes
+			}
+			visible = {
+				always= yes
+			}
+			modifier = {
+				army_org_regain = 0.05
+			}
+		}
 		BOH_hjalmar = {
 			picture = BOH_hjalmar-62449
 			allowed = {

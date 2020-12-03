@@ -2966,7 +2966,7 @@ add_political_power= 150
 		}
 		
 		completion_reward = {
-			add_ideas = BOH_idea_socialist_education
+			add_ideas = BOH_idea_healthcare
 			
 		}
 	}
