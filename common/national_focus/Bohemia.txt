@@ -21,6 +21,7 @@
 			factor = 1
 		}
 		completion_reward = {
+			
 			IF = {
 				limit = { has_idea = BOH_recovering}
 				swap_ideas = {
@@ -149,7 +150,7 @@ army_experience= 50
 			has_civil_war= no
 		}
 		completion_reward = {
-			remove_unit_leader = 49240
+			
 			add_ideas = BOH_isolation
 			add_ideas = BOH_collapsed_economy
 			add_ideas= BOH_recovering
@@ -659,6 +660,12 @@ popularity = 0.2
 			factor = 1
 		}
 		completion_reward = {
+			every_army_leader = {
+				limit = {
+					has_id = 49240
+				}
+				retire = yes
+			}
 			remove_ideas = BOH_the_rightful_empire
 			add_popularity = {
 				ideology = communism
