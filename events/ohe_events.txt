@@ -653,14 +653,13 @@ country_event = {
 	option = {
 		name = ohe.31.a
 		ai_chance = { factor = 1}
-		
-		
+		annex_country= {
+			target = TPR
+		}
 		custom_effect_tooltip = "Cores all of Brandenburg-Pomerania"
 		hidden_effect = {
 			set_cosmetic_tag= BOH_com_east_germany
-			annex_country= {
-				target = TPR
-			}
+			
 			#Pomerania
 			64 = {add_core_of= BOH }
 			62 = {add_core_of= BOH }
@@ -990,14 +989,12 @@ country_event = {
 		name = ohe.44.a
 		ai_chance = { factor = 2}
 		declare_war_on = { target = TRC    type = annex_everything }
-   }
-	}
+    }
 	option = {
 		name = ohe.44.b
 		ai_chance = { factor = 1}
 		add_political_power= -150
 	}
-}
 }
 ##Event: (COM) France protects Rhine!
 country_event = {
@@ -1116,7 +1113,6 @@ country_event = {
 		name = ohe.50.a
 		ai_chance = { factor = 2}
 		declare_war_on = { target = PRS    type = annex_everything }
-   }
 	}
 	option = {
 		name = ohe.50.b
@@ -1124,4 +1120,42 @@ country_event = {
 		add_political_power= -150
 	}
 }
+##Event: (COM) Berlin is under our control!
+country_event = {
+	id = ohe.51
+	title = ohe.51.title
+	desc = ohe.51.desc
+	picture = GFX_report_event_generic_peaceful_annexation
+	is_triggered_only = no
+	fire_only_once = yes
+	trigger = {
+		tag = BOH
+		has_completed_focus = BOH_approach_pomerania
+		NOT = { has_cosmetic_tag = BOH_com_east_germany }
+		#Pomerania
+		controls_state = 64
+		controls_state = 62
+		controls_state = 63
+		controls_state = 68
+		controls_state = 86
+	}
+	option = {
+		name = ohe.51.a
+		ai_chance = { factor = 1}
+		custom_effect_tooltip = "Cores all of Brandenburg-Pomerania"
+		hidden_effect = {
+			set_cosmetic_tag= BOH_com_east_germany
+			
+			#Pomerania
+			64 = {add_core_of= BOH }
+			62 = {add_core_of= BOH }
+			63 = {add_core_of= BOH }
+			68 = {add_core_of= BOH }
+			86 = {add_core_of= BOH }
+		}
+		country_event= {
+			days = 10 
+			id = ohe.36
+		}
+	}
 }
