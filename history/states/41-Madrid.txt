@@ -23,9 +23,9 @@ state={
 	}
 
 	provinces={
-		858 896 939 977 3794 3845 3938 3986 6914 9767 9800 11820 13224
+		896 939 977 3794 3845 3938 3986 9800 11820
 	}
-	manpower=1032329
+	manpower=1165164
 	buildings_max_level_factor=1.000
 	state_category=city
 }
