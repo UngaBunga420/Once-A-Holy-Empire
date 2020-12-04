@@ -689,6 +689,16 @@ popularity = 0.2
 				ideology = communism
 				popularity = 0.5
 			}
+			create_country_leader = {
+				name = "Transitional Workers Council"
+				desc = "POLITICS_TRANSITIONAL_WORKERS_COUNCIL_DESC"
+				picture = "gfx/leaders/BOH/Portrait_Transitional_Government.dds"
+				expire = "1969.1.1"
+				ideology = marxism
+				traits = {
+					#
+				}
+			}
 			set_politics = {
 				ruling_party = communism
 				elections_allowed = yes
@@ -2808,7 +2818,16 @@ add_political_power= 150
 		completion_reward = { 
 			custom_effect_tooltip = BOH_has_marxism 
 			add_ideas = BOH_idea_marxism
-			
+			create_country_leader = {
+				name = "Rudolf Slánský"
+				desc = "POLITICS_RUDOLF_SLANSKY_DESC"
+				picture = "gfx/leaders/BOH/Portrait_Czech_Rudolf.dds"
+				expire = "1969.1.1"
+				ideology = marxism
+				traits = {
+					#
+				}
+			}
 		}
 	}
 
