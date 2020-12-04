@@ -67,16 +67,7 @@ create_country_leader = {
 	}
 }
 
-create_country_leader = {
-	name = "Rudolf Slánský"
-	desc = "POLITICS_RUDOLF_SLANSKY_DESC"
-	picture = "gfx/leaders/BOH/Portrait_Czech_Rudolf.dds"
-	expire = "1969.1.1"
-	ideology = marxism
-	traits = {
-		#
-	}
-}
+
 
 create_field_marshal = {
 	name = "Otto von Hapsburg"
