@@ -302,7 +302,7 @@ ideas = {
 			}
 			modifier = {
 				production_speed_buildings_factor= -0.25
-				political_power_factor= 0.25
+				political_power_factor= -0.25
 				consumer_goods_factor=0.15
 				stability_factor=-0.25
 			}
@@ -321,7 +321,7 @@ ideas = {
 			}
 			modifier = {
 				production_speed_buildings_factor= -0.25
-				political_power_factor= 0.20
+				political_power_factor= -0.20
 				consumer_goods_factor=0.15
 				stability_factor=-0.20
 			}
@@ -340,7 +340,7 @@ ideas = {
 			}
 			modifier = {
 				production_speed_buildings_factor= -0.25
-				political_power_factor= 0.15
+				political_power_factor= -0.15
 				consumer_goods_factor=0.15
 				stability_factor=-0.15
 			}
@@ -349,7 +349,7 @@ ideas = {
 			picture = chi_hyper_inflation2
 			modifier = {
 				production_speed_buildings_factor= -0.20
-				political_power_factor= 0.15
+				political_power_factor= -0.15
 				consumer_goods_factor=0.10
 				stability_factor=-0.15
 			}
@@ -358,7 +358,7 @@ ideas = {
 			picture = chi_hyper_inflation
 			modifier = {
 				production_speed_buildings_factor= -0.15
-				political_power_factor= 0.15
+				political_power_factor= -0.15
 				consumer_goods_factor=0.05
 				stability_factor=-0.15
 			}
@@ -367,7 +367,7 @@ ideas = {
 			picture = chi_hyper_inflation
 			modifier = {
 				production_speed_buildings_factor= -0.10
-				political_power_factor= 0.10
+				political_power_factor= -0.10
 				stability_factor=-0.10
 			}
 		}
@@ -443,8 +443,8 @@ ideas = {
 			}
 			modifier = {
 				stability_factor= 0.10  
-				political_power_factor= 0.75
-				production_speed_buildings_factor= 0.5
+				political_power_factor= 0.15
+				production_speed_buildings_factor= 0.15
 			}
 		}
 		BOH_true_blitzkrieg = {
