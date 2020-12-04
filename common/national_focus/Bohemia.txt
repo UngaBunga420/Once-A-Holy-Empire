@@ -3228,6 +3228,7 @@ add_political_power= 150
 		prerequisite = { 
 			focus = BOH_the_bavarian_issue
 		}
+		
 		search_filters = { FOCUS_FILTER_ANNEXATION } 
 		ai_will_do = {
 			factor = 1
@@ -3471,6 +3472,11 @@ id = ohe.20
 		ai_will_do = {
 			factor = 1
 		}
+		bypass = {
+			TRC={
+				exists= no  
+			}
+		}
 		completion_reward = {
 			TRC = {
 				country_event= {
@@ -3495,6 +3501,11 @@ id = ohe.20
 		search_filters = { FOCUS_FILTER_ANNEXATION } 
 		ai_will_do = {
 			factor = 1
+		}
+		bypass = {
+			HOL={
+				exists= no  
+			}
 		}
 		completion_reward = {
 			create_wargoal= { 
