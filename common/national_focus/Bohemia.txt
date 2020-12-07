@@ -3544,9 +3544,6 @@ id = ohe.20
 		prerequisite = { 
 			focus = BOH_approach_pomerania
 		}
-		prerequisite = { 
-			focus = BOH_the_bavarian_issue
-		}
 		bypass = {
 			PRS={
 				exists= no  
