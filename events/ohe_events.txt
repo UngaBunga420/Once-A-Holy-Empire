@@ -651,7 +651,31 @@ country_event = {
 	picture = GFX_report_event_generic_peaceful_annexation
 	is_triggered_only = yes
 	option = {
+		trigger = { has_cosmetic_tag = BOH_marxism_leninism}
 		name = ohe.31.a
+		ai_chance = { factor = 1}
+		annex_country= {
+			target = TPR
+		}
+		custom_effect_tooltip = "Cores all of Brandenburg-Pomerania"
+		hidden_effect = {
+			set_cosmetic_tag= BOH_com_east_germany2
+			
+			#Pomerania
+			64 = {add_core_of= BOH }
+			62 = {add_core_of= BOH }
+			63 = {add_core_of= BOH }
+			68 = {add_core_of= BOH }
+			86 = {add_core_of= BOH }
+		}
+		country_event= {
+			days = 10 
+			id = ohe.36
+		}
+	}
+	option = {
+		trigger = { has_cosmetic_tag = BOH_marxism_n }
+		name = ohe.31.b
 		ai_chance = { factor = 1}
 		annex_country= {
 			target = TPR
@@ -779,7 +803,7 @@ country_event = {
 	picture = GFX_report_event_generic_read_write
 	is_triggered_only = yes
 	option = {
-		trigger = { has_completed_focus = BOH_marxismleninism }
+		trigger = { has_cosmetic_tag = BOH_com_east_germany2 }
 		name = ohe.37.a
 		ai_chance = { factor = 2}
 		set_cosmetic_tag = BOH_holy_roman_union
@@ -791,7 +815,7 @@ country_event = {
 		complete_national_focus = BOH_proclaim_the_holy_roman_union
 	}
 	option = {
-		trigger = { has_completed_focus = BOH_marxism }
+		trigger = { has_cosmetic_tag = BOH_com_east_germany }
 		name = ohe.37.b
 		ai_chance = { factor = 1}
 		set_cosmetic_tag = BOH_holy_roman_federation
@@ -1131,7 +1155,12 @@ country_event = {
 	trigger = {
 		tag = BOH
 		has_completed_focus = BOH_approach_pomerania
-		NOT = { has_cosmetic_tag = BOH_com_east_germany }
+		OR = {
+			NOT = { has_cosmetic_tag = BOH_com_east_germany }
+			NOT = { has_cosmetic_tag = BOH_com_east_germany2 }
+			NOT = { has_cosmetic_tag = BOH_holy_roman_federation }
+			NOT = { has_cosmetic_tag = BOH_holy_roman_union }
+		}
 		#Pomerania
 		controls_state = 64
 		controls_state = 62
@@ -1186,7 +1215,7 @@ id = ohe.54
    }
 	}
 }
-##Event: (COM) Annexation of Austria
+##Event: (COM) Austria accepts annexation
 country_event = {
 	id = ohe.53
 	title = ohe.53.title
