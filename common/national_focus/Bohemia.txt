@@ -3262,7 +3262,7 @@ add_political_power= 150
 			AUS = {
 				country_event= {
 				days = 5
-				id = ohe.9
+				id = ohe.52
 				}
 			}
 		}
