@@ -3015,12 +3015,11 @@ add_political_power= 150
 		id = BOH_approach_the_commune_of_baden
 		icon = GFX_BOH_approach_baden
 		x = 29
-		y = 9
+		y = 10
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { 
-			focus = BOH_marxismleninism 
-			focus = BOH_marxism 
+			focus = BOH_the_bavarian_issue
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION } 
 		ai_will_do = {
@@ -3029,6 +3028,13 @@ add_political_power= 150
 		bypass = {
 			BAD={
 				exists= no  
+			}
+		}
+		available = {
+			OR = {
+				BAV = { exists = no}
+				BAV = { is_puppet_of = BOH}
+				BAV = { is_in_faction_with = BOH }
 			}
 		}
 		completion_reward = {
@@ -3057,8 +3063,9 @@ add_political_power= 150
 		prerequisite = { 
 			focus = BOH_com_austria
 		}
-		
-		
+		prerequisite = { 
+			focus = BOH_approach_the_commune_of_baden
+		}
 		available = {
 			# All the HRE cores
 			custom_trigger_tooltip = {
@@ -3211,7 +3218,7 @@ add_political_power= 150
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { 
-			focus = BOH_com_foreign_policy
+			focus = BOH_exporting_the_revolution
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION } 
 		ai_will_do = {
@@ -3237,17 +3244,20 @@ add_political_power= 150
 	focus = {
 		id = BOH_com_austria
 		icon = GFX_BOH_annex_austria
-		x = 28
+		x = 27
 		y = 10
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { 
-			focus = BOH_approach_the_commune_of_baden
-		}
-		prerequisite = { 
 			focus = BOH_the_bavarian_issue
 		}
-		
+		available = {
+			OR = {
+				BAV = { exists = no}
+				BAV = { is_puppet_of = BOH}
+				BAV = { is_in_faction_with = BOH }
+			}
+		}
 		search_filters = { FOCUS_FILTER_ANNEXATION } 
 		ai_will_do = {
 			factor = 1
@@ -3276,7 +3286,7 @@ add_political_power= 150
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { 
-			focus = BOH_com_foreign_policy
+			focus = BOH_exporting_the_revolution
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION } 
 		ai_will_do = {
@@ -3339,7 +3349,7 @@ add_political_power= 150
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { 
-			focus = BOH_com_foreign_policy
+			focus = BOH_exporting_the_revolution
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION } 
 		ai_will_do = {
@@ -3392,10 +3402,10 @@ add_political_power= 150
 			}
 		}
 	}
-	#Focus for Foreign Policy
+	#Focus for GFX_BOH_exporting_the_revolution
 	focus = {
-		id = BOH_com_foreign_policy
-		icon = GFX_goal_unknown
+		id = BOH_exporting_the_revolution
+		icon = GFX_BOH_exporting_the_revolution
 		x = 31
 		y = 13
 		cost = 5
@@ -3447,7 +3457,7 @@ add_political_power= 150
 	focus = {
 		id = BOH_the_bavarian_issue
 		icon = GFX_BOH_destroy_the_bavarians
-		x = 27
+		x = 28
 		y = 9
 		cost = 10
 		available_if_capitulated = yes
@@ -3477,19 +3487,24 @@ id = ohe.20
 	focus = {
 		id = BOH_demand_the_rhine
 		icon = GFX_demand_the_rhine
-		x = 30
+		x = 31
 		y = 10
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { 
-			focus = BOH_approach_the_commune_of_baden
-		}
 		prerequisite = { 
 			focus = BOH_deal_with_mackensen
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION } 
 		ai_will_do = {
 			factor = 1
+		}
+		available = {
+			OR = {
+				BAD = { exists = no}
+				BAD = { is_puppet_of = BOH}
+				BAD = { is_in_faction_with = BOH }
+			}
+			
 		}
 		bypass = {
 			TRC={
@@ -3521,6 +3536,9 @@ id = ohe.20
 		ai_will_do = {
 			factor = 1
 		}
+		available = {
+			has_war_with = TRC
+		}
 		bypass = {
 			HOL={
 				exists= no  
@@ -3533,16 +3551,23 @@ id = ohe.20
 			}
 		}
 	}
-	#Focus for Demand Prussian Annexation
+	#Focus for The Prussian Expedition
 	focus = {
 		id = BOH_demand_prussia
 		icon = GFX_BOH_demand_prussia
-		x = 26
+		x = 25
 		y = 10
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { 
 			focus = BOH_approach_pomerania
+		}
+		available = {
+			OR = {
+				TPR = { exists = no}
+				TPR = { is_puppet_of = BOH}
+				TPR = { is_in_faction_with = BOH }
+			}
 		}
 		bypass = {
 			PRS={
