@@ -3402,7 +3402,7 @@ add_political_power= 150
 			}
 		}
 	}
-	#Focus for GFX_BOH_exporting_the_revolution
+	#Focus for Exporting the Revolution
 	focus = {
 		id = BOH_exporting_the_revolution
 		icon = GFX_BOH_exporting_the_revolution
@@ -3430,7 +3430,7 @@ add_political_power= 150
 	#Focus for Internal Policy
 	focus = {
 		id = BOH_com_internal_policy
-		icon = GFX_goal_unknown
+		icon = GFX_BOH_domestic_policy
 		x = 25
 		y = 13
 		cost = 5

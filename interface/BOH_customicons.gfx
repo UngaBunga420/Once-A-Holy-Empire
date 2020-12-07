@@ -530,6 +530,44 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 	
+	##Icon For: Domestic Policy
+	SpriteType = { 
+		name = "GFX_BOH_domestic_policy"
+		texturefile = "gfx/interface/goals/GFX_BOH_domestic_policy.dds"
+	}
+
+	##Icon Shine For: Domestic Policy
+	SpriteType = { 
+		name = "GFX_BOH_domestic_policy_shine"
+		texturefile = "gfx/interface/goals/GFX_BOH_domestic_policy.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_BOH_domestic_policy.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_BOH_domestic_policy.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+	
 	##Icon For: Holy Roman Federation
 	SpriteType = { 
 		name = "GFX_BOH_reunited_under_marxism"
