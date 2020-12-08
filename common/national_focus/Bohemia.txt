@@ -3738,7 +3738,7 @@ target = HUN
 		x = 41
 		y = 5
 		cost = 5
-		available = { ruling_party = neutrality }
+		available = { has_government = neutrality }
 		available_if_capitulated = yes
 		prerequisite = { focus = BOH_increase_mountaineer_investment }
 		search_filters = { FOCUS_FILTER_ANNEXATION } 

@@ -59,6 +59,7 @@ ideas = {
 		}
 	}
 	country = {
+		
 		BOH_coastal_forts = {
 			picture = generic_fortify_the_borders
 			allowed = {
@@ -74,6 +75,7 @@ ideas = {
 				production_speed_coastal_bunker_factor = 0.2
 			}
 		}
+		
 		BOH_the_kaiser = {
 			picture = BOH_the_kaiser-61704
 			allowed = {
@@ -89,6 +91,7 @@ ideas = {
 				political_power_gain = 0.75
 			}
 		}
+		
 		BOH_idea_immigration = {
 			picture = generic_manpower_bonus
 			allowed = {
@@ -104,6 +107,7 @@ ideas = {
 				monthly_population = 0.15
 			}
 		}
+		
 		BOH_idea_marxism_leninism = {
 			picture = generic_communism_drift_bonus
 			allowed = {
@@ -120,21 +124,23 @@ ideas = {
 				consumer_goods_factor = -0.01
 			}
 		}
+		
 		BOH_idea_failing_kaiser = {
+			picture = generic_democratic_drift_bonus
 			allowed = {
 				always= yes
 			}
 			allowed_civil_war = {
 				always= yes
 			}
-			visible = {
-				always= no
-			}
 			modifier = {
-				neutrality_drift = -0.05
+				democratic_drift = 0.03
+				communism_drift = 0.03
 			}
 		}
+		
 		BOH_idea_support_kaiser = {
+			picture = GFX_idea_generic_neutrality_drift_bonus
 			allowed = {
 				always= yes
 			}
@@ -148,7 +154,9 @@ ideas = {
 				neutrality_drift = 0.05
 			}
 		}
+		
 		BOH_idea_fascism = {
+			picture = GFX_idea_generic_fascism_drift_bonus
 			allowed = {
 				always= yes
 			}
@@ -162,6 +170,7 @@ ideas = {
 				fascism_drift = 0.04
 			}
 		}
+		
 		BOH_idea_marxism = {
 			picture = generic_communism_drift_bonus
 			allowed = {
@@ -178,6 +187,7 @@ ideas = {
 				consumer_goods_factor = -0.01
 			}
 		}
+		
 		BOH_idea_marxism_industry = {
 			picture = idea_man_five_year_plan_industry
 			allowed = {
@@ -216,6 +226,7 @@ ideas = {
 				production_speed_arms_factory_factor = 0.05
 			}
 		}
+		
 		BOH_united_federation_idea = {
 			picture = generic_communism_drift_bonus
 			allowed = {
@@ -247,6 +258,7 @@ ideas = {
 				consumer_goods_factor=0.25
 			}
 		}
+		
 		BOH_reformed_economy = {
 			picture = BOH_reformed_economy-61330
 			allowed = {
@@ -271,6 +283,7 @@ ideas = {
 				planning_speed = 0.2
 			}
 		}
+		
 		BOH_small_arms_production = {
 			picture = BOH_small_arms_production-67084
 			equipment_bonus = {
@@ -280,6 +293,7 @@ ideas = {
 				}
 			}
 		}
+		
 		BOH_revitalized_industry = {
 			picture = man_five_year_plan_industry
 			allowed = {
@@ -296,6 +310,7 @@ ideas = {
 				economy_cost_factor = -0.15
 			}
 		}
+		
 		BOH_army_training = {
 			picture = chi_army_corruption3
 			allowed = {
@@ -313,6 +328,7 @@ ideas = {
 				breakthrough_factor= 0.2
 			}
 		}
+		
 		BOH_military_advisors = {
 			picture = send_attache
 			allowed = {
@@ -349,6 +365,7 @@ ideas = {
 				stability_factor=-0.25
 			}
 		}
+		
 		BOH_com_purge = { #Political #1
 			ledger = army
 			picture = chi_hyper_inflation4
@@ -368,6 +385,7 @@ ideas = {
 				stability_factor=-0.20
 			}
 		}
+		
 		BOH_com_political_reforms = { #Political #2
 			ledger = army
 			picture = chi_hyper_inflation3
@@ -387,6 +405,7 @@ ideas = {
 				stability_factor=-0.15
 			}
 		}
+		
 		BOH_partially_recovered = { #Industry #1
 			picture = chi_hyper_inflation2
 			modifier = {
@@ -396,6 +415,7 @@ ideas = {
 				stability_factor=-0.15
 			}
 		}
+		
 		BOH_nearly_recovered = { #Industry #2
 			picture = chi_hyper_inflation
 			modifier = {
@@ -405,6 +425,7 @@ ideas = {
 				stability_factor=-0.15
 			}
 		}
+		
 		BOH_reopening_our_economy = { #Industry&Political
 			picture = chi_hyper_inflation
 			modifier = {
@@ -413,6 +434,7 @@ ideas = {
 				stability_factor=-0.10
 			}
 		}
+		
 		BOH_fully_recovered = { #Industry Buff
 			picture = generic_economic_increase
 			modifier = {
@@ -420,7 +442,6 @@ ideas = {
 				consumer_goods_factor=-0.05
 			}
 		}
-		
 		
 		BOH_closer_ties_to_bavaria = {
 			ledger = army
@@ -489,6 +510,7 @@ ideas = {
 				production_speed_buildings_factor= 0.15
 			}
 		}
+		
 		BOH_true_blitzkrieg = {
 			picture = BOH_true_blitzkrieg-67078
 			modifier = {
@@ -558,6 +580,7 @@ ideas = {
 				recruitable_population_factor = 0.15
 			}
 		}
+		
 		BOH_idea_socialist_education = {
 			picture = idea_jap_supremacy_of_will
 			allowed = {
@@ -573,6 +596,7 @@ ideas = {
 				research_speed_factor = 0.05
 			}
 		}
+		
 		BOH_idea_healthcare = {
 			picture = generic_research_bonus
 			allowed = {
@@ -1188,6 +1212,9 @@ ideas = {
 			
 			allowed = {
 				original_tag = BOH
+				any_owned_state = {
+					is_coastal = yes
+				}
 			}
 						
 			traits = { navy_chief_decisive_battle_2 }
@@ -1202,6 +1229,9 @@ ideas = {
 			
 			allowed = {
 				original_tag = BOH
+				any_owned_state = {
+					is_coastal = yes
+				}
 			}
 						
 			traits = { navy_chief_commerce_raiding_3 }
