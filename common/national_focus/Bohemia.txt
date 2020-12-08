@@ -891,6 +891,7 @@ category = cat_mobile_warfare
 		ai_will_do = {
 			factor = 1
 		}
+		custom_effect_tooltip = "We will relinquish our claims on Western Germany."
 		completion_reward = {
 			hidden_effect = { 
 				#Rhine
@@ -944,13 +945,6 @@ category = cat_mobile_warfare
 				50 = {add_core_of= BAV }
 				55 = {add_core_of= BAV }
 			}
-			BAV = {remove_core_of= BOH   }
-			NTE = {remove_core_of= BOH   }
-			TRC = {remove_core_of= BOH   }
-			BAD = {remove_core_of= BOH   }
-			NTE = {add_core_of= BAV   }
-			BAD = {add_core_of= BAV   }
-			TRC = {add_core_of= BAV   }
 		}
 	}
 
@@ -2478,9 +2472,7 @@ id = ohe.5
 			factor = 1
 		}
 		completion_reward = {
-			add_idea= { 
-idea = BOH_stabilized 
-}
+			add_ideas = BOH_stabilized 
 add_political_power= 150
 		}
 	}
