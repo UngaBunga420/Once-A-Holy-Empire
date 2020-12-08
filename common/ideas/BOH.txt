@@ -545,7 +545,7 @@ ideas = {
 				research_speed_factor = 0.05
 			}
 		}
-		BOH_com_healthcare = {
+		BOH_idea_healthcare = {
 			picture = generic_research_bonus
 			allowed = {
 				always= yes
