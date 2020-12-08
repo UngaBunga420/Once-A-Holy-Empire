@@ -230,7 +230,7 @@ army_experience= 50
 			has_government= neutrality
 		}
 		completion_reward = {
-			add_political_power= 200
+			add_political_power= 75
 		}
 	}
 	#Focus for Advancements in Artillery
@@ -681,7 +681,7 @@ add_building_construction = {
 	focus = {
 		id = BOH_support_the_pomeranians
 		icon = GFX_focus_prc_agrarian_socialism
-		x = 33
+		x = 28
 		y = 1
 		cost = 10
 		available_if_capitulated = yes
@@ -697,7 +697,7 @@ add_building_construction = {
 		}
 		completion_reward = {
 			custom_effect_tooltip = "Remove all Holy Roman core states except Bohemia"
-			
+			add_ideas = BOH_idea_failing_kaiser
 			hidden_effect = { 
 				
 				#Bavaria
@@ -766,9 +766,8 @@ add_building_construction = {
 			factor = 1
 		}
 		completion_reward = {
-			add_political_power= 200  
-
-neutrality_drift = 0.03
+			add_political_power= 75
+			add_ideas = BOH_idea_support_kaiser
 		}
 	}
 
@@ -1146,7 +1145,7 @@ add_war_support= 0.1
 			factor = 1
 		}
 		completion_reward = {
-			add_political_power= 300  add_stability= 0.1
+			add_political_power= 100  add_stability= 0.05
 		}
 	}
 
