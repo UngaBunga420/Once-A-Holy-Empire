@@ -404,9 +404,7 @@ days = 365
 			
 		}
 		completion_reward = {
-			add_idea = BOH_idea_fascism
-}
-   }
+			add_ideas = BOH_idea_fascism
 		}
 	}
 	
@@ -425,18 +423,18 @@ days = 365
 		}
 		completion_reward = {
 			set_politics= {
- ruling_party = fascism 
-elections_allowed = no 
-}
-  add_ideas= BOH_the_kaiser
+				ruling_party = fascism 
+				elections_allowed = no 
+			}
+			add_ideas= BOH_the_kaiser
 		}
 	}
 	
 	#Focus for We Decide Our Own Fate
 	focus = {
 		id = BOH_we_decide_our_fate
-		icon =
-		x = 10
+		icon = GFX_BOH_we_decide_our_fate
+		x = 11
 		y = 3
 		cost = 10
 		available_if_capitulated = yes
