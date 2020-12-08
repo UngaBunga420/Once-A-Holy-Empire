@@ -62,6 +62,20 @@ defined_text = {
 		localization_key = BAV_CHANCELLOR_TITLE
 	}
 	text = {
+		trigger = {
+			tag = ITA
+			has_government = fascism
+		}
+		localization_key = ITA_LEADER_TITLE
+	}
+	text = {
+		trigger = {
+			tag = ITA
+			has_government = neutrality
+		}
+		localization_key = ITA_MONARCH_TITLE
+	}
+	text = {
 		localization_key = DEFAULT_FIRST_TITLE
 	}
 }
@@ -89,6 +103,18 @@ defined_text = {
 		}
 		localization_key = BOH_MONARCH_TITLE
 	}
+	text = {
+        trigger = {
+			original_tag = ITA
+			ITA = {
+				has_idea = victor_emmanuel
+				NOT = {
+					has_government = neutrality
+				}
+			}
+        }
+        localization_key = ITA_MONARCH_TITLE
+	}
 }
 
 
@@ -109,6 +135,18 @@ defined_text = {
 			}
 		}
 		localization_key = ENG_GEORGE_V
+	}
+	text = {
+        trigger = {
+			original_tag = ITA
+			ITA = {
+				has_idea = victor_emmanuel
+				NOT = {
+					has_government = neutrality
+				}
+			}
+        }
+        localization_key = ITA_EMMANUEL_III
 	}
 	text = {
 		trigger = {
@@ -140,6 +178,18 @@ defined_text = {
 			}
         }
         localization_key = "GFX_ENG_George_V"
+	}
+	text = {
+        trigger = {
+			original_tag = ITA
+			ITA = {
+				has_idea = victor_emmanuel
+				NOT = {
+					has_government = neutrality
+				}
+			}
+        }
+        localization_key = "GFX_ITA_Emmanuel_III"
 	}
 	text = {
 		trigger = {
