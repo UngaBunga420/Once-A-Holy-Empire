@@ -120,6 +120,34 @@ ideas = {
 				consumer_goods_factor = -0.01
 			}
 		}
+		BOH_idea_failing_kaiser = {
+			allowed = {
+				always= yes
+			}
+			allowed_civil_war = {
+				always= yes
+			}
+			visible = {
+				always= no
+			}
+			modifier = {
+				neutrality_drift = -0.05
+			}
+		}
+		BOH_idea_support_kaiser = {
+			allowed = {
+				always= yes
+			}
+			allowed_civil_war = {
+				always= yes
+			}
+			visible = {
+				always= no
+			}
+			modifier = {
+				neutrality_drift = 0.05
+			}
+		}
 		BOH_idea_fascism = {
 			allowed = {
 				always= yes
