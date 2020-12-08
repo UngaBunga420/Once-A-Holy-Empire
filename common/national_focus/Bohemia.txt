@@ -383,10 +383,10 @@ days = 365
 		}
 	}
 
-	#Focus for An Ally In The Fuhrer
+	#Focus for Support the Far Right
 	focus = {
-		id = BOH_an_ally_in_the_fuhrer
-		icon = GFX_BOH_an_ally_in_the_fuhrer-60312
+		id = BOH_support_the_far_right
+		icon = GFX_goal_molotov_ribbentrop_pact
 		x = 10
 		y = 1
 		cost = 10
@@ -395,53 +395,64 @@ days = 365
 		mutually_exclusive = { 
 			focus = BOH_support_the_pomeranians 
 			focus = BOH_support_the_kaisers_regime 
-			focus = BOH_ 
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL } 
 		ai_will_do = {
 			factor = 1
 		}
 		available = {
-			BAV = { has_government= fascism }
+			
 		}
 		completion_reward = {
-			BAV = {country_event= {
-days = 1 
-id = ohe.13
+			add_idea = BOH_idea_fascism
 }
    }
 		}
 	}
-	#Focus for Consolidate Our Power
+	
+	#Focus for Move Torwards The Right
 	focus = {
-		id = BOH_consolidate_our_power
-		icon = GFX_focus_generic_strike_at_democracy1
-		x = 11
+		id = BOH_move_torwards_the_right
+		icon = GFX_goal_support_fascism
+		x = 10
 		y = 2
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = BOH_an_ally_in_the_fuhrer }
+		prerequisite = { focus = BOH_support_the_far_right }
 		search_filters = { FOCUS_FILTER_POLITICAL } 
 		ai_will_do = {
 			factor = 1
 		}
+		completion_reward = {
+			set_politics= {
+ ruling_party = fascism 
+elections_allowed = no 
+}
+  add_ideas= BOH_the_kaiser
+		}
 	}
-
-	#Focus for Appoint Loyal Ministers
+	
+	#Focus for We Decide Our Own Fate
 	focus = {
-		id = BOH_appoint_loyal_ministers
-		icon = GFX_goal_tripartite_pact
-		x = 11
+		id = BOH_we_decide_our_fate
+		icon =
+		x = 10
 		y = 3
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = BOH_consolidate_our_power }
-		search_filters = { FOCUS_FILTER_POLITICAL } 
+		prerequisite = { focus = BOH_move_torwards_the_right }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = {
 			factor = 1
 		}
+		completion_reward = {
+			country_event= {
+				days = 1 
+				id = ohe.55
+			}
+		}
 	}
-
+			
 	#Focus for Prepare For War With Pomerania
 	focus = {
 		id = BOH_prepare_for_war_with_pomerania
@@ -513,27 +524,7 @@ add_building_construction = {
 }
 		}
 	}
-	#Focus for Move Torwards The Right
-	focus = {
-		id = BOH_move_torwards_the_right
-		icon = GFX_goal_support_fascism
-		x = 9
-		y = 2
-		cost = 10
-		available_if_capitulated = yes
-		prerequisite = { focus = BOH_an_ally_in_the_fuhrer }
-		search_filters = { FOCUS_FILTER_POLITICAL } 
-		ai_will_do = {
-			factor = 1
-		}
-		completion_reward = {
-			set_politics= {
- ruling_party = fascism 
-elections_allowed = no 
-}
-  add_ideas= BOH_the_kaiser
-		}
-	}
+
 
 	#Focus for Invest In The Local Population
 	focus = {
@@ -641,28 +632,6 @@ elections_allowed = no
 		}
 	}
 
-	#Focus for Less Radical Socialism
-	focus = {
-		id = BOH_less_radical_socialism
-		icon = GFX_goal_tripartite_pact
-		x = 38
-		y = 2
-		cost = 10
-		available_if_capitulated = yes
-		prerequisite = { focus = BOH_support_the_pomeranians }
-		mutually_exclusive = { focus = BOH_abolish_the_monarchy }
-		search_filters = { FOCUS_FILTER_POLITICAL } 
-		ai_will_do = {
-			factor = 1
-		}
-		completion_reward = {
-			add_popularity= { 
-ideology = democratic 
-popularity = 0.2 
-}
-		}
-	}
-
 	#Focus for Abolish The Monarchy
 	focus = {
 		id = BOH_abolish_the_monarchy
@@ -672,7 +641,7 @@ popularity = 0.2
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { focus = BOH_support_the_pomeranians }
-		mutually_exclusive = { focus = BOH_less_radical_socialism }
+		mutually_exclusive = {  }
 		search_filters = { FOCUS_FILTER_POLITICAL } 
 		ai_will_do = {
 			factor = 1
@@ -720,7 +689,7 @@ popularity = 0.2
 		available_if_capitulated = yes
 		prerequisite = { focus = BOH_the_state_of_the_empire }
 		mutually_exclusive = { 
-			focus = BOH_an_ally_in_the_fuhrer 
+			focus = BOH_support_the_far_right 
 			focus = BOH_support_the_kaisers_regime 
 			focus = BOH_ 
 		}
@@ -792,7 +761,7 @@ popularity = 0.2
 			focus = BOH_support_the_pomeranians 
 		}
 		mutually_exclusive = { 
-			focus = BOH_an_ally_in_the_fuhrer 
+			focus = BOH_support_the_far_right 
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL } 
 		ai_will_do = {
@@ -1267,30 +1236,8 @@ custom_effect_tooltip = available_chief_of_army
 show_ideas_tooltip = walther_von_brauchitsch
 		}
 	}
-#Focus for A Democratic Empire
-	focus = {
-		id = BOH_a_democratic_empire
-		icon = GFX_BOH_a_democratic_empire-61329
-		x = 38
-		y = 3
-		cost = 10
-		available_if_capitulated = yes
-		prerequisite = { focus = BOH_less_radical_socialism }
-		search_filters = { FOCUS_FILTER_POLITICAL } 
-		ai_will_do = {
-			factor = 1
-		}
-		completion_reward = {
-			set_politics= {
- ruling_party = democratic
-elections_allowed = yes 
-}
-  add_ideas= BOH_the_kaiser
-		}
-	}
-
 	
-
+	
 	#Focus for Death from Above
 	focus = {
 		id = BOH_death_from_above
@@ -1318,116 +1265,6 @@ category = cas_bomber
 		}
 	}
 
-	#Focus for Ally With The Rhine
-	focus = {
-		id = BOH_ally_with_the_rhine
-		icon = GFX_BOH_ally_with_the_rhine-61949
-		x = 38
-		y = 4
-		cost = 10
-		available_if_capitulated = yes
-		prerequisite = { focus = BOH_a_democratic_empire }
-		mutually_exclusive = { focus = BOH_our_own_democratic_sphere }
-		search_filters = { FOCUS_FILTER_POLITICAL } 
-		ai_will_do = {
-			factor = 1
-		}
-		completion_reward = {
-			BAV = {country_event= {
-days = 1 
-id = ohe.14
-}
-   }
-		}
-	}
-
-
-
-
-	#Focus for Our Own Democratic Sphere
-	focus = {
-		id = BOH_our_own_democratic_sphere
-		icon = GFX_goal_unknown
-		x = 35
-		y = 4
-		cost = 10
-		available_if_capitulated = yes
-		prerequisite = { focus = BOH_a_democratic_empire }
-		mutually_exclusive = { focus = BOH_ally_with_the_rhine }
-		search_filters = { FOCUS_FILTER_POLITICAL } 
-		ai_will_do = {
-			factor = 1
-		}
-		completion_reward = {create_faction= "Democratic German Front" }
-	}
-
-	#Focus for Support Bavarian Democrats
-	focus = {
-		id = BOH_support_bavarian_democrats
-		icon = GFX_BOH_support_bavarian_democrats-62633
-		x = 35
-		y = 5
-		cost = 10
-		available_if_capitulated = yes
-		prerequisite = { 
-			focus = BOH_our_own_democratic_sphere 
-			focus = BOH_ally_with_the_rhine 
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL } 
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
-			not= {
-is_in_faction_with= TRC
-}
-		}
-	}
-
-	#Focus for Help The Rhine Take Hessen
-	focus = {
-		id = BOH_help_the_rhine_take_hessen
-		icon = GFX_goal_unknown
-		x = 38
-		y = 5
-		cost = 10
-		available_if_capitulated = yes
-		prerequisite = { focus = BOH_ally_with_the_rhine }
-		search_filters = { FOCUS_FILTER_ANNEXATION } 
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
-	#Focus for A Joint Bavarian Conquest
-	focus = {
-		id = BOH_a_joint_bavarian_conquest
-		icon = GFX_goal_unknown
-		x = 38
-		y = 6
-		cost = 10
-		available_if_capitulated = yes
-		prerequisite = { focus = BOH_help_the_rhine_take_hessen }
-		search_filters = { FOCUS_FILTER_ANNEXATION } 
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
-	#Focus for Split The North
-	focus = {
-		id = BOH_split_the_north
-		icon = GFX_goal_unknown
-		x = 38
-		y = 7
-		cost = 10
-		available_if_capitulated = yes
-		prerequisite = { focus = BOH_a_joint_bavarian_conquest }
-		search_filters = { FOCUS_FILTER_ANNEXATION } 
-		ai_will_do = {
-			factor = 1
-		}
-	}
 
 	#Focus for Integrated Airforce
 	focus = {
@@ -3904,6 +3741,7 @@ target = HUN
 		x = 41
 		y = 5
 		cost = 5
+		available = { ruling_party = neutrality }
 		available_if_capitulated = yes
 		prerequisite = { focus = BOH_increase_mountaineer_investment }
 		search_filters = { FOCUS_FILTER_ANNEXATION } 

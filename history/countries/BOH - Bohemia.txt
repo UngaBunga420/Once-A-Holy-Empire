@@ -68,15 +68,16 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Fascist Council"
-	desc = "POLITICS_FAS_DESC"
-	picture = "gfx/leaders/BOH/fascist_council.dds"
+	name = "Radola Gajda"
+	desc = "POLITICS_RADOLA_DESC"
+	picture = "gfx/leaders/BOH/radola.dds"
 	expire = "2011.6.4"
 	ideology = fascism
 	traits = {
 		
 	}
 }
+
 
 create_field_marshal = {
 	name = "Otto von Hapsburg"

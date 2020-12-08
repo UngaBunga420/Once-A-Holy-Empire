@@ -1252,3 +1252,21 @@ country_event = {
 		add_political_power= -150
 	}
 }
+##Event: We Decide Our Fate
+country_event = {
+	id = ohe.55
+	title = ohe.55.title
+	desc = ohe.55.desc
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		name = ohe.55.a
+		ai_chance = { factor = 2}
+		
+	}
+	option = {
+		name = ohe.55.b
+		ai_chance = { factor = 1}
+		
+	}
+}

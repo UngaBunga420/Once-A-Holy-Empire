@@ -120,6 +120,19 @@ ideas = {
 				consumer_goods_factor = -0.01
 			}
 		}
+		BOH_idea_fascism = {
+			allowed = {
+				always= yes
+			}
+			allowed_civil_war = {
+				always= yes
+			}
+			visible = {
+				always= no
+			}
+			modifier = {
+				fascism_drift = 0.04
+			}
 		BOH_idea_marxism = {
 			picture = generic_communism_drift_bonus
 			allowed = {
