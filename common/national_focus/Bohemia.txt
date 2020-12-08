@@ -967,6 +967,8 @@ category = cat_mobile_warfare
 uses = 2 
 category = armor 
 }
+custom_effect_tooltip = available_chief_of_army
+show_ideas_tooltip = heinz_guderian
 		}
 	}
 
@@ -1261,6 +1263,8 @@ category = cat_superior_firepower
 uses = 1
 category = cat_mechanized_equipment
 }
+custom_effect_tooltip = available_chief_of_army
+show_ideas_tooltip = walther_von_brauchitsch
 		}
 	}
 #Focus for A Democratic Empire
@@ -1833,6 +1837,29 @@ category = air_doctrine
 		}
 		completion_reward = {
 			navy_experience= 15
+			create_navy_leader = {
+				name = "Karl Dönitz"
+				picture = "Portrait_Germany_Karl_Donitz.dds"
+				traits = { navy_career_officer seawolf }
+				skill = 5
+				id = 26
+				attack_skill = 5
+				defense_skill = 3
+				maneuvering_skill = 3
+				coordination_skill = 5
+			}
+
+			create_navy_leader = {
+				name = "Erich Raeder"
+				picture = "Portrait_Germany_Erich_Raeder.dds"
+				traits = { naval_lineage battleship_adherent }
+				skill = 4
+				id = 27
+				attack_skill = 3
+				defense_skill = 4
+				maneuvering_skill = 3
+				coordination_skill = 3
+			}
 		}
 	}
 
@@ -1853,6 +1880,7 @@ category = air_doctrine
 		}
 		completion_reward = {
 			add_ideas= BOH_modern_airforce
+			
 		}
 	}
 
@@ -2083,6 +2111,8 @@ add_tech_bonus = {
 uses = 1 
 category = cat_mobile_warfare
 }
+custom_effect_tooltip = available_chief_of_army
+show_ideas_tooltip = erwin_rommel
 		}
 	}
 

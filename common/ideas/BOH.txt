@@ -500,25 +500,7 @@ ideas = {
 				production_speed_bunker_factor = 0.2
 			}
 		}
-		BOH_hugenberg = {
-			ledger = army
-			picture = BOH_hugenberg-62448
-			allowed = {
-				always= yes
-			}
-			allowed_civil_war = {
-				always= yes
-			}
-			visible = {
-				always= yes
-			}
-			modifier = {
-				production_speed_arms_factory_factor= 0.05
-				production_speed_fuel_silo_factor= 0.15
-				production_speed_synthetic_refinery_factor= 0.15
-				base_fuel_gain_factor= 0.15
-			}
-		}
+		
 		BOH_idea_reorganized_labor = {
 			picture = idea_generic_communist_army
 			allowed = {
@@ -564,6 +546,649 @@ ideas = {
 				army_org_regain = 0.05
 			}
 		}
+		
+	}
+	# TECHNOLOGY
+	tank_manufacturer = { 
+		
+		designer = yes
+		
+		porsche = {
+
+			
+			allowed = {
+				original_tag = BOH
+			}
+			
+			research_bonus = {
+				armor = 0.15
+			}
+			
+			traits = { heavy_tank_manufacturer }
+
+			ai_will_do = {
+				factor = 10
+			}
+
+		}
+		
+		henschel = {
+
+			
+			allowed = {
+				original_tag = BOH
+			}
+			
+			research_bonus = {
+				armor = 0.15
+			}
+			
+			traits = { fast_tank_manufacturer }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		GER_MAN = {
+
+			picture = GER_MAN
+			
+			allowed = {
+				original_tag = BOH
+			}
+			
+			research_bonus = {
+				armor = 0.15
+			}
+			
+			traits = { medium_tank_manufacturer }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+	naval_manufacturer = { 
+		
+		designer = yes
+		
+		germaniawerft = {
+
+			
+			allowed = {
+				original_tag = BOH
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			equipment_bonus = {
+				
+			}
+			
+			traits = { atlantic_fleet_naval_manufacturer }
+			
+		}
+		
+		blohm_und_voss = {
+
+			
+			allowed = {
+				original_tag = BOH
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { raiding_fleet_naval_manufacturer }
+			
+			equipment_bonus = {
+				
+			}
+			
+		}	
+	}
+	
+	aircraft_manufacturer = { 
+			
+		designer = yes
+		
+		messerschmitt = {
+			
+			allowed = {
+				original_tag = BOH
+			}
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { light_aircraft_manufacturer }
+			
+			equipment_bonus = {
+				
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		junkers = { 
+			allowed = {
+				original_tag = BOH
+			}
+						
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { CAS_manufacturer }
+			
+			equipment_bonus = {
+				
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}	
+		
+
+		focke_wulf = { 
+
+			
+			allowed = {
+				original_tag = BOH
+			}
+			
+						
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { medium_aircraft_manufacturer }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		heinkel = {
+
+			
+			allowed = {
+				original_tag = BOH
+			}
+			
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { heavy_aircraft_manufacturer }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		dornier = {
+
+			allowed = {
+				original_tag = BOH
+			}
+			
+						
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { naval_aircraft_manufacturer }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}	
+
+
+	}
+	
+	industrial_concern = {
+		
+		ig_faben = {
+			
+			allowed = {
+				original_tag = BOH
+			}
+			
+			research_bonus = {
+				industry = 0.05
+				synth_resources = 0.15
+			}
+			
+			traits = { refinery_concern }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		krupp = {
+			
+			allowed = {
+				original_tag = BOH
+			}
+			
+			research_bonus = {
+				industry = 0.15
+				
+			}
+			ai_will_do = {
+				factor = 2
+			}
+			
+			traits = { industrial_concern }
+		}
+
+		siemens = {
+			
+			allowed = {
+				original_tag = BOH
+			}
+			
+			research_bonus = {
+				electronics = 0.15
+			}
+			
+			traits = { electronics_concern }
+		}		
+	}
+	
+	materiel_manufacturer = {
+		
+		designer = yes
+		
+		rheinmetall = {
+			
+			allowed = {
+				original_tag = BOH
+			}
+			
+			research_bonus = {
+				artillery = 0.15
+			}
+			
+			traits = { artillery_manufacturer }
+			
+			modifier = {
+				# +10% arty/at/aa research speed
+			}
+		}
+		
+		mauser = {
+
+			
+			allowed = {
+				original_tag = BOH
+			}
+			
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+			
+			traits = { infantry_equipment_manufacturer }
+			
+			ai_will_do = {
+				factor = 2
+			}
+		}
+		
+		
+
+		
+		opel = {
+			
+			allowed = {
+				original_tag = BOH
+			}
+			
+			research_bonus = {
+				motorized_equipment = 0.15
+			}
+			
+			traits = { motorized_equipment_manufacturer }
+		}
+	}
+	
+	theorist = {
+		von_braun = {
+			ledger = air
+			
+			allowed = {
+				original_tag = BOH
+			}
+			
+			research_bonus = {
+				rocketry = 0.15
+			}
+			
+			traits = { rocket_scientist }
+		}
+		
+		heisenberg = {
+			ledger = army
+
+			
+			allowed = {
+				original_tag = BOH
+			}
+		
+			research_bonus = {
+				nuclear = 0.15
+			}
+			
+			traits = { nuclear_scientist }
+		}
+		
+		heinz_guderian = {
+			ledger = army
+
+			
+			allowed = {
+				original_tag = BOH
+				has_completed_focus = BOH_armor_innovations
+			}
+			
+			research_bonus = {
+				land_doctrine = 0.10
+			}
+			
+			
+			traits = { blitzkrieg_theorist }
+		}
+		
+		manstein = {
+			ledger = army
+
+			
+			allowed = {
+				original_tag = BOH
+			}
+			
+			cost = 250
+			
+			research_bonus = {
+				cat_mobile_warfare = 0.15
+			}
+			
+
+			traits = { mobile_warfare_expert }
+		}
+		
+		wolfram_von_richthofen = {
+			ledger = air
+
+			
+			allowed = {
+				original_tag = BOH
+			}
+			
+			cost = 250
+			
+			research_bonus = {
+				cat_battlefield_support = 0.15
+			}
+			
+			traits = { close_air_support_proponent }
+		}
+		
+		walther_wever = {
+			ledger = air
+
+			
+			allowed = {
+				original_tag = BOH
+			}
+			
+			research_bonus = {
+				air_doctrine = 0.10
+			}
+			
+			traits = { air_warfare_theorist }
+		}
+		
+		ernst_udet = {
+			ledger = air
+
+			
+			allowed = {
+				original_tag = BOH
+			}
+			
+			research_bonus = {
+				air_doctrine = 0.10
+			}
+			
+			traits = { dive_bomber }
+		}
+		
+		alfred_saalwachter = {
+			ledger = navy
+
+			
+			allowed = {
+				original_tag = BOH
+			}
+			
+			cost = 250
+			
+			research_bonus = {
+				cat_trade_interdiction = 0.20
+			}
+			
+			traits = { submarine_specialist }
+		}
+		
+		otto_ciliax = {
+			ledger = navy
+
+			
+			allowed = {
+				original_tag = BOH
+			}
+			
+			research_bonus = {
+				naval_doctrine = 0.10
+			}
+			
+			traits = { naval_theorist }
+		}
+	}	
+		
+	# MILITARY
+	army_chief = {
+
+		CZE_ludvik_svoboda = {
+			
+			picture = generic_army_europe_5
+			
+			allowed = {
+				original_tag = CZE
+			}
+			
+
+			
+			traits = { army_chief_morale_3 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		wilhelm_keitel  = {
+
+			
+			allowed = {
+				original_tag = BOH
+			}
+
+			available = {
+				has_government = fascism
+			}
+						
+			traits = { army_chief_drill_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	
+		franz_halder = {
+
+			
+			allowed = {
+				original_tag = BOH
+			}
+						
+			traits = { army_chief_offensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	
+		walther_von_brauchitsch = {
+
+			
+			allowed = {
+				original_tag = BOH
+			}
+			available = {
+				has_completed_focus = BOH_mechanize_our_troops
+			}
+
+					
+			traits = { army_chief_maneuver_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+	air_chief = {
+		
+		goering = {
+
+			
+			allowed = {
+				original_tag = BOH
+			}
+
+			available = {
+				OR = {
+					has_government = fascism
+					custom_trigger_tooltip = {
+						tooltip = "Has instated Nazi Leadership"
+						has_cosmetic_tag = BOH_nazism
+					}
+				}
+			}
+						
+			traits = { air_chief_ground_support_2 }
+			
+			ai_will_do = {
+				factor = 2
+			}
+		}
+		
+		ritter_von_greim = {
+
+			
+			allowed = {
+				original_tag = BOH
+			}
+			available = {
+				has_completed_focus = BOH_independent_airforce
+			}
+						
+			traits = { air_chief_all_weather_2 }
+			
+			ai_will_do = {
+				factor = 0.5
+			}
+		}
+		
+		albert_kesselring = {
+
+			
+			allowed = {
+				original_tag = BOH
+			}
+						
+			traits = { air_chief_reform_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+	navy_chief = { #CHIEF OF NAVY
+		
+		raeder = {
+
+			
+			allowed = {
+				original_tag = BOH
+			}
+						
+			traits = { navy_chief_decisive_battle_2 }
+			
+			ai_will_do = {
+				factor = 0.1
+			}
+		}
+		
+		donitz = {
+
+			
+			allowed = {
+				original_tag = BOH
+			}
+						
+			traits = { navy_chief_commerce_raiding_3 }
+			
+			ai_will_do = {
+				factor = 0.1
+			}
+		}
+	}
+	political_advisor = {
+		BOH_hugenberg = {
+			ledger = army
+			picture = BOH_hugenberg-62448
+			allowed = {
+				always= yes
+			}
+			allowed_civil_war = {
+				always= yes
+			}
+			visible = {
+				always= yes
+			}
+			modifier = {
+				production_speed_arms_factory_factor= 0.05
+				production_speed_fuel_silo_factor= 0.15
+				production_speed_synthetic_refinery_factor= 0.15
+				base_fuel_gain_factor= 0.15
+			}
+		}
 		BOH_hjalmar = {
 			picture = BOH_hjalmar-62449
 			allowed = {
@@ -580,12 +1205,168 @@ ideas = {
 				production_speed_infrastructure_factor= 0.20
 			}
 			research_bonus = {
-				add_tech_bonus= {
-					 bonus = 0.75 
-					uses = 2 
-					category = industry 
+				industry = 0.15
+			}
+		}
+	}
+	high_command = {
+
+		ferdinand_schorner = {
+			ledger = army
+
+			
+			allowed = {
+				original_tag = BOH
+			}
+			
+			traits = { army_infantry_2 }
+			
+			ai_will_do = {
+				factor = 2
+			}
+		}
+		
+		erwin_rommel = {
+			ledger = army
+
+			
+			allowed = {
+				original_tag = BOH
+			}
+			available = {
+					has_completed_focus = BOH_prioritize_breakthroughs
 				}
+			
+			traits = { army_armored_3 }
+			
+			ai_will_do = {
+				factor = 8
+			}
+		}
+		
+		gerd_von_rundstedt = {
+			ledger = army
+
+			
+			allowed = {
+				original_tag = BOH
+			}
+			
+			traits = { army_regrouping_2 }
+			
+			ai_will_do = {
+				factor = 1.5
+			}
+		}
+		
+		werner_von_fritsch = {
+			ledger = army
+
+			
+			allowed = {
+				original_tag = BOH
+			}
+			
+			traits = { army_logistics_2 }
+			
+			ai_will_do = {
+				factor = 1.5
+			}
+		}
+		
+		hugo_sperrle = {
+			ledger = air
+
+			
+			allowed = {
+				original_tag = BOH
+			}
+			available = {
+					has_completed_focus = BOH_integrated_airforce
+			}
+			
+			traits = { air_close_air_support_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		erhard_milch = {
+			ledger = air
+
+			
+			allowed = {
+				original_tag = BOH
+			}
+			
+			traits = { air_bomber_interception_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		kurt_student = {
+			ledger = air
+
+			
+			allowed = {
+				original_tag = BOH
+			}
+			
+			traits = { air_airborne_2 }
+			
+			ai_will_do = {
+				factor = 1
 			}
 		}	
+		
+		erich_bey = {
+			ledger = navy
+
+			
+			allowed = {
+				original_tag = BOH
+			}
+			
+			traits = { navy_naval_air_defense_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		gunther_lutjens = {
+			ledger = navy
+
+			
+			allowed = {
+				original_tag = BOH
+			}
+			
+			traits = { navy_fleet_logistics_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		 
+		viktor_schutze = {
+			ledger = navy
+
+			
+			allowed = {
+				original_tag = BOH
+			}
+			
+			traits = { navy_anti_submarine_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
 	}
+
+	
 }
