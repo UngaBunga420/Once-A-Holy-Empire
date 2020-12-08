@@ -1,0 +1,85 @@
+# For the Duel Leader Title, Leader Names, and custom portrait!
+
+defined_text = {
+	name = GetFirstTitle
+	text = {
+		trigger = {
+			tag = BOH
+			has_government = fascism
+		}
+		localization_key = BOH_CHANCELLOR_TITLE
+	}
+	text = {
+		localization_key = DEFAULT_FIRST_TITLE
+	}
+}
+
+defined_text = {
+	name = GetSecondTitle
+	text = {
+		trigger = {
+			tag = BOH
+			has_government = fascism
+		}
+		localization_key = BOH_MONARCH_TITLE
+	}
+}
+
+defined_text = {
+	name = GetDualLeaderName
+	text = {
+		trigger = {
+			tag = BOH
+			has_government = fascism
+		}
+		localization_key = BOH_OTTO
+	}
+	text = {
+		trigger = {
+			
+	text = {
+		localization_key = DEFAULT_TITLE
+	}
+}
+
+defined_text = {
+    name = GetDualLeaderPortrait
+	text = {
+		trigger = {
+			tag = BOH
+			has_government = fascism
+		}
+		localization_key = GFX_BOH_otto
+	}
+	text = {
+		localization_key = "GFX_portrait_bg_blank"
+	}
+}
+
+##defined_text = {
+##    name = GetDualLeaderDesc
+##    
+##    text = {
+##        trigger = {
+##			original_tag = ENG
+##			ENG = {
+##				has_idea = george_v
+##			}
+##        }
+##        localization_key = "DESCRIPTION_TEST"
+##	}
+##}
+
+##defined_text = {
+##    name = GetFirstLeaderDesc
+##    
+##    text = {
+##        trigger = {
+##			original_tag = ENG
+##			ENG = {
+##				has_idea = george_v
+##			}
+##        }
+##        localization_key = "FIRST_LEADER_DESC_TEST"
+##	}
+##}
