@@ -17,6 +17,13 @@ defined_text = {
 		localization_key = ENG_PRIME_MINISTER_TITLE
 	}
 	text = {
+        trigger = {
+			tag = BOH
+			has_government = neutrality
+		}
+		localization_key = "BOH_MONARCH_TITLE"
+	}
+	text = {
 		trigger = {
 			tag = BOH
 			has_government = fascism
@@ -46,6 +53,13 @@ defined_text = {
 			has_cosmetic_tag = BOH
 		}
 		localization_key = BOH_COMMUNIST_TITLE
+	}
+	text = {
+		trigger = {
+			tag = BAV
+			has_government = fascism
+		}
+		localization_key = BAV_CHANCELLOR_TITLE
 	}
 	text = {
 		localization_key = DEFAULT_FIRST_TITLE
@@ -170,5 +184,19 @@ defined_text = {
 			has_government = fascism
 		}
 		localization_key = "BOH_CHANCELLOR_DESC"
+	}
+	text = {
+		trigger = {
+			tag = BAV
+			has_government = fascism
+		}
+		localization_key = BAV_CHANCELLOR_DESC
+	}
+	text = {
+        trigger = {
+			tag = BOH
+			has_government = neutrality
+		}
+		localization_key = "BOH_MONARCH_DESC"
 	}
 }

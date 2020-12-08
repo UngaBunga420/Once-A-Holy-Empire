@@ -18,11 +18,17 @@
  ROM_PRIME_MINISTER_TITLE:0 "Prime Minister"
  ROM_MONARCH_TITLE:0 "Monarch"
  ROM_CAROL_II:0 "Carol II"
+ ## Fascist Bavarian stuff
+ BAV_CHANCELLOR_TITLE:0 "Chancellor"
+ BAV_CHANCELLOR_DESC:0 "Adolf Hitler, Chancellor of the Bavarian Reich, swiftly rose to power after the collapse of the Holy Roman Empire. During the interwar period, he slowly changed Bavaria into an ultra-nationalistic state, turning himelf into the \"sole leader of the German people\"."
+ ## Communist HRE stuff
  BOH_COMMUNIST_TITLE:0 "Provisional Government"
  BOH_MARXIST_LENINIST_TITLE:0 "General Secretary"
  BOH_MARXIST_TITLE:0 "President"
+ ## Fascist HRE stuff
  BOH_CHANCELLOR_TITLE:0 "Chancellor"
  BOH_CHANCELLOR_DESC:0 "Chancellor"
+ ## Monarchist HRE stuff
  BOH_MONARCH_TITLE:0 "Kaiser"
  BOH_MONARCH_DESC:0 "Kaiser"
  BOH_OTTO:0 "Otto von Hapsburg"
