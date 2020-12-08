@@ -32,6 +32,22 @@ defined_text = {
 		localization_key = BOH_MARXIST_LENINIST_TITLE
 	}
 	text = {
+		trigger = {
+			tag = BOH
+			has_government = communism
+			has_cosmetic_tag = BOH_marxism_n
+		}
+		localization_key = BOH_MARXIST_TITLE
+	}
+	text = {
+		trigger = {
+			tag = BOH
+			has_government = communism
+			has_cosmetic_tag = BOH
+		}
+		localization_key = BOH_COMMUNIST_TITLE
+	}
+	text = {
 		localization_key = DEFAULT_FIRST_TITLE
 	}
 }

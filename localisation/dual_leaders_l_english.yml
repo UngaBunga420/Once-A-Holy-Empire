@@ -20,6 +20,7 @@
  ROM_CAROL_II:0 "Carol II"
  BOH_COMMUNIST_TITLE:0 "Provisional Government"
  BOH_MARXIST_LENINIST_TITLE:0 "General Secretary"
+ BOH_MARXIST_TITLE:0 "President"
  BOH_CHANCELLOR_TITLE:0 "Chancellor"
  BOH_CHANCELLOR_DESC:0 "Chancellor"
  BOH_MONARCH_TITLE:0 "Kaiser"
