@@ -1212,9 +1212,7 @@ ideas = {
 			
 			allowed = {
 				original_tag = BOH
-				any_owned_state = {
-					is_coastal = yes
-				}
+				has_completed_focus = BOH_naval_interests
 			}
 						
 			traits = { navy_chief_decisive_battle_2 }
@@ -1229,9 +1227,7 @@ ideas = {
 			
 			allowed = {
 				original_tag = BOH
-				any_owned_state = {
-					is_coastal = yes
-				}
+				has_completed_focus = BOH_naval_interests
 			}
 						
 			traits = { navy_chief_commerce_raiding_3 }
