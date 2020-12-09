@@ -2860,7 +2860,7 @@ add_political_power= 150
 		prerequisite = { 
 			focus = BOH_com_internal_policy
 		}
-		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		search_filters = { FOCUS_FILTER_MANPOWER } 
 		ai_will_do = {
 			factor = 1
 		}
@@ -2881,14 +2881,14 @@ add_political_power= 150
 		prerequisite = { 
 			focus = BOH_com_internal_policy
 		}
-		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		search_filters = { FOCUS_FILTER_RESEARCH } 
 		ai_will_do = {
 			factor = 1
 		}
 		
 		completion_reward = {
 			add_ideas = BOH_idea_socialist_education
-			
+			add_research_slot = 1
 		}
 	}
 	#Focus for Improve Healthcare Standards
@@ -2902,7 +2902,7 @@ add_political_power= 150
 		prerequisite = { 
 			focus = BOH_com_internal_policy
 		}
-		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		search_filters = { FOCUS_FILTER_RESEARCH } 
 		ai_will_do = {
 			factor = 1
 		}
