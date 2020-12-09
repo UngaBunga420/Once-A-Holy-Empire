@@ -1261,12 +1261,13 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = ohe.55.a
-		ai_chance = { factor = 2}
-		
+		ai_chance = { factor = 1}
+		set_cosmetic_tag= BOH_nazism_n
+		complete_national_focus = BOH_ally_with_fuhrer
 	}
 	option = {
 		name = ohe.55.b
-		ai_chance = { factor = 1}
-		
+		ai_chance = { factor = 2}
+		complete_national_focus = BOH_on_our_own
 	}
 }

@@ -429,16 +429,50 @@ days = 365
 			add_ideas= BOH_the_kaiser
 		}
 	}
+	#Focus for Consolidate Our Control
+	focus = {
+		id = BOH_consolidate_control
+		icon = GFX_goal_support_fascism
+		x = 10
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_move_torwards_the_right }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			
+		}
+	}
+	#Focus for Stop The Purge
+	focus = {
+		id = BOH_stop_the_purge
+		icon = GFX_goal_support_fascism
+		x = 10
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_consolidate_control }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+
+		}
+	}
 	
 	#Focus for We Decide Our Own Fate
 	focus = {
 		id = BOH_we_decide_our_fate
 		icon = GFX_BOH_we_decide_our_fate
-		x = 11
-		y = 3
+		x = 10
+		y = 5
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = BOH_move_torwards_the_right }
+		prerequisite = { focus = BOH_stop_the_purge }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = {
 			factor = 1
@@ -450,19 +484,110 @@ days = 365
 			}
 		}
 	}
-			
-	#Focus for Prepare For War With Pomerania
+	
+	#Focus for Continue On Our Own
 	focus = {
-		id = BOH_prepare_for_war_with_pomerania
-		icon = GFX_goal_unknown
-		x = 9
-		y = 4
+		id = BOH_on_our_own
+		icon = GFX_BOH_we_decide_our_fate
+		x = 12
+		y = 6
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = BOH_split_our_claims_with_bavaria }
+		prerequisite = { focus = BOH_we_decide_our_fate }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+
+		}
+	}
+	
+	#Focus for Ally With The Fuhrer
+	focus = {
+		id = BOH_ally_with_fuhrer
+		icon = GFX_BOH_we_decide_our_fate
+		x = 8
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_we_decide_our_fate }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+
+		}
+	}
+	
+	#Focus for Split Our Claims With Bavaria
+	focus = {
+		id = BOH_split_our_claims_with_bavaria
+		icon = GFX_goal_molotov_ribbentrop_pact
+		x = 8
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_ally_with_fuhrer }
 		search_filters = { FOCUS_FILTER_ANNEXATION } 
 		ai_will_do = {
 			factor = 1
+		}
+		completion_reward = {
+		custom_effect_tooltip = "We will relinquish our claims on Western Germany."
+			hidden_effect = { 
+				#Rhine
+				42 = { add_core_of= BAV }
+				51 = { add_core_of= BAV }
+				807 = { add_core_of= BAV }
+				808 = { add_core_of= BAV }
+				34 = { add_core_of= BAV }
+				8 = { add_core_of= BAV }
+				6 = { add_core_of= BAV }
+				#Mackensen
+				57 = { add_core_of= BAV }
+				56 = { add_core_of= BAV }
+				59 = { add_core_of= BAV }
+				58 = { add_core_of= BAV }
+				#Pomerania
+				64 = {add_core_of= BOH }
+				62 = {add_core_of= BOH }
+				63 = {add_core_of= BOH }
+				68 = {add_core_of= BOH }
+				86 = {add_core_of= BOH }
+				#Prussia
+				85 = {add_core_of= BOH }
+				5 = {add_core_of= BOH }
+				188 = {add_core_of= BOH }
+				763 = {add_core_of= BOH }
+				#Bavaria
+				53 = { remove_core_of= BOH }
+				52 = {remove_core_of= BOH   }
+				54 = {remove_core_of= BOH   }
+				60 = {remove_core_of= BOH   }
+				#Rhine
+				42 = { remove_core_of= BOH }
+				51 = {remove_core_of= BOH   }
+				807 = {remove_core_of= BOH   }
+				808 = {remove_core_of= BOH   }
+				34 = {remove_core_of= BOH   }
+				8 = {remove_core_of= BOH   }
+				6 = {remove_core_of= BOH   }
+				#Mackensen
+				57 = { remove_core_of= BOH }
+				56 = {remove_core_of= BOH   }
+				59 = {remove_core_of= BOH   }
+				58 = {remove_core_of= BOH   }
+				61 = {remove_core_of= BAV   }
+				61 = {add_core_of= BOH   }
+				#Baden
+				50 = {remove_core_of= BOH   }
+				55 = {remove_core_of= BOH   }
+				#Baden
+				50 = {add_core_of= BAV }
+				55 = {add_core_of= BAV }
+			}
 		}
 	}
 
@@ -844,76 +969,6 @@ id = ohe.1
 uses = 2 
 category = cat_mobile_warfare
 }
-		}
-	}
-
-	#Focus for Split Our Claims With Bavaria
-	focus = {
-		id = BOH_split_our_claims_with_bavaria
-		icon = GFX_goal_molotov_ribbentrop_pact
-		x = 9
-		y = 3
-		cost = 10
-		available_if_capitulated = yes
-		prerequisite = { focus = BOH_move_torwards_the_right }
-		search_filters = { FOCUS_FILTER_ANNEXATION } 
-		ai_will_do = {
-			factor = 1
-		}
-		custom_effect_tooltip = "We will relinquish our claims on Western Germany."
-		completion_reward = {
-			hidden_effect = { 
-				#Rhine
-				42 = { add_core_of= BAV }
-				51 = { add_core_of= BAV }
-				807 = { add_core_of= BAV }
-				808 = { add_core_of= BAV }
-				34 = { add_core_of= BAV }
-				8 = { add_core_of= BAV }
-				6 = { add_core_of= BAV }
-				#Mackensen
-				57 = { add_core_of= BAV }
-				56 = { add_core_of= BAV }
-				59 = { add_core_of= BAV }
-				58 = { add_core_of= BAV }
-				#Pomerania
-				64 = {add_core_of= BOH }
-				62 = {add_core_of= BOH }
-				63 = {add_core_of= BOH }
-				68 = {add_core_of= BOH }
-				86 = {add_core_of= BOH }
-				#Prussia
-				85 = {add_core_of= BOH }
-				5 = {add_core_of= BOH }
-				188 = {add_core_of= BOH }
-				763 = {add_core_of= BOH }
-				#Bavaria
-				53 = { remove_core_of= BOH }
-				52 = {remove_core_of= BOH   }
-				54 = {remove_core_of= BOH   }
-				60 = {remove_core_of= BOH   }
-				#Rhine
-				42 = { remove_core_of= BOH }
-				51 = {remove_core_of= BOH   }
-				807 = {remove_core_of= BOH   }
-				808 = {remove_core_of= BOH   }
-				34 = {remove_core_of= BOH   }
-				8 = {remove_core_of= BOH   }
-				6 = {remove_core_of= BOH   }
-				#Mackensen
-				57 = { remove_core_of= BOH }
-				56 = {remove_core_of= BOH   }
-				59 = {remove_core_of= BOH   }
-				58 = {remove_core_of= BOH   }
-				61 = {remove_core_of= BAV   }
-				61 = {add_core_of= BOH   }
-				#Baden
-				50 = {remove_core_of= BOH   }
-				55 = {remove_core_of= BOH   }
-				#Baden
-				50 = {add_core_of= BAV }
-				55 = {add_core_of= BAV }
-			}
 		}
 	}
 
