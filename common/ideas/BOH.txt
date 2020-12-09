@@ -1208,13 +1208,12 @@ ideas = {
 	navy_chief = { #CHIEF OF NAVY
 		
 		raeder = {
-
-			
 			allowed = {
 				original_tag = BOH
-				has_completed_focus = BOH_naval_interests
 			}
-						
+			available = {
+				has_completed_focus = BOH_naval_interests
+			}			
 			traits = { navy_chief_decisive_battle_2 }
 			
 			ai_will_do = {
@@ -1223,13 +1222,12 @@ ideas = {
 		}
 		
 		donitz = {
-
-			
 			allowed = {
 				original_tag = BOH
-				has_completed_focus = BOH_naval_interests
 			}
-						
+			available = {
+				has_completed_focus = BOH_naval_interests
+			}	
 			traits = { navy_chief_commerce_raiding_3 }
 			
 			ai_will_do = {

@@ -71,7 +71,7 @@ create_country_leader = {
 	desc = "POLITICS_RADOLA_DESC"
 	picture = "gfx/leaders/BOH/radola.dds"
 	expire = "2011.6.4"
-	ideology = fascism
+	ideology = fascism_ideology
 	traits = {
 		
 	}
