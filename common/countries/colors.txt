@@ -7,6 +7,10 @@ HUN = {
 	color = rgb { 255 221 153 }
 	color_ui = rgb { 224 228 160 }
 }
+LOU = {
+	color = rgb { 142 155 191 }
+	color_ui = rgb { 188 203 245 }
+}
 BOH = {
 	color = rgb { 86 99 69 }
 	color_ui = rgb { 106 119 89 }
@@ -42,6 +46,10 @@ SWE = {
 FRA = {
 	color = rgb { 57 113 228 }
 	color_ui = rgb { 74 147 255 }
+}
+LOU = {
+	color = rgb { 134 139 173 }
+	color_ui = rgb { 174 179 214 }
 }
 LUX = {
 	color = rgb { 65 175 179 }
