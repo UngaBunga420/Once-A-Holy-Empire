@@ -644,6 +644,9 @@ add_building_construction = {
 		ai_will_do = {
 			factor = 1
 		}
+		available = {
+			communism > 0.5
+		}
 		completion_reward = {
 			every_army_leader = {
 				limit = {
