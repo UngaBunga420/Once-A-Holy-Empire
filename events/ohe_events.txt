@@ -783,68 +783,12 @@ country_event = {
 	option = {
 		trigger = { has_cosmetic_tag = BOH_com_east_germany2 }
 		name = ohe.37.a
-		ai_chance = { factor = 2}
-		set_cosmetic_tag = BOH_holy_roman_union
-		country_event= {
-			days = 5
-			id = ohe.38 
-		}
-		add_ideas = BOH_united_union_idea
-		complete_national_focus = BOH_proclaim_the_holy_roman_union
+		ai_chance = { factor = 1}
 	}
 	option = {
 		trigger = { has_cosmetic_tag = BOH_com_east_germany }
 		name = ohe.37.b
 		ai_chance = { factor = 1}
-		set_cosmetic_tag = BOH_holy_roman_federation
-		IF = {
-				limit = { OR = { AND = { controls_state = 52 controls_state = 53 controls_state = 54 controls_state = 60 } } }
-				release = BAV
-				puppet = BAV
-				BAV = {load_oob = "BAV_1936" set_cosmetic_tag = BAV_holy_roman_federation}
-		}
-		IF = {
-				limit = { OR = { AND = { controls_state = 64 controls_state = 62 controls_state = 68 controls_state = 63 controls_state = 86 } } }
-				release = TPR
-				puppet = TPR
-				TPR = {load_oob = "TPR_1936" set_cosmetic_tag = TPR_holy_roman_federation}
-		}
-		IF = {
-				limit = { OR = { AND = { controls_state = 152 controls_state = 4 controls_state = 153 controls_state = 102 controls_state = 736 controls_state = 160 } } }
-				release = AUS
-				puppet = AUS
-				AUS = {add_state_core = 160 transfer_state = 160 load_oob = "AUS_1936" set_cosmetic_tag = AUS_holy_roman_federation}
-		}
-		IF = {
-				limit = { OR = { AND = { controls_state = 85 controls_state = 5 controls_state = 763 controls_state = 188 } } }
-				release = PRS
-				puppet = PRS
-				PRS = {load_oob = "PRS_1936" set_cosmetic_tag = PRS_holy_roman_federation remove_ideas = PRS_gymnastics_and_sports_division}
-		}
-		IF = {
-				limit = { OR = { AND = { controls_state = 50 controls_state = 55 } } }
-				release = BAD
-				puppet = BAD
-				BAD = {load_oob = "BAD_1936" set_cosmetic_tag = BAD_holy_roman_federation}
-		}
-		IF = {
-				limit = { OR = { AND = { controls_state = 56 controls_state = 57 controls_state = 58 controls_state = 59 controls_state = 61 } } }
-				release = NTE
-				puppet = NTE
-				NTE = {load_oob = "NTE_1936" set_cosmetic_tag = NTE_holy_roman_federation}
-		}
-		IF = {
-				limit = { OR = { AND = { controls_state = 42 controls_state = 808 controls_state = 51 controls_state = 807 controls_state = 6 controls_state = 34 controls_state = 8 } } }
-				release = TRC
-				puppet = TRC
-				TRC = {load_oob = "TRC_1936" set_cosmetic_tag = TRC_holy_roman_federation}
-		}
-		country_event= {
-			days = 5
-			id = ohe.38 
-		}
-		add_ideas = BOH_united_federation_idea
-		complete_national_focus = BOH_proclaim_the_holy_roman_federation
 	}
 }
 ##Event: Move our capital #2
@@ -872,12 +816,10 @@ country_event = {
 	option = {
 		name = ohe.38.d
 		ai_chance = { factor = 1}
-		set_capital = 52
-	}
-	option = {
-		name = ohe.38.e
-		ai_chance = { factor = 1}
-		set_capital = 4
+		country_event= {
+			days = 0
+			id = ohe.56
+		}
 	}
 }
 ##Event: COM BOH Foreign Policy
@@ -1266,5 +1208,67 @@ country_event = {
 		name = ohe.55.b
 		ai_chance = { factor = 2}
 		complete_national_focus = BOH_on_our_own
+	}
+}
+##Event: Move our capital #3
+country_event = {
+	id = ohe.56
+	title = ohe.56.title
+	desc = ohe.56.desc
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		name = ohe.56.a
+		ai_chance = { factor = 2}
+		set_capital = 52
+   }
+	option = {
+		name = ohe.56.b
+		ai_chance = { factor = 1}
+		set_capital = 4
+	}
+	option = {
+		name = ohe.56.c
+		ai_chance = { factor = 2}
+		set_capital = 6
+   }
+	option = {
+		name = ohe.56.d
+		ai_chance = { factor = 1}
+		country_event= {
+			days = 0
+			id = ohe.57
+		}
+	}
+}
+##Event: Move our capital #4
+country_event = {
+	id = ohe.57
+	title = ohe.57.title
+	desc = ohe.57.desc
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		name = ohe.57.a
+		ai_chance = { factor = 2}
+		set_capital = 763
+   }
+	option = {
+		name = ohe.57.b
+		ai_chance = { factor = 1}
+		set_capital = 50
+	}
+	option = {
+		name = ohe.57.c
+		ai_chance = { factor = 2}
+		set_capital = 55
+   }
+	option = {
+		name = ohe.57.d
+		ai_chance = { factor = 1}
+		country_event= {
+			days = 0
+			id = ohe.38
+		}
 	}
 }

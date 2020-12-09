@@ -34,7 +34,10 @@ defined_text = {
 		trigger = {
 			tag = BOH
 			has_government = communism
-			has_cosmetic_tag = BOH_marxism_leninism
+			OR = {
+				has_cosmetic_tag = BOH_marxism_leninism
+				has_cosmetic_tag = BOH_com_east_germany2
+			}
 		}
 		localization_key = BOH_MARXIST_LENINIST_TITLE
 	}
@@ -42,7 +45,10 @@ defined_text = {
 		trigger = {
 			tag = BOH
 			has_government = communism
-			has_cosmetic_tag = BOH_marxism_n
+			OR = {
+				has_cosmetic_tag = BOH_marxism_n
+				has_cosmetic_tag = BOH_com_east_germany
+			}
 		}
 		localization_key = BOH_MARXIST_TITLE
 	}
