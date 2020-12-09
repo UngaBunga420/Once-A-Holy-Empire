@@ -214,7 +214,7 @@ country_event = {
 		ai_chance = { factor = 2}
 		BOH = {
 country_event = {
-days = 5
+days = 1
 id = ohe.25
 }
 }
@@ -224,7 +224,7 @@ id = ohe.25
 		ai_chance = { factor = 1}
 		BOH = {
 country_event = {
-days = 5
+days = 1
 id = ohe.15
 }
 }
@@ -465,7 +465,7 @@ country_event = {
 		ai_chance = { factor = 1}
 		BAV={
 country_event= {
-days = 5
+days = 1
 id = ohe.24
 }
   }
@@ -488,7 +488,7 @@ country_event = {
 		declare_war_on = { target = BAV    type = annex_everything }
 		BAV={
 country_event= {
-days = 5
+days = 1
 id = ohe.23
 }
   }
@@ -566,7 +566,7 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = ohe.27.a
-		ai_chance = { factor = 2}
+		ai_chance = { factor = 3}
 		BOH = {country_event= {
 days = 1 
 id = ohe.28
@@ -626,7 +626,7 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = ohe.30.a
-		ai_chance = { factor = 2}
+		ai_chance = { factor = 3}
 		BOH = {country_event= {
 days = 1 
 id = ohe.31
@@ -878,7 +878,7 @@ country_event = {
 		ai_chance = { factor = 1}
 		BOH = {
 			country_event= {
-				days = 5
+				days = 1
 				id = ohe.43
 			}
 		}
@@ -889,7 +889,7 @@ country_event = {
 		ai_chance = { factor = 2}
 		BOH = {
 			country_event= {
-				days = 5
+				days = 1
 				id = ohe.44
 			}
 		}
@@ -900,7 +900,7 @@ country_event = {
 		ai_chance = { factor = 3}
 		FRA = {
 			country_event= {
-				days = 5
+				days = 1
 				id = ohe.47
 			}
 		}
@@ -1014,7 +1014,7 @@ country_event = {
 		ai_chance = { factor = 1}
 		BOH = {
 			country_event= {
-				days = 5
+				days = 1
 				id = ohe.49
 			}
 		}
@@ -1024,7 +1024,7 @@ country_event = {
 		ai_chance = { factor = 2}
 		BOH = {
 			country_event= {
-				days = 5
+				days = 1
 				id = ohe.50
 			}
 		}

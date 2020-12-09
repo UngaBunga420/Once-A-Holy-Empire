@@ -2761,7 +2761,7 @@ add_political_power= 150
 		
 			TPR = {
 				country_event= {
-				days = 5
+				days = 1
 				id = ohe.30
 				}
 			}
@@ -2792,7 +2792,7 @@ add_political_power= 150
 		completion_reward = {
 			NTE = {
 				country_event= {
-				days = 5
+				days = 1
 				id = ohe.33
 				}
 			}
@@ -2945,7 +2945,7 @@ add_political_power= 150
 		completion_reward = {
 			BAD = {
 				country_event= {
-				days = 5
+				days = 1
 				id = ohe.27
 				}
 			}
@@ -3024,7 +3024,7 @@ add_political_power= 150
 		completion_reward = { 
 		remove_ideas = BOH_a_fragmented_empire 
 		country_event= {
-				days = 5
+				days = 0
 				id = ohe.37
 				} }
 		
@@ -3064,7 +3064,7 @@ add_political_power= 150
 			custom_effect_tooltip = BOH_proclaim_holy_roman_union2
 			set_cosmetic_tag = BOH_holy_roman_union
 				country_event= {
-					days = 5
+					days = 1
 					id = ohe.38 
 				}
 				add_ideas = BOH_united_union_idea
@@ -3099,7 +3099,7 @@ add_political_power= 150
 			#custom_effect_tooltip = BOH_proclaim_holy_roman_federation2
 			set_cosmetic_tag = BOH_holy_roman_federation
 			country_event= {
-			days = 5
+			days = 1
 			id = ohe.38 
 		}
 		IF = {
@@ -3244,7 +3244,7 @@ add_political_power= 150
 		completion_reward = {
 			AUS = {
 				country_event= {
-				days = 5
+				days = 1
 				id = ohe.52
 				}
 			}
