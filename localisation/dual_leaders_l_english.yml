@@ -5,6 +5,7 @@
  dual_leader_name:0 "[ROOT.GetDualLeaderName]"
  DEFAULT_TITLE:0 "Vacant"
  DEFAULT_FIRST_TITLE:0 "Leader"
+ MONARCH_TITLE:0 "Monarch"
  second_leader_tt:0 "§Y[ROOT.GetDualLeaderName]§!"
  first_leader_diplo_tt:0 "§Y[From.GetLeader]§!\n[From.GetFirstTitle] of [From.GetNameDef]"
  second_leader_diplo_tt:0 "§Y[From.GetDualLeaderName]§!\n[From.GetSecondTitle] of [From.GetNameDef]"
@@ -12,16 +13,14 @@
  first_leader_desc_tt:0 "§g[From.GetFirstLeaderDesc]§!"
     # Nation Specific Localisation
  ENG_PRIME_MINISTER_TITLE:0 "Prime Minister"
- ENG_KING_TITLE:0 "Monarch"
  ENG_GEORGE_V:0 "George V"
  ENG_GEORGE_V_DESC:0 "His Majesty"
  ROM_PRIME_MINISTER_TITLE:0 "Prime Minister"
- ROM_MONARCH_TITLE:0 "Monarch"
  ROM_CAROL_II:0 "Carol II"
  ## Italy stuff
  ITA_LEADER_TITLE:0 "Il Duce"
- ITA_MONARCH_TITLE:0 "Monarch"
  ITA_EMMANUEL_III:0 "Victor Emmanuel III"
+ ## Louisiana stuff
  ## Fascist Bavarian stuff
  BAV_CHANCELLOR_TITLE:0 "Chancellor"
  BAV_CHANCELLOR_DESC:0 "Adolf Hitler, Chancellor of the Bavarian Reich, swiftly rose to power after the collapse of the Holy Roman Empire. During the interwar period, he slowly changed Bavaria into an ultra-nationalistic state, turning himelf into the \"sole leader of the German people\"."

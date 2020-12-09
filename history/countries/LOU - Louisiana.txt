@@ -36,3 +36,13 @@ set_popularities = {
 	communism = 3
 	neutrality = 74
 }
+create_country_leader = {
+	name = "Alphonse I"
+	desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
+	picture = "gfx/leaders/LOU/portrait_alfonso_xiii.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+		dislikes_france
+	}
+}

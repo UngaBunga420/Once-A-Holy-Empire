@@ -73,7 +73,14 @@ defined_text = {
 			tag = ITA
 			has_government = neutrality
 		}
-		localization_key = ITA_MONARCH_TITLE
+		localization_key = MONARCH_TITLE
+	}
+	text = {
+		trigger = {
+			tag = LOU
+			has_government = neutrality
+		}
+		localization_key = MONARCH_TITLE
 	}
 	text = {
 		localization_key = DEFAULT_FIRST_TITLE
@@ -87,7 +94,7 @@ defined_text = {
 			tag = ROM
 			has_government = neutrality
 		}
-		localization_key = ROM_MONARCH_TITLE
+		localization_key = MONARCH_TITLE
 	}
 	text = {
 		trigger = {
@@ -113,7 +120,7 @@ defined_text = {
 				}
 			}
         }
-        localization_key = ITA_MONARCH_TITLE
+        localization_key = MONARCH_TITLE
 	}
 }
 
