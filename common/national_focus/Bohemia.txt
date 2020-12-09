@@ -2683,6 +2683,7 @@ add_political_power= 150
 			
 		}
 		completion_reward = { 
+			custom_effect_tooltip = BOH_proclaim_holy_roman_union2
 			custom_effect_tooltip = BOH_has_marxism_leninism
 			add_ideas = BOH_idea_marxism_leninism
 			create_country_leader = {
@@ -3060,8 +3061,7 @@ add_political_power= 150
 				}
 			}
 		}
-		completion_reward = {  
-			custom_effect_tooltip = BOH_proclaim_holy_roman_union2
+		completion_reward = { 
 			set_cosmetic_tag = BOH_holy_roman_union
 				country_event= {
 					days = 1

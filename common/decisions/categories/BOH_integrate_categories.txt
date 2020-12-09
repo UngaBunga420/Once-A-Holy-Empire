@@ -8,6 +8,6 @@ BOH_integration_decisions = {
 		
 	}
 	visible = {
-		has_completed_focus = BOH_proclaim_the_holy_roman_union
+		has_completed_focus = BOH_marxismleninism
 	}
 }
