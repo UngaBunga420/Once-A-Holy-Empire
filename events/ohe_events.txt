@@ -657,17 +657,6 @@ country_event = {
 		annex_country= {
 			target = TPR
 		}
-		custom_effect_tooltip = "Cores all of Brandenburg-Pomerania"
-		hidden_effect = {
-			set_cosmetic_tag= BOH_com_east_germany2
-			
-			#Pomerania
-			64 = {add_core_of= BOH }
-			62 = {add_core_of= BOH }
-			63 = {add_core_of= BOH }
-			68 = {add_core_of= BOH }
-			86 = {add_core_of= BOH }
-		}
 		country_event= {
 			days = 10 
 			id = ohe.36
@@ -679,17 +668,6 @@ country_event = {
 		ai_chance = { factor = 1}
 		annex_country= {
 			target = TPR
-		}
-		custom_effect_tooltip = "Cores all of Brandenburg-Pomerania"
-		hidden_effect = {
-			set_cosmetic_tag= BOH_com_east_germany
-			
-			#Pomerania
-			64 = {add_core_of= BOH }
-			62 = {add_core_of= BOH }
-			63 = {add_core_of= BOH }
-			68 = {add_core_of= BOH }
-			86 = {add_core_of= BOH }
 		}
 		country_event= {
 			days = 10 
@@ -1155,12 +1133,10 @@ country_event = {
 	trigger = {
 		tag = BOH
 		has_completed_focus = BOH_approach_pomerania
-		OR = {
-			NOT = { has_cosmetic_tag = BOH_com_east_germany }
-			NOT = { has_cosmetic_tag = BOH_com_east_germany2 }
-			NOT = { has_cosmetic_tag = BOH_holy_roman_federation }
-			NOT = { has_cosmetic_tag = BOH_holy_roman_union }
-		}
+		NOT = { has_cosmetic_tag = BOH_com_east_germany }
+		NOT = { has_cosmetic_tag = BOH_com_east_germany2 }
+		NOT = { has_cosmetic_tag = BOH_holy_roman_federation }
+		NOT = { has_cosmetic_tag = BOH_holy_roman_union }
 		#Pomerania
 		controls_state = 64
 		controls_state = 62
@@ -1169,7 +1145,28 @@ country_event = {
 		controls_state = 86
 	}
 	option = {
+		trigger = { has_cosmetic_tag=BOH_marxism_leninism}
 		name = ohe.51.a
+		ai_chance = { factor = 1}
+		custom_effect_tooltip = "Cores all of Brandenburg-Pomerania"
+		hidden_effect = {
+			set_cosmetic_tag= BOH_com_east_germany2
+			
+			#Pomerania
+			64 = {add_core_of= BOH }
+			62 = {add_core_of= BOH }
+			63 = {add_core_of= BOH }
+			68 = {add_core_of= BOH }
+			86 = {add_core_of= BOH }
+		}
+		country_event= {
+			days = 10 
+			id = ohe.36
+		}
+	}
+	option = {
+		trigger = { has_cosmetic_tag=BOH_marxism_n}
+		name = ohe.51.b
 		ai_chance = { factor = 1}
 		custom_effect_tooltip = "Cores all of Brandenburg-Pomerania"
 		hidden_effect = {
