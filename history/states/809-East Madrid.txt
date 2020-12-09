@@ -3,9 +3,9 @@ state={
 	name="STATE_809"
 
 	history={
-		owner = FSP
+		owner = SPE
 		victory_points = {
-			13236 25
+			13236 30
 		}
 		buildings = {
 			infrastructure = 6
