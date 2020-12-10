@@ -37,7 +37,6 @@ if = {
 		freedom_level = 0.2
 	}
 	else = {
-		puppet = POL
 		puppet = UKR
 		puppet = BLR
 		puppet = AZR
