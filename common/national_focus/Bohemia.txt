@@ -513,8 +513,21 @@ days = 365
 		ai_will_do = {
 			factor = 1
 		}
+		bypass = {
+			has_cosmetic_tag = BOH_nazism
+		}
 		completion_reward = {
-
+			custom_effect_tooltip = BOH_has_nazism
+			create_country_leader = {
+				name = "Hans Knirsh"
+				desc = "POLITICS_HANS_KNIRSH_DESC"
+				picture = "gfx/leaders/BOH/Hans_Knirsh.dds"
+				expire = "1965.1.1"
+				ideology = nazism
+				traits = {
+					#
+				}
+			}
 		}
 	}
 	
@@ -1141,7 +1154,7 @@ id = ohe.11
 	focus = {
 		id = BOH_crush_prussia
 		icon = GFX_BOH_crush_prussia-60528
-		x = 16
+		x = 17
 		y = 5
 		cost = 10
 		available_if_capitulated = yes
@@ -1208,7 +1221,7 @@ add_war_support= 0.1
 	focus = {
 		id = BOH_look_north
 		icon = GFX_BOH_look_north-61331
-		x = 20
+		x = 19
 		y = 5
 		cost = 10
 		available_if_capitulated = yes
@@ -2312,8 +2325,8 @@ random_owned_controlled_state={
 	focus = {
 		id = BOH_conquer_rome
 		icon = GFX_BOH_conquer_rome-61119
-		x = 19
-		y = 11
+		x = 18
+		y = 9
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { focus = BOH_take_switzerland }
@@ -2329,66 +2342,6 @@ target = ITA
 		}
 	}
 
-	#Focus for Send Austria Military Advisors
-	focus = {
-		id = BOH_send_austria_military_advisors
-		icon = GFX_focus_generic_military_mission
-		x = 22
-		y = 8
-		cost = 10
-		available_if_capitulated = yes
-		prerequisite = { focus = BOH_ally_austria }
-		mutually_exclusive = { focus = BOH_rebuild_austria }
-		search_filters = { FOCUS_FILTER_POLITICAL } 
-		ai_will_do = {
-			factor = 1
-		}
-		completion_reward = {
-			AUS = {army_experience= 50  air_experience= 25  add_ideas= BOH_military_advisors   }
-		}
-	}
-
-	#Focus for Ally Austria
-	focus = {
-		id = BOH_ally_austria
-		icon = GFX_BOH_ally_austria-60641
-		x = 22
-		y = 7
-		cost = 10
-		available_if_capitulated = yes
-		prerequisite = { focus = BOH_retake_the_industrial_heartland }
-		mutually_exclusive = { focus = BOH_demand_austrian_subjugation }
-		search_filters = { FOCUS_FILTER_POLITICAL } 
-		ai_will_do = {
-			factor = 1
-		}
-		completion_reward = {
-			AUS = {country_event= {
-days = 1 
-id = ohe.5 
-}
-   }
-		}
-	}
-
-	#Focus for Stabilize The State
-	focus = {
-		id = BOH_stabilize_the_state
-		icon = GFX_goal_generic_neutrality_focus
-		x = 14
-		y = 7
-		cost = 10
-		available_if_capitulated = yes
-		prerequisite = { focus = BOH_retake_the_industrial_heartland }
-		search_filters = { FOCUS_FILTER_INDUSTRY } 
-		ai_will_do = {
-			factor = 1
-		}
-		completion_reward = {
-			add_ideas = BOH_stabilized 
-add_political_power= 150
-		}
-	}
 #Focus for Political Reforms
 	focus = {
 		id = BOH_com_political_reforms_focus
@@ -3592,12 +3545,11 @@ id = ohe.2
 	focus = {
 		id = BOH_demand_austrian_subjugation
 		icon = GFX_BOH_demand_austrian_subjugation-60787
-		x = 19
+		x = 17
 		y = 7
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { focus = BOH_retake_the_industrial_heartland }
-		mutually_exclusive = { focus = BOH_ally_austria }
 		search_filters = { FOCUS_FILTER_ANNEXATION } 
 		ai_will_do = {
 			factor = 1
@@ -3610,59 +3562,37 @@ id = ohe.9
    }
 		}
 	}
-
-	#Focus for Rebuild Austria
+	
+	#Focus for Demand Amsterdam's annexation
 	focus = {
-		id = BOH_rebuild_austria
-		icon = GFX_goal_continuous_repairments
+		id = BOH_subjugate_holland
+		icon = GFX_demand_the_rhine
 		x = 19
-		y = 8
+		y = 7
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { 
-			focus = BOH_ally_austria 
-			focus = BOH_demand_austrian_subjugation 
+			focus = BOH_retake_the_industrial_heartland
 		}
-		mutually_exclusive = { focus = BOH_send_austria_military_advisors }
-		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		search_filters = { FOCUS_FILTER_ANNEXATION } 
 		ai_will_do = {
 			factor = 1
 		}
-		available = {
-			NOT = {
-country_exists = AUS
-}
+		bypass = {
+			HOL={
+				exists= no  
+			}
 		}
 		completion_reward = {
-			4 = {              add_extra_state_shared_building_slots = 1
-                add_building_construction = {
-                    type = industrial_complex
-                    level = 1
-                    instant_build = yes
-                }
-
-            }
-       4 = {
-add_extra_state_shared_building_slots = 1
-                add_building_construction = {
-                    type = industrial_complex
-                    level = 1
-                    instant_build = yes
-                }
-
-            }
-       4 = {
-add_extra_state_shared_building_slots = 1
-                add_building_construction = {
-                    type = arms_factory
-                    level = 1
-                    instant_build = yes
-                }
-
-            }
+			HOL = {
+				country_event= {
+					days = 1
+					id = ohe.58
+				}
+			}
 		}
 	}
-
+	
 	#Focus for Appoint An Economical Minister
 	focus = {
 		id = BOH_appoint_an_economical_minister
@@ -3687,13 +3617,13 @@ id = ohe.12
 	focus = {
 		id = BOH_take_switzerland
 		icon = GFX_focus_attack_switzerland
-		x = 19
-		y = 10
+		x = 18
+		y = 8
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { 
-			focus = BOH_help_austria_take_hungary 
-			focus = BOH_rebuild_austria 
+			focus = BOH_demand_austrian_subjugation
+			focus = BOH_subjugate_holland
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION } 
 		ai_will_do = {
@@ -3704,28 +3634,6 @@ id = ohe.12
 type = annex_everything 
 target = SWI
 }
-		}
-	}
-
-	#Focus for Help Austria Take Hungary
-	focus = {
-		id = BOH_help_austria_take_hungary
-		icon = GFX_BOH_help_austria_take_hungary-61118
-		x = 22
-		y = 9
-		cost = 10
-		available_if_capitulated = yes
-		prerequisite = { focus = BOH_send_austria_military_advisors }
-		search_filters = { FOCUS_FILTER_POLITICAL } 
-		ai_will_do = {
-			factor = 1
-		}
-		completion_reward = {
-			AUS = {create_wargoal= { 
-type = annex_everything 
-target = HUN
-}
-   }
 		}
 	}
 

@@ -12,7 +12,6 @@ country_event = {
 		ai_chance = { factor = 1}	
 		add_timed_idea= { 
 		idea = kaiser_influence
-		days = 720 
 		}
 	}
 }
@@ -52,9 +51,9 @@ country_event = {
 	option = {
 		name = ohe.3.a
 		ai_chance = { factor = 1}
-		annex_country= {
+		_country= {
  target = TRC 
-}
+}annex
 add_named_threat= {
 threat = 10
 name = ohe.3.title
@@ -1201,7 +1200,7 @@ country_event = {
 	option = {
 		name = ohe.55.a
 		ai_chance = { factor = 1}
-		set_cosmetic_tag= BOH_nazism_n
+		set_cosmetic_tag= BOH_nazism
 		complete_national_focus = BOH_ally_with_fuhrer
 	}
 	option = {
@@ -1272,3 +1271,68 @@ country_event = {
 		}
 	}
 }
+##Event: (HOL) Prague Demands our Subjugation
+country_event = {
+	id = ohe.58
+	title = ohe.58.title
+	desc = ohe.58.desc
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		name = ohe.58.a
+		ai_chance = { factor = 2 }
+		
+		BOH = {
+			country_event= {
+				days = 1 
+				id = ohe.59
+			}
+		}
+	}
+	option = {
+		name = ohe.58.b
+		ai_chance = { factor = 1 }
+		BOH = {
+			country_event= {
+				days = 1 
+				id = ohe.60
+			}
+		}
+	}
+}
+##Event: Holland Denies Annexation
+country_event = {
+	id = ohe.59
+	title = ohe.59.title
+	desc = ohe.59.desc
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		name = ohe.59.a
+		ai_chance = { factor = 2 }
+		declare_war_on = { target = HOL    type = annex_everything }
+	}
+	option = {
+		name = ohe.59.b
+		ai_chance = { factor = 1 }
+		add_political_power= -150
+	}
+}
+##Event: Holland Accepts Our Proposal
+country_event = {
+	id = ohe.60
+	title = ohe.60.title
+	desc = ohe.60.desc
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		name = ohe.60.a
+		ai_chance = { factor = 1 }
+		annex_country= {
+			target = HOL
+		}
+	}
+}
+
+	
+	

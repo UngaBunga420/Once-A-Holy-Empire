@@ -148,7 +148,7 @@ ideas = {
 				always= yes
 			}
 			visible = {
-				always= no
+				always= yes
 			}
 			modifier = {
 				neutrality_drift = 0.05
