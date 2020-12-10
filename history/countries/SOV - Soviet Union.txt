@@ -2,8 +2,60 @@
 
 oob = "SOV_1936"
 
-puppet = POL
 
+# DIPLOMACY
+if = {
+	limit = {
+		OR = {
+			has_dlc = "Together for Victory"
+			has_dlc = "Man the Guns"
+		}
+	}
+	set_autonomy = {
+		target = AZR
+		autonomous_state = autonomy_integrated_puppet
+		freedom_level = 0.3
+	}
+	set_autonomy = {
+		target = UBD
+		autonomous_state = autonomy_integrated_puppet
+		freedom_level = 0.1
+	}
+	set_autonomy = {
+		target = UKR
+		autonomous_state = autonomy_integrated_puppet
+		freedom_level = 0.1
+	}
+	set_autonomy = {
+		target = BLR
+		autonomous_state = autonomy_integrated_puppet
+		freedom_level = 0.2
+	}
+	set_autonomy = {
+		target = AZR
+		autonomous_state = autonomy_integrated_puppet
+		freedom_level = 0.2
+	}
+	else = {
+		puppet = POL
+		puppet = UKR
+		puppet = BLR
+		puppet = AZR
+	}
+}
+set_cosmetic_tag = SOV_russia
+AZR = {
+	set_cosmetic_tag = AZR_russia
+}
+BLR = {
+	set_cosmetic_tag = BLR_russia
+}
+UKR = {
+	set_cosmetic_tag = UKR_russia
+}
+UBD = {
+	set_cosmetic_tag = UBD_russia
+}
 set_research_slots = 3
 set_stability = 0.5
 set_war_support = 0.8

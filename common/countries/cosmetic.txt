@@ -323,6 +323,23 @@ SOV_russia = {
     color_ui = rgb { 72 143 68 }
 }
 
+UKR_russia = {
+    color = rgb { 72 143 68 }
+    color_ui = rgb { 72 143 68 }
+}
+AZR_russia = {
+    color = rgb { 72 143 68 }
+    color_ui = rgb { 72 143 68 }
+}
+BLR_russia = {
+    color = rgb { 72 143 68 }
+    color_ui = rgb { 72 143 68 }
+}
+UBD_russia = {
+    color = rgb { 72 143 68 }
+    color_ui = rgb { 72 143 68 }
+}
+
 HOL_benelux_unified = {
 	color = rgb { 255 128 0 }
 	color_ui = rgb { 255 128 0 }
