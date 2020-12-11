@@ -8,8 +8,18 @@ country_event = {
 	picture = GFX_report_event_king_speech
 	is_triggered_only = yes
 	option = {
+		trigger = { BOH = { has_government = democratic } }
 		name = ohe.1.a
-		ai_chance = { factor = 1}	
+		ai_chance = { factor = 1}
+		add_timed_idea= { 
+			idea = democratic_kaiser_influence
+			days = 720
+		}
+	}
+	option = {
+		trigger = { BOH = { has_government = neutrality } }
+		name = ohe.1.b
+		ai_chance = { factor = 1}
 		add_timed_idea= { 
 			idea = kaiser_influence
 			days = 720

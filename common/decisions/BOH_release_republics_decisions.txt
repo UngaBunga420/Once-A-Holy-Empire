@@ -1,0 +1,233 @@
+BOH_release_republics_decisions = {
+	BOH_release_rwr_baden = {
+
+		icon = GFX_baden
+
+		available = {
+			controls_state = 50
+			controls_state = 55
+		}
+
+		visible = {
+			always = yes
+		}
+
+		fire_only_once = yes
+
+		modifier = {
+			stability_factor = -0.05
+			consumer_goods_factor = 0.1
+			industrial_capacity_factory = -0.1
+		}
+
+		days_remove = 10
+
+
+		cost = 5
+
+		remove_effect = {
+			release = BAD
+			puppet = BAD
+			BAD = {load_oob = "BAD_1936" set_cosmetic_tag = BAD_holy_roman_federation}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+	BOH_release_rwr_austria = {
+
+		icon = GFX_austria
+
+		available = {
+			controls_state = 4
+			controls_state = 152
+			controls_state = 153
+			controls_state = 39
+			controls_state = 160
+			controls_state = 736
+			controls_state = 102
+		}
+
+		visible = {
+			always = yes
+		}
+
+		fire_only_once = yes
+
+		modifier = {
+			stability_factor = -0.1
+			consumer_goods_factor = 0.15
+			industrial_capacity_factory = -0.15
+		}
+
+		days_remove = 10
+		
+
+		cost = 5
+
+		remove_effect = {
+			release = AUS
+			puppet = AUS
+			AUS = {load_oob = "AUS_1936" set_cosmetic_tag = AUS_holy_roman_federation}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+	BOH_release_rwr_prussia = {
+
+		icon = GFX_prussia
+
+		available = {
+			controls_state = 763
+			controls_state = 188
+			controls_state = 5
+			controls_state = 85
+		}
+
+		visible = {
+			always = yes
+		}
+
+		fire_only_once = yes
+
+		modifier = {
+			stability_factor = -0.1
+			consumer_goods_factor = 0.10
+			industrial_capacity_factory = -0.1
+		}
+
+		days_remove = 10
+
+
+		cost = 5
+
+		remove_effect = {
+			release = PRS
+			puppet = PRS
+			PRS = {load_oob = "PRS_1936" set_cosmetic_tag = PRS_holy_roman_federation}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+	BOH_release_rwr_bavaria = {
+
+		icon = GFX_bavaria
+
+		available = {
+			controls_state = 52
+			controls_state = 53
+			controls_state = 54
+			controls_state = 60
+		}
+
+		visible = {
+			always = yes
+		}
+
+		fire_only_once = yes
+
+		modifier = {
+			stability_factor = -0.05
+			consumer_goods_factor = 0.1
+			industrial_capacity_factory = -0.1
+		}
+
+		days_remove = 10
+
+		cost = 5
+
+		remove_effect = {
+			release = BAV
+			puppet = BAV
+			BAV = {load_oob = "BAV_1936" set_cosmetic_tag = BAV_holy_roman_federation}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+	BOH_release_rwr_hamburg = {
+
+		icon = GFX_hamburg
+
+		available = {
+			controls_state = 57
+			controls_state = 56
+			controls_state = 59
+			controls_state = 58
+			controls_state = 61
+		}
+
+		visible = {
+			always = yes
+		}
+
+		fire_only_once = yes
+
+		modifier = {
+			stability_factor = -0.15
+			consumer_goods_factor = 0.1
+			industrial_capacity_factory = -0.1
+		}
+
+		days_remove = 10
+
+		cost = 5
+
+		remove_effect = {
+			release = NTE
+			puppet = NTE
+			NTE = {load_oob = "NTE_1936" set_cosmetic_tag = NTE_holy_roman_federation}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+	BOH_release_rwr_the_rhine = {
+
+		icon = GFX_the_rhine
+
+		available = {
+			controls_state = 42
+			controls_state = 51
+			controls_state = 807
+			controls_state = 808
+			controls_state = 34
+			controls_state = 8
+			controls_state = 6
+		}
+
+		visible = {
+			always = yes
+		}
+
+		fire_only_once = yes
+
+		modifier = {
+			stability_factor = -0.15
+			consumer_goods_factor = 0.15
+			industrial_capacity_factory = -0.15
+		}
+
+		days_remove = 10
+
+
+		cost = 5
+
+		remove_effect = {
+			release = TRC
+			puppet = TRC
+			TRC = {load_oob = "TRC_1936" set_cosmetic_tag = TRC_holy_roman_federation}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+}

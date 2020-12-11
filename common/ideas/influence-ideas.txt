@@ -78,5 +78,20 @@ ideas = {
 				neutrality_drift = 0.2
 			}
 		}
+		democratic_kaiser_influence = {
+			picture = GFX_idea_BOH_democratic_empire
+			allowed = {
+				always= yes
+			}
+			allowed_civil_war = {
+				always= yes
+			}
+			visible = {
+				always= yes
+			}
+			modifier = {
+				democratic_drift = 0.2
+			}
+		}
 	}
 }

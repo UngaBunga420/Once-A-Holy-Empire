@@ -196,7 +196,7 @@ army_experience= 50
 	#Focus for The Kaiser's Will
 	focus = {
 		id = BOH_the_kaisers_will
-		icon = GFX_goal_generic_major_war
+		icon = GFX_focus_ger_return_of_the_kaiser
 		x = 15
 		y = 2
 		cost = 10
@@ -214,10 +214,10 @@ army_experience= 50
 	#Focus for A Constitutional Monarchy
 	focus = {
 		id = BOH_less_radical_socialism
-		icon = GFX_goal_tripartite_pact
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
 		x = 16
 		y = 3
-		cost = 10
+		cost = 5
 		available_if_capitulated = yes
 		prerequisite = { focus = BOH_the_kaisers_will }
 		mutually_exclusive = { focus = BOH_absolute_power }
@@ -232,13 +232,13 @@ popularity = 0.15
 }
 		}
 	}
-	#Focus for Absolute Power
+	#Focus for Absolutism
 	focus = {
 		id = BOH_absolute_power
-		icon = GFX_goal_tripartite_pact
+		icon = GFX_focus_generic_monarchy_1
 		x = 14
 		y = 3
-		cost = 10
+		cost = 5
 		available_if_capitulated = yes
 		prerequisite = { focus = BOH_the_kaisers_will }
 		mutually_exclusive = { focus = BOH_less_radical_socialism }
@@ -248,7 +248,7 @@ popularity = 0.15
 		}
 		completion_reward = {
 			add_popularity= { 
-ideology = democratic 
+ideology = neutrality
 popularity = 0.15
 }
 		}
@@ -274,10 +274,10 @@ elections_allowed = yes
 }
 		}
 	}
-	#Focus for An Imperial Empire
+	#Focus for Revive the Holy Roman Empire
 	focus = {
 		id = BOH_an_imperial_empire
-		icon = GFX_BOH_a_democratic_empire-61329
+		icon = GFX_focus_ger_revive_kaiserreich
 		x = 13
 		y = 4
 		cost = 10
@@ -289,10 +289,10 @@ elections_allowed = yes
 			factor = 1
 		}
 		completion_reward = {
-			set_politics= {
- ruling_party = democratic
-elections_allowed = yes 
-}
+			add_popularity= { 
+				ideology = neutrality 
+				popularity = 0.05
+			}
 		}
 	}
 	#Focus for Deal with the Neighbors
@@ -1044,11 +1044,19 @@ add_building_construction = {
 			factor = 1
 		}
 		available = {
-			TPR = { 
-if = {
-neutrality > 0.55
-}
-}
+			IF = {
+				limit = { has_government = democratic}
+				TPR = { 
+					democratic > 0.55
+				}
+			}
+			ELSE_IF = {
+				limit = { has_government = neutrality}
+				TPR = { 
+					neutrality > 0.55
+				}
+			}
+
 		}
 		completion_reward = {
 			TPR = {country_event= {
@@ -1256,11 +1264,19 @@ producer = BOH
 			factor = 1
 		}
 		available = {
-			BAV = {
-if = {
-neutrality > 0.55
-}
-}
+			IF = {
+				limit = { has_government = democratic}
+				BAV = { 
+					democratic > 0.55
+				}
+			}
+			ELSE_IF = {
+				limit = { has_government = neutrality}
+				BAV = { 
+					neutrality > 0.55
+				}
+			}
+
 		}
 		completion_reward = {
 			BAV = {country_event= {

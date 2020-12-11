@@ -843,23 +843,47 @@ ideas = {
 				factor = 1
 			}
 		}
-		
-		krupp = {
-			
+		BOH_hugenberg = {
+			ledger = army
+			picture = BOH_hugenberg-62448
 			allowed = {
-				original_tag = BOH
+				always= yes
 			}
-			
-			research_bonus = {
-				industry = 0.15
-				
+			allowed_civil_war = {
+				always= yes
 			}
-			ai_will_do = {
-				factor = 2
+			visible = {
+				always= yes
 			}
-			
+			modifier = {
+				production_speed_arms_factory_factor= 0.05
+				production_speed_fuel_silo_factor= 0.15
+				production_speed_synthetic_refinery_factor= 0.15
+				base_fuel_gain_factor= 0.15
+			}
 			traits = { industrial_concern }
 		}
+		BOH_hjalmar = {
+			picture = BOH_hjalmar-62449
+			allowed = {
+				always= yes
+			}
+			allowed_civil_war = {
+				always= yes
+			}
+			visible = {
+				always= yes
+			}
+			modifier = {
+				production_speed_industrial_complex_factor= 0.05
+				production_speed_infrastructure_factor= 0.20
+			}
+			research_bonus = {
+				industry = 0.15
+			}
+			traits = { industrial_concern }
+		}
+		
 
 		siemens = {
 			
@@ -1235,46 +1259,7 @@ ideas = {
 			}
 		}
 	}
-	political_advisor = {
-		BOH_hugenberg = {
-			ledger = army
-			picture = BOH_hugenberg-62448
-			allowed = {
-				always= yes
-			}
-			allowed_civil_war = {
-				always= yes
-			}
-			visible = {
-				always= yes
-			}
-			modifier = {
-				production_speed_arms_factory_factor= 0.05
-				production_speed_fuel_silo_factor= 0.15
-				production_speed_synthetic_refinery_factor= 0.15
-				base_fuel_gain_factor= 0.15
-			}
-		}
-		BOH_hjalmar = {
-			picture = BOH_hjalmar-62449
-			allowed = {
-				always= yes
-			}
-			allowed_civil_war = {
-				always= yes
-			}
-			visible = {
-				always= yes
-			}
-			modifier = {
-				production_speed_industrial_complex_factor= 0.05
-				production_speed_infrastructure_factor= 0.20
-			}
-			research_bonus = {
-				industry = 0.15
-			}
-		}
-	}
+	
 	high_command = {
 
 		ferdinand_schorner = {
