@@ -1,0 +1,255 @@
+focus_tree = {
+	id = Russia
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = SOV
+		}
+	}
+	#Focus for Future of our Army
+	focus = {
+		id = SOV_future_of_our_army
+		icon = GFX_goal_unknown
+		x = 24
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Reorganize our Industries
+	focus = {
+		id = SOV_reorganize_our_industries
+		icon = GFX_focus_generic_industry_1
+		x = 15
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_country_flag= unlocked_industry
+		}
+		completion_reward = {
+			swap_ideas= {
+ remove_idea = RUS_unindustrialized
+add_idea = RUS_reorganizing_industry
+}
+		}
+	}
+
+	#Focus for Imperial Tour
+	focus = {
+		id = SOV_imperial_tour
+		icon = GFX_goal_unknown
+		x = 2
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = 0.05  
+add_political_power = 50
+		}
+	}
+	
+	#Focus for Visit Kiev
+	focus = {
+		id = SOV_visit_kiev
+		icon = GFX_goal_unknown
+		x = 1
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = SOV_imperial_tour
+		}
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event= {
+				days = 1 
+				id = rus.1 
+			}
+		}
+	}
+	#Focus for Visit Minsk
+	focus = {
+		id = SOV_visit_minsk
+		icon = GFX_goal_unknown
+		x = 1
+		y = 2
+		cost = 5
+		prerequisite = {
+			focus = SOV_visit_kiev
+		}
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event= {
+				days = 1 
+				id = rus.2
+			}
+		}
+	}
+	
+	#Focus for Visit Riga
+	focus = {
+		id = SOV_visit_riga
+		icon = GFX_goal_unknown
+		x = 3
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = SOV_imperial_tour
+		}
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event= {
+				days = 1 
+				id = rus.3
+			}
+		}
+	}
+	
+	#Focus for Visit Baku
+	focus = {
+		id = SOV_visit_baku
+		icon = GFX_goal_unknown
+		x = 3
+		y = 2
+		cost = 5
+		prerequisite = {
+			focus = SOV_visit_riga
+		}
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event= {
+				days = 1 
+				id = rus.4
+			}
+		}
+	}
+	
+	#Focus for Governate Crisis of 1937
+	focus = {
+		id = SOV_governate_crisis_of_1937
+		icon = GFX_goal_unknown
+		x = 2
+		y = 3
+		cost = 1
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+			focus = SOV_visit_minsk
+		}
+		prerequisite = {
+			focus = SOV_visit_baku
+		}
+		available = {
+			date > 1937.3.12
+		}
+		completion_reward = {
+			country_event= {
+				days = 1 
+				id = rus.5
+			}
+		}
+	}
+
+	#Focus for Crisis Solved
+	focus = {
+		id = SOV_crisis_solved
+		icon = GFX_goal_unknown
+		x = 0
+		y = 4
+		cost = 1
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+			focus = SOV_governate_crisis_of_1937
+		}
+		mutually_exclusive = {
+			focus = SOV_governate_independence
+		}
+		completion_reward = {
+			country_event= {
+				days = 1 
+				id = rus.6
+			}
+		}
+	}
+	
+	#Focus for Governate's declare Independence
+	focus = {
+		id = SOV_governate_independence
+		icon = GFX_goal_unknown
+		x = 4
+		y = 4
+		cost = 1
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		mutually_exclusive = {
+			focus = SOV_crisis_solved
+		}
+		prerequisite = {
+			focus = SOV_governate_crisis_of_1937
+		}
+		completion_reward = {
+			country_event= {
+				days = 1 
+				id = rus.7
+			}
+		}
+	}
+	
+	
+	#Focus for Political Stabilization
+	focus = {
+		id = SOV_political_stabilization
+		icon = GFX_goal_generic_neutrality_focus
+		x = 8
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		available = {
+			has_completed_focus = SOV_governate_crisis_of_1937
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+#End of focuses 
+ }
