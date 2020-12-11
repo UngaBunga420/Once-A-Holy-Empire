@@ -158,7 +158,7 @@ army_experience= 50
 		id = BOH_integrate_pomerania
 		icon = GFX_goal_generic_intelligence_exchange
 		x = 20
-		y = 4
+		y = 5
 		cost = 5
 		available_if_capitulated = yes
 		prerequisite = { focus = BOH_hold_a_referendum_in_pomerania }
@@ -177,8 +177,8 @@ army_experience= 50
 	focus = {
 		id = BOH_integrate_bavaria
 		icon = GFX_goal_generic_intelligence_exchange
-		x = 16
-		y = 4
+		x = 22
+		y = 5
 		cost = 5
 		available_if_capitulated = yes
 		prerequisite = { focus = BOH_hold_a_referendum_in_bavaria }
@@ -193,15 +193,52 @@ army_experience= 50
 			annex_country = {target = BAV}
 		}
 	}
-	#Focus for Purge Political Conspirators
+	#Focus for The Kaiser's Will
 	focus = {
-		id = BOH_purge_political_conspirators
+		id = BOH_the_kaisers_will
 		icon = GFX_goal_generic_major_war
-		x = 16
+		x = 15
 		y = 2
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { focus = BOH_support_the_kaisers_regime }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_timed_idea = { idea = BOH_idea_support_kaiser days = 140 }
+		}
+	}
+	#Focus for Deal with the Neighbors
+	focus = {
+		id = BOH_deal_with_the_neighbors
+		icon = GFX_goal_generic_major_war
+		x = 21
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_support_the_kaisers_regime }
+		available = {
+			has_completed_focus = BOH_put_new_officials_in_place
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 75
+		}
+	}
+	#Focus for Purge Political Conspirators
+	focus = {
+		id = BOH_purge_political_conspirators
+		icon = GFX_goal_generic_major_war
+		x = 15
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_the_kaisers_will }
 		search_filters = { FOCUS_FILTER_POLITICAL } 
 		ai_will_do = {
 			factor = 1
@@ -605,11 +642,11 @@ days = 365
 	focus = {
 		id = BOH_gain_influence_in_pomerania
 		icon = GFX_BOH_gain_influence_in_pomerania-60525
-		x = 18
-		y = 2
+		x = 20
+		y = 3
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = BOH_support_the_kaisers_regime }
+		prerequisite = { focus = BOH_deal_with_the_neighbors }
 		search_filters = { FOCUS_FILTER_POLITICAL } 
 		ai_will_do = {
 			factor = 1
@@ -904,8 +941,7 @@ add_building_construction = {
 			factor = 1
 		}
 		completion_reward = {
-			add_political_power= 75
-			add_ideas = BOH_idea_support_kaiser
+			add_political_power= 150
 		}
 	}
 
@@ -913,8 +949,8 @@ add_building_construction = {
 	focus = {
 		id = BOH_hold_a_referendum_in_pomerania
 		icon = GFX_BOH_hold_a_referendum_in_pomerania-60501
-		x = 18
-		y = 3
+		x = 20
+		y = 4
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { focus = BOH_gain_influence_in_pomerania }
@@ -925,7 +961,7 @@ add_building_construction = {
 		available = {
 			TPR = { 
 if = {
-neutrality > 0.75
+neutrality > 0.55
 }
 }
 		}
@@ -942,11 +978,11 @@ id = ohe.17
 	focus = {
 		id = BOH_gain_influence_in_bavaria
 		icon = GFX_BOH_gain_influence_in_bavaria-60526
-		x = 20
-		y = 2
+		x = 22
+		y = 3
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = BOH_support_the_kaisers_regime }
+		prerequisite = { focus = BOH_deal_with_the_neighbors }
 		search_filters = { FOCUS_FILTER_POLITICAL } 
 		ai_will_do = {
 			factor = 1
@@ -1125,8 +1161,8 @@ producer = BOH
 	focus = {
 		id = BOH_hold_a_referendum_in_bavaria
 		icon = GFX_BOH_hold_a_referendum_in_bavaria-60501
-		x = 20
-		y = 3
+		x = 22
+		y = 4
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { focus = BOH_gain_influence_in_bavaria }
@@ -1137,7 +1173,7 @@ producer = BOH
 		available = {
 			BAV = {
 if = {
-neutrality > 0.75
+neutrality > 0.55
 }
 }
 		}
@@ -1154,8 +1190,8 @@ id = ohe.11
 	focus = {
 		id = BOH_crush_prussia
 		icon = GFX_BOH_crush_prussia-60528
-		x = 17
-		y = 5
+		x = 20
+		y = 7
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { focus = BOH_stop_the_communists_in_the_west }
@@ -1176,12 +1212,12 @@ add_war_support= 0.1
 	focus = {
 		id = BOH_stop_the_communists_in_the_west
 		icon = GFX_BOH_stop_the_communists_in_the_west-60788
-		x = 18
-		y = 4
+		x = 21
+		y = 6
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { 
-			focus = BOH_put_new_officials_in_place 
+			focus = BOH_hold_a_referendum_in_pomerania
 		}
 		prerequisite = { 
 			focus = BOH_hold_a_referendum_in_bavaria 
@@ -1203,8 +1239,8 @@ add_war_support= 0.1
 	focus = {
 		id = BOH_put_new_officials_in_place
 		icon = GFX_goal_generic_neutrality_focus
-		x = 16
-		y = 3
+		x = 15
+		y = 4
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { focus = BOH_purge_political_conspirators }
@@ -1216,13 +1252,50 @@ add_war_support= 0.1
 			add_political_power= 100  add_stability= 0.05
 		}
 	}
-
+	#Focus for royal weddings
+	focus = {
+		id = BOH_royal_weddings
+		icon = GFX_goal_generic_neutrality_focus
+		x = 14
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_put_new_officials_in_place }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power= 125
+		}
+	}
+	#Focus for Hold a Royal Ceremony
+	focus = {
+		id = BOH_royal_ceremony
+		icon = GFX_goal_generic_neutrality_focus
+		x = 16
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_put_new_officials_in_place }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power= 25
+			country_event = {
+				days = 1
+				id = ohe.61
+			}
+		}
+	}
 	#Focus for Look North
 	focus = {
 		id = BOH_look_north
 		icon = GFX_BOH_look_north-61331
-		x = 19
-		y = 5
+		x = 22
+		y = 7
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { focus = BOH_stop_the_communists_in_the_west }
@@ -2325,8 +2398,8 @@ random_owned_controlled_state={
 	focus = {
 		id = BOH_conquer_rome
 		icon = GFX_BOH_conquer_rome-61119
-		x = 18
-		y = 9
+		x = 21
+		y = 11
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { focus = BOH_take_switzerland }
@@ -3518,8 +3591,8 @@ id = ohe.48
 	focus = {
 		id = BOH_retake_the_industrial_heartland
 		icon = GFX_BOH_retake_the_industrial_heartland-60614
-		x = 18
-		y = 6
+		x = 21
+		y = 8
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { 
@@ -3545,8 +3618,8 @@ id = ohe.2
 	focus = {
 		id = BOH_demand_austrian_subjugation
 		icon = GFX_BOH_demand_austrian_subjugation-60787
-		x = 17
-		y = 7
+		x = 20
+		y = 9
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { focus = BOH_retake_the_industrial_heartland }
@@ -3567,8 +3640,8 @@ id = ohe.9
 	focus = {
 		id = BOH_subjugate_holland
 		icon = GFX_demand_the_rhine
-		x = 19
-		y = 7
+		x = 22
+		y = 9
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { 
@@ -3617,8 +3690,8 @@ id = ohe.12
 	focus = {
 		id = BOH_take_switzerland
 		icon = GFX_focus_attack_switzerland
-		x = 18
-		y = 8
+		x = 21
+		y = 10
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { 
