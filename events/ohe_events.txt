@@ -11,7 +11,8 @@ country_event = {
 		name = ohe.1.a
 		ai_chance = { factor = 1}	
 		add_timed_idea= { 
-		idea = kaiser_influence
+			idea = kaiser_influence
+			days = 720 
 		}
 	}
 }
@@ -51,9 +52,9 @@ country_event = {
 	option = {
 		name = ohe.3.a
 		ai_chance = { factor = 1}
-		_country= {
+		annex_country= {
  target = TRC 
-}annex
+}
 add_named_threat= {
 threat = 10
 name = ohe.3.title
