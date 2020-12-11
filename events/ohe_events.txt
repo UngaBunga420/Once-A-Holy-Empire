@@ -11,7 +11,8 @@ country_event = {
 		name = ohe.1.a
 		ai_chance = { factor = 1}	
 		add_timed_idea= { 
-			idea = kaiser_influence 
+			idea = kaiser_influence
+			days = 720
 		}
 	}
 }
