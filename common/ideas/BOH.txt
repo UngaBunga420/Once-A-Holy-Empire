@@ -88,7 +88,7 @@ ideas = {
 				always= yes
 			}
 			modifier = {
-				political_power_gain = 0.75
+				political_power_gain = 0.25
 			}
 		}
 		

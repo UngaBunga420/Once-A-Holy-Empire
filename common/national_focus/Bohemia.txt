@@ -207,7 +207,92 @@ army_experience= 50
 			factor = 1
 		}
 		completion_reward = {
-			add_timed_idea = { idea = BOH_idea_support_kaiser days = 140 }
+			add_timed_idea = { idea = BOH_idea_support_kaiser days = 180 }
+			add_ideas= BOH_the_kaiser
+		}
+	}
+	#Focus for A Constitutional Monarchy
+	focus = {
+		id = BOH_less_radical_socialism
+		icon = GFX_goal_tripartite_pact
+		x = 16
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_the_kaisers_will }
+		mutually_exclusive = { focus = BOH_absolute_power }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity= { 
+ideology = democratic 
+popularity = 0.15
+}
+		}
+	}
+	#Focus for Absolute Power
+	focus = {
+		id = BOH_absolute_power
+		icon = GFX_goal_tripartite_pact
+		x = 14
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_the_kaisers_will }
+		mutually_exclusive = { focus = BOH_less_radical_socialism }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity= { 
+ideology = democratic 
+popularity = 0.15
+}
+		}
+	}
+	#Focus for A Democratic Empire
+	focus = {
+		id = BOH_a_democratic_empire
+		icon = GFX_BOH_a_democratic_empire-61329
+		x = 17
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_less_radical_socialism }
+		available = { democratic > 0.4}
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			set_politics= {
+ ruling_party = democratic
+elections_allowed = yes 
+}
+		}
+	}
+	#Focus for An Imperial Empire
+	focus = {
+		id = BOH_an_imperial_empire
+		icon = GFX_BOH_a_democratic_empire-61329
+		x = 13
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_absolute_power }
+		available = { has_government = neutrality}
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			set_politics= {
+ ruling_party = democratic
+elections_allowed = yes 
+}
 		}
 	}
 	#Focus for Deal with the Neighbors
@@ -235,10 +320,10 @@ army_experience= 50
 		id = BOH_purge_political_conspirators
 		icon = GFX_goal_generic_major_war
 		x = 15
-		y = 3
+		y = 4
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = BOH_the_kaisers_will }
+		prerequisite = { focus = BOH_less_radical_socialism focus = BOH_absolute_power }
 		search_filters = { FOCUS_FILTER_POLITICAL } 
 		ai_will_do = {
 			factor = 1
@@ -1240,7 +1325,7 @@ add_war_support= 0.1
 		id = BOH_put_new_officials_in_place
 		icon = GFX_goal_generic_neutrality_focus
 		x = 15
-		y = 4
+		y = 5
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { focus = BOH_purge_political_conspirators }
@@ -1257,7 +1342,7 @@ add_war_support= 0.1
 		id = BOH_royal_weddings
 		icon = GFX_goal_generic_neutrality_focus
 		x = 14
-		y = 5
+		y = 6
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { focus = BOH_put_new_officials_in_place }
@@ -1274,7 +1359,7 @@ add_war_support= 0.1
 		id = BOH_royal_ceremony
 		icon = GFX_goal_generic_neutrality_focus
 		x = 16
-		y = 5
+		y = 6
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { focus = BOH_put_new_officials_in_place }
