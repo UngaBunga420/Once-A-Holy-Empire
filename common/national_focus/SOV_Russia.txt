@@ -232,8 +232,120 @@ add_political_power = 50
 			}
 		}
 	}
+	#Focus for Retake Ukraine
+	focus = {
+		id = SOV_retake_ukraine
+		icon = GFX_goal_unknown
+		x = 5
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+			focus = SOV_governate_independence
+		}
+		completion_reward = {
+			country_event= {
+				days = 1 
+				id = rus.8
+			}
+		}
+	}
 	
-	
+	#Focus for Retake the Baltics
+	focus = {
+		id = SOV_retake_baltics
+		icon = GFX_goal_unknown
+		x = 3
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+			focus = SOV_retake_the_caucasus
+		}
+		completion_reward = {
+			country_event= {
+				days = 1 
+				id = rus.9
+			}
+		}
+	}
+	#Focus for Retake Belarus
+	focus = {
+		id = SOV_retake_belarus
+		icon = GFX_goal_unknown
+		x = 5
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+			focus = SOV_retake_ukraine
+		}
+		completion_reward = {
+			country_event= {
+				days = 1 
+				id = rus.10
+			}
+		}
+	}
+	#Focus for Retake the Caucasus
+	focus = {
+		id = SOV_retake_the_caucasus
+		icon = GFX_goal_unknown
+		x = 3
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+			focus = SOV_governate_independence
+		}
+		completion_reward = {
+			country_event= {
+				days = 1 
+				id = rus.11
+			}
+		}
+	}
+	#Focus for Status of our territories
+	focus = {
+		id = SOV_imperial_russia_reestablished
+		icon = GFX_goal_unknown
+		x = 4
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+			focus = SOV_retake_belarus
+		}
+		prerequisite = {
+			focus = SOV_retake_baltics
+		}
+		completion_reward = {
+			country_event= {
+				days = 1 
+				id = rus.12
+			}
+		}
+	}
 	#Focus for Political Stabilization
 	focus = {
 		id = SOV_political_stabilization
