@@ -2811,24 +2811,24 @@ target = ITA
 		}
 		completion_reward = { 
 			custom_effect_tooltip = BOH_proclaim_holy_roman_union2
-			custom_effect_tooltip = BOH_has_marxism_leninism
 			add_ideas = BOH_idea_marxism_leninism
-			set_party_name= {
-				ideology = communism 
-				long_name = BOH_marxism_leninism_party_long 
-				name = BOH_marxism_leninism_party
-			}
-			create_country_leader = {
-				name = "Klement Gottwald"
-				desc = "POLITICS_KLEMENT_GOTTWALD_DESC"
-				picture = "gfx/leaders/BOH/Portrait_Czech_Klement_Gottwald.dds"
-				expire = "1965.1.1"
-				ideology = stalinism
-				traits = {
-					#
+			hidden_effect = {
+				set_party_name= {
+					ideology = communism 
+					long_name = BOH_marxism_leninism_party_long 
+					name = BOH_marxism_leninism_party
+				}
+				create_country_leader = {
+					name = "Klement Gottwald"
+					desc = "POLITICS_KLEMENT_GOTTWALD_DESC"
+					picture = "gfx/leaders/BOH/Portrait_Czech_Klement_Gottwald.dds"
+					expire = "1965.1.1"
+					ideology = stalinism
+					traits = {
+						#
+					}
 				}
 			}
-
 		}
 		
 	}
@@ -2854,23 +2854,26 @@ target = ITA
 			always = no
 		}
 		completion_reward = { 
-			custom_effect_tooltip = BOH_has_marxism 
+			custom_effect_tooltip = BOH_proclaim_holy_roman_federation2
 			add_ideas = BOH_idea_marxism
-			set_party_name= {
-				ideology = communism 
-				long_name = BOH_marxism_party_long 
-				name = BOH_marxism_party
-			}
-			create_country_leader = {
-				name = "Rudolf Slánský"
-				desc = "POLITICS_RUDOLF_SLANSKY_DESC"
-				picture = "gfx/leaders/BOH/Portrait_Czech_Rudolf.dds"
-				expire = "1969.1.1"
-				ideology = marxism
-				traits = {
-					#
+			hidden_effect = {
+				set_party_name= {
+					ideology = communism 
+					long_name = BOH_marxism_party_long 
+					name = BOH_marxism_party
+				}
+				create_country_leader = {
+					name = "Rudolf Slánský"
+					desc = "POLITICS_RUDOLF_SLANSKY_DESC"
+					picture = "gfx/leaders/BOH/Portrait_Czech_Rudolf.dds"
+					expire = "1969.1.1"
+					ideology = marxism
+					traits = {
+						#
+					}
 				}
 			}
+			
 		}
 	}
 
@@ -3232,60 +3235,13 @@ target = ITA
 				}
 			}
 		}
-		completion_reward = { 
+		completion_reward = {
 			#custom_effect_tooltip = BOH_proclaim_holy_roman_federation2
 			set_cosmetic_tag = BOH_holy_roman_federation
 			country_event= {
-			days = 1
-			id = ohe.38 
-		}
-		IF = {
-				limit = { OR = { AND = { controls_state = 52 controls_state = 53 controls_state = 54 controls_state = 60 } } }
-				release = BAV
-				puppet = BAV
-				BAV = {load_oob = "BAV_1936" set_cosmetic_tag = BAV_holy_roman_federation}
-		}
-		IF = {
-				limit = { OR = { AND = { controls_state = 64 controls_state = 62 controls_state = 68 controls_state = 63 controls_state = 86 } } }
-				release = TPR
-				puppet = TPR
-				TPR = {load_oob = "TPR_1936" set_cosmetic_tag = TPR_holy_roman_federation}
-		}
-		IF = {
-				limit = { OR = { AND = { controls_state = 152 controls_state = 4 controls_state = 153 controls_state = 102 controls_state = 736 controls_state = 160 } } }
-				release = AUS
-				puppet = AUS
-				AUS = {add_state_core = 160 transfer_state = 160 load_oob = "AUS_1936" set_cosmetic_tag = AUS_holy_roman_federation}
-		}
-		IF = {
-				limit = { OR = { AND = { controls_state = 85 controls_state = 5 controls_state = 763 controls_state = 188 } } }
-				release = PRS
-				puppet = PRS
-				PRS = {load_oob = "PRS_1936" set_cosmetic_tag = PRS_holy_roman_federation remove_ideas = PRS_gymnastics_and_sports_division}
-		}
-		IF = {
-				limit = { OR = { AND = { controls_state = 50 controls_state = 55 } } }
-				release = BAD
-				puppet = BAD
-				BAD = {load_oob = "BAD_1936" set_cosmetic_tag = BAD_holy_roman_federation}
-		}
-		IF = {
-				limit = { OR = { AND = { controls_state = 56 controls_state = 57 controls_state = 58 controls_state = 59 controls_state = 61 } } }
-				release = NTE
-				puppet = NTE
-				NTE = {load_oob = "NTE_1936" set_cosmetic_tag = NTE_holy_roman_federation}
-		}
-		IF = {
-				limit = { OR = { AND = { controls_state = 42 controls_state = 808 controls_state = 51 controls_state = 807 controls_state = 6 controls_state = 34 controls_state = 8 } } }
-				release = TRC
-				puppet = TRC
-				TRC = {load_oob = "TRC_1936" set_cosmetic_tag = TRC_holy_roman_federation}
-		}
-		ELSE = {
-			custom_effect_tooltip = "For each warlord we own, we will release as a puppet."
-		}
-		
-		#add_ideas = BOH_united_federation_idea
+				days = 1
+				id = ohe.38 custom_effect_tooltip = "For each warlord we own, we will release as a puppet."
+			}
 		}
 		
 	}
