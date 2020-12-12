@@ -2813,6 +2813,11 @@ target = ITA
 			custom_effect_tooltip = BOH_proclaim_holy_roman_union2
 			custom_effect_tooltip = BOH_has_marxism_leninism
 			add_ideas = BOH_idea_marxism_leninism
+			set_party_name= {
+				ideology = communism 
+				long_name = BOH_marxism_leninism_party_long 
+				name = BOH_marxism_leninism_party
+			}
 			create_country_leader = {
 				name = "Klement Gottwald"
 				desc = "POLITICS_KLEMENT_GOTTWALD_DESC"
@@ -2851,6 +2856,11 @@ target = ITA
 		completion_reward = { 
 			custom_effect_tooltip = BOH_has_marxism 
 			add_ideas = BOH_idea_marxism
+			set_party_name= {
+				ideology = communism 
+				long_name = BOH_marxism_party_long 
+				name = BOH_marxism_party
+			}
 			create_country_leader = {
 				name = "Rudolf Slánský"
 				desc = "POLITICS_RUDOLF_SLANSKY_DESC"
