@@ -1,0 +1,1220 @@
+focus_tree = {
+	id = Rhineland
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = TRC
+		}
+	}
+	#Focus for The New Army
+	focus = {
+		id = TRC_the_new_army
+		icon = GFX_goal_unknown
+		x = 43
+		y = 4
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = TRC_make_more_guns 
+		}
+		prerequisite = { 
+			focus = TRC_organize_the_rhine_military_guart 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Start to Reform the Rheinparlament
+	focus = {
+		id = TRC_start_to_reform_the_rheinparlament
+		icon = GFX_TRC_start_to_reform_the_rheinparlament-59957
+		x = 2
+		y = 3
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_the_needed_reforms }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability= 0.05Submit  add_political_power= 50Submit
+		}
+	}
+
+	#Focus for Crush then!!
+	focus = {
+		id = TRC_crush_then
+		icon = GFX_TRC_crush_then-60494
+		x = 14
+		y = 2
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_adress_the_belgium_issue }
+		mutually_exclusive = { focus = TRC_open_negotiations }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Open Negotiations
+	focus = {
+		id = TRC_open_negotiations
+		icon = GFX_TRC_open_negotiations-60492
+		x = 12
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_adress_the_belgium_issue }
+		mutually_exclusive = { focus = TRC_crush_then }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Invest in the Car Indrustry
+	focus = {
+		id = TRC_invest_in_the_car_indrustry
+		icon = GFX_TRC_invest_in_the_car_indrustry-61352
+		x = 27
+		y = 4
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_new_trade_deals }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The Rheinmarshal's proposal
+	focus = {
+		id = TRC_the_rheinmarshals_proposal
+		icon = GFX_TRC_the_rheinmarshals_proposal-60475
+		x = 10
+		y = 4
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_democracy_in_chaos }
+		mutually_exclusive = { focus = TRC_the_presidents_proposal }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for A military economy
+	focus = {
+		id = TRC_a_military_economy
+		icon = GFX_goal_unknown
+		x = 33
+		y = 3
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_the_rheinmarshals_victory }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Dominate the Rheinparlament
+	focus = {
+		id = TRC_dominate_the_rheinparlament
+		icon = GFX_goal_unknown
+		x = 25
+		y = 4
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_the_save_the_traditional_act }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Invest in Military factories
+	focus = {
+		id = TRC_invest_in_military_factories
+		icon = GFX_goal_unknown
+		x = 33
+		y = 4
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_a_military_economy }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Democracy in chaos
+	focus = {
+		id = TRC_democracy_in_chaos
+		icon = GFX_TRC_democracy_in_chaos-60079
+		x = 9
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_no_reforms }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability= -0.05  add_popularity= { 
+ideology = neutrality 
+popularity = 0.1 
+}
+  add_political_power= 50
+		}
+	}
+
+	#Focus for The Armed forces of the Rhine
+	focus = {
+		id = TRC_the_armed_forces_of_the_rhine
+		icon = GFX_goal_unknown
+		x = 43
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The Last Hope of the Empire
+	focus = {
+		id = TRC_the_last_hope_of_the_empire
+		icon = GFX_TRC_the_last_hope_of_the_empire-59940
+		x = 6
+		y = 1
+		cost = 4
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government= democratic
+		}
+		completion_reward = {
+			country_event= {
+days = 1 
+id = finland.1 
+}
+Submit  add_stability= 0.05  add_war_support= 5
+		}
+	}
+
+	#Focus for Start to Reform the Industry
+	focus = {
+		id = TRC_start_to_reform_the_industry
+		icon = GFX_TRC_start_to_reform_the_industry-59987
+		x = 0
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_the_needed_reforms }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for No Reforms!
+	focus = {
+		id = TRC_no_reforms
+		icon = GFX_TRC_no_reforms-59942
+		x = 9
+		y = 2
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_the_last_hope_of_the_empire }
+		mutually_exclusive = { 
+			focus = TRC_the_needed_reforms 
+		}
+		mutually_exclusive = { 
+			focus = TRC_ 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability= 0.05Submit  add_popularity= { 
+ideology = fascism 
+popularity = 0.1 
+}
+Submit
+		}
+	}
+
+	#Focus for Adress the Belgium Issue?
+	focus = {
+		id = TRC_adress_the_belgium_issue
+		icon = GFX_TRC_adress_the_belgium_issue-59946
+		x = 13
+		y = 1
+		cost = 2
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event= {
+days = 1 
+id = finland.1 
+}
+		}
+	}
+
+	#Focus for The Needed Reforms
+	focus = {
+		id = TRC_the_needed_reforms
+		icon = GFX_TRC_the_needed_reforms-59939
+		x = 2
+		y = 2
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_the_last_hope_of_the_empire }
+		mutually_exclusive = { focus = TRC_no_reforms }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability= 0.05
+		}
+	}
+
+	#Focus for Start to Reform the Army
+	focus = {
+		id = TRC_start_to_reform_the_army
+		icon = GFX_TRC_start_to_reform_the_army-59967
+		x = 4
+		y = 3
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_the_needed_reforms }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			army_experience= 50  
+add_command_power= 50
+		}
+	}
+
+	#Focus for Military build
+	focus = {
+		id = TRC_military_build
+		icon = GFX_goal_unknown
+		x = 23
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_the_rcc_victory }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Invest in the Rhineland factories
+	focus = {
+		id = TRC_invest_in_the_rhineland_factories
+		icon = GFX_TRC_invest_in_the_rhineland_factories-60464
+		x = 21
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_the_rndc_victory }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Draw closer to the West
+	focus = {
+		id = TRC_draw_closer_to_the_west
+		icon = GFX_TRC_draw_closer_to_the_west-60631
+		x = 19
+		y = 3
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_the_rndc_victory }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Form the New High Command
+	focus = {
+		id = TRC_form_the_new_high_command
+		icon = GFX_TRC_form_the_new_high_command-67553
+		x = 17
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_the_rndc_victory }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_command_power= 50
+		}
+	}
+
+	#Focus for The New Prussian Standarts
+	focus = {
+		id = TRC_the_new_prussian_standarts
+		icon = GFX_TRC_the_new_prussian_standarts-66221
+		x = 29
+		y = 3
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_the_rheinmarshals_victory }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			army_experience= 25
+		}
+	}
+
+	#Focus for The "Save the Traditional" act
+	focus = {
+		id = TRC_the_save_the_traditional_act
+		icon = GFX_goal_unknown
+		x = 25
+		y = 3
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_the_rcc_victory }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The New Military State
+	focus = {
+		id = TRC_the_new_military_state
+		icon = GFX_goal_unknown
+		x = 31
+		y = 3
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_the_rheinmarshals_victory }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The Rheinmarshal's victory
+	focus = {
+		id = TRC_the_rheinmarshals_victory
+		icon = GFX_TRC_the_rheinmarshals_victory-60458
+		x = 31
+		y = 2
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_the_1937_elections }
+		mutually_exclusive = { 
+			focus = TRC_the_rndc_victory 
+		}
+		mutually_exclusive = { 
+			focus = TRC_the_rcc_victory 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			set_party_name= { 
+ideology = neutrality 
+long_name = TRC_rheinmarshal's_party 
+name = TRC_RP 
+}
+		}
+	}
+
+	#Focus for New trade Deals
+	focus = {
+		id = TRC_new_trade_deals
+		icon = GFX_TRC_new_trade_deals-61362
+		x = 27
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_the_rcc_victory }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The 1937 elections
+	focus = {
+		id = TRC_the_1937_elections
+		icon = GFX_TRC_the_1937_elections-60447
+		x = 25
+		y = 1
+		cost = 1
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			date >, date <> 1937.2.2 
+< 1937.2.10
+		}
+		completion_reward = {
+			country_event= {
+days = 1 
+id = finland.1 
+}
+		}
+	}
+
+	#Focus for The RNDC Victory
+	focus = {
+		id = TRC_the_rndc_victory
+		icon = GFX_TRC_the_rndc_victory-60454
+		x = 19
+		y = 2
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_the_1937_elections }
+		mutually_exclusive = { 
+			focus = TRC_the_rheinmarshals_victory 
+		}
+		mutually_exclusive = { 
+			focus = TRC_the_rcc_victory 
+		}
+		mutually_exclusive = { 
+			focus = TRC_ 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			set_party_name= { 
+ideology = democratic 
+long_name = TRC_RNDC 
+name = TRC_rhein_national_democratic_coalition
+}
+		}
+	}
+
+	#Focus for The RCC Victory
+	focus = {
+		id = TRC_the_rcc_victory
+		icon = GFX_TRC_the_rcc_victory-60453
+		x = 25
+		y = 2
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_the_1937_elections }
+		mutually_exclusive = { 
+			focus = TRC_the_rndc_victory 
+		}
+		mutually_exclusive = { 
+			focus = TRC_the_rheinmarshals_victory 
+		}
+		mutually_exclusive = { 
+			focus = TRC_ 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			set_party_name= { 
+ideology = democratic 
+long_name = TRC_rhein_conservative_coalition 
+name = TRC_RCC 
+}
+		}
+	}
+
+	#Focus for End the Reforms
+	focus = {
+		id = TRC_end_the_reforms
+		icon = GFX_goal_unknown
+		x = 2
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for It has to Go
+	focus = {
+		id = TRC_it_has_to_go
+		icon = GFX_TRC_it_has_to_go-66037
+		x = 12
+		y = 3
+		cost = 2
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_open_negotiations }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			release_puppet= BEL
+		}
+	}
+
+	#Focus for Buy British Tanks
+	focus = {
+		id = TRC_buy_british_tanks
+		icon = GFX_TRC_buy_british_tanks-66264
+		x = 23
+		y = 4
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_military_build }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Our Military
+	focus = {
+		id = TRC_our_military
+		icon = GFX_goal_generic_axis_build_infantry
+		x = 43
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_the_armed_forces_of_the_rhine }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Organize the Rhine military guart
+	focus = {
+		id = TRC_organize_the_rhine_military_guart
+		icon = GFX_goal_unknown
+		x = 44
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_our_military }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The "Condem The Rheinparlament" act
+	focus = {
+		id = TRC_the_condem_the_rheinparlament_act
+		icon = GFX_TRC_the_condem_the_rheinparlament_act-66263
+		x = 31
+		y = 4
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_the_new_military_state }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity= { 
+ideology = democratic 
+popularity = -0.1 
+}
+		}
+	}
+
+	#Focus for Invest in Belgian Tank Companies
+	focus = {
+		id = TRC_invest_in_belgian_tank_companies
+		icon = GFX_TRC_invest_in_belgian_tank_companies-61357
+		x = 21
+		y = 4
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_invest_in_the_rhineland_factories }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state={
+ limit = {
+ free_building_slots = {
+ building = arms_factory
+ size > 0
+ include_locked = yes
+ }
+
+ }
+
+ add_extra_state_shared_building_slots = 1
+ add_building_construction = {
+ type = arms_factory
+ level = 1
+ instant_build = yes
+ }
+
+ set_state_flag = REPLACE_ME_WITH_UNIQUE_IDENTIFIER
+ }
+		}
+	}
+
+	#Focus for Send The Military
+	focus = {
+		id = TRC_send_the_military
+		icon = GFX_TRC_send_the_military-66045
+		x = 14
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_crush_then }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The President's proposal
+	focus = {
+		id = TRC_the_presidents_proposal
+		icon = GFX_goal_unknown
+		x = 8
+		y = 4
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_democracy_in_chaos }
+		mutually_exclusive = { focus = TRC_the_rheinmarshals_proposal }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Make More Guns
+	focus = {
+		id = TRC_make_more_guns
+		icon = GFX_goal_unknown
+		x = 42
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_our_military }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Our Airforce
+	focus = {
+		id = TRC_our_airforce
+		icon = GFX_goal_generic_build_airforce
+		x = 36
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_the_armed_forces_of_the_rhine }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Buy new fighers
+	focus = {
+		id = TRC_buy_new_fighers
+		icon = GFX_goal_unknown
+		x = 37
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_our_airforce }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for New Ties to The Netherlands
+	focus = {
+		id = TRC_new_ties_to_the_netherlands
+		icon = GFX_TRC_new_ties_to_the_netherlands-67401
+		x = 19
+		y = 4
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_draw_closer_to_the_west }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Buy naval planes
+	focus = {
+		id = TRC_buy_naval_planes
+		icon = GFX_goal_unknown
+		x = 35
+		y = 3
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_our_airforce }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The Flanders' Dockyarts
+	focus = {
+		id = TRC_the_flanders_dockyarts
+		icon = GFX_goal_unknown
+		x = 50
+		y = 3
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_our_navy }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			is_coastal= yes
+		}
+	}
+
+	#Focus for Our Navy
+	focus = {
+		id = TRC_our_navy
+		icon = GFX_goal_unknown
+		x = 49
+		y = 2
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_the_armed_forces_of_the_rhine }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Buy old French ships
+	focus = {
+		id = TRC_buy_old_french_ships
+		icon = GFX_goal_unknown
+		x = 48
+		y = 3
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_our_navy }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for better guns
+	focus = {
+		id = TRC_better_guns
+		icon = GFX_TRC_better_guns-66257
+		x = 17
+		y = 4
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_form_the_new_high_command }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_equipment_to_stockpile= {
+ type = infantry_equipment_2 
+amount = 2500 
+producer = TRC 
+}
+		}
+	}
+
+	#Focus for New Tacticts
+	focus = {
+		id = TRC_new_tacticts
+		icon = GFX_TRC_new_tacticts-66253
+		x = 29
+		y = 4
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_the_new_prussian_standarts }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Ban Comunist parties?
+	focus = {
+		id = TRC_ban_comunist_parties
+		icon = GFX_TRC_ban_comunist_parties-61535
+		x = 31
+		y = 5
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_the_condem_the_rheinparlament_act }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The Economy
+	focus = {
+		id = TRC_the_economy
+		icon = GFX_goal_unknown
+		x = 57
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for New Road Projects
+	focus = {
+		id = TRC_new_road_projects
+		icon = GFX_goal_unknown
+		x = 56
+		y = 2
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_the_economy }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Form the Belgian Naval command
+	focus = {
+		id = TRC_form_the_belgian_naval_command
+		icon = GFX_TRC_form_the_belgian_naval_command-61641
+		x = 49
+		y = 4
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = TRC_buy_old_french_ships 
+		}
+		prerequisite = { 
+			focus = TRC_the_flanders_dockyarts 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The "Löwenkrieg" Tactics
+	focus = {
+		id = TRC_the_lwenkrieg_tactics
+		icon = GFX_TRC_the_lwenkrieg_tactics-61762
+		x = 17
+		y = 5
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_better_guns }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The Anglo-Rhine Friendship
+	focus = {
+		id = TRC_the_anglorhine_friendship
+		icon = GFX_TRC_the_anglorhine_friendship-61811
+		x = 25
+		y = 5
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_dominate_the_rheinparlament }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Make More Airfields
+	focus = {
+		id = TRC_make_more_airfields
+		icon = GFX_goal_unknown
+		x = 36
+		y = 4
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = TRC_buy_naval_planes 
+		}
+		prerequisite = { 
+			focus = TRC_buy_new_fighers 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Invest in our Heart
+	focus = {
+		id = TRC_invest_in_our_heart
+		icon = GFX_goal_unknown
+		x = 58
+		y = 2
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_the_economy }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Invest in new Tractors
+	focus = {
+		id = TRC_invest_in_new_tractors
+		icon = GFX_goal_unknown
+		x = 54
+		y = 2
+		cost = 4
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for A New Army
+	focus = {
+		id = TRC_a_new_army
+		icon = GFX_TRC_a_new_army-67415
+		x = 23
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_buy_british_tanks }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The Old is better
+	focus = {
+		id = TRC_the_old_is_better
+		icon = GFX_TRC_the_old_is_better-66251
+		x = 46
+		y = 5
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_the_new_army }
+		mutually_exclusive = { focus = TRC_the_modern_way }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The Modern Way
+	focus = {
+		id = TRC_the_modern_way
+		icon = GFX_TRC_the_modern_way-66247
+		x = 40
+		y = 5
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_the_new_army }
+		mutually_exclusive = { 
+			focus = TRC_the_old_is_better 
+		}
+		mutually_exclusive = { 
+			focus = TRC_ 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Send the Rheinmarshal
+	focus = {
+		id = TRC_send_the_rheinmarshal
+		icon = GFX_TRC_send_the_rheinmarshal-66255
+		x = 14
+		y = 4
+		cost = 2
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_send_the_military }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Befriend the Parlament
+	focus = {
+		id = TRC_befriend_the_parlament
+		icon = GFX_TRC_befriend_the_parlament-67414
+		x = 19
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_new_ties_to_the_netherlands }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Agricultural push
+	focus = {
+		id = TRC_agricultural_push
+		icon = GFX_goal_unknown
+		x = 21
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_invest_in_belgian_tank_companies }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Foreign planes
+	focus = {
+		id = TRC_foreign_planes
+		icon = GFX_goal_unknown
+		x = 35
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_make_more_airfields }
+		mutually_exclusive = { focus = TRC_make_our_own_planes }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Make our own Planes
+	focus = {
+		id = TRC_make_our_own_planes
+		icon = GFX_goal_unknown
+		x = 37
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_make_more_airfields }
+		mutually_exclusive = { focus = TRC_foreign_planes }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Purge the High Command
+	focus = {
+		id = TRC_purge_the_high_command
+		icon = GFX_TRC_purge_the_high_command-68383
+		x = 4
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_start_to_reform_the_army }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for New RheinParlament election laws
+	focus = {
+		id = TRC_new_rheinparlament_election_laws
+		icon = GFX_goal_unknown
+		x = 2
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_start_to_reform_the_rheinparlament }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for New Agricultural Restrictions
+	focus = {
+		id = TRC_new_agricultural_restrictions
+		icon = GFX_TRC_new_agricultural_restrictions-68802
+		x = 0
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_start_to_reform_the_industry }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Artillery attacks
+	focus = {
+		id = TRC_artillery_attacks
+		icon = GFX_goal_unknown
+		x = 48
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_the_old_is_better }
+		mutually_exclusive = { focus = TRC_manpower_superiority }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Enact Anti-corruption laws
+	focus = {
+		id = TRC_enact_anticorruption_laws
+		icon = GFX_TRC_enact_anticorruption_laws-70216
+		x = 2
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_new_rheinparlament_election_laws }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Expand the reserve
+	focus = {
+		id = TRC_expand_the_reserve
+		icon = GFX_goal_unknown
+		x = 4
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_purge_the_high_command }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Manpower Superiority
+	focus = {
+		id = TRC_manpower_superiority
+		icon = GFX_goal_unknown
+		x = 44
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_the_old_is_better }
+		mutually_exclusive = { focus = TRC_artillery_attacks }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for A Combined armor army
+	focus = {
+		id = TRC_a_combined_armor_army
+		icon = GFX_goal_unknown
+		x = 38
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_the_modern_way }
+		mutually_exclusive = { focus = TRC_tanks_alone }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Tanks alone
+	focus = {
+		id = TRC_tanks_alone
+		icon = GFX_goal_unknown
+		x = 42
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_the_modern_way }
+		mutually_exclusive = { focus = TRC_a_combined_armor_army }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+#End of focuses 
+ }
