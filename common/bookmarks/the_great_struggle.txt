@@ -15,7 +15,9 @@ bookmarks = {
 				BOH_the_rightful_empire
 			}
 			focuses = {
-
+				BOH_support_the_far_right
+				BOH_support_the_pomeranians
+				BOH_support_the_kaisers_regime
 			}
 		}
 
@@ -125,7 +127,7 @@ bookmarks = {
 			
 			}
 			focuses = {
-
+				SOV_governate_crisis_of_1937
 			}
 		}
 
