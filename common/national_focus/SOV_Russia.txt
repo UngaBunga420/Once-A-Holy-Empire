@@ -11,7 +11,7 @@ focus_tree = {
 	focus = {
 		id = SOV_future_of_our_army
 		icon = GFX_goal_unknown
-		x = 24
+		x = 35
 		y = 0
 		cost = 10
 		available_if_capitulated = yes
@@ -24,7 +24,7 @@ focus_tree = {
 	focus = {
 		id = SOV_reorganize_our_industries
 		icon = GFX_focus_generic_industry_1
-		x = 15
+		x = 25
 		y = 0
 		cost = 10
 		available_if_capitulated = yes
@@ -350,7 +350,7 @@ add_political_power = 50
 	focus = {
 		id = SOV_political_stabilization
 		icon = GFX_goal_generic_neutrality_focus
-		x = 8
+		x = 14
 		y = 0
 		cost = 5
 		available_if_capitulated = yes
@@ -362,6 +362,49 @@ add_political_power = 50
 			factor = 1
 		}
 	}
-	
+	#Focus for Romanovs keeps power
+	focus = {
+		id = SOV_keep_romanovs
+		icon = GFX_goal_generic_neutrality_focus
+		x = 11
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SOV_political_stabilization }
+		mutually_exclusive = { focus = SOV_constitution}
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#Focus for A Constitution
+	focus = {
+		id = SOV_constitution
+		icon = GFX_goal_generic_neutrality_focus
+		x = 13
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SOV_political_stabilization }
+		mutually_exclusive = { focus = SOV_keep_romanovs}
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#Focus for Duma Control
+	focus = {
+		id = SOV_duma_control
+		icon = GFX_goal_generic_neutrality_focus
+		x = 12
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SOV_constitution }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+	}
 #End of focuses 
  }
