@@ -46,7 +46,7 @@ add_idea = RUS_reorganizing_industry
 	#Focus for Imperial Tour
 	focus = {
 		id = SOV_imperial_tour
-		icon = GFX_goal_unknown
+		icon = GFX_SOV_imperial_tour
 		x = 2
 		y = 0
 		cost = 5
@@ -64,7 +64,7 @@ add_political_power = 50
 	#Focus for Visit Kiev
 	focus = {
 		id = SOV_visit_kiev
-		icon = GFX_goal_unknown
+		icon = GFX_SOV_visit_kiev
 		x = 1
 		y = 1
 		cost = 5
@@ -86,7 +86,7 @@ add_political_power = 50
 	#Focus for Visit Minsk
 	focus = {
 		id = SOV_visit_minsk
-		icon = GFX_goal_unknown
+		icon = GFX_SOV_visit_minsk
 		x = 1
 		y = 2
 		cost = 5
@@ -109,7 +109,7 @@ add_political_power = 50
 	#Focus for Visit Riga
 	focus = {
 		id = SOV_visit_riga
-		icon = GFX_goal_unknown
+		icon = GFX_SOV_visit_riga
 		x = 3
 		y = 1
 		cost = 5
@@ -132,7 +132,7 @@ add_political_power = 50
 	#Focus for Visit Baku
 	focus = {
 		id = SOV_visit_baku
-		icon = GFX_goal_unknown
+		icon = GFX_SOV_visit_baku
 		x = 3
 		y = 2
 		cost = 5
@@ -155,7 +155,7 @@ add_political_power = 50
 	#Focus for Governate Crisis of 1937
 	focus = {
 		id = SOV_governate_crisis_of_1937
-		icon = GFX_goal_unknown
+		icon = GFX_SOV_governorate_crisis
 		x = 2
 		y = 3
 		cost = 1
