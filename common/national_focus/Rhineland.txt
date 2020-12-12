@@ -231,6 +231,9 @@ add_command_power= 50
 		ai_will_do = {
 			factor = 1
 		}
+		completion_reward = {
+			add_ideas = TRC_idea_parliament
+		}
 	}
 
 	#Focus for New Agricultural Restrictions
@@ -244,6 +247,13 @@ add_command_power= 50
 		prerequisite = { focus = TRC_start_to_reform_the_industry }
 		ai_will_do = {
 			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus= {
+				bonus = 0.5
+				uses = 2
+				category = industry 
+			}
 		}
 	}
 
@@ -403,7 +413,7 @@ add_command_power= 50
 			factor = 1
 		}
 		completion_reward = {
-			add_stability= 0.05Submit  add_political_power= 50Submit
+			add_stability= 0.05  add_political_power= 50
 		}
 	}
 #Focus for Adress the Belgium Issue?
@@ -1157,9 +1167,9 @@ popularity = 0.1
 		completion_reward = {
 			country_event= {
 days = 1 
-id = finland.1 
+id = trc.3
 }
-Submit  add_stability= 0.05  add_war_support= 5
+ add_stability= 0.05  add_war_support= 0.05
 		}
 	}
 
@@ -1174,6 +1184,13 @@ Submit  add_stability= 0.05  add_war_support= 5
 		prerequisite = { focus = TRC_the_needed_reforms }
 		ai_will_do = {
 			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus= {
+				bonus = 1 
+				uses = 1 
+				category = industry 
+			}
 		}
 	}
 
@@ -1196,11 +1213,10 @@ Submit  add_stability= 0.05  add_war_support= 5
 			factor = 1
 		}
 		completion_reward = {
-			add_stability= 0.05Submit  add_popularity= { 
+			add_stability= 0.05  add_popularity= { 
 ideology = fascism 
 popularity = 0.1 
 }
-Submit
 		}
 	}
 
