@@ -713,7 +713,7 @@ producer = TRC
 			factor = 1
 		}
 	}
-	#Focus for Crush then!!
+	#Focus for Crush them!!
 	focus = {
 		id = TRC_crush_then
 		icon = GFX_TRC_crush_then-60494
