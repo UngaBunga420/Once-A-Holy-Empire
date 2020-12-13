@@ -847,7 +847,7 @@ ideas = {
 			ledger = army
 			picture = BOH_hugenberg-62448
 			allowed = {
-				always= yes
+				original_tag = BOH
 			}
 			allowed_civil_war = {
 				always= yes
@@ -866,7 +866,7 @@ ideas = {
 		BOH_hjalmar = {
 			picture = BOH_hjalmar-62449
 			allowed = {
-				always= yes
+				original_tag = BOH
 			}
 			allowed_civil_war = {
 				always= yes
