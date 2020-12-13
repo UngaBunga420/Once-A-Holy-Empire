@@ -2,7 +2,8 @@ add_namespace = rus
 
 ##Event: Visit Kiev
 country_event = {
-	id = rus.1.title
+	id = rus.1
+	title = rus.1.title
 	desc = rus.1.desc
 	picture = GFX_report_event_king_speech
 	is_triggered_only = yes
@@ -12,6 +13,71 @@ country_event = {
 	}
 	option = {
 		name = rus.1.b
+		ai_chance = { factor = 1}
+	}
+}
+
+##Event: Visit Minsk
+country_event = {
+	id = rus.2
+	title = rus.2.title
+	desc = rus.2.desc
+	picture = GFX_report_event_king_speech
+	is_triggered_only = yes
+	option = { 
+		name = rus.2.a
+		ai_chance = { factor = 2}
+	}
+	option = {
+		name = rus.2.b
+		ai_chance = { factor = 1}
+	}
+}
+
+##Event: Visit Riga
+country_event = {
+	id = rus.3
+	title = rus.3.title
+	desc = rus.3.desc
+	picture = GFX_report_event_king_speech
+	is_triggered_only = yes
+	option = { 
+		name = rus.3.a
+		ai_chance = { factor = 2}
+	}
+	option = {
+		name = rus.3.b
+		ai_chance = { factor = 1}
+	}
+}
+
+##Event: Visit Baku
+country_event = {
+	id = rus.4
+	title = rus.4.title
+	desc = rus.4.desc
+	picture = GFX_report_event_king_speech
+	is_triggered_only = yes
+	option = { 
+		name = rus.4.a
+		ai_chance = { factor = 2}
+	}
+	option = {
+		name = rus.4.b
+		ai_chance = { factor = 1}
+	}
+}
+
+
+##Event: Governorate Crisis of 1937
+country_event = {
+	id = rus.5
+	title = rus.5.title
+	desc = rus.5.desc
+	picture = GFX_report_event_king_speech
+	is_triggered_only = yes
+	option = { 
+		name = rus.5.a
 		ai_chance = { factor = 1}
 	}
 }
