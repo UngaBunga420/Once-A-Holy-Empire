@@ -79,7 +79,7 @@ add_political_power = 50
 		completion_reward = {
 			country_event= {
 				days = 1 
-				id = rus.1 
+				id = rus.1
 			}
 		}
 	}
@@ -387,6 +387,20 @@ add_political_power = 50
 		available_if_capitulated = yes
 		prerequisite = { focus = SOV_political_stabilization }
 		mutually_exclusive = { focus = SOV_keep_romanovs}
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#Focus for Duma Control
+	focus = {
+		id = SOV_duma_control
+		icon = GFX_goal_generic_neutrality_focus
+		x = 12
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SOV_constitution }
 		search_filters = { FOCUS_FILTER_POLITICAL } 
 		ai_will_do = {
 			factor = 1
