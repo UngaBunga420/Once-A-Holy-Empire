@@ -1,0 +1,27 @@
+add_namespace = rus
+
+##Event: Visit Kiev
+country_event = {
+	id = rus.1.title
+	desc = rus.1.desc
+	picture = GFX_report_event_king_speech
+	is_triggered_only = yes
+	option = {
+		trigger = { UKR = { is_puppet_of = SOV } }
+		name = rus.1.a
+		ai_chance = { factor = 1}
+		add_timed_idea= { 
+			idea = democratic_kaiser_influence
+			days = 720
+		}
+	}
+	option = {
+		trigger = { BOH = { has_government = neutrality } }
+		name = rus.1.b
+		ai_chance = { factor = 1}
+		add_timed_idea= { 
+			idea = kaiser_influence
+			days = 720
+		}
+	}
+}
