@@ -133,6 +133,10 @@ set_popularities = {
 
 add_ideas = {
 	
+	SOV_unindustrialized
+	SOV_unpopular_monarch
+	SOV_idea_soviet_resistance
+	
 }
 
 create_country_leader = {
