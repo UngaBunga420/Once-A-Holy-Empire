@@ -9,7 +9,7 @@ set_war_support = 0.13
 
 add_ideas = {
 		#laws
-
+	SOV_imperial_governorate
 }
 set_technology = {
  	infantry_weapons = 1

@@ -1,0 +1,19 @@
+ideas = {
+	country = {
+		SOV_imperial_governorate = {
+			picture = GFX_goal_unknown
+			allowed = {
+				always= yes
+			}
+			allowed_civil_war = {
+				always= yes
+			}
+			visible = {
+				always= yes
+			}
+			modifier = {
+				extra_trade_to_target_factor = 0.25
+			}
+		}
+	}
+}
