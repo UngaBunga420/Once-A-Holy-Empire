@@ -1,1 +1,0 @@
-BAV = "countries/Facist Bavaria.txt"
