@@ -5623,4 +5623,20 @@ spriteTypes = {
 		name = "GFX_idea_BOH_idea_fascism"
 		texturefile = "gfx/interface/ideas/fascism.dds"
 	}
+	spriteType = {
+		name = "GFX_SOV_idea_soviet_resistance"
+		texturefile = "gfx/interface/ideas/GFX_SOV_idea_soviet_resistance.dds"
+	}
+	spriteType = {
+		name = "GFX_SOV_imperial_governorate"
+		texturefile = "gfx/interface/ideas/GFX_SOV_imperial_governorate.dds"
+	}
+	spriteType = {
+		name = "GFX_SOV_unpopular_monarch"
+		texturefile = "gfx/interface/ideas/GFX_SOV_unpopular_monarch.dds"
+	}
+	spriteType = {
+		name = "GFX_SOV_unindustrialized"
+		texturefile = "gfx/interface/ideas/GFX_SOV_unindustrialized.dds"
+	}
 }

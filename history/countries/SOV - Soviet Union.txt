@@ -45,15 +45,12 @@ if = {
 set_cosmetic_tag = SOV_russia
 AZR = {
 	set_cosmetic_tag = AZR_russia
-	add_ideas = SOV_imperial_govenorate
 }
 BLR = {
 	set_cosmetic_tag = BLR_russia
-	add_ideas = SOV_imperial_govenorate
 }
 UKR = {
 	set_cosmetic_tag = UKR_russia
-	add_ideas = SOV_imperial_govenorate
 }
 UBD = {
 	set_cosmetic_tag = UBD_russia

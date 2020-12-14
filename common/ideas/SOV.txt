@@ -1,7 +1,7 @@
 ideas = {
 	country = {
 		SOV_imperial_governorate = {
-			picture = GFX_goal_unknown
+			picture = GFX_SOV_imperial_governorate
 			allowed = {
 				always= yes
 			}
@@ -16,7 +16,7 @@ ideas = {
 			}
 		}
 		SOV_idea_soviet_resistance = {
-			picture = GFX_goal_unknown
+			picture = GFX_SOV_idea_soviet_resistance
 			allowed = {
 				always= yes
 			}
@@ -34,7 +34,7 @@ ideas = {
 			}
 		}
 		SOV_unindustrialized = {
-			picture = GFX_goal_unknown
+			picture = GFX_SOV_unindustrialized
 			allowed = {
 				always= yes
 			}
@@ -50,7 +50,7 @@ ideas = {
 			}
 		}
 		SOV_unpopular_monarch = {
-			picture = GFX_goal_unknown
+			picture = GFX_SOV_unpopular_monarch
 			allowed = {
 				always= yes
 			}

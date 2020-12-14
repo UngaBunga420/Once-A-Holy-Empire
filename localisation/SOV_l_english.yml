@@ -31,6 +31,11 @@
  SOV_russia_DEF:0 "Imperial Russia"
  SOV_russia_ADJ:0 "Russian"
  
+ SOV_imperial_govenorate:0 "Imperial Governorate"
+ SOV_idea_soviet_resistance:0 "Soviet Resistance"
+ SOV_unindustrialized:0 "Unindustrialized"
+ SOV_unpopular_monarch:0 "Unpopular Monarch"
+ 
  SOV_imperial_tour:0 "Imperial Tour"
  SOV_imperial_tour_desc:0 "WIP"
  SOV_visit_kiev:0 "Visit Kiev"
