@@ -1,0 +1,8 @@
+SOV_civil_war_decisions = {
+	icon = generic_form_nation
+	allowed = {
+		OR = {
+			tag = SOV
+		}
+	}
+}
