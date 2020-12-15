@@ -1,7 +1,8 @@
 ideas = {
 	country = {
 		SOV_imperial_governorate = {
-			picture = GFX_SOV_imperial_governorate
+			ledger = army
+			picture = GFX_SOV_idea_imperial_governorate
 			allowed = {
 				always= yes
 			}
@@ -16,7 +17,7 @@ ideas = {
 			}
 		}
 		SOV_idea_soviet_resistance = {
-			picture = GFX_SOV_idea_soviet_resistance
+			picture = GFX_SOV_soviet_resistance
 			allowed = {
 				always= yes
 			}
@@ -34,7 +35,7 @@ ideas = {
 			}
 		}
 		SOV_unindustrialized = {
-			picture = GFX_SOV_unindustrialized
+			picture = GFX_SOV_idea_unindustrialized
 			allowed = {
 				always= yes
 			}
@@ -50,7 +51,7 @@ ideas = {
 			}
 		}
 		SOV_unpopular_monarch = {
-			picture = GFX_SOV_unpopular_monarch
+			picture = GFX_SOV_idea_unpopular_monarch
 			allowed = {
 				always= yes
 			}

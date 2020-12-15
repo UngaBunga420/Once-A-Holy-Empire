@@ -1,6 +1,6 @@
 spriteTypes = {	
 
-
+	
 
 	SpriteType = {
 		name = "GFX_idea_traits_strip"
@@ -9,7 +9,9 @@ spriteTypes = {
 	}
 
 	### new tfv nat spirit icons
+	
 
+	
 	spriteType = {
 		name = "GFX_idea_generic_degauss_ship_hulls"
 		texturefile = "gfx/interface/ideas/idea_generic_degauss_ship_hulls.dds"
@@ -5618,25 +5620,5 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_BOH_democratic_empire"
 		texturefile = "gfx/interface/goals/GFX_BOH_a_democratic_empire-61329.dds"
-	}
-	spriteType = {
-		name = "GFX_idea_BOH_idea_fascism"
-		texturefile = "gfx/interface/ideas/fascism.dds"
-	}
-	spriteType = {
-		name = "GFX_SOV_idea_soviet_resistance"
-		texturefile = "gfx/interface/ideas/GFX_SOV_idea_soviet_resistance.dds"
-	}
-	spriteType = {
-		name = "GFX_SOV_imperial_governorate"
-		texturefile = "gfx/interface/ideas/GFX_SOV_imperial_governorate.dds"
-	}
-	spriteType = {
-		name = "GFX_SOV_unpopular_monarch"
-		texturefile = "gfx/interface/ideas/GFX_SOV_unpopular_monarch.dds"
-	}
-	spriteType = {
-		name = "GFX_SOV_unindustrialized"
-		texturefile = "gfx/interface/ideas/GFX_SOV_unindustrialized.dds"
 	}
 }
