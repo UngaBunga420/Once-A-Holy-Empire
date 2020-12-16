@@ -17,7 +17,7 @@ ideas = {
 			}
 		}
 		SOV_idea_soviet_resistance = {
-			picture = GFX_SOV_soviet_resistance
+			picture = SOV_unindustrialized
 			allowed = {
 				always= yes
 			}
