@@ -617,6 +617,9 @@ days = 365
 		ai_will_do = {
 			factor = 1
 		}
+		mutually_exclusive = {
+			focus = BOH_ally_with_fuhrer
+		}
 		completion_reward = {
 
 		}
@@ -637,6 +640,9 @@ days = 365
 		}
 		bypass = {
 			has_cosmetic_tag = BOH_nazism
+		}
+		mutually_exclusive = {
+			focus = BOH_on_our_own
 		}
 		completion_reward = {
 			custom_effect_tooltip = BOH_has_nazism

@@ -11,10 +11,12 @@
  second_leader_diplo_tt:0 "§Y[From.GetDualLeaderName]§!\n[From.GetSecondTitle] of [From.GetNameDef]"
  dual_leader_desc_tt:0 "§g[From.GetDualLeaderDesc]§!"
  first_leader_desc_tt:0 "§g[From.GetFirstLeaderDesc]§!"
-    # Nation Specific Localisation
+ # England stuff
  ENG_PRIME_MINISTER_TITLE:0 "Prime Minister"
+ ENG_KING_TITLE:0 "King"
  ENG_GEORGE_V:0 "George V"
  ENG_GEORGE_V_DESC:0 "His Majesty"
+ #Romania Stuff
  ROM_PRIME_MINISTER_TITLE:0 "Prime Minister"
  ROM_CAROL_II:0 "Carol II"
  ## Italy stuff
