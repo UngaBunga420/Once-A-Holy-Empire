@@ -132,7 +132,7 @@ add_ideas = {
 	
 	SOV_unindustrialized
 	SOV_unpopular_monarch
-	SOV_idea_soviet_resistance
+	SOV_soviet_resistance
 	
 }
 

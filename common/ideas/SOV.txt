@@ -1,23 +1,7 @@
 ideas = {
 	country = {
-		SOV_imperial_governorate = {
-			ledger = army
-			picture = GFX_SOV_idea_imperial_governorate
-			allowed = {
-				always= yes
-			}
-			allowed_civil_war = {
-				always= yes
-			}
-			visible = {
-				always= yes
-			}
-			modifier = {
-				extra_trade_to_target_factor = 0.25
-			}
-		}
-		SOV_idea_soviet_resistance = {
-			picture = SOV_unindustrialized
+		SOV_soviet_resistance = {
+			picture = GFX_idea_SOV_soviet_resistance
 			allowed = {
 				always= yes
 			}
@@ -34,8 +18,25 @@ ideas = {
 				root_out_resistance_effectiveness_factor = -0.05
 			}
 		}
+		
+		SOV_imperial_governorate = {
+			picture = GFX_idea_SOV_imperial_governorate
+			allowed = {
+				always= yes
+			}
+			allowed_civil_war = {
+				always= yes
+			}
+			visible = {
+				always= yes
+			}
+			modifier = {
+				extra_trade_to_target_factor = 0.25
+			}
+		}
+		
 		SOV_unindustrialized = {
-			picture = GFX_SOV_idea_unindustrialized
+			picture = GFX_idea_SOV_unindustrialized
 			allowed = {
 				always= yes
 			}
@@ -51,7 +52,7 @@ ideas = {
 			}
 		}
 		SOV_unpopular_monarch = {
-			picture = GFX_SOV_idea_unpopular_monarch
+			picture = GFX_idea_SOV_unpopular_monarch
 			allowed = {
 				always= yes
 			}

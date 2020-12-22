@@ -2,19 +2,19 @@ spriteTypes = {
 	##National Spirits
 	
 	spriteType = {
-		name = "GFX_SOV_soviet_resistance"
-		texturefile = "gfx/interface/ideas/SOV_idea_soviet_resistance.dds"
+		name = "GFX_idea_SOV_soviet_resistance"
+		texturefile = "gfx/interface/ideas/SOV_soviet_resistance.dds"
 	}
 	spriteType = {
-		name = "GFX_SOV_idea_imperial_governorate"
+		name = "GFX_idea_SOV_imperial_governorate"
 		texturefile = "gfx/interface/ideas/SOV_imperial_governorate.dds"
 	}
 	spriteType = {
-		name = "GFX_SOV_idea_unpopular_monarch"
+		name = "GFX_idea_SOV_unpopular_monarch"
 		texturefile = "gfx/interface/ideas/SOV_unpopular_monarch.dds"
 	}
 	spriteType = {
-		name = "GFX_SOV_idea_unindustrialized"
+		name = "GFX_idea_SOV_unindustrialized"
 		texturefile = "gfx/interface/ideas/SOV_unindustrialized.dds"
 	}
 
