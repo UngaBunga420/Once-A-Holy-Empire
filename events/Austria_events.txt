@@ -1,0 +1,23 @@
+add_namespace = aus
+
+##Event: Snap Election
+country_event = {
+	id = aus.1
+	title = aus.1.title
+	desc = aus.1.desc
+	picture = GFX_report_event_king_speech
+	is_triggered_only = yes
+	option = {
+		name = aus.1.a
+		ai_chance = { factor = 1}
+	}
+	option = {
+		name = aus.1.b
+		ai_chance = { factor = 1}
+		
+	}
+	option = {
+		name = aus.1.c
+		ai_chance = { factor = 1}
+	}
+}

@@ -1,0 +1,907 @@
+focus_tree = {
+	id = AUS
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = AUS
+		}
+	}
+	#Focus for Army Focus
+	focus = {
+		id = AUS_army_focus
+		icon = GFX_goal_generic_political_pressure
+		x = 18
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = AUS_our_industry }
+		mutually_exclusive = { focus = AUS_civilian_focus }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas= AUS_army_investment
+		}
+	}
+	#Focus for Economic Boom
+	focus = {
+		id = AUS_economic_boom
+		icon = GFX_focus_generic_tank_production
+		x = 20
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = AUS_modernize_our_industry }
+		prerequisite = { focus = AUS_prepare_for_the_next_conflict }
+		prerequisite = { focus = AUS_lighten_up_gun_laws }
+		prerequisite = { focus = AUS_invest_in_private_construction_firms }
+		mutually_exclusive = { focus = AUS_civilian_focus }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas= AUS_idea_economic_boom
+		}
+	}
+	#Focus for Liberate Italy
+	focus = {
+		id = AUS_liberate_italy
+		icon = GFX_goal_generic_major_war
+		x = 7
+		y = 10
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = AUS_austria_united_and_ready }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_wargoal= { 
+type = annex_everything 
+target = ITA
+}
+		}
+	}
+
+	#Focus for Modernize our Industry
+	focus = {
+		id = AUS_modernize_our_industry
+		icon = GFX_goal_generic_consumer_goods
+		x = 23
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = AUS_fund_civilian_scientists }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus= {
+ bonus = 0.5 
+uses = 2 
+category = industry 
+}
+		}
+	}
+
+	#Focus for Construction Projects
+	focus = {
+		id = AUS_construction_projects
+		icon = GFX_focus_generic_industry_3
+		x = 21
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = AUS_create_jobs_for_the_poor }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state={
+ limit = {
+ free_building_slots = {
+ building = industrial_complex
+ size > 0
+ include_locked = yes
+ }
+
+ }
+
+ add_extra_state_shared_building_slots = 1
+ add_building_construction = {
+ type = industrial_complex
+ level = 1
+ instant_build = yes
+ }
+
+ set_state_flag = REPLACE_ME_WITH_UNIQUE_IDENTIFIER
+ }
+		}
+	}
+
+	#Focus for Create the Liberty Arms Plant
+	focus = {
+		id = AUS_create_the_liberty_arms_plant
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 19
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = AUS_hire_factory_workers }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability= 0.05  random_owned_controlled_state={
+ limit = {
+ free_building_slots = {
+ building = arms_factory
+ size > 0
+ include_locked = yes
+ }
+
+ }
+
+ add_extra_state_shared_building_slots = 1
+ add_building_construction = {
+ type = arms_factory
+ level = 1
+ instant_build = yes
+ }
+
+ set_state_flag = REPLACE_ME_WITH_UNIQUE_IDENTIFIER
+ }
+		}
+	}
+
+	#Focus for Focus on Military Research
+	focus = {
+		id = AUS_focus_on_military_research
+		icon = GFX_goal_tfv_generic_tech_sharing
+		x = 17
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = AUS_army_focus }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_research_slot= 2  add_stability= -0.1
+		}
+	}
+
+	#Focus for Prepare for the next Conflict
+	focus = {
+		id = AUS_prepare_for_the_next_conflict
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 17
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = AUS_focus_on_military_research }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus= {
+ bonus = 0.5 
+uses = 2 
+category = land_doctrine 
+}
+		}
+	}
+
+	#Focus for Prepare our industry for the next war
+	focus = {
+		id = AUS_prepare_our_industry_for_the_next_war
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 9
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = AUS_prepare_our_people_for_the_next_war }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state={
+ limit = {
+ free_building_slots = {
+ building = industrial_complex
+ size > 0
+ include_locked = yes
+ }
+
+ }
+
+ add_extra_state_shared_building_slots = 1
+ add_building_construction = {
+ type = industrial_complex
+ level = 1
+ instant_build = yes
+ }
+
+ set_state_flag = REPLACE_ME_WITH_UNIQUE_IDENTIFIER
+ }
+  random_owned_controlled_state={
+ limit = {
+ free_building_slots = {
+ building = arms_factory
+ size > 0
+ include_locked = yes
+ }
+
+ }
+
+ add_extra_state_shared_building_slots = 1
+ add_building_construction = {
+ type = arms_factory
+ level = 1
+ instant_build = yes
+ }
+
+ set_state_flag = REPLACE_ME_WITH_UNIQUE_IDENTIFIER
+ }
+		}
+	}
+
+	#Focus for Emergency Powers Act
+	focus = {
+		id = AUS_emergency_powers_act
+		icon = GFX_goal_molotov_ribbentrop_pact
+		x = 7
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = AUS_monitor_capitalism }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas= AUS_power_to_the_president
+		}
+	}
+
+	#Focus for Monitor Capitalism
+	focus = {
+		id = AUS_monitor_capitalism
+		icon = GFX_focus_generic_industry_3
+		x = 7
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = AUS_balanced_approach }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas= AUS_idea_monitor_capitalism
+		}
+	}
+
+	#Focus for Place Restrictions on Private Companies
+	focus = {
+		id = AUS_place_restrictions_on_private_companies
+		icon = GFX_goal_unknown
+		x = 5
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = AUS_every_man_a_king }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas= aus_restricted_companies
+		}
+	}
+
+	#Focus for Create Jobs for the Poor
+	focus = {
+		id = AUS_create_jobs_for_the_poor
+		icon = GFX_focus_generic_industry_2
+		x = 21
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = AUS_civilian_focus }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state={
+ limit = {
+ free_building_slots = {
+ building = industrial_complex
+ size > 0
+ include_locked = yes
+ }
+
+ }
+
+ add_extra_state_shared_building_slots = 1
+ add_building_construction = {
+ type = industrial_complex
+ level = 1
+ instant_build = yes
+ }
+
+ set_state_flag = REPLACE_ME_WITH_UNIQUE_IDENTIFIER
+ }
+		}
+	}
+
+	#Focus for Fund Civilian Scientists
+	focus = {
+		id = AUS_fund_civilian_scientists
+		icon = GFX_goal_generic_scientific_exchange
+		x = 23
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = AUS_civilian_focus }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_research_slot= 1
+		}
+	}
+
+	#Focus for Civilian Focus
+	focus = {
+		id = AUS_civilian_focus
+		icon = GFX_focus_generic_industry_1 ##Unfortunately, the tool could not find your icon in the game's files
+		x = 22
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = AUS_our_industry }
+		mutually_exclusive = { focus = AUS_army_focus }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas= AUS_idea_civilian_focus
+		}
+	}
+
+	#Focus for Continue the Path
+	focus = {
+		id = AUS_continue_the_path
+		icon = GFX_goal_generic_national_unity
+		x = 7
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = AUS_the_future_of_austria }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = AUS_idea_continue_the_path
+		}
+	}
+	#Focus for Call an Emergency Election
+	focus = {
+		id = AUS_emergency_election
+		icon = GFX_focus_generic_self_management
+		x = 7
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = AUS_continue_the_path }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			
+			country_event= {
+				days = 1 
+				id = aus.1
+			}
+		}
+	}
+	#Focus for The Future of Austria
+	focus = {
+		id = AUS_the_future_of_austria
+		icon = GFX_goal_unknown
+		x = 7
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			custom_effect_tooltip = AUS_disclaimer
+			add_political_power= 150
+		}
+	}
+
+	#Focus for Hire Factory Workers
+	focus = {
+		id = AUS_hire_factory_workers
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 19
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = AUS_army_focus }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state={
+ limit = {
+ free_building_slots = {
+ building = arms_factory
+ size > 0
+ include_locked = yes
+ }
+
+ }
+
+ add_extra_state_shared_building_slots = 1
+ add_building_construction = {
+ type = arms_factory
+ level = 1
+ instant_build = yes
+ }
+
+ set_state_flag = REPLACE_ME_WITH_UNIQUE_IDENTIFIER
+ }
+		}
+	}
+
+	#Focus for Invest in our Peoples Needs
+	focus = {
+		id = AUS_invest_in_our_peoples_needs
+		icon = GFX_goal_tripartite_pact
+		x = 5
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = AUS_place_restrictions_on_private_companies 
+			focus = AUS_invest_in_private_companies 
+			focus = AUS_emergency_powers_act 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability= 0.05  add_political_power= -50
+		}
+	}
+
+	#Focus for Prepare our People for the next War
+	focus = {
+		id = AUS_prepare_our_people_for_the_next_war
+		icon = GFX_goal_generic_political_pressure
+		x = 9
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = AUS_place_restrictions_on_private_companies 
+			focus = AUS_invest_in_private_companies 
+			focus = AUS_emergency_powers_act 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_war_support= 0.05
+		}
+	}
+
+	#Focus for Austria, United and Ready
+	focus = {
+		id = AUS_austria_united_and_ready
+		icon = GFX_focus_generic_support_the_left_right
+		x = 7
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = AUS_prepare_our_industry_for_the_next_war 
+		}
+		prerequisite = { 
+			focus = AUS_recruit_workers_into_our_factories 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.05
+			add_ideas= AUS_united_and_ready
+		}
+	}
+
+	#Focus for The Aerial Arms Factory
+	focus = {
+		id = AUS_the_aerial_arms_factory
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 13
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = AUS_recruit_airmen }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state={
+ limit = {
+ free_building_slots = {
+ building = arms_factory
+ size > 0
+ include_locked = yes
+ }
+
+ }
+
+ add_extra_state_shared_building_slots = 1
+ add_building_construction = {
+ type = arms_factory
+ level = 1
+ instant_build = yes
+ }
+
+ set_state_flag = REPLACE_ME_WITH_UNIQUE_IDENTIFIER
+ }
+		}
+	}
+
+	#Focus for The Austrian Airforce
+	focus = {
+		id = AUS_the_austrian_airforce
+		icon = GFX_goal_generic_air_fighter2
+		x = 13
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_equipment_to_stockpile= {
+ type = fighter_2 
+amount = 20 
+producer = AUS 
+}
+add_ideas = AUS_airforce
+		}
+	}
+
+	#Focus for Recruit airmen
+	focus = {
+		id = AUS_recruit_airmen
+		icon = GFX_focus_generic_military_mission
+		x = 13
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = AUS_the_austrian_airforce }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_manpower= 10000  air_experience= 25
+		}
+	}
+
+	#Focus for The European Democratic League
+	focus = {
+		id = AUS_the_european_democratic_league
+		icon = GFX_goal_generic_propaganda
+		x = 9
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = AUS_austria_united_and_ready }
+		mutually_exclusive = { focus = AUS_go_with_the_allies }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_faction= "European Democratic League"
+		}
+	}
+
+	#Focus for Invest in Private Construction Firms
+	focus = {
+		id = AUS_invest_in_private_construction_firms
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 21
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = AUS_construction_projects }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state={
+ limit = {
+ free_building_slots = {
+ building = industrial_complex
+ size > 0
+ include_locked = yes
+ }
+
+ }
+
+ add_extra_state_shared_building_slots = 1
+ add_building_construction = {
+ type = industrial_complex
+ level = 1
+ instant_build = yes
+ }
+
+ set_state_flag = REPLACE_ME_WITH_UNIQUE_IDENTIFIER
+ }
+		}
+	}
+
+	#Focus for Go with the allies
+	focus = {
+		id = AUS_go_with_the_allies
+		icon = GFX_goal_support_democracy
+		x = 5
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = AUS_austria_united_and_ready }
+		mutually_exclusive = { focus = AUS_the_european_democratic_league }
+		ai_will_do = {
+			factor = 1
+		}
+		available = { ENG = { has_government = democratic is_in_faction = yes } }
+		completion_reward = {
+			ENG = {add_to_faction= AUS   }
+		}
+	}
+
+	#Focus for Recruit Workers into our Factories
+	focus = {
+		id = AUS_recruit_workers_into_our_factories
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 5
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = AUS_invest_in_our_peoples_needs }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_manpower= -1000  add_stability= 0.05  random_owned_controlled_state={
+ limit = {
+ free_building_slots = {
+ building = industrial_complex
+ size > 0
+ include_locked = yes
+ }
+
+ }
+
+ add_extra_state_shared_building_slots = 1
+ add_building_construction = {
+ type = industrial_complex
+ level = 1
+ instant_build = yes
+ }
+
+ set_state_flag = REPLACE_ME_WITH_UNIQUE_IDENTIFIER
+ }
+  random_owned_controlled_state={
+ limit = {
+ free_building_slots = {
+ building = arms_factory
+ size > 0
+ include_locked = yes
+ }
+
+ }
+
+ add_extra_state_shared_building_slots = 1
+ add_building_construction = {
+ type = arms_factory
+ level = 1
+ instant_build = yes
+ }
+
+ set_state_flag = REPLACE_ME_WITH_UNIQUE_IDENTIFIER
+ }
+		}
+	}
+
+	#Focus for Lighten up Gun Laws
+	focus = {
+		id = AUS_lighten_up_gun_laws
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 19
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = AUS_create_the_liberty_arms_plant }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state={
+ limit = {
+ free_building_slots = {
+ building = arms_factory
+ size > 0
+ include_locked = yes
+ }
+
+ }
+
+ add_extra_state_shared_building_slots = 1
+ add_building_construction = {
+ type = arms_factory
+ level = 2
+ instant_build = yes
+ }
+
+ set_state_flag = REPLACE_ME_WITH_UNIQUE_IDENTIFIER
+ }
+  add_stability= -0.05
+		}
+	}
+
+	#Focus for Go with the republicans
+	focus = {
+		id = AUS_go_with_the_republicans
+		icon = GFX_goal_generic_dangerous_deal
+		x = 9
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = AUS_emergency_election }
+		mutually_exclusive = { 
+			focus = AUS_go_with_the_democrats 
+		}
+		mutually_exclusive = { 
+			focus = AUS_balanced_approach 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_war_support= 0.05
+		}
+	}
+
+	#Focus for Go with the democrats
+	focus = {
+		id = AUS_go_with_the_democrats
+		icon = GFX_goal_support_democracy
+		x = 5
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = AUS_emergency_election }
+		mutually_exclusive = { 
+			focus = AUS_go_with_the_republicans 
+		}
+		mutually_exclusive = { 
+			focus = AUS_balanced_approach 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability= 0.05  add_war_support= -0.05
+		}
+	}
+
+	#Focus for "Every Man a King"
+	focus = {
+		id = AUS_every_man_a_king
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		x = 5
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = AUS_go_with_the_democrats }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability= -0.05  add_ideas= AUS_every_man_a_king
+		}
+	}
+
+	#Focus for Power to the President
+	focus = {
+		id = AUS_power_to_the_president
+		icon = GFX_focus_generic_support_the_left_right
+		x = 9
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = AUS_go_with_the_republicans }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas= AUS_power_to_the_president
+		}
+	}
+	#Focus for Our Industry
+	focus = {
+		id = AUS_our_industry
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 20
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		
+		
+		mutually_exclusive = { 
+			focus = AUS_ 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus= {
+				bonus = 0.25 
+				uses = 1
+				category = industry 
+			}
+		}
+	}
+	#Focus for Balanced Approach
+	focus = {
+		id = AUS_balanced_approach
+		icon = GFX_goal_tripartite_pact
+		x = 7
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		mutually_exclusive = { 
+			focus = AUS_go_with_the_democrats 
+		}
+		mutually_exclusive = { 
+			focus = AUS_go_with_the_republicans 
+		}
+		prerequisite = { focus = AUS_emergency_election }
+		mutually_exclusive = { 
+			focus = AUS_ 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability= 0.05
+		}
+	}
+
+	#Focus for Invest in Private Companies
+	focus = {
+		id = AUS_invest_in_private_companies
+		icon = GFX_goal_generic_consumer_goods
+		x = 9
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = AUS_power_to_the_president }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas= AUS_Private_Companies
+		}
+	}
+
+#End of focuses 
+ }
