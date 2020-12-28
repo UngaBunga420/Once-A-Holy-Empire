@@ -1,6 +1,6 @@
 capital = 809
 
-#oob = ""
+oob = "SPE_1936"
 
 set_research_slots = 3
 
