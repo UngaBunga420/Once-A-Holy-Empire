@@ -21,6 +21,30 @@ bookmarks = {
 			}
 		}
 
+		"SPE"={
+			
+			history = "SPE_GTB_DESC_LOC"
+			ideology = neutrality
+			ideas = {
+				
+			}
+			focuses = {
+				SPE_civil_war
+			}
+		}
+
+		"FSP"={
+			
+			history = "FRA_GTB_DESC_LOC"
+			ideology = fascism
+			ideas = {
+				
+			}
+			focuses = {
+				FSP_civil_war
+			}
+		}
+		
 		"BAV"={
 			history = "BAV_GTB_DESC_LOC"
 			ideology = fascism
@@ -31,19 +55,9 @@ bookmarks = {
 
 			}
 		}
-
-		"TRC"={
-			history = "TRC_GTB_DESC_LOC"
-			ideology = democratic
-			ideas = {
-				BOH_a_fragmented_empire
-			}
-			focuses = {
-
-			}
-		}
-
+		
 		"NTE"={
+			
 			history = "NTE_GTB_DESC_LOC"
 			ideology = neutrality
 			ideas = {
@@ -51,22 +65,24 @@ bookmarks = {
 				NTE_lack_of_defensive_planning
 			}
 			focuses = {
-
+				BOH_a_fragmented_empire
 			}
 		}
 
 		"TPR"={
+			
 			history = "TPR_GTB_DESC_LOC"
 			ideology = communism
 			ideas = {
 				BOH_a_fragmented_empire
 			}
 			focuses = {
-
+				BOH_a_fragmented_empire
 			}
 		}
 
 		"PRS"={
+			
 			history = "PRS_GTB_DESC_LOC"
 			ideology = fascism
 			ideas = {
@@ -74,51 +90,15 @@ bookmarks = {
 				PRS_gymnastics_and_sports_division
 			}
 			focuses = {
-
+				BOH_a_fragmented_empire
 			}
 		}
-
 		
 		"---"={
 			history = "OTHER_GATHERING_STORM_DESC"
 		}
 		
-		"FRA"={
-			minor = yes
-			history = "FRA_GTB_DESC_LOC"
-			ideology = neutrality
-			ideas = {
-				
-			}
-			focuses = {
-				
-			}
-		}
-
-		"SPE"={
-			minor = yes
-			history = "SPE_GTB_DESC_LOC"
-			ideology = neutrality
-			ideas = {
-				
-			}
-			focuses = {
-				
-			}
-		}
-
-		"FSP"={
-			minor = yes
-			history = "FRA_GTB_DESC_LOC"
-			ideology = fascism
-			ideas = {
-				
-			}
-			focuses = {
-				
-			}
-		}
-
+		
 		"SOV"={
 			minor = yes
 			history = "SOV_GTB_DESC_LOC"
@@ -128,6 +108,32 @@ bookmarks = {
 			}
 			focuses = {
 				SOV_governate_crisis_of_1937
+			}
+		}
+		
+		"TRC"={
+			minor = yes
+			history = "TRC_GTB_DESC_LOC"
+			ideology = democratic
+			ideas = {
+				BOH_a_fragmented_empire
+			}
+			focuses = {
+				TRC_the_rcc_victory
+				TRC_the_rndc_victory
+				TRC_the_rheinmarshals_victory
+			}
+		}
+		
+		"AUS"={
+			minor = yes
+			history = "AUS_GTB_DESC_LOC"
+			ideology = democratic
+			ideas = {
+				
+			}
+			focuses = {
+				AUS_continue_the_path
 			}
 		}
 
