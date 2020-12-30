@@ -171,7 +171,7 @@ add_political_power = 50
 			focus = SOV_visit_baku
 		}
 		available = {
-			date > 1937.3.12
+			date > 1937.2.15
 		}
 		completion_reward = {
 			country_event= {
