@@ -33,7 +33,7 @@ country_event = {
 	picture = GFX_report_event_king_speech
 	is_triggered_only = yes
 	option = { #
-		name = rus.1.a
+		name = rus.2.a
 		ai_chance = { factor = 2}
 		custom_effect_tooltip = SOV_belarus_crisis_tour
 		set_country_flag = SOV_can_tour_belarus
@@ -49,13 +49,13 @@ country_event = {
 		#}
 	}
 	option = {
-		name = rus.1.b
+		name = rus.2.b
 		ai_chance = { factor = 1}
 		custom_effect_tooltip = SOV_belarus_crisis_20
 		add_political_power = -50
 		add_to_variable = {
 			var = belarus_crisis_level
-			value = 15`
+			value = 15
 		}
 	}
 }
@@ -67,13 +67,21 @@ country_event = {
 	desc = rus.3.desc
 	picture = GFX_report_event_king_speech
 	is_triggered_only = yes
-	option = { 
+	option = { #
 		name = rus.3.a
 		ai_chance = { factor = 2}
+		custom_effect_tooltip = SOV_baltic_crisis_tour
+		set_country_flag = SOV_can_tour_baltic
 	}
 	option = {
 		name = rus.3.b
 		ai_chance = { factor = 1}
+		custom_effect_tooltip = SOV_baltic_crisis_20
+		add_political_power = -50
+		add_to_variable = {
+			var = baltic_crisis_level
+			value = 20
+		}
 	}
 }
 
@@ -84,13 +92,21 @@ country_event = {
 	desc = rus.4.desc
 	picture = GFX_report_event_king_speech
 	is_triggered_only = yes
-	option = { 
+	option = { #
 		name = rus.4.a
 		ai_chance = { factor = 2}
+		custom_effect_tooltip = SOV_transcaucasia_crisis_tour
+		set_country_flag = SOV_can_tour_caucasia
 	}
 	option = {
 		name = rus.4.b
 		ai_chance = { factor = 1}
+		custom_effect_tooltip = SOV_transcaucasia_crisis_20
+		add_political_power = -50
+		add_to_variable = {
+			var = transcaucasia_crisis_level
+			value = 20
+		}
 	}
 }
 
