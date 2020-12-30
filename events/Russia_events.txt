@@ -10,10 +10,18 @@ country_event = {
 	option = { #
 		name = rus.1.a
 		ai_chance = { factor = 2}
+		custom_effect_tooltip = SOV_ukraine_crisis_tour
+		set_country_flag = SOV_can_tour_ukraine
 	}
 	option = {
 		name = rus.1.b
 		ai_chance = { factor = 1}
+		custom_effect_tooltip = SOV_ukraine_crisis_20
+		add_political_power = -50
+		add_to_variable = {
+			var = ukraine_crisis_level
+			value = 20
+		}
 	}
 }
 
@@ -24,13 +32,31 @@ country_event = {
 	desc = rus.2.desc
 	picture = GFX_report_event_king_speech
 	is_triggered_only = yes
-	option = { 
-		name = rus.2.a
+	option = { #
+		name = rus.1.a
 		ai_chance = { factor = 2}
+		custom_effect_tooltip = SOV_belarus_crisis_tour
+		set_country_flag = SOV_can_tour_belarus
+		#random_list = {
+		#	50 = {
+		#		modifier = {
+		#			factor = 0
+		#			has_global_flag = GER_air_safety_regulations_flag
+		#		}
+		#		USA = { news_event = { id = news.42 } }
+		#	}
+		#	30 = { USA = { news_event = { id = news.43 } } }
+		#}
 	}
 	option = {
-		name = rus.2.b
+		name = rus.1.b
 		ai_chance = { factor = 1}
+		custom_effect_tooltip = SOV_belarus_crisis_20
+		add_political_power = -50
+		add_to_variable = {
+			var = belarus_crisis_level
+			value = 15`
+		}
 	}
 }
 
