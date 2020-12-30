@@ -1,8 +1,26 @@
-SOV_civil_war_decisions = {
-	icon = generic_form_nation
+SOV_governate_rebellion_decisions = {
+	icon = generic_ignite_civil_war
 	allowed = {
 		OR = {
 			tag = SOV
 		}
+	}
+	visible = {
+		always = yes
+	}
+}
+SOV_governorate_crisis_decisions = {
+	icon = generic_ignite_civil_war
+	allowed = {
+		OR = {
+			tag = SOV
+		}
+	}
+}
+prospect_for_resources = {
+	icon = generic_prospect_for_resources
+
+	allowed = {
+		has_dlc = "Waking the Tiger"
 	}
 }
