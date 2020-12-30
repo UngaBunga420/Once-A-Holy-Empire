@@ -127,6 +127,25 @@ set_popularities = {
 	neutrality = 58
 }
 
+##
+## Base Governorate Unrest Levels
+##
+set_variable = {
+	var = ukraine_crisis_level
+	value = 60
+}
+set_variable = {
+	var = belarus_crisis_level
+	value = 25
+}
+set_variable = {
+	var = baltic_crisis_level
+	value = 45
+}
+set_variable = {
+	var = transcaucasia_crisis_level
+	value = 30
+}
 
 add_ideas = {
 	
