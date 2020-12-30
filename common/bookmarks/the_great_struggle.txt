@@ -29,19 +29,19 @@ bookmarks = {
 				
 			}
 			focuses = {
-				SPE_civil_war
+				
 			}
 		}
 
 		"FSP"={
 			
-			history = "FRA_GTB_DESC_LOC"
+			history = "FSP_GTB_DESC_LOC"
 			ideology = fascism
 			ideas = {
 				
 			}
 			focuses = {
-				FSP_civil_war
+				
 			}
 		}
 		
@@ -104,7 +104,9 @@ bookmarks = {
 			history = "SOV_GTB_DESC_LOC"
 			ideology = neutrality
 			ideas = {
-			
+				SOV_unindustrialized
+				SOV_unpopular_monarch
+				SOV_soviet_resistance
 			}
 			focuses = {
 				SOV_governate_crisis_of_1937
