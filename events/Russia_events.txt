@@ -37,16 +37,7 @@ country_event = {
 		ai_chance = { factor = 2}
 		custom_effect_tooltip = SOV_belarus_crisis_tour
 		set_country_flag = SOV_can_tour_belarus
-		#random_list = {
-		#	50 = {
-		#		modifier = {
-		#			factor = 0
-		#			has_global_flag = GER_air_safety_regulations_flag
-		#		}
-		#		USA = { news_event = { id = news.42 } }
-		#	}
-		#	30 = { USA = { news_event = { id = news.43 } } }
-		#}
+		
 	}
 	option = {
 		name = rus.2.b
@@ -122,4 +113,65 @@ country_event = {
 		name = rus.5.a
 		ai_chance = { factor = 1}
 	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+##Event: Tour of Kiev
+country_event = {
+	id = rus.21
+	title = rus.21.title
+	desc = rus.21.desc
+	picture = GFX_report_event_king_speech
+	is_triggered_only = yes
+	option = { #
+		name = rus.21.a
+		ai_chance = { factor = 1}
+		random_list = {
+			85 = {
+				custom_effect_tooltip = "people gather in the streets to see the Tsar!"
+			}
+			15 = { custom_effect_tooltip = "Kirill is assassinated" news_event = { id = rus.40 days = 2 } }
+		}
+		custom_effect_tooltip = SOV_ukraine_crisis_remove_10
+		add_to_variable = {
+			var = ukraine_crisis_level
+			value = -10
+		}
+	}
+	option = { #
+		name = rus.21.b
+		ai_chance = { factor = 2}
+		custom_effect_tooltip = SOV_ukraine_crisis_10
+		add_to_variable = {
+			var = ukraine_crisis_level
+			value = 10
+		}
+	}
+}
+# Tsar Kirill Vladimirovich was Assassinated
+news_event = {
+	id = rus.40
+	title = rus.40.title
+	desc = rus.40.desc
+	picture = GFX_news_event_001
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = rus.40.a
+		
+	}
+	
 }
