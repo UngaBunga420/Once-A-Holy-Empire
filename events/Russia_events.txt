@@ -125,7 +125,6 @@ country_event = {
 
 
 
-
 ##Event: Tour of Kiev
 country_event = {
 	id = rus.21
@@ -158,6 +157,26 @@ country_event = {
 		}
 	}
 }
+
+##Event: Status of the Russian Empire in 1936
+country_event = {
+	id = rus.30
+	title = rus.30.title
+	desc = rus.30.desc
+	picture = GFX_report_event_soviet_purge_trial
+	is_triggered_only = no
+	fire_only_once = yes
+	trigger = {
+		tag = SOV
+		date > 1936.1.1
+	}
+	option = { 
+		name = rus.30.a
+		ai_chance = { factor = 1}
+	}
+}
+
+
 # Tsar Kirill Vladimirovich was Assassinated
 news_event = {
 	id = rus.40
