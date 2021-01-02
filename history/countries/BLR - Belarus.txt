@@ -5,7 +5,7 @@ oob = "BLR_1936"
 set_research_slots = 3
 add_ideas = {
 		#laws
-	SOV_imperial_governorate
+	#SOV_imperial_governorate
 }
 # Starting tech
 set_technology = {

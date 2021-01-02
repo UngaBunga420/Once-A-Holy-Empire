@@ -46,7 +46,7 @@ country_event = {
 		add_political_power = -50
 		add_to_variable = {
 			var = belarus_crisis_level
-			value = 15
+			value = 20
 		}
 	}
 }
@@ -171,18 +171,277 @@ country_event = {
 		date > 1936.1.1
 	}
 	option = { 
-		name = rus.30.a
+		name = rus.30.a	
 		ai_chance = { factor = 1}
 	}
 }
 
+##Hidden Event: (Triggers every day) Fires an unrest event in any governorate with random chance.
+country_event = {
+	id = rus.31
+	title = rus.31.title
+	desc = rus.31.desc
+	picture = GFX_doesnt_matter
+	hidden = yes
+	is_triggered_only = no
+	fire_only_once = no
+	trigger = {
+		tag = SOV
+		
+		NOT = { OR = { has_idea = SOV_governorate_crisis_resolved has_idea = SOV_governorate_crisis_war has_idea = SOV_riots_in_ukraine has_idea = SOV_riots_in_baltics has_idea = SOV_riots_in_belarus has_idea = SOV_riots_in_transcaucasia } }
+	}
+	immediate = {
+		random_list = {
+			15 = {
+				country_event = { id = rus.32 days = 5 } #Unrest in the Baltics
+			}
+			15 = {
+				country_event = { id = rus.33 days = 5 } #Unrest in Belarus
+			}
+			15 = {
+				country_event = { id = rus.34 days = 5 } #Unrest in Ukraine
+			}
+			15 = {
+				country_event = { id = rus.35 days = 5 } #Unrest in Transcaucasia
+			}
+			30 = {
+				country_event = { id = rus.37 days = 5 } #Imperial Reforms
+				
+			}
+		}
+	}
+}
+
+##Event: Unrest in the Baltics
+country_event = {
+	id = rus.32
+	title = rus.32.title
+	desc = rus.32.desc
+	picture = GFX_report_event_gre_rural_rebels
+	is_triggered_only = yes
+	option = { 
+		name = rus.32.a
+		ai_chance = { factor = 1}
+		custom_effect_tooltip = SOV_baltic_crisis_20
+		add_to_variable = {
+			var = baltic_crisis_level
+			value = 20
+		}
+		add_timed_idea = {
+			idea = SOV_riots_in_baltics
+			days = 85
+		}
+	}
+}
+
+##Event: Unrest in the Belarus
+country_event = {
+	id = rus.33
+	title = rus.33.title
+	desc = rus.33.desc
+	picture = GFX_report_event_gre_rural_rebels
+	is_triggered_only = yes
+	option = { 
+		name = rus.33.a
+		ai_chance = { factor = 1}
+		custom_effect_tooltip = SOV_belarus_crisis_20
+		add_to_variable = {
+			var = belarus_crisis_level
+			value = 20
+		}
+		add_timed_idea = {
+			idea = SOV_riots_in_belarus
+			days = 85
+		}
+	}
+}
+
+##Event: Unrest in the Ukraine
+country_event = {
+	id = rus.34
+	title = rus.34.title
+	desc = rus.34.desc
+	picture = GFX_report_event_gre_rural_rebels
+	is_triggered_only = yes
+	option = { 
+		name = rus.34.a
+		ai_chance = { factor = 1}
+		custom_effect_tooltip = SOV_ukraine_crisis_15
+		add_to_variable = {
+			var = ukraine_crisis_level
+			value = 15
+		}
+		add_timed_idea = {
+			idea = SOV_riots_in_ukraine
+			days = 85
+		}
+	}
+}
+
+##Event: Unrest in the Transcaucasia
+country_event = {
+	id = rus.35
+	title = rus.35.title
+	desc = rus.35.desc
+	picture = GFX_report_event_gre_rural_rebels
+	is_triggered_only = yes
+	option = { 
+		name = rus.35.a
+		ai_chance = { factor = 1}
+		custom_effect_tooltip = SOV_transcaucasia_crisis_20
+		add_to_variable = {
+			var = transcaucasia_crisis_level
+			value = 20
+		}
+		add_timed_idea = {
+			idea = SOV_riots_in_transcaucasia
+			days = 85
+		}
+	}
+}
+
+
+##Event: Imperial Reforms
+country_event = {
+	id = rus.37
+	title = rus.37.title
+	desc = rus.37.desc
+	picture = GFX_event_imperial_reforms
+	is_triggered_only = yes
+	option = { #Ukraine needs it the most
+		trigger = {
+			check_variable = {
+				var = ukraine_crisis_level
+				value = belarus_crisis_level
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = ukraine_crisis_level
+				value = transcaucasia_crisis_level
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = ukraine_crisis_level
+				value = baltic_crisis_level
+				compare = greater_than_or_equals
+			}
+		}
+		name = rus.37.a
+		ai_chance = { factor = 1}
+		custom_effect_tooltip = SOV_ukraine_crisis_remove_20
+		add_to_variable = {
+			var = ukraine_crisis_level
+			value = -20
+		}
+		add_timed_idea = {
+			idea = SOV_imperial_reforms
+			days = 85
+		}
+	}
+	option = { #Baltics needs it the most
+		trigger = {
+			check_variable = {
+				var = baltic_crisis_level
+				value = belarus_crisis_level
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = baltic_crisis_level
+				value = transcaucasia_crisis_level
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = baltic_crisis_level
+				value = ukraine_crisis_level
+				compare = greater_than_or_equals
+			}
+		}
+		name = rus.37.b
+		ai_chance = { factor = 1}
+		custom_effect_tooltip = SOV_baltic_crisis_remove_20
+		add_to_variable = {
+			var = baltic_crisis_level
+			value = -20
+		}
+		add_timed_idea = {
+			idea = SOV_imperial_reforms
+			days = 85
+		}
+	}
+	option = { #Transcaucasia needs it the most
+		trigger = {
+			check_variable = {
+				var = transcaucasia_crisis_level
+				value = belarus_crisis_level
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = transcaucasia_crisis_level
+				value = baltic_crisis_level
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = transcaucasia_crisis_level
+				value = ukraine_crisis_level
+				compare = greater_than_or_equals
+			}
+		}
+		name = rus.37.c
+		ai_chance = { factor = 1}
+		custom_effect_tooltip = SOV_transcaucasia_crisis_remove_20
+		add_to_variable = {
+			var = transcaucasia_crisis_level
+			value = -20
+		}
+		add_timed_idea = {
+			idea = SOV_imperial_reforms
+			days = 85
+		}
+	}
+	option = { #Belarus needs it the most
+		trigger = {
+			check_variable = {
+				var = belarus_crisis_level
+				value = baltic_crisis_level
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = belarus_crisis_level
+				value = transcaucasia_crisis_level
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = belarus_crisis_level
+				value = ukraine_crisis_level
+				compare = greater_than
+			}
+		}
+		name = rus.37.d
+		ai_chance = { factor = 1}
+		custom_effect_tooltip = SOV_belarus_crisis_remove_20
+		add_to_variable = {
+			var = belarus_crisis_level
+			value = -20
+		}
+		add_timed_idea = {
+			idea = SOV_imperial_reforms
+			days = 85
+		}
+	}
+	option = { #Do nothing (Easy way to get communist faster)
+		
+		name = rus.37.e
+		ai_chance = { factor = 0} #AI Wont do this normally
+		
+	}
+}
 
 # Tsar Kirill Vladimirovich was Assassinated
 news_event = {
 	id = rus.40
 	title = rus.40.title
 	desc = rus.40.desc
-	picture = GFX_news_event_001
+	picture = GFX_news_event_kirill_assassinated
 	
 	major = yes
 	
@@ -190,7 +449,7 @@ news_event = {
 	
 	option = {
 		name = rus.40.a
-		
+		#TO DO: governorates rebel and soviets declare war
 	}
 	
 }

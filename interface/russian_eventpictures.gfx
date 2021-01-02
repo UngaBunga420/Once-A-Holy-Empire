@@ -1,0 +1,12 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_event_imperial_reforms"
+		texturefile = "gfx/event_pictures/GFX_event_imperial_reforms.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_kirill_assassinated"
+		texturefile = "gfx/event_pictures/news_event_kirill_assassinated.dds"
+	}
+	
+}

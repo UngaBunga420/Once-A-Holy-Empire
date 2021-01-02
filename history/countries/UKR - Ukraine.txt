@@ -5,7 +5,7 @@ oob = "UKR_1936"
 set_research_slots = 3
 add_ideas = {
 		#laws
-	SOV_imperial_governorate
+	#SOV_imperial_governorate
 }
 # Starting tech
 set_technology = {
@@ -63,7 +63,11 @@ if = {
 	}
 }
 
-set_popularities = {	democratic = 20	fascism = 30	communism = 50
+set_popularities = {
+	democratic = 15
+	fascism = 30
+	communism = 5
+	neutrality = 50
 }
 
 create_country_leader = {
@@ -76,10 +80,19 @@ create_country_leader = {
 		
 	}
 }
-
+create_country_leader = {
+	name = "Pavlo Skoropadskyi"
+	desc = ""
+	picture = "Portrait_Skoropadski.dds"
+	expire = "1965.3.1"
+	ideology = despotism
+	traits = {
+		
+	}
+}
 create_country_leader = {
 	name = "Nikita Sergeyevich Khrushchev"
-	desc = ""
+	desc = "This isnt Khrushchev. Another Alf Landon found..."
 	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_4.dds"
 	expire = "1953.3.1"
 	ideology = marxism

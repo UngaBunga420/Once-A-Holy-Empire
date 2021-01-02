@@ -367,7 +367,9 @@ SOV_governorate_crisis_decisions = {
 
 		is_good = no
 		available = {                           # Available here means as much as goal because:
-			custom_trigger_tooltip = {
+			OR = {
+				has_country_flag = SOV_failed_to_reform_governorate_system
+				custom_trigger_tooltip = {
 				tooltip = SOV_reformed_governorate_system
 				check_variable = {
 					var = ukraine_crisis_level
@@ -390,6 +392,8 @@ SOV_governorate_crisis_decisions = {
 					compare = less_than_or_equals
 				}
 			}
+			}
+			
             
         }
 		timeout_effect = {

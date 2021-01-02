@@ -4,44 +4,28 @@ oob = "SOV_1936"
 
 
 # DIPLOMACY
-if = {
-	limit = {
-		OR = {
-			has_dlc = "Together for Victory"
-			has_dlc = "Man the Guns"
-		}
-	}
-	set_autonomy = {
-		target = AZR
-		autonomous_state = autonomy_integrated_puppet
-		freedom_level = 0.3
-	}
-	set_autonomy = {
-		target = UBD
-		autonomous_state = autonomy_integrated_puppet
-		freedom_level = 0.1
-	}
-	set_autonomy = {
-		target = UKR
-		autonomous_state = autonomy_integrated_puppet
-		freedom_level = 0.1
-	}
-	set_autonomy = {
-		target = BLR
-		autonomous_state = autonomy_integrated_puppet
-		freedom_level = 0.2
-	}
-	set_autonomy = {
-		target = AZR
-		autonomous_state = autonomy_integrated_puppet
-		freedom_level = 0.2
-	}
-	else = {
-		puppet = UKR
-		puppet = BLR
-		puppet = AZR
-	}
+set_autonomy = {
+	target = UBD
+	autonomous_state = autonomy_imperial_governorate
+	freedom_level = 0.1
 }
+set_autonomy = {
+	target = UKR
+	autonomous_state = autonomy_imperial_governorate
+	freedom_level = 0.1
+}
+set_autonomy = {
+	target = BLR
+	autonomous_state = autonomy_imperial_governorate
+	freedom_level = 0.2
+}
+set_autonomy = {
+	target = AZR
+	autonomous_state = autonomy_imperial_governorate
+	freedom_level = 0.2
+}
+
+# COUNTRY NAMES
 set_cosmetic_tag = SOV_russia
 AZR = {
 	set_cosmetic_tag = AZR_russia
@@ -55,6 +39,8 @@ UKR = {
 UBD = {
 	set_cosmetic_tag = UBD_russia
 }
+
+#RUSSIA STARTING TECH
 set_research_slots = 3
 set_stability = 0.5
 set_war_support = 0.8
@@ -115,6 +101,7 @@ if = {
 	}
 }
 
+#RUSSIAN POLITICS
 set_politics = {
 	ruling_party = neutrality
 	last_election = "1933.7.1"
@@ -147,6 +134,7 @@ set_variable = {
 	value = 30
 }
 
+# RUSSIAN STARTING IDEAS
 add_ideas = {
 	
 	SOV_unindustrialized
@@ -155,6 +143,7 @@ add_ideas = {
 	
 }
 
+# LEADER OF MONARCHIST PARTY, KIRILL VLADIMIROVICH
 create_country_leader = {
 	name = "Kirill Vladimirovich Romanov"
 	desc = "POLITICS_KIRILL_ROMANOV_DESC"
@@ -162,7 +151,7 @@ create_country_leader = {
 	expire = "1953.3.1"
 	ideology = despotism
 	traits = {
-		unpopular_monarch
+		
 	}
 }
 
