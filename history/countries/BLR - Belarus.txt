@@ -76,7 +76,17 @@ create_country_leader = {
         #
     }
 }
-
+ 
+create_country_leader = {
+    name = "Stanisław Bułak-Bałachowicz"
+    desc = ""
+    picture = "stanislaw.dds"
+    expire = "1965.1.1"
+    ideology = despotism
+    traits = {
+        #
+    }
+}
 create_country_leader = {
     name = "Radasłaŭ Astroŭski"
     desc = ""
