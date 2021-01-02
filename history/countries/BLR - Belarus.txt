@@ -63,19 +63,15 @@ if = {
 	}
 }
 
-set_popularities = {	democratic = 15	neutrality = 20	communism = 60	fascism = 5
+set_popularities = {	democratic = 15	neutrality = 60	communism = 20	fascism = 5
+}
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1933.7.1"
+	election_frequency = 48
+	elections_allowed = no
 }
 
-create_country_leader = {
-    name = "Vasil Zacharka"
-    desc = ""
-    picture = "gfx/leaders/Europe/Portrait_Europe_Generic_3.dds"
-    expire = "1965.1.1"
-    ideology = centrism
-    traits = {
-        #
-    }
-}
  
 create_country_leader = {
     name = "Stanisław Bułak-Bałachowicz"
