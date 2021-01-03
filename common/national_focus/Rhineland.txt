@@ -122,6 +122,14 @@ add_command_power= 50
 		cost = 4
 		available_if_capitulated = yes
 		prerequisite = { focus = TRC_the_new_army }
+		completion_reward = {
+		add_tech_bonus = {
+		bonus = 0.5
+		uses = 2
+		category = cat_mobile_warfare
+		}
+		}
+		
 		mutually_exclusive = { 
 			focus = TRC_the_old_is_better 
 		}
@@ -266,6 +274,13 @@ add_command_power= 50
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { focus = TRC_the_old_is_better }
+		completion_reward = {
+		add_tech_bonus = {
+		bonus = 0.5
+		uses = 2
+		category = cat_superior_firepower
+		}
+		}
 		mutually_exclusive = { focus = TRC_manpower_superiority }
 		ai_will_do = {
 			factor = 1
@@ -456,6 +471,9 @@ id = trc.1
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { focus = TRC_the_armed_forces_of_the_rhine }
+		completion_reward = {
+		air_experience = 50
+		}
 		ai_will_do = {
 			factor = 1
 		}
@@ -585,6 +603,13 @@ id = trc.1
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { focus = TRC_the_old_is_better }
+		completion_reward = {
+		add_tech_bonus = {
+		bonus = 0.5
+		uses = 2
+		category = cat_mass_assault
+		}
+		}
 		mutually_exclusive = { focus = TRC_artillery_attacks }
 		ai_will_do = {
 			factor = 1
@@ -600,6 +625,18 @@ id = trc.1
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { focus = TRC_the_modern_way }
+		completion_reward = {
+		add_tech_bonus = {
+		bonus = 0.5
+		uses = 1
+		category = armor
+		}
+		add_tech_bonus = {
+		bonus = 0.5
+		uses = 1
+		category = cat_mechanized_equipment
+		}
+		}
 		mutually_exclusive = { focus = TRC_tanks_alone }
 		ai_will_do = {
 			factor = 1
@@ -615,6 +652,13 @@ id = trc.1
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { focus = TRC_the_modern_way }
+		completion_reward = {
+		add_tech_bonus = {
+		bonus = 0.5
+		uses = 2
+		category = cat_medium_armor
+		}
+		}
 		mutually_exclusive = { focus = TRC_a_combined_armor_army }
 		ai_will_do = {
 			factor = 1
@@ -736,6 +780,9 @@ producer = TRC
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { focus = TRC_the_armed_forces_of_the_rhine }
+		completion_reward = {
+		army_experience = 50
+		}
 		ai_will_do = {
 			factor = 1
 		}
@@ -1147,6 +1194,11 @@ popularity = 0.1
 		available_if_capitulated = yes
 		ai_will_do = {
 			factor = 1
+		} 
+		completion_reward = {
+	    army_experience = 20
+		navy_experience = 20
+		air_experience = 20
 		}
 	}
 
